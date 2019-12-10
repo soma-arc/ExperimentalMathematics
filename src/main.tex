@@ -1,0 +1,87 @@
+% interacttfssample.tex
+% v1.05 - August 2017
+
+\documentclass[dvipdfmx]{interact}
+
+%\usepackage{epstopdf}% To incorporate .eps illustrations using PDFLaTeX, etc.
+%\usepackage[caption=false]{subfig}% Support for small, `sub' figures and tables
+%\usepackage[nolists,tablesfirst]{endfloat}% To `separate' figures and tables from text if required
+\usepackage[format=hang]{caption}
+\usepackage[format=hang, subrefformat=parens]{subcaption}
+\captionsetup{compatibility=false}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{hyperref}
+
+%\usepackage[doublespacing]{setspace}% To produce a `double spaced' document if required
+%\setlength\parindent{24pt}% To increase paragraph indentation when line spacing is doubled
+%\setlength\bibindent{2em}% To increase hanging indent in bibliography when line spacing is doubled
+
+\usepackage[numbers,sort&compress]{natbib}% Citation support using natbib.sty
+\bibpunct[, ]{[}{]}{,}{n}{,}{,}% Citation support using natbib.sty
+\renewcommand\bibfont{\fontsize{10}{12}\selectfont}% Bibliography support using natbib.sty
+
+\theoremstyle{plain}% Theorem-like structures provided by amsthm.sty
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{notation}{Notation}
+
+\begin{document}
+
+%\articletype{ARTICLE TEMPLATE}% Specify the article type or omit as appropriate
+
+\title{Sphairahedron}
+
+\author{
+\name{Kento Nakamura\textsuperscript{a}\thanks{CONTACT
+Kento Nakamura. Email: somaarcr@gmail.com Web: soma-arc.net}
+ and Kazushi Ahara\textsuperscript{b}}
+\affil{\textsuperscript{a}Graduate School of Advanced Mathematical
+Sciences, Meiji University, Tokyo, Japan; 
+\textsuperscript{b}School of Interdisciplinary Mathematical Sciences
+, Meiji University, Tokyo, Japan.}
+}
+
+\maketitle
+
+\begin{abstract}
+ This is abstract.
+\end{abstract}
+
+\begin{keywords}
+mathematics; visualization; fractals; Kleinian groups; circle inversion;
+ sphere inversion
+\end{keywords}
+
+\section{Introduction}
+
+In this paper we will
+
+See also \cite{bridges2018}
+
+Kazushi Ahara prooved that the limit set of the sphairahedra
+is a union of the spheres.
+
+\begin{thebibliography}{99}
+\bibitem{AharaAraki}
+        Kazushi Ahara and Yoshiaki Araki,
+        \emph{Sphairahedral approach to parameterize visible three
+        dimensional quasi-Fuchsian fractals},
+        Proceedings of Computer Graphics International, 2003, pp. 226--229.
+\bibitem{bridges2018}
+        Kento Nakamura and Kazushi Ahara,
+        \emph{Sphairahedra and Three-Dimensional Fractals}, 
+        Proceedings of Bridges 2018: Mathematics, Music, Art, Architecture,
+        Education, Culture, Tessellations Publishing,
+        Phoenix, Arizona, 2017, pp. 171--178.
+\end{thebibliography}
+\end{document}
