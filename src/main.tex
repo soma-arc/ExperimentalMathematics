@@ -39,10 +39,10 @@
 
 %\articletype{ARTICLE TEMPLATE}% Specify the article type or omit as appropriate
 
-\title{Sphairahedron}
+\title{Polyhedra with Spherical Faces and ??? Four-Dimensional Kleinian Groups}
 
 \author{
-\name{Kento Nakamura\textsuperscript{a}\thanks{CONTACT
+\name{Kento Nakamura, Yoshiaki Araki and \textsuperscript{a}\thanks{CONTACT
 Kento Nakamura. Email: somaarcr@gmail.com Web: soma-arc.net}
  and Kazushi Ahara\textsuperscript{b}}
 \affil{\textsuperscript{a}Graduate School of Advanced Mathematical
@@ -55,7 +55,9 @@ Sciences, Meiji University, Tokyo, Japan;
 
 \begin{abstract}
  これまで，球面体群について，提案され
- 図が高速に描画できるようになった．
+ このフラクタルは豊かな図像を見せる．
+ 元来，多大な時間がかかっていた．しかし，ハードウェアの進化とアルゴリズ
+ ムによってリアルタイムに図を描画できるようになった．
  本論文では可視化された図像から数学的問題を提起し，解決する．
  その問題は．．．であり，．．．を示す．
 \end{abstract}
@@ -66,7 +68,40 @@ mathematics; visualization; fractals; Kleinian groups; circle inversion;
 \end{keywords}
 
 \section{Introduction}
+Kazushi Ahara and Yoshiaki Araki invented a new geometrical concept
+called a \textit{sphairahedron}.
+
+Visualization of a quasi-sphere takes long time.
+We developed an algorithm to render this kind of fractals fast
+\cite{bridges2018}.
+It is called \textit{Iterated Inversion System (IIS)}.
+
+In this paper, we briefly introduce sphairahedron and its rendering
+technique.
+Next, we show problems found by viewing masthematical problems.
+We find mathematical problems and solve the problems.
+
+
+We are interested in finding examples of quasi-fuchsian sub-group of
+M\"ob$_{+}(S^3)$, the  group of orientation preserving M\"obius
+transformation on $S^3 = R^3 \bigcup \{\infty\}$. For a subgroup $G$ of
+Mob$_+(S^3)$, let the discontinuity set $\Omega(G)$ be
+$$
+\Omega(G) = \left\{ x \in S^3 | \text{the point x possesses a neighborhood} U(x)
+\text{such that the intersection} U(x) \cap gU(x) \text{is empty for all but finite
+elements} g\in G. \right\}.
+$$
+The complement $\Lambda(G) := S^3 \backslash \Omega(G)$ is called the
+limit set of the group $G$. $G$$ is a Kleinian group if $\Omega(G)$ is
+not empty. The limit set $\Lambda(G)$ consists either of 0 or 1 or 2 or
+infinitely many points. Here we consider only the case that $\Lambda$
+is infinite and two-dimensional.
+
 \section{Preparation}
+
+definition of a sphairahedra.
+See also \cite{bridges2018}.
+
 \section{Visualization}
 We use ray tracing technique.
 Ray marching
@@ -85,6 +120,8 @@ Summary \& Future work 解決したこと，未解決問題のまとめ
 
 単連結な部分が0のときはどうする？ 最初から抜いておく？
 
+\cite{bridges2018}では，球面体の定義とその図像の豊かさについて論じた．
+
 
 Kazushi Ahara prooved that the limit set of the sphairahedra
 is a union of the spheres.
@@ -95,6 +132,7 @@ is a union of the spheres.
 (阿原・荒木がやったこと)
 Yoshiaki Araki and Kazushi Ahara found Sphairahedron in 2003.
 It is extension of two dimensional tessellation of circles.
+円辺形を拡張した図形である球面体を用いる．
 cubeタイプのパラメータに関して計算を行ない，パラメータスペースを求めた．
 その求め方の論文は出版されていない．
 球面体そのものでなく，球面体を含む球の和集合に群を作用させることによっても
@@ -151,6 +189,12 @@ Find mathematical property of the fractals.
 The limit set of the semi-sphairahedron is not known.
 However, we visualize semi-sphairahedron and its tessellation.
 
+図を観察して こういうことができるという主張
+パラメータ空間の形状はフラクタル形状がない
+パラメータスペースが連結
+
+ゴーストサークルの概念が三次元にもある
+ゴーストスフィア
 
 
 \begin{thebibliography}{99}
