@@ -238,7 +238,7 @@ $$
 
 We call $\varepsilon(n_{ij})$ a moduli of polyhedra.
 
-\section{Preparation}
+\subsection{Preparation}
 
 We will show sime lemmas in this subsection.
 
@@ -291,11 +291,293 @@ Hence the four vertices lie on one plane in $R^3$.
  Using this Lemma 2.3, we obtain the following lemma in a combinatorical way.
 
 \begin{lemma}
- 12-ple($n_{ij}$) = ($n_{12}, n_{n13}, n_14), n_{}$
+ 12-ple($n_{ij}$) = ($n_{12}, n_{13}, n_{14}, n_{15}, n_{23}, n_{24},
+ n_{26}, n_{35}, n_{36}, n_{45}, n_{46}, n_{56}$) of face-angle
+ parameters is one of the following 11.(See Figire 4.)
 \end{lemma}
 
-definition of a sphairahedra.
-See also \cite{bridges2018}.
+\noindent(a) (3, 3, 3, 3, 3, 3, 3 ,3 ,3 ,3 ,3 ,3)\\
+(b) (2, 3, 3, 3, 6, 6, 2, 3, 3, 3, 3, 3)\\
+(c) (2, 3, 6, 3, 6, 3, 2, 3, 3, 2, 6, 3)\\
+(d) (6, 2, 3, 3, 3, 2, 3, 6, 3, 3, 6, 2)\\
+(e) (3, 2, 2, 3, 6, 6, 2, 6, 3, 6, 3, 2)\\
+(f) (3, 2, 2, 3, 6, 6, 3, 6, 2, 6, 2, 3)\\
+(g) (6, 2, 2, 3, 3, 3, 6, 5, 2, 6, 2, 3)\\
+(h) (3, 2, 6, 3, 6, 2, 3, 6, 2, 2, 6, 3)\\
+(i) (4, 2, 2, 4, 4, 4, 2, 4, 4, 4, 4, 2)\\
+(j) (4, 2, 2, 4, 4, 4, 4, 4, 2, 4, 2, 4)\\
+(k) (6, 2, 2, 4, 3, 3, 6, 4, 2, 4, 2, 4)\\
+
+
+We get this lemma only in combinatorical way, so we omit the proof.
+
+In this preview section we introduce that there are 7 types of
+combination of face angles. But here are 11. Ub fact, in case (f), (g),
+(j), and (k), there is no polyhedron with these face-angles. See section 2.4.
+
+\subsection{Constructing hexahedron}
+
+We fix a set($n_{ij}$) of face-angles and consider conformal equivalent
+classes of polyhedra with (P1), (P2), (P3).
+
+In the sequel we suppose that $H = \infty$. (See Figure 3) So the three
+edges $HA, HB, HC$ are straight lines and are parallel to each other. We
+assume that they are perpendicular to xy-plane.
+Let ($x_A, y_B, z_z$), ..., ($x_G, y_G, z_G$) be coordinates of vertices
+A, B, ..., G (except $H$) respectively. Let $A'(x_A, y_A)$, ...,$G'(x_G,
+y_G)$ be projection of these 7 vertices to the xy-plane.
+
+We get immediately that $\angle C'A'B' = \theta_{13}, \angle A'B'C' =
+\theta_{15}, \angle B'C'A'=\theta_{13}$. Remark that $\theta_{13} +
+\theta_{15} + \theta_{35} = \pi$ by Lemma2.3.
+
+Here we may assume that the radius of the circumcircle of $A'B'C'$ is 1,
+that the circumcenter of $A'B'C'$ is $(0, 0, 0)$, and that $A'$ is on
+the x-axis. IF it is not, by a orioer M\"obius transformation(such that
+it fixes the infinity point,) and it is easy to let the polyhedron
+satisfy these conditions. By parallel transformation along z-axis, we
+may assume that $A$ is on xy-plane. (That is, $A = A' and z_A = 0.$)
+
+See Figure 3 again. $O_2, O_4, O_6$ are spheres Let $O_i(x_i, y_i, z_i)$
+and $r_i$ be the center and the radius of $O_i for i = 2, 4, 6.$ About
+the radius, we have the following proposition.
+
+\begin{proposition}
+ \begin{eqnarray}
+ r_2sin\theta_{12} + r_4sin\theta_{14} &=& \overline{AB}^2 / (2\overline{A'B'})\\
+ r_4sin\theta_{45} + r_6sin\theta_{56} &=& \overline{BC}^2 / (2\overline{B'C'})\\
+ r_2sin\theta_{23} + r_6sin\theta_{36} &=& \overline{CA}^2 / (2\overline{C'A'})
+ \end{eqnarray}
+\end{proposition}
+
+\begin{proof}
+ In Figure 5. the edge $AD = e_{12}$ is a circle with radius
+ $r_2sin\theta_{12}$, and the edge $DB e_{14}$ is a circle with radius
+ ($r_4sin\theta_{14}$).
+Two vertical lines $HA$ and $HB$ aare tangent to these circles as in
+ Figure 5,
+ and we have 
+ \begin{eqnarray*}
+  \overline{AD} = 2 r_2 sin\theta_{12} \cdot \overline{A'B'\|}/\overline{AB}
+  \overline{DB} = 2 r_4 sin\theta_{14} \cdot \overline{A'B'\|}/\overline{AB}
+ \end{eqnarray*}
+ Remark that $cos(\angle BAB') =\overline{A'B'}/\overline{AB}.$ Clearly
+ $\overline{AD} + \overline{DB} = \overline{AB}$ holds, so it is easy to
+ show the first formula of Proposition 2.5. Others are shown in the same
+ way.
+
+\end{proof}
+
+\begin{remark}
+ If we regard ($2.A$) as linear equation on $r_2, r_4, r_6$, the
+ coordinate matrix of ($2.A$) is not singular. In fact,
+ \begin{eqnarray*}
+  \left| 
+   \begin{array}{ccc}
+    sin\theta_{12} & sin\theta_{14} & 0\\
+    0              & sin\theta_{45} & sin\theta_{56}\\
+    sin\theta_{32} & 0              & sin\theta_{36}
+   \end{array}
+  \right|
+ \end{eqnarray*}
+ is positive.
+ If we fix three vertices $A, B, C$ then always there are solutions of
+ (2.A), but they may be non-positive. And, if $r_2$ or $r_4$ or $r_6$
+ are too large, ($O_i$) doesn't form a hexahedron. For example, see
+ section 3. In this section, we know that $r_2, r_4, r_6$ are all
+ 'valid' if and only if parameters ($z_B, z_C$) are in the restricted are
+ area
+
+Next, we will obtain the coordinate of the centers of $O_2, O_4, O_6$.
+Let $O_i'(x_i, y_i)$bew a projection of the center of the sphere $O_i$
+ to xy-plane (for i = 2, 4, 6.)
+\end{remark}
+
+\begin{proposition}
+ (1)$\angle O_2'A'B' = \pi/2 - \theta_{12}, \angle
+ O'_2A'C'=\pi/2-\theta_{23}$.
+
+  $\angle O_4'B'A' = \pi/2 - \theta_{14}, \angle O_4'B'C' = \pi/2 -
+ \theta_{45}$.
+
+ $\angle O_6'C'A' = \pi/2 - \theta_{36}, \angle O_6'C'A' = \pi/2 - \theta_{56}$.
+
+ (2)$z_A = z_2 = 0 and \overline{A'O'_2} = \overline{AO_2} = r_2$
+
+ $z_B = z_4 and \overline{B'O'_4} = \overline{BO_4} = r_4$
+
+ $z_C = z_6 and \overline{C'O'_6} = \overline{CO_6} = r_6$
+\end{proposition}
+
+\begin{proof}
+ (1) Since the face-angle of the plane $O_1$ and the sphere$O_2$ is
+ $\theta_{12}$, the angle of a straight line $A'B'$ and a circle with
+ center $O'_2$ and with radius $r_2$ is also $\theta_{12}$. It follows
+ that $\angle O_2'A'B' = \pi/2 - \theta_{12}$(See Figure 6.)
+ 
+ (2) The edge AD - $e_{12}$ is the intersection of a plane $O_1$ and a
+ sphere $O_2$. This edge(= plane circle) is tangent to $AH$ (which is
+ parallel to z-axis) at $A$, so a radius $AO_2$ if the sphere $O_2$ is
+ perpendicular to $AH$. It follows that $z_A=z_2$ and that
+ $\overline{A'O'_2} = \overline{AO_2}$ immediately.
+
+ Using Lemma 2.6(1), we can obtain all coordinates of $O_i$ from
+ $\theta_{ij}$ and $r_i$ and $z_A, z_B, z_C$. In fact, the formula
+ $\angle O'_2, A'B' = \pi/2 - \theta_{12}, \angle O'_{2}A'C' = \pi/2 -
+ \theta_{23}$ means that the center $O_2'$ is a half-line with one
+ endfloat$A'$ as in Figure 6.
+ And $\overline{A'O'_2} = \overline{AO_2} = r_2$ determines $A'$.
+ So $O'_2$ is uniquely determined. From Lemma 2.6(2), we get the
+ z-coordinates $z_2$ of the center $O_2$ from $z_A(=0)$. Hence a sphere
+ $O_2$ is uniquely determined from $\theta_{ij}$'s and positive $r_2$
+ and $z_A(= 0)$.
+\end{proof}
+
+\subsection{Compatibility}
+In this way for given parameters ($z_B, z_C$) such that $r_2, r_4, r_6$
+are all positive, we get the coordinates of three spheres 
+$O_2 O_4, O_6$. But it is not trivial whether the 6-ple($O_1, ..., O_6$) is
+in $\tilde\varepsilon(n_{ij})$. (That is, we have to show that ($O_1,
+..., O_6$) satisfies (P1), (P2), (P3).)
+
+\begin{theorem}
+ Fix $(n_{ij})_(i, j)\in E$(which is one of combination in Lemma 2.4)
+ Fix three vertices ABC. Assume that linear equations (2.A) have
+ positive solutions. Then $O_1, O_3, O_5$ as in Figure 3 and $O_2, O_4,
+ O_6$ as in Proposition 2.6 satisfy followings.
+ \begin{description}
+  \item[(1)] The faace-angle of $O_2$ and $O_4$ (resp. $O_4$ and $O_6$,
+             $O_2$ and $O_6$) is equal to $\theta_{24}$
+             (resp. $\theta{46}$, $\theta_{26}$.)
+  \item[(2)] The intersecrion set of two spheres $O_2$, $O_4$ and a plane
+             $O_1$ consists of only one point. The point is 
+             $D = v_{124}$. Similarly other two vertices $E = v_{245}$
+             and $F = v_{236}$ are uniquely determined.
+  \item[(3)] The intersection set of the three spheres $O_2, O_4, O_6$
+             consists of only one point. The point is $G = v_{246}$.
+             
+  \item[(4)] $(O_1, ..., O_6) \in \tilde\varepsilon(n_{ij}))$.
+\end{description}
+\end{theorem}
+
+\begin{proof}
+ (1) Let $\theta'_{24}$ be the face-angle of $O_2$ and $O_4$. From the
+ law pf cosine, we have
+ \begin{eqnarray}
+  \overline{O_2O_4}^2 = r_2^2 + r_4^2 - 2r_2r_4cos(\pi-\theta'_{24})
+ \end{eqnarray}
+From Figure 7, we get a formula
+\begin{eqnarray*}
+ \overline{O'_2O'_4}^2 = (\overline{A'B'} - r_2sin\theta_{12}-
+  r_4sin\theta_{14})^2 + (-r_2cos\theta_{12} + r_4 cos \theta_{14})^2
+\end{eqnarray*}
+ Remark that $z_2 = z_A= 0, z_4 = z_B$. Then we have
+\begin{eqnarray*}
+ \overline{O_2O_4}^2 &=& \overline{O'_2O'_4}^2 + (z_2-z_4)^2\\
+ &=&\overline{A'B'}^2 + 2 \overline{A'B'}(-r_2sin\theta_{12} -
+  r_4sin\theta_{14}) + r^2_2 + r^2_4 -2r_2r_4cos(\theta_{12} +
+  \theta_{14}) + z^2_B
+\end{eqnarray*}
+Using (2.B) and $\overline{A'B'}^2 + (z_A-z_B)^2 = \overline{AB}^2$,
+\begin{eqnarray*}
+ \overline{AB}^2 + 2\overline{A'B'}(-r_2sin\theta_{12} -
+  r_4sin\theta_{14}) - 2r_2r_4\{\cos(\theta_{12} + \theta_{14}) -
+  \cos(\pi- \theta'_{24})\} = 0
+\end{eqnarray*}
+ $r_2, r_4$ satisfy (2.A) and they are positive, so we obtain
+\begin{eqnarray*}
+ \cos(\theta_{12} + \theta_{14}) = \cos(\pi - \theta'_{24})
+\end{eqnarray*}
+From Lemma 2.3, $\theta_{12} + \theta_{14} + \theta_{24} = \pi$. It
+ follows that $\theta_24 = \theta'_24$. In the same way $\theta_{46}$
+ (resp.$\theta{26}$)is equal to the face-angle of $O_4$and $O_6$(resp
+ $O_2$ and $O_6$.)
+
+(2) First we show that two edges $e_{12}$ and $e_{14}$ are mutually tangent
+ on $O_1$. The radius of $e_{12}$(resp. $e_{14}$) is
+ $r_2\sin\theta_{12}$ (resp. $r_4\sin\theta_{14}$). Let $d$ be the
+ distance between two centers of two circles $e_{12}$, $e_{14}$. See
+ Figure 8.
+
+We have
+ \begin{align*}
+d^2&= (\overline{A'B'} - r_2\sin\theta_{12}-r_4\sin\theta_{14})^2 + \overline{BB'}^2\\
+&= (\overline{A'B'} - \overline{AB}/(2\overline{A'B'}))^2 + \overline{BB'}^2\\
+&= \overline{A'B'}^2 - \overline{AB}^2 +\overline{AB}^4/(4\overline{A'B'}^2) + \overline{BB'}^2\\
+&=(r_2\sin\theta_{12} + r_4\sin\theta_{14})^2\\
+d&= r_2\sin\theta_12 + r_4\sin\theta_{14}
+ \end{align*}
+It means that $e_{12}$ and $e_{14}$ are mutually tangent.
+
+Next we will show that the edge $e_{24}$ is tangent to both of $e_{12}$ and
+ $e_{14}$. Assume that it is not. Then $e_{24}$ intersects to $O_1$
+ twice.
+(Remark that the tangent point of $e_{12}$ and $e_{14}$ is also on the
+ circle $e_{24}$.) But all intersection points of $e_{24}$ and $O_1$ are
+ on $e_{12}$ and $e_{14}$ by definition. This contradicts to the fact
+ that $e_{12}$ is tangent to $e_{14}$. So the edge $e_{24}$ is tangent
+ to both of $e_{12}$ and $e_{14}$. Similarly we will show it about $E$
+ and $F$.
+
+(3) Let $\alpha$ be a plane containing 3 centers $O_2, O_4, O_6$. Let
+ $C_2, C_4, C_6$ be three circles on $\alpha$ such that $C_i$ is the
+ intersection of the sphere $O_i$ and the plane $\alpha$. ($i=2, 4, 6$.)
+Let R be the radical point of $C_2, C_4, C_6$. There are three cases
+ here.
+(i) $R$ us inside if $C_2, C_4, C_6$.(ii) R is outside $C_2, C_4, C_6$.
+(iii)$R$ is on $C_2, C_4, C_6$. (See Figure 9)
+
+In the case (i), let three points $S_{24}, S_{46}, S_{26}$ be as in Figure
+ 9 (left). Here we have $\angle O_2 S_{24} O_4 = \pi - \theta_{24}$,
+because their face-angle of $O_2$ and $O_4$is $\theta_{24}$.
+In the same way, $\angle O_4\theta_{46}O_6 = \pi - \theta_{46}$ and
+$\angle O_2S_{26}O_6 = \pi-\theta_{26}$ hold. Hence
+
+\begin{align*}
+ \angle O_2 S_{24} O_4 + \angle O_4 S_{46} O_6 + \angle O_2 S_{26} O_6 = 3\pi -
+ \theta_{24} - \theta_{46} - \theta_{26} = 2\pi.
+\end{align*}
+
+On the other hand, from Figure 9 (left)
+
+\begin{align*}
+ \angle O_2 S_{24} O_4 &< \angle O_2 R O_4
+ \angle O_2 S_{24} O_4 &< \angle O_2 R O_4
+ \angle O_2 S_{24} O_4 &< \angle O_2 R O_4
+\end{align*}
+and
+\begin{align*}
+ \angle O_2 R O_4 + \angle O_4 R O_6 + \angle O_2 R O_6 = 2\pi
+\end{align*}
+This is a contradiction. So this case cannnot happen. In the same way,
+ the case (ii) cannnot happen. These follow that the radical point $R$
+ is on the intersection of 3 circles $C_2, C_4, C_6.$ this means that
+ $R$ isthe unique intersection of 3 spheres $O_2, O_4, O_6$. this must
+ $G$.
+
+(4) The 6-pre($O_1, ..., O_6$ satisfies (P1) by definition.
+
+(P2): For (i, j) = (1, 3), (3, 5), (1, 5), it is good because we first
+ take a triangle prism (consisting of $O_1, O_3, O_5$) with face-angles
+ $\theta_{13}, \theta_{35}, \theta_{15}.$ For (i, j) = (1, 2)
+, (1, 4), (4, 5), (5, 6), (2, 3), (3, 6), it is good from Lemma2.6. In
+other cases, it is goodfrom Theorem 2.7(1).
+
+(P3): At $H = \infty, AH, BH, CH$ are parallel lines so they are tangent
+ at $\infty$. At $D, R, F, G,$ we have shown it in Theorem 2.7(2)(3)
+\end{proof}
+
+\subsection{Parameter space}
+In this subsection we first consider in the case that $n_{ij} = 3$ for all
+$(i, j) \in E$. (That is, in case (a) in Lemma 2.4.) There are 11 cases
+in Lemma 2.4. The case (a) is not a special case, amd we can make
+similar observation in other cases.
+The linear equations (2.A) are:
+\begin{align*}
+ r_2 + r_4 &= (3 + z_B^2) / 3 \\
+ r_4 + r_6 &= (3 + (z_B^2 - z_C)^2 ) / 3 \\
+ r_2 + r_6 &= (3 + z_C^2) / 3
+\end{align*}
 
 \section{Visualization}
 We use ray tracing technique.
