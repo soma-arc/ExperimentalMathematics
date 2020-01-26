@@ -79,10 +79,16 @@ Sciences, Meiji University, Tokyo, Japan;
 
  We are interested in finding examples of quasi-fuchsian subgroup of
  M\"ob$(S^3)$, the group of orientation preserving M\"obius
- transformations on $S^3$. In thiws article we consider a new problem of
+ transformations on $S^3$. In this article we consider a new problem of
  Euclidian geometry about polyhedra with spherical faces and we obtain
  interesting examples of quasi-fuchsian groups and pictures of fractal
  2-spheres.
+
+ Usually, rendering image of the fractals takes much time.
+ We use an original algorithm Iterated Inversion System (IIS.)
+ We can render the images of fractals in real-time.
+ In this paper we focus visualized images.
+ We find mathematical problem from rendered images.
 \end{abstract}
 
 \begin{keywords}
@@ -96,6 +102,25 @@ mathematics; visualization; fractals; Kleinian groups; circle inversion;
 この論文の立ち位置を明示する．
 パラメータ空間の境界でなにがおこるか予想
 図からよみとれることがあればよい
+
+After Kazushi Ahara and Yoshiaki Araki published
+We write \cite{bridges2018}
+real-time rendering technique and 
+Artistical perspective.
+In this article, we discuss mathematical properties of
+sphairahedra and its limit set.
+
+In 2003 after they publish a 4 page paper \cite{}.
+を出版しただけであったが，フラクタルアートに興味のあった者達には
+初めて見る複雑性をもつ三次元のフラクタル構造であったため，コミュニティの
+興味をひいた．
+数学的には一部の球面体をRyo Kageyamaが追実験している．
+
+The parameter space difference from other fractals it is not fractal
+structure. Maskit parametrization or julia set have parameter spaces
+with fractal structures.
+この論文はsphairahedron, quasi-fuchsian fractalsを数学的に考察する論文で
+ある．
 
 We are interested in finding examples of quasi-fuchsian sub-group of
 M\"ob$_{+}(S^3)$, the  group of orientation preserving M\"obius
@@ -141,7 +166,7 @@ initial circles are disjoint or tangential or intersecting  by angle
 $\pi/n$ for $n \in N$. Then a subgroup $G$ which is defined by a set of
 all even-length-elements of $\tilde G$ is well-defined.
 
-In this article we consideran extension of kissing Schottky groups and
+In this article we consider an extension of kissing Schottky groups and
 Coxeter-like groups to M\"ob($A^3$). In order to do that, we have to
 obtain a set of initial spheres (instead of 'initial circles') with some
 conditions. In fact, the following new problem of Eucliduan geometry is
@@ -178,7 +203,7 @@ structure as that if cybe. (Hence the number of the initial spheres is
  dimensional.
 \end{theorem}
 
-Onve we have a polyhedron $P$ with the above conditions, we may consider
+Once we have a polyhedron $P$ with the above conditions, we may consider
 a Coxeter-like subgroup $G=G(P)$ of M\"ob$_+(S^3)$. Through proving this
 theorem, we obtain that for each combination of face angles, there is a
 polyhedron such that the limit set $\Lambda{G}$ is a round sphere. So,
@@ -190,6 +215,7 @@ This paper is organized as follows. In this section2 we will show the
 above theorem. We also see many more pictures of fractal spheres in the
 web site [Ahara and Araki 2002]. In the section 4 we consider other type
 of polyhedra and show a similar theorems.
+
 \section{Hexahedron of cube type with spherical faces}
 We will formulate hexahedron of cube type in $S^3 = R^2 \cup \{\infty\}$.
 First ket $E$ be a set of edges if hexahedron of cube type. That is,
@@ -833,12 +859,20 @@ We may consioder the same problem for other polyhedra. Here is a list of
 pentahedra and hexahedra with the number of combination of face-angles
 and the dimension of $\tilde{\varepsilon}(n_{ij})$.
 
+
+
 \section{Visualization}
 We use ray tracing technique.
 Ray marching
 See also \cite{bridges2018}
-3D print
+3D print？
+
+semi-sphairahedron. It is not quasi-fuchsian group.
+
 \section{Problems}
+極限集合の腕がのび，違うタイルと重なるとき，非離散的であるが，
+重なりはpi/nになる．
+
 \section{Summary \& Future Work}
 
 Kazushi Ahara and Yoshiaki Araki invented a new geometrical concept
@@ -882,13 +916,18 @@ is a union of the spheres.
 (阿原・荒木がやったこと)
 Yoshiaki Araki and Kazushi Ahara found Sphairahedron in 2003.
 It is extension of two dimensional tessellation of circles.
-円辺形を拡張した図形である球面体を用いる．
 cubeタイプのパラメータに関して計算を行ない，パラメータスペースを求めた．
 その求め方の論文は出版されていない．
 球面体そのものでなく，球面体を含む球の和集合に群を作用させることによっても
 quasi-sphereを得ることができる．その証明は...
-立方体をベースにした球面体群の分類問題を扱った．
+The quasi-sphere can be obtained by applying the group to sum of
+spheres, not sphairahedra themselves.
+The proof of the this theorem ... ....
+classification problems besed on cube type hexahedron.
+
 今回はレンダリングされた図から得られた数学的問題を解決する
+In this case, we solve the mathematical problems obtained from rendered
+images.
 
 Kazushi Ahara prooved that the limit set of the sphairahedra
 is a union of the spheres.
@@ -897,14 +936,15 @@ is a union of the spheres.
 In 2016 Ryo Kageyama had supplementary examination in his master thesis.
 He calculate parameter space of the cube type sphairahedron.
 三次元でレンズ空間を考えた．
-阿原・荒木と別にcubeタイプのパラメータスペースを求めた
-日本語論文である
+He also calculate the parameter space of the cube-type sphairahedra
+apart from Ahara and Araki.
+However his thesis is written in Japanese.
 
 (中村がやったこと)
 球面体群の可視化は長らく時間のかかる処理であった．
 IISによってリアルタイムに可視化することができるようになった．
 Visualize sphairahedron(semi-sphairahedron)-based fractals in real time.
-The limit set is many spheres touching each other and,
+The limit set of semi-sphairahedron is many spheres touching each other and,
 and it becomes not Fuchsian group,
 準球面体の可視化にも成功した．
 semi-sphairahedronの極限集合は球が多数接した形状になっており，フックス群
