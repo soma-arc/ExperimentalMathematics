@@ -124,6 +124,14 @@ mathematically.
 この論文はsphairahedron, quasi-fuchsian fractalsを数学的に考察する論文で
 ある．
 
+We call them sphairahedra. sphairahedron is a coined word combining two
+words sphaira- (a prefix that means ’spherical’) and -hedron (a suffix
+comes from ’polyhedron.’)
+
+The union of all the tiles
+is mostly homeomorphic to a three-dimensional ball. Thus, this is called
+a quasi-sphere. 
+
 We are interested in finding examples of quasi-fuchsian sub-group of
 M\"ob$_{+}(S^3)$, the  group of orientation preserving M\"obius
 transformation on $S^3 = R^3 \bigcup \{\infty\}$. For a subgroup $G$ of
@@ -296,7 +304,7 @@ Hence the four vertices lie on one plane in $R^3$.
 \end{proof}
 
 \begin{lemma}
- Eight vertices ofr a polyhedron of cube type lie on the same sphere.
+ Eight vertices of a polyhedron of cube type lie on the same sphere.
 \end{lemma}
 
 \begin{proof}
@@ -861,18 +869,119 @@ We may consioder the same problem for other polyhedra. Here is a list of
 pentahedra and hexahedra with the number of combination of face-angles
 and the dimension of $\tilde{\varepsilon}(n_{ij})$.
 
+In the cube type polyhedra, Kazushi Ahara and Yoshiaki Araki
+verify the parameter space, and Ryo Kageyama do further experiment in
+his master thesis\cite{kageyama}. 
 
+Yoshiaki Araki and Kazushi Ahara found Sphairahedron in 2003.
+It is extension of two dimensional tessellation of circles.
+cubeタイプのパラメータに関して計算を行ない，パラメータスペースを求めた．
+その求め方の論文は出版されていない．
+球面体そのものでなく，球面体を含む球の和集合に群を作用させることによっても
+quasi-sphereを得ることができる．その証明は...
+The quasi-sphere can be obtained by applying the group to sum of
+spheres, not sphairahedra themselves.
+The proof of the this theorem ... ....
+classification problems besed on cube type hexahedron.
+
+We visualize other sphairahedra and 
+
+今回はレンダリングされた図から得られた数学的問題を解決する
+In this case, we solve the mathematical problems obtained from rendered
+images.
 
 \section{Visualization}
+There are two methods of visualization. 
+We can obtain quasi-sphere from applying group to sum of the spheres
+including sphairahedra.
+The proof of the fact is ...
+
 In order to visualize these fractal objects using a computer,
 We use ray tracing technique.
-we have t0 compute infinite number of sphairahedra.
-Ray marching
-Iterated Inversion System (IIS.)
-See also \cite{bridges2018}
-3D print？
+we have to compute coordinates of center and radius and infinite number
+of sphairahedra, and it takes much time.
+
+Therefore we developed an algorithm to render fractals based on
+inversions. It is called Iterated Inversion System (IIS) and sphere
+tracing, that is, a kind of ray tracing technique.
+For more details, see also \cite{bridges2018}.
 
 semi-sphairahedron. It is not quasi-fuchsian group.
+
+Visualize sphairahedron(semi-sphairahedron)-based fractals in real time.
+The limit set of semi-sphairahedron is many spheres touching each other and,
+it becomes not Fuchsian group,
+準球面体の可視化にも成功した．
+semi-sphairahedronの極限集合は球が多数接した形状になっており，フックス群
+でなくなる．
+The limit set of the semi-sphairahedron
+Kento Nakamura compute parameter spaces for other sphairahedra.
+別の立体におけるパラメータ表示を計算し，新たな形状を見ることができた
+
+
+Yoshiaki Araki and Kazushi Ahara found Sphairahedron in 2003.
+It is extension of two dimensional tessellation of circles.
+cubeタイプのパラメータに関して計算を行ない，パラメータスペースを求めた．
+その求め方の論文は出版されていない．
+その証明は...
+The quasi-sphere can be obtained by applying the group to sum of
+spheres, not sphairahedra themselves.
+The proof of the this theorem ... ....
+classification problems besed on cube type hexahedron.
+
+今回はレンダリングされた図から得られた数学的問題を解決する
+In this case, we solve the mathematical problems obtained from rendered
+images.
+
+\subsection{Observation of images}
+
+\subsection{Three-dimensional Printing}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=2in, keepaspectratio]{./img/sphairahedron/3dprint/mono1.jpg}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=2in, keepaspectratio]{./img/sphairahedron/3dprint/mono2.jpg}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{\textit{Monochrome printing by Makerbot Replicater Z18 with PLA resin.}}
+  \label{fig:3dmono}
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=2in, keepaspectratio]{./img/sphairahedron/3dprint/col1.jpg}
+   \subcaption{\textit{Plaster}}
+   \label{fig:3dcolPlaster}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=2in, keepaspectratio]{./img/sphairahedron/3dprint/col2.jpg}
+   \subcaption{\textit{Plastic}}
+   \label{fig:3dcolPlastic}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{\textit{Full-colored printing by DMM.make 3D print.}}
+  \label{fig:3dcol}
+\end{figure}
+
+Yoshiaki Araki also tried to materialize these fractals in 2006
+\cite{araki2006materializing}.
+
+By three-dimensional printing 
+このように，プリントすることによって，レンダリングでみることのできない
+角度からもフラクタルを観察することができる．
+単色プリンタとカラープリンタによる3Dプリントを行った．
+フラクタルとその対称性を肌で感じることができる．
+We feel on the skin
+fractal structures and its symmetry.
 
 \section{Problems}
 極限集合の腕がのび，違うタイルと重なるとき，非離散的であるが，
@@ -888,92 +997,11 @@ It may be discrete group of the group.
 So, the parameter space of the ideal rational sphairahedron has outer
 parameter space, but we don't know it is points, lines, or regions.
 
-\section{Summary \& Future Work}
-
-Kazushi Ahara and Yoshiaki Araki invented a new geometrical concept
-called a \textit{sphairahedron}.
-
-Visualization of a quasi-sphere takes long time.
-We developed an algorithm to render this kind of fractals fast
-\cite{bridges2018}.
-It is called \textit{Iterated Inversion System (IIS)}.
-
-In this paper, we briefly introduce sphairahedron and its rendering
-technique.
-Next, we show problems found by viewing masthematical problems.
-We find mathematical problems and solve the problems.
-
-\section{Other Polyhedra}
-
-In the cube type polyhedra, Kazushi Ahara and Yoshiaki Araki
-verify the parameter space, and Ryo Kageyama do further experiment in
-his master thesis\cite{kageyama}. 
-
-章立て
-Introduction 球面体群について．これまでの研究成果について阿原・荒木
-(classification problem)，蔭山の成果
-Preparation 球面体の定義など 離散的，非離散的について 理想的かつ有理的
-Visualization 可視化方法について
-Problems (Propositions) 図を見ることで考察することのできる数学的問題を提起，解決
-Summary \& Future work 解決したこと，未解決問題のまとめ
-
-単連結な部分が0のときはどうする？ 最初から抜いておく？
-
-\cite{bridges2018}では，球面体の定義とその図像の豊かさについて論じた．
-
-
-Kazushi Ahara prooved that the limit set of the sphairahedra
-is a union of the spheres.
-
-球面体の定義
-二次元における円辺形によるフラクタル(クライン群)について
-
-(阿原・荒木がやったこと)
-Yoshiaki Araki and Kazushi Ahara found Sphairahedron in 2003.
-It is extension of two dimensional tessellation of circles.
-cubeタイプのパラメータに関して計算を行ない，パラメータスペースを求めた．
-その求め方の論文は出版されていない．
-球面体そのものでなく，球面体を含む球の和集合に群を作用させることによっても
-quasi-sphereを得ることができる．その証明は...
-The quasi-sphere can be obtained by applying the group to sum of
-spheres, not sphairahedra themselves.
-The proof of the this theorem ... ....
-classification problems besed on cube type hexahedron.
-
-今回はレンダリングされた図から得られた数学的問題を解決する
-In this case, we solve the mathematical problems obtained from rendered
-images.
-
-Kazushi Ahara prooved that the limit set of the sphairahedra
-is a union of the spheres.
-
-(蔭山さんがやったこと)
-In 2016 Ryo Kageyama had supplementary examination in his master thesis.
-He calculate parameter space of the cube type sphairahedron.
-三次元でレンズ空間を考えた．
-He also calculate the parameter space of the cube-type sphairahedra
-apart from Ahara and Araki.
-However his thesis is written in Japanese.
-
-(中村がやったこと)
-球面体群の可視化は長らく時間のかかる処理であった．
-IISによってリアルタイムに可視化することができるようになった．
-Visualize sphairahedron(semi-sphairahedron)-based fractals in real time.
-The limit set of semi-sphairahedron is many spheres touching each other and,
-and it becomes not Fuchsian group,
-準球面体の可視化にも成功した．
-semi-sphairahedronの極限集合は球が多数接した形状になっており，フックス群
-でなくなる．
-The limit set of the semi-sphairahedron
-Kento Nakamura compute parameter spaces for other sphairahedra.
-別の立体におけるパラメータ表示を計算し，新たな形状を見ることができた
-
-可視化によって見えること
-Ahara Arakiによって計算されたパラメータスペースの外側にも
-離散的になるパラメータが混在してい可能性がある．
-それは点か，曲線か，領域か，わかっていない
-There may be parameters which is discrete.
-We don't know it is point, curved line, or regions.
+図を観察して こういうことができるという主張
+パラメータ空間の形状はフラクタル形状がない
+パラメータスペースが連結
+The shape of the parameter space is not fractal structures.
+The parameter space is connected.
 
 ビジュアライズされて図から読みとれること
 固定点付近は収束が遅いこと
@@ -989,7 +1017,6 @@ patterns, but it is difficult to compute them
 because there must not be vertexes connecting to five or more edges.
 Because pi / n (n >= 5)は360 /  となるkが存在しないため．
 
-
 (まだできていないこと)
 Find mathematical property of the fractals.
 実験が必要？
@@ -998,18 +1025,41 @@ Find mathematical property of the fractals.
 The limit set of the semi-sphairahedron is not known.
 However, we visualize semi-sphairahedron and its tessellation.
 
-図を観察して こういうことができるという主張
-パラメータ空間の形状はフラクタル形状がない
-パラメータスペースが連結
-The shape of the parameter space is not fractal structures.
-The parameter space is connected.
-
 ゴーストサークルの概念が三次元にもある
 ゴーストスフィア
 We call ghost circle. In the three-dimensional space, there are ghost
 sphere formed by limit set.
 There are ghost spheres.
 
+
+\section{Summary \& Future Work}
+
+Kazushi Ahara and Yoshiaki Araki invented a new geometrical concept
+called a \textit{sphairahedron}.
+
+Visualization of a quasi-sphere takes long time.
+We developed an algorithm to render this kind of fractals fast
+\cite{bridges2018}.
+ It is called \textit{Iterated Inversion System (IIS)}.
+
+In this paper, we briefly introduce sphairahedron and its rendering
+technique.
+Next, we show problems found by viewing masthematical problems.
+We find mathematical problems and solve the problems.
+
+Not only fascinate us, they are discovery of mathematical problem
+and one of the clue of solution.
+我々の目を楽しませるだけでなく，数学的な問題の発見や解決の糸口の一つとな
+る．
+\section{Other}
+
+章立て
+Introduction 球面体群について．これまでの研究成果について阿原・荒木
+(classification problem)，蔭山の成果
+Preparation 球面体の定義など 離散的，非離散的について 理想的かつ有理的
+Visualization 可視化方法について
+Problems (Propositions) 図を見ることで考察することのできる数学的問題を提起，解決
+Summary \& Future work 解決したこと，未解決問題のまとめ
 
 \begin{thebibliography}{99}
 \bibitem{AharaAraki}
@@ -1027,5 +1077,9 @@ There are ghost spheres.
         蔭山亮, 
         \emph{円辺形ち球面体の変形空間及び極限集合},
         Master thesis, 2016
+\bibitem{araki2006materializing}
+        Yoshiaki Araki,
+        \emph{Materializing 3D quasi-Fuchsian fractals},
+        In: Forma 21.1 (2006), pp. 19–27.
 \end{thebibliography}
 \end{document}
