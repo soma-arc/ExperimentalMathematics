@@ -133,48 +133,88 @@ sphere.
 Moreover, we can make a tiling pattern of sphairahedra using inversions
 of each spherical faces. In many cases, the boundary of the tiling
 patterns converges to three-dimensional beautiful fractal structure. 
+The union of all the tiles is mostly homeomorphic to a three-dimensional
+ball. Thus, this is called a \textit{quasi-sphere}.
 
 In spite of innovative idea, there are few publications
 \cite{AharaAraki}\cite{AharaJa}.
-However, after Ahara and Araki publish 
-, but stop the research of the sphairahedra.
+After Ahara and Araki publish two articles, the research of the
+sphairahedra stop. 
+One of the reasons is that it takes too much time to render the image of
+the quasi-sphere with the computer in those days.
 
 After that Ryo Kageyama perform further experiment of
-cube-type sphairahedron \cite{kageyama}, and he use lens space.
+cube-type sphairahedron in his master thesis \cite{kageyama}, and he use
+lens space. 
+レンズとよばれる概念を導入し，検証を行った．
 
 In 2017, breakthrough is came out. We develop an algorithm called
-\textit{Iterated Inversion System (IIS)} and \textit{Sphere tracing}, a
-kind of ray tracing technique.
-Combining IIS and Sphere tracing are experiment
+\textit{Iterated Inversion System (IIS.)}
+Combining IIS and \textit{Sphere tracing}, a kind of ray tracing
+technique, we can render image of quasi-sphere in real time.
 
+IIS can be used to render fractals based on circle or sphere inversions.
+\cite{bridges2016}\cite{bridges2017}
 
+The previous paper is focused on the artistical perspective.
+In this article we introduce mathematical details,
+problems, and its solutions. 
 
-After Kazushi Ahara and Yoshiaki Araki published
-We wrote \cite{bridges2018}.
-In the paper, real-time rendering technique and 
-discuss the fractal from Artistical perspective.
-In this article, we discuss mathematical properties of
-sphairahedra and its limit set.
+There are pictures of three-dimensional, so it is hard to see whole
+appearance only by them. We can see more pixtures and more movies in the
+our web-site\footnote{\url{https://sphairahedron.net}}.
+\subsection{Sphairahedron}
 
-Ryo kageyama and further experiment in
-his master thesis\cite{kageyama}.
+We will describe the simple definition of a sphairahedron. 
+First of all, we will describe the definition of a sphairahedron.
+Let $S^3 = R^3 \cup \{\infty\}$ be a three-dimensional sphere and let
+$\overline{D_1},~\overline{D_2},~...,~\overline{D_p}$ be some
+three-dimensional closed balls.
+We consider the complement $A$ of the union of these balls, that is,
+$A = S^3 - (\overline{D_1} \cup \overline{D_2} \cup ... \cup \overline{D_p})$.
+If $A$ is composed of simply-connected two components;
+in other words, $A$ has two connected components and the first homology
+group of each component is trivial, we call one side of $A$
+a sphairahedron.
 
-In this paper we focus pure mathematical viewpoint.
+The image in Figure \ref{}\subref{}
+is an example of $A$.
+We hollow out the $S^3$ with six balls: we remove three half space
+(three balls with infinite radius,) from $S^3$ and obtain the prism of
+infinite length, and we scoop out the prism by the remaining
+three-colored transparent balls as in Figure \ref{}\subref{}.
+$A$ is composed of two parts, and each of the components is simply connected.
+Since it has six faces, and these faces are arranged as those of faces of
+a cube, it is called a cube-type sphairahedron.
+Especially, the sphairahedron shown in Figure \ref{}\subref{}
+is also called an \textit{infinite type sphairahedron},
+because one of the vertices of the sphairahedron is at the infinity.
+Similarly, the shape hollowed out by six finite balls in Figure
+\ref{}\subref{} is called a
+\textit{finite type sphairahedron}.
 
-In 2003 after they publish a 4 page paper \cite{AharaAraki}.
+Moreover, we can loosen the definition of sphairahedron,
+that is, the case $A$ has simply connected three or more components.
+Figure \ref{}\subref{} shows an
+example of $A$ with simply connected three components.
+It is the $S^3$ scooped out by five balls and a pentahedral prism type
+sphairahedron.
+We divide $A$ so that one part of $A$ has five faces as shown in
+Figure \ref{}\subref{}.
+We can regard the resulting shape as a singular case of a pentahedron,
+and we call it a \textit{semi-sphairahedron}.
+When Ahara, Araki and Kageyama did not deal with semi-sphairahedron and
+did not render its tiling patterns.
 
-In this paper, we consider sphairahedra and quasi-fuchsian fractals
-mathematically.
+When the sphairahedron is not discrete, the sphairahedron is broken.
+For example, unnecessary hole and so on.
+See Figure \ref{}. It shows broken sphairahedron.
 
-We call them sphairahedra. sphairahedron is a coined word combining two
-words sphaira- (a prefix that means ’spherical’) and -hedron (a suffix
-comes from ’polyhedron.’)
+In the following section, we introduce more mathematical definitions of
+derivation of sphairahedron and its parameter space.
+\subsection{Mathematical Introduction}
+In the following sections, we introduce sphairahedron and its parameter space.
 
-The union of all the tiles
-is mostly homeomorphic to a three-dimensional ball. Thus, this is called
-a quasi-sphere. 
-
-\subsection{}
 We are interested in finding examples of quasi-fuchsian sub-group of
 M\"ob$_{+}(S^3)$, the  group of orientation preserving M\"obius
 transformation on $S^3 = R^3 \bigcup \{\infty\}$. For a subgroup $G$ of
@@ -230,12 +270,14 @@ one of good approaches.
  the following conditions.
  \begin{description}
   \item[Condition 1:] Each face of a polyhedron is a sphere in $S^3$.
-  \item[Condition 2:] For each edge, the face-angle equals to $\pi/n$
+  \item[Condition 2 (rationality):] For each edge, the face-angle equals to $\pi/n$
              for a natural number n.
-  \item[Condition 3:] For each vertex, edges with the vertex are
+  \item[Condition 3 (ideality):] For each vertex, edges with the vertex are
              mutually tangent at the vertex.
  \end{description}
 \end{problem}
+
+In the following sections, we derive rational ideal sphairahedron.
 
 Usually a polyhedron has a planer faces. But easily we can consider an
 extension of polyhedron such that the faces are a part of a
@@ -245,12 +287,12 @@ spheres. Easily we can consider a Coxeter-like group generated by the
 inversions of them.
 
 In this article we first consider a polyhedron with the same cellular
-structure as that if cybe. (Hence the number of the initial spheres is
+structure as that if cube. (Hence the number of the initial spheres is
 6.) And we have the following result.
 
 \begin{theorem}
- If a polyhedronn with the above conditions is of cube-type (that is,
- the one skeleton of the polyhedron is sane as tgat if a cube,) then
+ If a polyhedron with the above conditions is of cube-type (that is,
+ the one skeleton of the polyhedron is same as that of a cube,) then
  there are 7 combinations of face-angles. For each combination of
  face-angles, a set if conformal equivalent classes of polyhedra is two
  dimensional.
@@ -531,7 +573,7 @@ in $\tilde\varepsilon(n_{ij})$. (That is, we have to show that ($O_1,
  positive solutions. Then $O_1, O_3, O_5$ as in Figure 3 and $O_2, O_4,
  O_6$ as in Proposition 2.6 satisfy followings.
  \begin{description}
-  \item[(1)] The faace-angle of $O_2$ and $O_4$ (resp. $O_4$ and $O_6$,
+  \item[(1)] The face-angle of $O_2$ and $O_4$ (resp. $O_4$ and $O_6$,
              $O_2$ and $O_6$) is equal to $\theta_{24}$
              (resp. $\theta{46}$, $\theta_{26}$.)
   \item[(2)] The intersecrion set of two spheres $O_2$, $O_4$ and a plane
@@ -793,10 +835,6 @@ previous section, the limit set contains a infinity point $\infty$. So
 we transform $\O_1, ..., O_6$ by an inversion of a proper sphere in
 order to make $\Gamma(G)$ doesn;t contain the infinity point.
 
-These are pictures of three-dimensional set, so it is hard to see whole
-appearance only by them. We can see more pixtures and more mocies in the
-web-site [Ahara and Araki 2002].
-
 Only when $(z_B, z_C) =(0, 0), \Delta(G)$ is a round sphere and hence
 $G$ is fuchsian. In order cases we get a homotopy to the case 
 $(z_B, z_C) = (0, 0)$, we know that $G$ is quasi-fuchsian.
@@ -907,7 +945,226 @@ In other cases (b),...,(j), we don't have a similar result. Three
 segments $AR, BF, CD$ meets at one point only in case (a), (f), (j), but
 there isn't a parameter space in cases (f) nor (j).
 
+\subsubsection{Construct Fractal}
+
+In Figure \ref{} we show a process of the tiling of
+sphairahedra.
+The sphairahedron presented in Figure
+\ref{}\subref{} has six spherical
+faces.
+We apply inversions in each spherical face to original sphairahedron,
+and we obtain new six sphairahedra surrounding the initial sphairahedron
+as shown in Figure
+\ref{}\subref{}.
+Next, we apply inversions in each of the new faces to the new sphairahedra,
+and we obtain more sphairahedra.
+We continue iterating inversions, and finally, we get a three-dimensional
+fractal shape as presented in Figure
+\ref{}\subref{}.
+
+Also, an infinite type sphairahedron can be tiled as presented in Figure
+\ref{}.
+The pattern converges to fractal terrain owing to reflections over side
+faces of the sphairahedron as shown in Figure \ref{}.
+In the fractal terrain, we can find symmetry easily.
+For example, we can see hexagram-like terrain patterns in Figure
+\ref{}.
+These patterns are originated from the dihedral angles of the side faces of
+$\pi / 3$.
+
+In the same way as the tiling of the sphairahedron, a semi-sphairahedron
+can be tiled by the inversions about its faces.
+The resulting fractal of the semi-sphairahedron is different from normal
+sphairahedron's one.
+Figure \ref{} shows the pattern
+generated by an infinite semi-sphairahedron shown in Figure 
+\ref{}.
+It is the union of an infinite number of balls
+circumscribing each other and no longer homeomorphic
+to a three-dimensional ball.
+Thus, It is not a quasi-sphere or a quasi-fuchsian.
+We will describe more about a tiling pattern of a semi-sphairahedron later.
+
+In the images of fractals within this paper, each tile of the
+sphairahedra is colored according to the
+number of inversions.
+We use the color wheel to determine their color,
+and the tile's color varies in order of red, yellow, green, and blue.
+In Figure \ref{}\subref{} $\sim$
+\subref{} and
+Figure \ref{}\subref{}
+$\sim$ \subref{}，
+we refer color wheel with large steps to visualize each tile clearly.
+On the other hand, in the other images, we refer the wheel with smaller
+steps, and we find lots of tiles with many inversions in the blue
+parts of the fractal.
+We can also find that the blue parts themselves form the constant
+patterns.
+For instance, see Figure \ref{} and Figure \ref{}.
+The blue parts are on the vertexes of sphairahedron.
+
+Up to this point, We showed tiling patterns without gaps between the tiles and
+intersections of the tiles.
+However, not every sphairahedra can generate such proper tiling patterns.
+To obtain them, we have to consider two mathematical properties
+of the original sphairahedron, that is, the sphairahedron should be
+ideal and rational.
+In the next section, we will introduce these properties.
+
 \section{Other polyhedra}
+
+\begin{figure}[H]
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/tetrahedron/sphairahedronFinite.png}
+   \subcaption{\textit{Sphairahedron}}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitsetFinite.png}
+   \subcaption{\textit{Limit set}}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{\textit{Finite tetrahedron type.}}
+  \label{fig:tetrahedronFinite}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/tetrahedron/sphairahedronInf.png}
+   \subcaption{\textit{Sphairahedron}}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitsetInf.png}
+   \subcaption{\textit{Limit set}}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{\textit{Finite pentahedral pyramid type.}}
+  \label{fig:tetrahedronInf}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/sphairahedronFinite.png}
+   \subcaption{\textit{Sphairahedron}}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/limitsetFinite.png}
+   \subcaption{\textit{Limit set}}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{\textit{Finite tetrahedron type.}}
+  \label{fig:pentahedralPyramidFinite}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/sphairahedronInf.png}
+   \subcaption{\textit{Sphairahedron}}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/limitsetInf.png}
+   \subcaption{\textit{Limit set}}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{\textit{Finite pentahedral pyramid type.}}
+  \label{fig:pentahedralPyramidInf}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/sphairahedronFinite.png}
+   \subcaption{\textit{Sphairahedron}}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/limitsetFinite.png}
+   \subcaption{\textit{Limit set}}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{\textit{Finite tetrahedron type.}}
+  \label{fig:pentahedralPyramidFinite}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/sphairahedronInf.png}
+   \subcaption{\textit{Sphairahedron}}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/limitsetInf.png}
+   \subcaption{\textit{Limit set}}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{\textit{Finite pentahedral pyramid type.}}
+  \label{fig:pentahedralPyramidInf}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/sphairahedronFinite2.png}
+   \subcaption{\textit{Sphairahedron}}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/limitsetFinite2.png}
+   \subcaption{\textit{Limit set}}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{\textit{Finite tetrahedron type.}}
+  \label{fig:pentahedralPyramidFinite}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/sphairahedronInf2.png}
+   \subcaption{\textit{Sphairahedron}}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/limitsetInf2.png}
+   \subcaption{\textit{Limit set}}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{\textit{Finite pentahedral pyramid type.}}
+  \label{fig:pentahedralPyramidInf}
+ \end{minipage}
+\end{figure}
+
+Tetrahedron has one type of combination of vertexes and edges.
+It is sphere and plane.
+It generate 
+
+Pentahedron has two type. pentahedra pyramid is alsp sphere and plane.
+However it is different from two sphere and plane.
+
+
 We may consioder the same problem for other polyhedra. Here is a list of
 pentahedra and hexahedra with the number of combination of face-angles
 and the dimension of $\tilde{\varepsilon}(n_{ij})$.
@@ -953,9 +1210,13 @@ Because
 pi / n (n >= 5)は360 / k となるkが存在しないため．
 から有理性を満たすことができないからである．
 
+polyhedra with spherical facesseven and and over faces.
+
 球面体と擬球の画像をのせる．パラメータスペースも導出する．
 
 \section{Visualization}
+Visualization 可視化方法について
+
 There are two methods of visualization. 
 We can obtain quasi-sphere from applying group to sum of the spheres
 including sphairahedra.
@@ -1072,6 +1333,8 @@ We feel on the skin
 fractal structures and its symmetry.
 
 \section{Problems}
+図を見ることで考察することのできる数学的問題を提起，解決
+
 極限集合の腕がのび，違うタイルと重なるとき，非離散的であるが，
 重なりはpi/nになる．
 The limit sets have arms. The arms get longer as the parameter approaches
@@ -1115,6 +1378,7 @@ There are ghost spheres.
 
 
 \section{Summary \& Future Work}
+解決したこと，未解決問題のまとめ
 
 Kazushi Ahara and Yoshiaki Araki invented a new geometrical concept
 called a \textit{sphairahedron}.
@@ -1133,15 +1397,6 @@ Not only fascinate us, they are discovery of mathematical problem
 and one of the clue of solution.
 我々の目を楽しませるだけでなく，数学的な問題の発見や解決の糸口の一つとな
 る．
-\section{Other}
-
-章立て
-Introduction 球面体群について．これまでの研究成果について阿原・荒木
-(classification problem)，蔭山の成果
-Preparation 球面体の定義など 離散的，非離散的について 理想的かつ有理的
-Visualization 可視化方法について
-Problems (Propositions) 図を見ることで考察することのできる数学的問題を提起，解決
-Summary \& Future work 解決したこと，未解決問題のまとめ
 
 \begin{thebibliography}{99}
 \bibitem{AharaAraki}
