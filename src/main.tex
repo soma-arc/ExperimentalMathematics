@@ -145,23 +145,24 @@ the quasi-sphere with the computer in those days.
 
 After that Ryo Kageyama perform further experiment of
 cube-type sphairahedron in his master thesis \cite{kageyama}, and he use
-lens space. 
-レンズとよばれる概念を導入し，検証を行った．
+a geometrical concept called \textit{lens} to study sphairahedra. 
 
 In 2017, breakthrough is came out. We develop an algorithm called
-\textit{Iterated Inversion System (IIS.)}
+\textit{Iterated Inversion System (IIS.)} to visualize fractals based on
+inversions in circles or spheres.
 Combining IIS and \textit{Sphere tracing}, a kind of ray tracing
 technique, we can render image of quasi-sphere in real time.
+For more details of this algorithm, see
+\cite{bridges2016} or \cite{bridges2017}.
 
-IIS can be used to render fractals based on circle or sphere inversions.
-\cite{bridges2016}\cite{bridges2017}
-
-The previous paper is focused on the artistical perspective.
+The previous paper \cite{bridges2018} is focused on the artistical
+perspective of the sphairahedron.
 In this article we introduce mathematical details,
 problems, and its solutions. 
 
 There are pictures of three-dimensional, so it is hard to see whole
-appearance only by them. We can see more pixtures and more movies in the
+appearance only by them. We can see sphairahedro based fractal renderer,
+ more pictures and more movies in the
 our web-site\footnote{\url{https://sphairahedron.net}}.
 \subsection{Sphairahedron}
 
@@ -1158,14 +1159,23 @@ In the next section, we will introduce these properties.
 \end{figure}
 
 Tetrahedron has one type of combination of vertexes and edges.
+There is no parameter space.
 It is sphere and plane.
-It generate 
+It generate sphere and plane. The limit set is sphere so, the group is
+fuchsian group.
 
-Pentahedron has two type. pentahedra pyramid is alsp sphere and plane.
-However it is different from two sphere and plane.
+Pentahedron has two type. They are pentahedral pyramid and pentahedral prism.
+pentahedra pyramid also don't have parameter space.
+It is also fuchsian group.
+It also generate sphere and plane. However, patterns of their surface is
+different from tetrahedron according to number of edges and positins of
+vertexes.
 
+A part of Pentahedral prism is semi-sphairahedron.
+See Figure \ref{}. When parameter is positive, it seems like plane and
+sphere. However, their are many cavity
 
-We may consioder the same problem for other polyhedra. Here is a list of
+We may consider the same problem for other polyhedra. Here is a list of
 pentahedra and hexahedra with the number of combination of face-angles
 and the dimension of $\tilde{\varepsilon}(n_{ij})$.
 
@@ -1175,7 +1185,11 @@ his master thesis\cite{kageyama}.
 
 Yoshiaki Araki and Kazushi Ahara found Sphairahedron in 2003.
 It is extension of two dimensional tessellation of circles.
+
+5面体のpentahedral prism は6つの面角の組み合わせが存在する
+
 cubeタイプのパラメータに関して計算を行ない，パラメータスペースを求めた．
+cubeタイプの球面体には7つの面角の組み合わせが存在している．
 その求め方の論文は出版されていない．
 球面体そのものでなく，球面体を含む球の和集合に群を作用させることによっても
 quasi-sphereを得ることができる．その証明は...
@@ -1185,11 +1199,6 @@ The proof of the this theorem ... ....
 classification problems besed on cube type hexahedron.
 
 We visualize other sphairahedra and 
-
-今回はレンダリングされた図から得られた数学的問題を解決する
-In this case, we solve the mathematical problems obtained from rendered
-images.
-
 
 七角形以上のSphairahedronはパターンが多くなること，条件を満たす
 パラメータが厳しくなることから，計算することが難しい
@@ -1215,8 +1224,6 @@ polyhedra with spherical facesseven and and over faces.
 球面体と擬球の画像をのせる．パラメータスペースも導出する．
 
 \section{Visualization}
-Visualization 可視化方法について
-
 There are two methods of visualization. 
 We can obtain quasi-sphere from applying group to sum of the spheres
 including sphairahedra.
@@ -1263,7 +1270,7 @@ IISとスフィアトレーシングで描画できるが，二つの描画方�
 球面体そのものを球の反転で移すことで描画できるが，球面体を含む複数の球を
 群の作用で移すことができる．
 
-\subsection{Observation of images}
+\subsection{Observation of Images}
 
 本セクションでは，図から観察できることを記述する．
 色は反転の数に応じてつけている．
@@ -1279,6 +1286,24 @@ HSV表色系を用いている
 かはわからない．
 
 球面体の頂点は収束が遅い
+
+In this section, we observe images of sphairahedra and its tiling
+patterns.
+We color the tiles according to the number of the inversions.
+We use the HSV color model to determine their color.
+The color varies in order of red, yellow, green, green, and blue.
+So, there are many sphairahedra at blue tiles.
+The point is parabolic fixed point, and the convergence of tile is
+late.
+
+When the sphairahedron at outside of the parameter space,
+the fractal bridge emerge.
+The bridge pass through the prism sphairahedron.
+The bridge seems to be discrete by n/pi.
+So, there are parameters ouy side of the parameter space.
+It is undefined that is point, curve, or regions.
+
+
 
 The parameter space different from other fractals it is not fractal
 structure. Maskit parametrization or julia set have parameter spaces
@@ -1323,14 +1348,18 @@ with fractal structures.
 
 Yoshiaki Araki also tried to materialize these fractals in 2006
 \cite{araki2006materializing}.
+He succeeded to materialize quasi-sphere with some methods including
+three-dimensional printing.
+However, recently, three-dimensional printing has become more popular.
+The printer has become cheaper than before, and we can easy to
+experiment for three-dimensional printing.
+Now, we can also make full-colored three-dimensional printing objects.
+We use monochrome printing by home use printer and full-colored
+printing by three-dimensional printing service.
 
-By three-dimensional printing 
-このように，プリントすることによって，レンダリングでみることのできない
-角度からもフラクタルを観察することができる．
-単色プリンタとカラープリンタによる3Dプリントを行った．
-フラクタルとその対称性を肌で感じることができる．
-We feel on the skin
-fractal structures and its symmetry.
+Three-dimensional printing enable us to observe the fractals from the
+various viewpoints.
+We feel fractal structures and its symmetry by hand.
 
 \section{Problems}
 図を見ることで考察することのできる数学的問題を提起，解決
@@ -1408,12 +1437,16 @@ and one of the clue of solution.
 \bibitem{AharaJa}
         阿原一志, \emph{球面体と3次元擬フックス群}，
         数理解析研究所講究録，1329巻，2003年，109-114
+\bibitem{bridges2016}
+        Kento Nakamura and Kazushi Ahara,
+\bibitem{bridges2017}
+        Kento Nakamura and Kazushi Ahara,
 \bibitem{bridges2018}
         Kento Nakamura and Kazushi Ahara,
         \emph{Sphairahedra and Three-Dimensional Fractals}, 
         Proceedings of Bridges 2018: Mathematics, Music, Art, Architecture,
         Education, Culture, Tessellations Publishing,
-        Phoenix, Arizona, 2017, pp. 171--178.
+        Phoenix, Arizona, 2018, pp. 171--178.
 \bibitem{kageyama}
         蔭山亮, 
         \emph{円辺形ち球面体の変形空間及び極限集合},
