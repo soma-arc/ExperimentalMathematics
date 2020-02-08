@@ -98,6 +98,41 @@ mathematics; visualization; fractals; Kleinian groups; circle inversion;
 
 \section{Introduction}
 
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.25\textwidth}
+   \centering
+   \includegraphics[height=1.2in, keepaspectratio]{./img/introduction/cube.png}
+   \caption{Cube-type sphairahedron.}
+   \label{fig:cubeSphaira}
+  \end{minipage}
+  \hspace*{\fill}
+ \begin{minipage}[t]{0.75\textwidth}
+  \begin{minipage}[t]{0.25\textwidth}
+   \centering
+   \includegraphics[height=1.2in,
+   keepaspectratio]{./img/introduction/quasi-sphere.png}
+   \subcaption{}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.25\textwidth}
+   \centering
+   \includegraphics[height=1.2in,
+   keepaspectratio]{./img/introduction/other.png}
+   \subcaption{}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.25\textwidth}
+   \centering
+   \includegraphics[height=1.2in,
+   keepaspectratio]{./img/introduction/quasi-sphereZoom.png}
+   \subcaption{}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{Images of a quasi-sphere rendered in different viewpoints.}
+  \label{fig:quasi-sphere}
+ \end{minipage}
+\end{figure}
+
 \subsection{Background}
 
 In this paper, we deal with geometrical concept called
@@ -105,7 +140,7 @@ In this paper, we deal with geometrical concept called
 Yoshiaki Araki \cite{AharaAraki} in 2003. Sphairahedron is a coined word
 combining two words sphaira- (a prefix that means 'spherical') and
 -hedron (a suffix comes from 'polyhedron.') It looks like a polyhedron
-with spherical faces. See Figure \ref{}. It shows cube-type
+with spherical faces. See Figure \ref{fig:cubeSphaira}. It shows cube-type
 sphairahedron. As we can see, each face of the cube is a part of a
 sphere.
 
@@ -113,7 +148,8 @@ Moreover, we can make a tiling pattern of sphairahedra using inversions
 of each spherical faces. In many cases, the boundary of the tiling
 patterns converges to three-dimensional fractal structure. 
 The union of all the tiles is mostly homeomorphic to a three-dimensional
-ball. Thus, this is called a \textit{quasi-sphere}.
+ball. Thus, this is called a \textit{quasi-sphere} and shown in Figure
+\ref{fig:quasi-sphere}.
 Quasi-sphere interested fractal art community because it is beginning of
 the complicated three-dimensional fractal.
 
@@ -148,6 +184,62 @@ our web-site\footnote{\url{https://sphairahedron.net}}.
 
 \subsection{Sphairahedron}
 
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.6\textwidth}
+  \centering
+  \begin{minipage}[t]{0.19\textwidth}
+   \includegraphics[width=1.2in, height=1.2in, keepaspectratio]
+   {./img/sphairahedralPrism/sphairaAll.png}
+   \subcaption{$A$}
+   \label{fig:sphairaPrismAll}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.19\textwidth}
+   \includegraphics[width=1.2in, height=1.2in, keepaspectratio]
+   {./img/sphairahedralPrism/sphairaHalf.png}
+   \subcaption{Infinite type}
+   \label{fig:sphairaPrismHalf}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.19\textwidth}
+   \includegraphics[width=1.2in, height=1.2in,
+   keepaspectratio]{./img/sphairahedralPrism/sphairahedron.png} 
+   \subcaption{Finite type}
+   \label{fig:sphairahedronFinite}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{Sphairahedron.}
+  \label{fig:sphairahedron}
+ \end{minipage}
+ \begin{minipage}[t]{0.4\textwidth}
+  \centering
+  \begin{minipage}[t]{0.19\textwidth}
+   \includegraphics[width=1.2in, height=1.2in,
+   keepaspectratio]{./img/sphairahedralPrism/semiSphairaAll.png}
+   \subcaption{$A$}
+   \label{fig:semi-sphairaAll}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.19\textwidth}
+   \includegraphics[width=1.2in, height=1.2in,
+   keepaspectratio]{./img/sphairahedralPrism/semiSphairaHalf.png}
+   \subcaption{Infinite type}
+   \label{fig:semi-sphairaHalf}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{Semi-sphairahedron.}
+  \label{fig:semi-sphairahedron}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \centering
+ \includegraphics[width=1.2in, height=1.2in,
+ keepaspectratio]{./img/sphairahedralPrism/hole.png}
+ \caption{sphairahedron with hole.}
+  \label{fig:brokenHole}
+\end{figure}
+
 We will describe the simple definition of a sphairahedron. 
 First of all, we will describe the definition of a sphairahedron.
 Let $S^3 = R^3 \cup \{\infty\}$ be a three-dimensional sphere and let
@@ -160,38 +252,41 @@ in other words, $A$ has two connected components and the first homology
 group of each component is trivial, we call one side of $A$
 a sphairahedron.
 
-The image in Figure \ref{}\subref{}
+The image in Figure \ref{fig:sphairahedron}\subref{fig:sphairaPrismAll}
 is an example of $A$.
 We hollow out the $S^3$ with six balls: we remove three half space
 (three balls with infinite radius,) from $S^3$ and obtain the prism of
 infinite length, and we scoop out the prism by the remaining
-three-colored transparent balls as in Figure \ref{}\subref{}.
+three-colored transparent balls as in Figure
+\ref{fig:sphairahedron}\subref{fig:sphairaPrismAll}.
 $A$ is composed of two parts, and each of the components is simply connected.
 Since it has six faces, and these faces are arranged as those of faces of
 a cube, it is called a cube-type sphairahedron.
-Especially, the sphairahedron shown in Figure \ref{}\subref{}
+Especially, the sphairahedron shown in Figure 
+\ref{fig:sphairahedron}\subref{fig:sphairaPrismHalf}
 is also called an \textit{infinite type sphairahedron},
 because one of the vertices of the sphairahedron is at the infinity.
 Similarly, the shape hollowed out by six finite balls in Figure
-\ref{}\subref{} is called a
+\ref{fig:sphairahedron}\subref{fig:sphairahedronFinite} is called a
 \textit{finite type sphairahedron}.
 
 Moreover, we can loosen the definition of sphairahedron,
 that is, the case $A$ has simply connected three or more components.
-Figure \ref{}\subref{} shows an
+Figure \ref{fig:semi-sphairahedron}\subref{fig:senu-sphairaAll} shows an
 example of $A$ with simply connected three components.
 It is the $S^3$ scooped out by five balls and a pentahedral prism type
 sphairahedron.
 We divide $A$ so that one part of $A$ has five faces as shown in
-Figure \ref{}\subref{}.
+Figure \ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaHalf}.
 We can regard the resulting shape as a singular case of a pentahedron,
 and we call it a \textit{semi-sphairahedron}.
 When Ahara, Araki and Kageyama did not deal with semi-sphairahedron and
 did not render its tiling patterns.
 
 When the sphairahedron is not discrete, the sphairahedron is broken.
-For example, unnecessary hole and so on.
-See Figure \ref{}. It shows broken sphairahedron.
+For example, it has unnecessary hole and so on.
+See Figure \ref{fig:brokenHole}. It shows broken sphairahedron.
+The green sphere make a hole.
 
 In the following section, we introduce more mathematical definitions of
 derivation of sphairahedron and its parameter space.
@@ -929,30 +1024,118 @@ In other cases (b),...,(j), we don't have a similar result. Three
 segments $AR, BF, CD$ meets at one point only in case (a), (f), (j), but
 there isn't a parameter space in cases (f) nor (j).
 
-\subsubsection{Construct Fractal}
+\section{Construct Fractal}
 
-In Figure \ref{} we show a process of the tiling of
+\begin{figure}[H]
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step1.png}
+  \subcaption{Step 1}
+  \label{fig:sphaira-step1}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step2.png}
+  \subcaption{Step 2}
+  \label{fig:sphaira-step2}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step5.png}
+  \subcaption{Step 5}
+  \label{fig:sphaira-step5}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step10.png}
+  \subcaption{Step 10}
+  \label{fig:sphaira-step10}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/final.png}
+  \subcaption{Final image}
+  \label{fig:sphaira-final}
+ \end{minipage}
+ \hspace*{\fill}
+ \caption{Tiling of a finite cube-type sphairahedron.}
+ \label{fig:sphairahedronTile}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step1.png}
+  \subcaption{Step 1}
+  \label{fig:terrainStep1}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step2.png}
+  \subcaption{Step 2}
+  \label{}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step5.png}
+  \subcaption{Step 5}
+  \label{}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step10.jpg}
+  \subcaption{Step 10}
+  \label{fig:terrainStep10}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/final.jpg}
+  \subcaption{Final image}
+  \label{fig:sphairaPrismFinal}
+ \end{minipage}
+ \caption{Tiling of a cube-type infinite sphairahedron.}
+ \label{fig:sphairahedralPrismTile}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \centering
+ \includegraphics[width=1.2in, height=1.2in,
+ keepaspectratio]{./img/constructFractal/semi-terrain2.png}
+ \caption{sphairahedron with hole.}
+  \label{fig:semiSphairaSpheres}
+\end{figure}
+
+In Figure \ref{fig:sphairahedronTile}, we show a process of the tiling of
 sphairahedra.
-The sphairahedron presented in Figure
-\ref{}\subref{} has six spherical
+The sphairahedron shown in Figure
+\ref{fig:sphairahedronTile}\subref{fig:sphaira-step1} has six spherical
 faces.
 We apply inversions in each spherical face to original sphairahedron,
 and we obtain new six sphairahedra surrounding the initial sphairahedron
 as shown in Figure
-\ref{}\subref{}.
+\ref{fig:sphairahedronTile}\subref{fig:sphaira-final}.
 Next, we apply inversions in each of the new faces to the new sphairahedra,
 and we obtain more sphairahedra.
 We continue iterating inversions, and finally, we get a three-dimensional
 fractal shape as presented in Figure
-\ref{}\subref{}.
+\ref{fig:sphairahedronTile}\subref{fig:sphaira-final}.
 
 Also, an infinite type sphairahedron can be tiled as presented in Figure
-\ref{}.
+\ref{fig:sphairahedralPrismTile}.
 The pattern converges to fractal terrain owing to reflections over side
-faces of the sphairahedron as shown in Figure \ref{}.
+faces of the sphairahedron as shown in Figure 
+\ref{fig:sphairahedralPrismTile}\subref{fig:terrainStep1}.
 In the fractal terrain, we can find symmetry easily.
 For example, we can see hexagram-like terrain patterns in Figure
-\ref{}.
+\ref{fig:sphairahedralPrismTile}\subref{fig:sphairaPrismFinal}.
 These patterns are originated from the dihedral angles of the side faces of
 $\pi / 3$.
 
@@ -960,9 +1143,9 @@ In the same way as the tiling of the sphairahedron, a semi-sphairahedron
 can be tiled by the inversions about its faces.
 The resulting fractal of the semi-sphairahedron is different from normal
 sphairahedron's one.
-Figure \ref{} shows the pattern
+Figure \ref{fig:semiSphairaSpheres} shows the pattern
 generated by an infinite semi-sphairahedron shown in Figure 
-\ref{}.
+\ref{fig:semi-sphairahedron}\subref{semi-sphairaHalf}.
 It is the union of an infinite number of balls
 circumscribing each other and no longer homeomorphic
 to a three-dimensional ball.
@@ -1261,7 +1444,7 @@ of sphairahedra, and it takes much time.
 Therefore we developed an algorithm to render fractals based on
 inversions. It is called Iterated Inversion System (IIS) and sphere
 tracing, that is, a kind of ray tracing technique.
-For more details, see also \cite{bridges2018}.
+For more details, see also \cite{bridges2018} and \cite{bridges2017}.
 
 semi-sphairahedron. It is not quasi-fuchsian group.
 
@@ -1414,6 +1597,7 @@ The parameter space is connected.
 固定点付近は収束が遅いこと
 橋ができたときにPI/nになった，
 球面体の各頂点の収束が特に遅い(タイリングするためにはたくさんの球面体が必要)
+たくさんの円が交わる各頂点は収束が遅くなる．
 
 (まだできていないこと)
 Find mathematical property of the fractals.
@@ -1431,6 +1615,7 @@ There are ghost spheres.
 
 \subsection{Patterns of Plane}
 The patterns of plane differs from sphairahedron.
+They represent patterns of parabolic fixed points.
 Figure \ref{}.
 
 \section{Summary \& Future Work}
