@@ -96,6 +96,8 @@ mathematics; visualization; fractals; Kleinian groups; circle inversion;
  sphere inversion
 \end{keywords}
 
+\tableofcontents
+
 \section{Introduction}
 
 \begin{figure}[h!tbp]
@@ -150,7 +152,8 @@ patterns converges to three-dimensional fractal structure.
 The union of all the tiles is mostly homeomorphic to a three-dimensional
 ball. Thus, this is called a \textit{quasi-sphere} and shown in Figure
 \ref{fig:quasi-sphere}.
-Quasi-sphere interested fractal art community because it is beginning of
+Quasi-sphere has complicated and beautiful fractal structures.
+So, it interested fractal art community because it is beginning of
 the complicated three-dimensional fractal.
 
 In spite of innovative idea, there are few publications
@@ -161,8 +164,8 @@ One of the reasons is that it takes too much time to render the image of
 the quasi-sphere with the computer in those days.
 
 After that Ryo Kageyama perform further experiment of
-cube-type sphairahedron in his master thesis \cite{kageyama}, and he use
-a geometrical concept called \textit{lens} to study sphairahedra. 
+cube-type sphairahedron in his master thesis \cite{kageyama}. 
+He use a geometrical concept called \textit{lens} to study sphairahedra. 
 
 In 2017, breakthrough is came out. We develop an algorithm called
 \textit{Iterated Inversion System (IIS)} to visualize fractals based on
@@ -173,9 +176,9 @@ For more details of this algorithm, see
 \cite{bridges2016} or \cite{bridges2017}.
 
 The our previous paper \cite{bridges2018} is focused on the artistical
-perspective of the sphairahedron.
+perspective of the sphairahedron and its fractals.
 In this article we introduce mathematical details,
-problems, and its solutions. 
+mathematical problems, and its solutions. 
 
 There are pictures of three-dimensional, so it is hard to see whole
 appearance only by them. We can see sphairahedron based fractal renderer,
@@ -240,8 +243,8 @@ our web-site\footnote{\url{https://sphairahedron.net}}.
   \label{fig:brokenHole}
 \end{figure}
 
-We will describe the simple definition of a sphairahedron. 
-First of all, we will describe the definition of a sphairahedron.
+We will describe the simple definition of a sphairahedron used in \cite{bridges2018}.
+First of all, we will introduce the definition of a sphairahedron.
 Let $S^3 = R^3 \cup \{\infty\}$ be a three-dimensional sphere and let
 $\overline{D_1},~\overline{D_2},~...,~\overline{D_p}$ be some
 three-dimensional closed balls.
@@ -272,7 +275,7 @@ Similarly, the shape hollowed out by six finite balls in Figure
 
 Moreover, we can loosen the definition of sphairahedron,
 that is, the case $A$ has simply connected three or more components.
-Figure \ref{fig:semi-sphairahedron}\subref{fig:senu-sphairaAll} shows an
+Figure \ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaAll} shows an
 example of $A$ with simply connected three components.
 It is the $S^3$ scooped out by five balls and a pentahedral prism type
 sphairahedron.
@@ -288,11 +291,161 @@ For example, it has unnecessary hole and so on.
 See Figure \ref{fig:brokenHole}. It shows broken sphairahedron.
 The green sphere make a hole.
 
-In the following section, we introduce more mathematical definitions of
-derivation of sphairahedron and its parameter space.
+\subsection{Construct Fractal}
 
-\subsection{Quasi-fuchsian Group}
-In the following sections, we introduce sphairahedron and its parameter space.
+\begin{figure}[H]
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step1.png}
+  \subcaption{Step 1}
+  \label{fig:sphaira-step1}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step2.png}
+  \subcaption{Step 2}
+  \label{fig:sphaira-step2}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step5.png}
+  \subcaption{Step 5}
+  \label{fig:sphaira-step5}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step10.png}
+  \subcaption{Step 10}
+  \label{fig:sphaira-step10}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/final.png}
+  \subcaption{Final image}
+  \label{fig:sphaira-final}
+ \end{minipage}
+ \hspace*{\fill}
+ \caption{Tiling of a finite cube-type sphairahedron.}
+ \label{fig:sphairahedronTile}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step1.png}
+  \subcaption{Step 1}
+  \label{fig:terrainStep1}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step2.png}
+  \subcaption{Step 2}
+  \label{}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step5.png}
+  \subcaption{Step 5}
+  \label{}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step10.jpg}
+  \subcaption{Step 10}
+  \label{fig:terrainStep10}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.19\textwidth}
+  \centering
+  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/final.jpg}
+  \subcaption{Final image}
+  \label{fig:sphairaPrismFinal}
+ \end{minipage}
+ \caption{Tiling of a cube-type infinite sphairahedron.}
+ \label{fig:sphairahedralPrismTile}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \centering
+ \includegraphics[width=1.2in, height=1.2in,
+ keepaspectratio]{./img/constructFractal/semi-terrain2.png}
+ \caption{sphairahedron with hole.}
+  \label{fig:semiSphairaSpheres}
+\end{figure}
+
+In Figure \ref{fig:sphairahedronTile}, we show a process of the tiling of
+sphairahedra.
+The sphairahedron shown in Figure
+\ref{fig:sphairahedronTile}\subref{fig:sphaira-step1} has six spherical
+faces.
+We apply inversions in each spherical face to original sphairahedron,
+and we obtain new six sphairahedra surrounding the initial sphairahedron
+as shown in Figure
+\ref{fig:sphairahedronTile}\subref{fig:sphaira-final}.
+Next, we apply inversions in each of the new faces to the new sphairahedra,
+and we obtain more sphairahedra.
+We continue iterating inversions, and finally, we get a three-dimensional
+fractal shape as presented in Figure
+\ref{fig:sphairahedronTile}\subref{fig:sphaira-final}.
+
+Also, an infinite type sphairahedron can be tiled as presented in Figure
+\ref{fig:sphairahedralPrismTile}.
+The pattern converges to fractal terrain owing to reflections over side
+faces of the sphairahedron as shown in Figure 
+\ref{fig:sphairahedralPrismTile}\subref{fig:terrainStep1}.
+In the fractal terrain, we can find symmetry easily.
+For example, we can see hexagram-like terrain patterns in Figure
+\ref{fig:sphairahedralPrismTile}\subref{fig:sphairaPrismFinal}.
+These patterns are originated from the dihedral angles of the side faces of
+$\pi / 3$.
+
+In the same way as the tiling of the sphairahedron, a semi-sphairahedron
+can be tiled by the inversions about its faces.
+The resulting fractal of the semi-sphairahedron is different from normal
+sphairahedron's one.
+Figure \ref{fig:semiSphairaSpheres} shows the pattern
+generated by an infinite semi-sphairahedron shown in Figure 
+\ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaHalf}.
+It is the union of an infinite number of balls
+circumscribing each other and no longer homeomorphic
+to a three-dimensional ball.
+Thus, It is not a quasi-sphere or a quasi-fuchsian.
+We will describe more about a tiling pattern of a semi-sphairahedron later.
+
+In the images of fractals within this paper, each tile of the
+sphairahedra is colored according to the
+number of inversions.
+We use the color wheel to determine their color,
+and the tile's color varies in order of red, yellow, green, and blue.
+In Figure \ref{fig:sphairahedronTile}\subref{fig:sphaira-step1} $\sim$ \subref{fig:sphaira-step10} and
+Figure \ref{fig:sphairahedralPrismTile}\subref{fig:terrainStep1} $\sim$ \subref{fig:terrainStep10}，
+we refer color wheel with large steps to visualize each tile clearly.
+On the other hand, in the other images, we refer the wheel with smaller
+steps, and we find lots of tiles with many inversions in the blue
+parts of the fractal.
+We can also find that the blue parts themselves form the constant
+patterns.
+
+Up to this point, we showed tiling patterns without gaps between the tiles and
+intersections of the tiles.
+However, not every sphairahedra can generate such proper tiling patterns.
+To obtain them, we have to consider two mathematical properties
+of the original sphairahedron, that is, the sphairahedron should be
+ideal and rational.
+In the following sections, we will introduce these properties and parameter
+space for the ideal rational sphairahedron.
+
+
+\section{Compute Parameter Space of Ideal Rational Sphairahedra}
+
+\subsection{Introduction to Group G}
 
 We are interested in finding examples of quasi-fuchsian sub-group of
 M\"ob$_{+}(S^3)$, the group of orientation preserving M\"obius
@@ -386,13 +539,16 @@ other polyhedra give us quasi-fuchsian groups. So we get a family of
 quasi-fuchsian group with two parameters. At the same time, we have a
 family of fractal spheres with two parameters.
 
-This paper is organized as follows. In the section 2 we will show the
-above theorem. In the section 4 we consider other type
-of polyhedra and show a similar theorems.
+% This paper is organized as follows. In the section 2 we will show the
+% above theorem. In the section 4 we consider other type
+% of polyhedra and show a similar theorems.
 
-\section{Hexahedron of cube type with spherical faces}
+\subsection{Compute cube-type sphairahedra}
+In this paper, We deal with cube because it is simple, but it generate
+complicated quasi-sphere.
+Kageyama also calculate parameter space of the cube-type sphairahedron\cite{kageyama}.
 We will formulate hexahedron of cube type in $S^3 = R^2 \cup \{\infty\}$.
-First ket $E$ be a set of edges if hexahedron of cube type. That is,
+First let $E$ be a set of edges if hexahedron of cube type. That is,
 $$
 E = \{(1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 6), (3, 5),
 (3, 6), (4, 5), (4, 6), (5, 6)\}.
@@ -406,7 +562,7 @@ We fix a sequence $\{n_{ij}\}_{(i,j) \in E}$ of natural numbers to
 parametrize face-angles.
 
 Under this preparation, we will consider a 6-ple($O_1$, ..., $O_6$)
-satisfying the following the following conditions.
+satisfying the following conditions.
 
 \begin{description}
  \item[(P1):] $O_i(i = 1, 2, ..., 6)$ is a sphere or a plane in $R^3
@@ -420,10 +576,10 @@ satisfying the following the following conditions.
             the point and we call it a vertex. For simplisity of
             notation, we denote
 \end{description}
-$$
-A = v_{123}, B=v_{145}, C = v_{356}, D = v_{124}
+\begin{eqnarray*}
+A = v_{123}, B=v_{145}, C = v_{356}, D = v_{124}\\
 E = v_{456}, F=v_{236}, G = v_{246}, H = v_{135}.
-$$
+\end{eqnarray*}
 
 Let $\tilde\varepsilon(n_{ij})$ be a set if all 6-ple $(O_1, ..., O_6)$
 satisfying the above conditions. We call such 6-pre $A$ polyhedron of
@@ -444,11 +600,11 @@ $$
 
 We call $\varepsilon(n_{ij})$ a moduli of polyhedra.
 
-\subsection{Preparation}
+\subsection{Preparations}
 
 We will show sime lemmas in this subsection.
 
-\begin{lemma}
+\begin{lemma}\label{sameCircle}
 For each $O_i$, the four vertices on $O_i$ lie on the same circle.
 Hence the four vertices lie on one plane in $R^3$.
 \end{lemma}
@@ -457,7 +613,7 @@ Hence the four vertices lie on one plane in $R^3$.
  We know the following famous lemma about four circles : If four circles 
  $C_1, C_2, C_3, C_4$ on a plane and they are mutually tangent like a
  chain as in Figure 2, then the four tangent points lie on one circle.
- (See figure 2.) Using this lemma we will show lemma 2.1. We fix $i$ and
+ (See figure 2.) Using this lemma we will show lemma \ref{sameCircle} We fix $i$ and
  consider only on $O_i$. If $O_i$ is not a plane, we transform 
  ($O_1, ..., O_6$) by a M\"obius transformation such that $O_i$ is a
  plane. There are four edges on $O_i$ and they are circles and are
@@ -467,20 +623,20 @@ Hence the four vertices lie on one plane in $R^3$.
  because any M\"obius transformation maps a planer circle to a planer circle.
 \end{proof}
 
-\begin{lemma}
- Eight vertices of a polyhedron of cube type lie on the same sphere.
+\begin{lemma}\label{eightVertices}
+ Eight vertices of a polyhedron of cube-type lie on the same sphere.
 \end{lemma}
 
 \begin{proof}
  There is a M\"obius transformation $\phi$ such that it moves the vertex
- $H$ to the infinity point. (See Figure 3.) From Lemma 2.1, the three
+ $H$ to the infinity point. (See Figure 3.) From Lemma \ref{sameCircle}, the three
  vertices $A, D,$ and $B$ lie on one straight line. In the same way,
  three vertices $A, D, G,$ and $F$ lie on one planercircle, all vertices
  except $H$ line on one plane. We transform them back by $\phi^{-1}$ and
- we get the conclusion of Lemma 2.2.
+ we get the conclusion of Lemma \ref{eightVertices}.
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{sum}
  For each vertex, there are three edges with the vertex. The sum of
  face-angles of these three edges is $\pi$.
 \end{lemma}
@@ -494,7 +650,7 @@ Hence the four vertices lie on one plane in $R^3$.
  completes the proof.
 \end{proof}
 
- Using this Lemma 2.3, we obtain the following lemma in a combinatorical way.
+ Using this Lemma \ref{sum}, we obtain the following lemma in a combinatorical way.
 
 \begin{lemma}
  12-ple($n_{ij}$) = ($n_{12}, n_{13}, n_{14}, n_{15}, n_{23}, n_{24},
@@ -502,7 +658,8 @@ Hence the four vertices lie on one plane in $R^3$.
  parameters is one of the following 11.(See Figire 4.)
 \end{lemma}
 
-\noindent(a) (3, 3, 3, 3, 3, 3, 3 ,3 ,3 ,3 ,3 ,3)\\
+\noindent
+(a) (3, 3, 3, 3, 3, 3, 3 ,3 ,3 ,3 ,3 ,3)\\
 (b) (2, 3, 3, 3, 6, 6, 2, 3, 3, 3, 3, 3)\\
 (c) (2, 3, 6, 3, 6, 3, 2, 3, 3, 2, 6, 3)\\
 (d) (6, 2, 3, 3, 3, 2, 3, 6, 3, 3, 6, 2)\\
@@ -519,7 +676,7 @@ We get this lemma only in combinatorical way, so we omit the proof.
 
 In this preview section we introduce that there are 7 types of
 combination of face angles. But here are 11. In fact, in case (f), (g),
-(j), and (k), there is no polyhedron with these face-angles. See section 2.4.
+(j), and (k), there is no polyhedron with these face-angles. See section 2.6.
 
 \subsection{Constructing hexahedron}
 
@@ -535,41 +692,41 @@ y_G)$ be projection of these 7 vertices to the xy-plane.
 
 We get immediately that $\angle C'A'B' = \theta_{13}, \angle A'B'C' =
 \theta_{15}, \angle B'C'A'=\theta_{13}$. Remark that $\theta_{13} +
-\theta_{15} + \theta_{35} = \pi$ by Lemma2.3.
+\theta_{15} + \theta_{35} = \pi$ by Lemma\ref{sum}.
 
 Here we may assume that the radius of the circumcircle of $A'B'C'$ is 1,
 that the circumcenter of $A'B'C'$ is $(0, 0, 0)$, and that $A'$ is on
-the x-axis. IF it is not, by a proper M\"obius transformation(such that
+the x-axis. If it is not, by a proper M\"obius transformation(such that
 it fixes the infinity point,) and it is easy to let the polyhedron
 satisfy these conditions. By parallel transformation along z-axis, we
-may assume that $A$ is on xy-plane. (That is, $A = A' and z_A = 0.$)
+may assume that $A$ is on xy-plane. (That is, $A = A'$ and $z_A = 0.$)
 
 See Figure 3 again. $O_2, O_4, O_6$ are spheres Let $O_i(x_i, y_i, z_i)$
-and $r_i$ be the center and the radius of $O_i for i = 2, 4, 6.$ About
+and $r_i$ be the center and the radius of $O_i$ for $i = 2, 4, 6.$ About
 the radius, we have the following proposition.
 
-\begin{proposition}
+\begin{proposition}\label{angles}
  \begin{eqnarray}
- r_2sin\theta_{12} + r_4sin\theta_{14} &=& \overline{AB}^2 / (2\overline{A'B'})\\
- r_4sin\theta_{45} + r_6sin\theta_{56} &=& \overline{BC}^2 / (2\overline{B'C'})\\
- r_2sin\theta_{23} + r_6sin\theta_{36} &=& \overline{CA}^2 / (2\overline{C'A'})
+ r_2\sin\theta_{12} + r_4\sin\theta_{14} &=& \overline{AB}^2 / (2\overline{A'B'})\\
+ r_4\sin\theta_{45} + r_6\sin\theta_{56} &=& \overline{BC}^2 / (2\overline{B'C'})\\
+ r_2\sin\theta_{23} + r_6\sin\theta_{36} &=& \overline{CA}^2 / (2\overline{C'A'})
  \end{eqnarray}
 \end{proposition}
 
 \begin{proof}
  In Figure 5. the edge $AD = e_{12}$ is a circle with radius
- $r_2sin\theta_{12}$, and the edge $DB e_{14}$ is a circle with radius
- ($r_4sin\theta_{14}$).
+ $r_2\sin\theta_{12}$, and the edge $DB e_{14}$ is a circle with radius
+ ($r_4\sin\theta_{14}$).
 Two vertical lines $HA$ and $HB$ are tangent to these circles as in
  Figure 5,
  and we have 
  \begin{eqnarray*}
-  \overline{AD} = 2 r_2 sin\theta_{12} \cdot \overline{A'B'\|}/\overline{AB}
-  \overline{DB} = 2 r_4 sin\theta_{14} \cdot \overline{A'B'\|}/\overline{AB}
+  \overline{AD} = 2 r_2 \sin\theta_{12} \cdot \overline{A'B'}/\overline{AB}\\
+  \overline{DB} = 2 r_4 \sin\theta_{14} \cdot \overline{A'B'}/\overline{AB}
  \end{eqnarray*}
- Remark that $cos(\angle BAB') =\overline{A'B'}/\overline{AB}.$ Clearly
+ Remark that $\cos(\angle BAB') =\overline{A'B'}/\overline{AB}.$ Clearly
  $\overline{AD} + \overline{DB} = \overline{AB}$ holds, so it is easy to
- show the first formula of Proposition 2.5. Others are shown in the same
+ show the first formula of Proposition \ref{angles}. Others are shown in the same
  way.
 
 \end{proof}
@@ -580,9 +737,9 @@ Two vertical lines $HA$ and $HB$ are tangent to these circles as in
  \begin{eqnarray*}
   \left| 
    \begin{array}{ccc}
-    sin\theta_{12} & sin\theta_{14} & 0\\
-    0              & sin\theta_{45} & sin\theta_{56}\\
-    sin\theta_{32} & 0              & sin\theta_{36}
+    \sin\theta_{12} & \sin\theta_{14} & 0\\
+    0               & \sin\theta_{45} & \sin\theta_{56}\\
+    \sin\theta_{32} & 0               & \sin\theta_{36}
    \end{array}
   \right|
  \end{eqnarray*}
@@ -590,7 +747,7 @@ Two vertical lines $HA$ and $HB$ are tangent to these circles as in
  If we fix three vertices $A, B, C$ then always there are solutions of
  (2.A), but they may be non-positive. And, if $r_2$ or $r_4$ or $r_6$
  are too large, ($O_i$) doesn't form a hexahedron. For example, see
- section 3. In this section, we know that $r_2, r_4, r_6$ are all
+ subsection \ref{extend}. In this section, we know that $r_2, r_4, r_6$ are all
  'valid' if and only if parameters ($z_B, z_C$) are in the restricted are
  area
 
@@ -599,7 +756,7 @@ Let $O_i'(x_i, y_i)$ be a projection of the center of the sphere $O_i$
  to xy-plane (for i = 2, 4, 6.)
 \end{remark}
 
-\begin{proposition}
+\begin{proposition}\label{angles}
  (1)$\angle O_2'A'B' = \pi/2 - \theta_{12}, \angle
  O'_2A'C'=\pi/2-\theta_{23}$.
 
@@ -608,11 +765,11 @@ Let $O_i'(x_i, y_i)$ be a projection of the center of the sphere $O_i$
 
  $\angle O_6'C'A' = \pi/2 - \theta_{36}, \angle O_6'C'A' = \pi/2 - \theta_{56}$.
 
- (2)$z_A = z_2 = 0 and \overline{A'O'_2} = \overline{AO_2} = r_2$
+ (2)$z_A = z_2 = 0$ and $\overline{A'O'_2} = \overline{AO_2} = r_2$
 
- $z_B = z_4 and \overline{B'O'_4} = \overline{BO_4} = r_4$
+ $z_B = z_4$ and $\overline{B'O'_4} = \overline{BO_4} = r_4$
 
- $z_C = z_6 and \overline{C'O'_6} = \overline{CO_6} = r_6$
+ $z_C = z_6$ and $\overline{C'O'_6} = \overline{CO_6} = r_6$
 \end{proposition}
 
 \begin{proof}
@@ -621,19 +778,19 @@ Let $O_i'(x_i, y_i)$ be a projection of the center of the sphere $O_i$
  center $O'_2$ and with radius $r_2$ is also $\theta_{12}$. It follows
  that $\angle O_2'A'B' = \pi/2 - \theta_{12}$(See Figure 6.)
  
- (2) The edge AD - $e_{12}$ is the intersection of a plane $O_1$ and a
+ (2) The edge $AD = e_{12}$ is the intersection of a plane $O_1$ and a
  sphere $O_2$. This edge(= plane circle) is tangent to $AH$ (which is
- parallel to z-axis) at $A$, so a radius $AO_2$ if the sphere $O_2$ is
+ parallel to z-axis) at $A$, so a radius $AO_2$ of the sphere $O_2$ is
  perpendicular to $AH$. It follows that $z_A=z_2$ and that
  $\overline{A'O'_2} = \overline{AO_2}$ immediately.
 
- Using Lemma 2.6(1), we can obtain all coordinates of $O_i$ from
+ Using Lemma \ref{angles}(1), we can obtain all coordinates of $O_i$ from
  $\theta_{ij}$ and $r_i$ and $z_A, z_B, z_C$. In fact, the formula
  $\angle O'_2, A'B' = \pi/2 - \theta_{12}, \angle O'_{2}A'C' = \pi/2 -
  \theta_{23}$ means that the center $O_2'$ is a half-line with one
  end $A'$ as in Figure 6.
  And $\overline{A'O'_2} = \overline{AO_2} = r_2$ determines $A'$.
- So $O'_2$ is uniquely determined. From Lemma 2.6(2), we get the
+ So $O'_2$ is uniquely determined. From Lemma \ref{angles}(2), we get the
  z-coordinates $z_2$ of the center $O_2$ from $z_A(=0)$. Hence a sphere
  $O_2$ is uniquely determined from $\theta_{ij}$'s and positive $r_2$
  and $z_A(= 0)$.
@@ -918,7 +1075,7 @@ Only when $(z_B, z_C) =(0, 0), \Delta(G)$ is a round sphere and hence
 $G$ is fuchsian. In order cases we get a homotopy to the case 
 $(z_B, z_C) = (0, 0)$, we know that $G$ is quasi-fuchsian.
 
-\section{Extended Schottky group for a cube with spherical faces}
+\subsection{Extended Schottky group for a cube with spherical faces}\label{extend}
 If $(O_1, ..., O_6)$ gives a polyhedron with conditions
 $(P1), (P2), (P3)$.
 These spheres also define a Schottky type subgroup of M\"ob$_+(S^3)$ 
@@ -1024,161 +1181,8 @@ In other cases (b),...,(j), we don't have a similar result. Three
 segments $AR, BF, CD$ meets at one point only in case (a), (f), (j), but
 there isn't a parameter space in cases (f) nor (j).
 
-\section{Construct Fractal}
 
-\begin{figure}[H]
- \begin{minipage}[t]{0.19\textwidth}
-  \centering
-  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step1.png}
-  \subcaption{Step 1}
-  \label{fig:sphaira-step1}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
-  \centering
-  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step2.png}
-  \subcaption{Step 2}
-  \label{fig:sphaira-step2}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
-  \centering
-  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step5.png}
-  \subcaption{Step 5}
-  \label{fig:sphaira-step5}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
-  \centering
-  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step10.png}
-  \subcaption{Step 10}
-  \label{fig:sphaira-step10}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
-  \centering
-  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/final.png}
-  \subcaption{Final image}
-  \label{fig:sphaira-final}
- \end{minipage}
- \hspace*{\fill}
- \caption{Tiling of a finite cube-type sphairahedron.}
- \label{fig:sphairahedronTile}
-\end{figure}
-
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.19\textwidth}
-  \centering
-  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step1.png}
-  \subcaption{Step 1}
-  \label{fig:terrainStep1}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
-  \centering
-  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step2.png}
-  \subcaption{Step 2}
-  \label{}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
-  \centering
-  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step5.png}
-  \subcaption{Step 5}
-  \label{}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
-  \centering
-  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step10.jpg}
-  \subcaption{Step 10}
-  \label{fig:terrainStep10}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
-  \centering
-  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/final.jpg}
-  \subcaption{Final image}
-  \label{fig:sphairaPrismFinal}
- \end{minipage}
- \caption{Tiling of a cube-type infinite sphairahedron.}
- \label{fig:sphairahedralPrismTile}
-\end{figure}
-
-\begin{figure}[h!tbp]
-  \centering
- \includegraphics[width=1.2in, height=1.2in,
- keepaspectratio]{./img/constructFractal/semi-terrain2.png}
- \caption{sphairahedron with hole.}
-  \label{fig:semiSphairaSpheres}
-\end{figure}
-
-In Figure \ref{fig:sphairahedronTile}, we show a process of the tiling of
-sphairahedra.
-The sphairahedron shown in Figure
-\ref{fig:sphairahedronTile}\subref{fig:sphaira-step1} has six spherical
-faces.
-We apply inversions in each spherical face to original sphairahedron,
-and we obtain new six sphairahedra surrounding the initial sphairahedron
-as shown in Figure
-\ref{fig:sphairahedronTile}\subref{fig:sphaira-final}.
-Next, we apply inversions in each of the new faces to the new sphairahedra,
-and we obtain more sphairahedra.
-We continue iterating inversions, and finally, we get a three-dimensional
-fractal shape as presented in Figure
-\ref{fig:sphairahedronTile}\subref{fig:sphaira-final}.
-
-Also, an infinite type sphairahedron can be tiled as presented in Figure
-\ref{fig:sphairahedralPrismTile}.
-The pattern converges to fractal terrain owing to reflections over side
-faces of the sphairahedron as shown in Figure 
-\ref{fig:sphairahedralPrismTile}\subref{fig:terrainStep1}.
-In the fractal terrain, we can find symmetry easily.
-For example, we can see hexagram-like terrain patterns in Figure
-\ref{fig:sphairahedralPrismTile}\subref{fig:sphairaPrismFinal}.
-These patterns are originated from the dihedral angles of the side faces of
-$\pi / 3$.
-
-In the same way as the tiling of the sphairahedron, a semi-sphairahedron
-can be tiled by the inversions about its faces.
-The resulting fractal of the semi-sphairahedron is different from normal
-sphairahedron's one.
-Figure \ref{fig:semiSphairaSpheres} shows the pattern
-generated by an infinite semi-sphairahedron shown in Figure 
-\ref{fig:semi-sphairahedron}\subref{semi-sphairaHalf}.
-It is the union of an infinite number of balls
-circumscribing each other and no longer homeomorphic
-to a three-dimensional ball.
-Thus, It is not a quasi-sphere or a quasi-fuchsian.
-We will describe more about a tiling pattern of a semi-sphairahedron later.
-
-In the images of fractals within this paper, each tile of the
-sphairahedra is colored according to the
-number of inversions.
-We use the color wheel to determine their color,
-and the tile's color varies in order of red, yellow, green, and blue.
-In Figure \ref{}\subref{} $\sim$
-\subref{} and
-Figure \ref{}\subref{}
-$\sim$ \subref{}，
-we refer color wheel with large steps to visualize each tile clearly.
-On the other hand, in the other images, we refer the wheel with smaller
-steps, and we find lots of tiles with many inversions in the blue
-parts of the fractal.
-We can also find that the blue parts themselves form the constant
-patterns.
-For instance, see Figure \ref{} and Figure \ref{}.
-The blue parts are on the vertexes of sphairahedron.
-
-Up to this point, We showed tiling patterns without gaps between the tiles and
-intersections of the tiles.
-However, not every sphairahedra can generate such proper tiling patterns.
-To obtain them, we have to consider two mathematical properties
-of the original sphairahedron, that is, the sphairahedron should be
-ideal and rational.
-In the next section, we will introduce these properties.
-
-\section{Other polyhedra}
+\section{Various Sphairahedra}
 
 \begin{figure}[H]
  \begin{minipage}{0.5\textwidth}
@@ -1431,6 +1435,8 @@ polyhedra with spherical facesseven and and over faces.
 球面体と擬球の画像をのせる．パラメータスペースも導出する．
 
 \section{Visualization}
+
+\subsection{Methods}
 There are two methods of visualization. 
 We can obtain quasi-sphere from applying group to sum of the spheres
 including sphairahedra.
@@ -1667,5 +1673,9 @@ and one of the clue of solution.
         Yoshiaki Araki,
         \emph{Materializing 3D quasi-Fuchsian fractals},
         In: Forma 21.1 (2006), pp. 19–27.
+\bibitem{indra}
+        David Mumford, Caroline Series, and David Wright.
+        \emph{Indra’s Pearls: The Vision of Felix Klein.}
+        1st ed. Apr. 2002.
 \end{thebibliography}
 \end{document}
