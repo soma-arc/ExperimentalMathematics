@@ -652,7 +652,7 @@ Hence the four vertices lie on one plane in $R^3$.
 
  Using this Lemma \ref{sum}, we obtain the following lemma in a combinatorical way.
 
-\begin{lemma}
+\begin{lemma}\label{combination}
  12-ple($n_{ij}$) = ($n_{12}, n_{13}, n_{14}, n_{15}, n_{23}, n_{24},
  n_{26}, n_{35}, n_{36}, n_{45}, n_{46}, n_{56}$) of face-angle
  parameters is one of the following 11.(See Figire 4.)
@@ -803,11 +803,12 @@ $O_2 O_4, O_6$. But it is not trivial whether the 6-ple($O_1, ..., O_6$) is
 in $\tilde\varepsilon(n_{ij})$. (That is, we have to show that 
 ($O_1,..., O_6$) satisfies (P1), (P2), (P3).)
 
-\begin{theorem}
- Fix $(n_{ij})_(i, j)\in E$(which is one of combination in Lemma 2.4)
- Fix three vertices ABC. Assume that linear equations (2.A) have
- positive solutions. Then $O_1, O_3, O_5$ as in Figure 3 and $O_2, O_4,
- O_6$ as in Proposition 2.6 satisfy followings.
+\begin{theorem}\label{compat}
+ Fix $(n_{ij})_{(i, j)\in E}$(which is one of combination in Lemma
+ \ref{combination})
+ Fix three vertices $A,B,C$. Assume that linear equations (2.A) have
+ positive solutions. Then $O_1, O_3, O_5$ as in Figure 3 and
+ $O_2, O_4, O_6$ as in Proposition \ref{angles} satisfy followings.
  \begin{description}
   \item[(1)] The face-angle of $O_2$ and $O_4$ (resp. $O_4$ and $O_6$,
              $O_2$ and $O_6$) is equal to $\theta_{24}$
@@ -827,24 +828,24 @@ in $\tilde\varepsilon(n_{ij})$. (That is, we have to show that
  (1) Let $\theta'_{24}$ be the face-angle of $O_2$ and $O_4$. From the
  law of cosine, we have
  \begin{eqnarray}
-  \overline{O_2O_4}^2 = r_2^2 + r_4^2 - 2r_2r_4cos(\pi-\theta'_{24})
+  \overline{O_2O_4}^2 = r_2^2 + r_4^2 - 2r_2r_4\cos(\pi-\theta'_{24})
  \end{eqnarray}
 From Figure 7, we get a formula
 \begin{eqnarray*}
- \overline{O'_2O'_4}^2 = (\overline{A'B'} - r_2sin\theta_{12}-
-  r_4sin\theta_{14})^2 + (-r_2cos\theta_{12} + r_4 cos \theta_{14})^2
+ \overline{O'_2O'_4}^2 = (\overline{A'B'} - r_2\sin\theta_{12}-
+  r_4\sin\theta_{14})^2 + (-r_2\cos\theta_{12} + r_4 \cos \theta_{14})^2
 \end{eqnarray*}
  Remark that $z_2 = z_A= 0, z_4 = z_B$. Then we have
 \begin{eqnarray*}
  \overline{O_2O_4}^2 &=& \overline{O'_2O'_4}^2 + (z_2-z_4)^2\\
- &=&\overline{A'B'}^2 + 2 \overline{A'B'}(-r_2sin\theta_{12} -
-  r_4sin\theta_{14}) + r^2_2 + r^2_4 -2r_2r_4cos(\theta_{12} +
+ &=&\overline{A'B'}^2 + 2 \overline{A'B'}(-r_2\sin\theta_{12} -
+  r_4\sin\theta_{14}) + r^2_2 + r^2_4 -2r_2r_4\cos(\theta_{12} +
   \theta_{14}) + z^2_B
 \end{eqnarray*}
 Using (2.B) and $\overline{A'B'}^2 + (z_A-z_B)^2 = \overline{AB}^2$,
 \begin{eqnarray*}
- \overline{AB}^2 + 2\overline{A'B'}(-r_2sin\theta_{12} -
-  r_4sin\theta_{14}) - 2r_2r_4\{\cos(\theta_{12} + \theta_{14}) -
+ \overline{AB}^2 + 2\overline{A'B'}(-r_2\sin\theta_{12} -
+  r_4\sin\theta_{14}) - 2r_2r_4\{\cos(\theta_{12} + \theta_{14}) -
   \cos(\pi- \theta'_{24})\} = 0
 \end{eqnarray*}
  $r_2, r_4$ satisfy (2.A) and they are positive, so we obtain
@@ -853,7 +854,7 @@ Using (2.B) and $\overline{A'B'}^2 + (z_A-z_B)^2 = \overline{AB}^2$,
 \end{eqnarray*}
 From Lemma 2.3, $\theta_{12} + \theta_{14} + \theta_{24} = \pi$. It
  follows that $\theta_24 = \theta'_24$. In the same way $\theta_{46}$
- (resp.$\theta{26}$)is equal to the face-angle of $O_4$ and $O_6$(resp
+ (resp.$\theta{26}$) is equal to the face-angle of $O_4$ and $O_6$(resp
  $O_2$ and $O_6$.)
 
 (2) First we show that two edges $e_{12}$ and $e_{14}$ are mutually tangent
@@ -866,7 +867,9 @@ We have
  \begin{align*}
 d^2&= (\overline{A'B'} - r_2\sin\theta_{12}-r_4\sin\theta_{14})^2 + \overline{BB'}^2\\
 &= (\overline{A'B'} - \overline{AB}/(2\overline{A'B'}))^2 + \overline{BB'}^2\\
-&= \overline{A'B'}^2 - \overline{AB}^2 +\overline{AB}^4/(4\overline{A'B'}^2) + \overline{BB'}^2\\
+&= \overline{A'B'}^2 - \overline{AB}^2
+  +\overline{AB}^4/(4\overline{A'B'}^2) + \overline{BB'}^2\\
+&= \overline{AB}^4 / (4 \overline{A'B'}^2)
 &=(r_2\sin\theta_{12} + r_4\sin\theta_{14})^2\\
 d&= r_2\sin\theta_12 + r_4\sin\theta_{14}
  \end{align*}
@@ -887,12 +890,12 @@ Next we will show that the edge $e_{24}$ is tangent to both of $e_{12}$ and
  intersection of the sphere $O_i$ and the plane $\alpha$. ($i=2, 4, 6$.)
 Let R be the radical point of $C_2, C_4, C_6$. There are three cases
  here.
-(i) $R$ us inside if $C_2, C_4, C_6$.(ii) R is outside $C_2, C_4, C_6$.
+(i) $R$ is inside if $C_2, C_4, C_6$.(ii) R is outside $C_2, C_4, C_6$.
 (iii)$R$ is on $C_2, C_4, C_6$. (See Figure 9)
 
 In the case (i), let three points $S_{24}, S_{46}, S_{26}$ be as in Figure
  9 (left). Here we have $\angle O_2 S_{24} O_4 = \pi - \theta_{24}$,
-because their face-angle of $O_2$ and $O_4$is $\theta_{24}$.
+because their face-angle of $O_2$ and $O_4$ is $\theta_{24}$.
 In the same way, $\angle O_4\theta_{46}O_6 = \pi - \theta_{46}$ and
 $\angle O_2S_{26}O_6 = \pi-\theta_{26}$ hold. Hence
 
@@ -916,29 +919,30 @@ This is a contradiction. So this case cannnot happen. In the same way,
  the case (ii) cannnot happen. These follow that the radical point $R$
  is on the intersection of 3 circles $C_2, C_4, C_6.$ this means that
  $R$ is the unique intersection of 3 spheres $O_2, O_4, O_6$. this must
- $G$.
+ be $G$.
 
 (4) The 6-pre ($O_1, ..., O_6$) satisfies (P1) by definition.
 
-(P2): For (i, j) = (1, 3), (3, 5), (1, 5), it is good because we first
+(P2): For $(i, j) = (1, 3), (3, 5), (1, 5)$, it is good because we first
  take a triangle prism (consisting of $O_1, O_3, O_5$) with face-angles
- $\theta_{13}, \theta_{35}, \theta_{15}.$ For (i, j) = (1, 2)
-, (1, 4), (4, 5), (5, 6), (2, 3), (3, 6), it is good from Lemma2.6. In
-other cases, it is good from Theorem 2.7(1).
+ $\theta_{13}, \theta_{35}, \theta_{15}.$ 
+For $(i, j) = (1, 2), (1, 4), (4, 5), (5, 6), (2, 3), (3, 6)$, it is
+ good from Lemma\ref{angles}. In other cases, it is good from Theorem
+ \ref{compat}(1).
 
 (P3): At $H = \infty, AH, BH, CH$ are parallel lines so they are tangent
- at $\infty$. At $D, R, F, G,$ we have shown it in Theorem 2.7(2)(3)
+ at $\infty$. At $D, R, F, G,$ we have shown it in Theorem \ref{compat}(2)(3).
 \end{proof}
 
 \subsection{Parameter space}
 In this subsection we first consider in the case that $n_{ij} = 3$ for all
-$(i, j) \in E$. (That is, in case (a) in Lemma 2.4.) There are 11 cases
-in Lemma 2.4. The case (a) is not a special case, and we can make
+$(i, j) \in E$. (That is, in case (a) in Lemma \ref{combination}) There are 11 cases
+in Lemma \ref{combination} The case (a) is not a special case, and we can make
 similar observation in other cases.
 The linear equations (2.A) are:
 \begin{align*}
  r_2 + r_4 &= (3 + z_B^2) / 3 \\
- r_4 + r_6 &= (3 + (z_B^2 - z_C)^2 ) / 3 \\
+ r_4 + r_6 &= (3 + (z_B - z_C)^2 ) / 3 \\
  r_2 + r_6 &= (3 + z_C^2) / 3
 \end{align*}
 
@@ -948,14 +952,14 @@ circumcircle is 1.(In all cases, $\overline{A'B'} = 2\sin\theta_{35},
 \overline{B'C'} = 2\sin\theta{13}, \overline{A'C'} = 2\sin\theta{15}$.)
 We solve these equations and we have 
 \begin{align}
- r2 &= (2-z_Bz_C + 2Z^2_C + 3) / 6 \\
+ r2 &= (-2z_Bz_C + 2Z^2_C + 3) / 6 \\
  r4 &= (2z_Bz_C + 3) / 6 \\
  r6 &= (2z^2_B - 2z_Bz_c + 3) / 6.
 \end{align}
 First we assume that $r_2, r_4, r_6$ are positive. This condition is
 equivalent to the followings.
 \begin{align}
- -3 / 2 &< -z_bz_C + z^2_C\\
+ -3 / 2 &< -z_Bz_C + z^2_C\\
  -3 / 2 &< z_Bz_C \\
  -3 / 2 &< z^2_B - z_Bz_C
 \end{align}
@@ -964,10 +968,11 @@ previous section. It is clear that 6 faces $O_1, ... , O_6$ surround
 a hexahedron if and only if $O_2$ doesn't interest to $O_5$ nor $O_3$
 doesn't intersect to $O_4$ nor $O_1$ doesn't intersect to $O_6$.
 
-$O_2$ doesn't interest to $O_5$ if only if the distance from the center
+$O_2$ doesn't interest to $O_5$ if and only if the distance from the center
 of the sphere $O_2$ to the plane $O_5$ is more than $r_2$. In this case
 the distance is $3 / 2 - r_2$ and hence $O_2$ doesn't intersect to $O_5$
-if and only if $_2 < 3/4$ and $r_6 < 3 / 4$ These three inequalities are
+if and only if $r_2 < 3/4$. In the same way $r_4 < 3/4$ and $r_6 <
+3/4$. These three inequalities are 
 equivalent to
 \begin{align}
  -z_Bz_C + z^2_C &< 3 / 4\\
