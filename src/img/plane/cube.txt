@@ -1,0 +1,7 @@
+cubeType0 ... すべてpi/3
+cubeType1 ... pi/2, pi/3, pi/6
+cubeType2 ... pi/2, pi/3, pi/6
+cubeType3 ... pi/2, pi/3, pi/6
+cubeType4 ... pi/2, pi/3, pi/6
+cubeType5 ... pi/2, pi/4, pi/4 画像なし
+cubeType6 ... pi/2, pi/4, pi/4

@@ -1,0 +1,6 @@
+pentahedralPrismType0 ... すべてpi/3
+pentahedralPrismType1 ...　pi/2, pi/3, pi/6
+pentahedralPrismType2 ... pi/2, pi/3, pi/6
+pentahedralPrismType3 ... pi/2, pi/3, pi/6
+pentahedralPrismType4 ... 画像なし
+pentahedralPrismType3 ... pi/2, pi/4
