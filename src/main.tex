@@ -82,10 +82,11 @@ Sciences, Meiji University, Tokyo, Japan;
  transformations on $S^3$. In this article we consider a new problem of
  Euclidian geometry about polyhedra with spherical faces and we obtain
  interesting examples of quasi-fuchsian groups and pictures of fractal
- 2-spheres.
+ two-spheres.
 
  Usually, rendering image of the fractals takes much time.
  We use an original algorithm Iterated Inversion System (IIS.)
+ and sphere tracing, a kind of a ray tracing techniques.
  We can render the images of fractals in real-time.
  In this paper we focus visualized images.
  We find mathematical problem from rendered images.
@@ -244,8 +245,7 @@ our web site\footnote{\url{https://sphairahedron.net}}.
 \end{figure}
 
 We will describe the simple definition of a sphairahedron used in \cite{bridges2018}.
-First of all, we will introduce the definition of a sphairahedron.
-Let $S^3 = R^3 \cup \{\infty\}$ be a three-dimensional sphere and let
+First of all, let $S^3 = R^3 \cup \{\infty\}$ be a three-dimensional sphere and let
 $\overline{D_1},~\overline{D_2},~...,~\overline{D_p}$ be some
 three-dimensional closed balls.
 We consider the complement $A$ of the union of these balls, that is,
@@ -604,6 +604,33 @@ $$
 
 We call $\varepsilon(n_{ij})$ a moduli of polyhedra.
 
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=3.5in,
+ keepaspectratio]{./img/HexahedraWithSphericalFaces/cubes.png}
+ \caption{}
+ \label{fig:cubes}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.5\textwidth}
+ \centering
+ \includegraphics[width=1.5in, height=1.5in,
+ keepaspectratio]{./img/HexahedraWithSphericalFaces/chain.png}
+ \caption{}
+ \label{fig:chainCircles}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.5\textwidth}
+  \centering
+  \includegraphics[width=1.5in, height=1.5in,
+  keepaspectratio]{./img/HexahedraWithSphericalFaces/infTriangle.png}
+  \caption{}
+  \label{fig:infTriangle}
+ \end{minipage}
+ \hspace*{\fill}
+\end{figure}
+
 \subsection{Preparations}
 
 We will show sime lemmas in this subsection.
@@ -616,8 +643,8 @@ Hence the four vertices lie on one plane in $R^3$.
 \begin{proof}
  We know the following famous lemma about four circles : If four circles 
  $C_1, C_2, C_3, C_4$ on a plane and they are mutually tangent like a
- chain as in Figure 2, then the four tangent points lie on one circle.
- (See figure 2.) Using this lemma we will show lemma \ref{sameCircle} We fix $i$ and
+ chain as in Figure \ref{fig:chainCircles}, then the four tangent points lie on one circle.
+ (See figure \ref{fig:chainCircles}) Using this lemma we will show lemma \ref{sameCircle} We fix $i$ and
  consider only on $O_i$. If $O_i$ is not a plane, we transform 
  ($O_1, ..., O_6$) by a M\"obius transformation such that $O_i$ is a
  plane. There are four edges on $O_i$ and they are circles and are
@@ -633,7 +660,7 @@ Hence the four vertices lie on one plane in $R^3$.
 
 \begin{proof}
  There is a M\"obius transformation $\phi$ such that it moves the vertex
- $H$ to the infinity point. (See Figure 3.) From Lemma \ref{sameCircle}, the three
+ $H$ to the infinity point. (See Figure \ref{fig:infTriangle}.) From Lemma \ref{sameCircle}, the three
  vertices $A, D,$ and $B$ lie on one straight line. In the same way,
  three vertices $A, D, G,$ and $F$ lie on one planercircle, all vertices
  except $H$ line on one plane. We transform them back by $\phi^{-1}$ and
@@ -675,8 +702,14 @@ Hence the four vertices lie on one plane in $R^3$.
 (j) (4, 2, 2, 4, 4, 4, 4, 4, 2, 4, 2, 4)\\
 (k) (6, 2, 2, 4, 3, 3, 6, 4, 2, 4, 2, 4)\\
 
-
 We get this lemma only in combinatorical way, so we omit the proof.
+
+In order to represent a sphairahedron, we use a polyhedral graph as
+shown in Figure []. The graph shows an infinite cube-type sphairahedron.
+The black lines represent edges, and the circles represent
+vertices. The three radial edges connect the infinite vertex and finite
+vertices. Each of the numbers beside 
+the edges means a natural number $n$ for the dihedral angle $\pi / n$
 
 In this preview section we introduce that there are 7 types of
 combination of face angles. But here are 11. In fact, in case (f), (g),
@@ -687,7 +720,7 @@ combination of face angles. But here are 11. In fact, in case (f), (g),
 We fix a set($n_{ij}$) of face-angles and consider conformal equivalent
 classes of polyhedra with (P1), (P2), (P3).
 
-In the sequel we suppose that $H = \infty$. (See Figure 3) So the three
+In the sequel we suppose that $H = \infty$. (See Figure \ref{fig:infTriangle}) So the three
 edges $HA, HB, HC$ are straight lines and are parallel to each other. We
 assume that they are perpendicular to xy-plane.
 Let ($x_A, y_B, z_z$), ..., ($x_G, y_G, z_G$) be coordinates of vertices
@@ -705,9 +738,17 @@ it fixes the infinity point,) and it is easy to let the polyhedron
 satisfy these conditions. By parallel transformation along z-axis, we
 may assume that $A$ is on xy-plane. (That is, $A = A'$ and $z_A = 0.$)
 
-See Figure 3 again. $O_2, O_4, O_6$ are spheres Let $O_i(x_i, y_i, z_i)$
+See Figure \ref{fig:infTriangle} again. $O_2, O_4, O_6$ are spheres Let $O_i(x_i, y_i, z_i)$
 and $r_i$ be the center and the radius of $O_i$ for $i = 2, 4, 6.$ About
 the radius, we have the following proposition.
+
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=3.5in, height=3.5in,
+ keepaspectratio]{./img/HexahedraWithSphericalFaces/sideSlice.png}
+ \caption{}
+ \label{fig:sideSlice}
+\end{figure}
 
 \begin{proposition}\label{angles}
  \begin{eqnarray}
@@ -718,11 +759,11 @@ the radius, we have the following proposition.
 \end{proposition}
 
 \begin{proof}
- In Figure 5. the edge $AD = e_{12}$ is a circle with radius
+ In Figure \ref{fig:sideSlice}. the edge $AD = e_{12}$ is a circle with radius
  $r_2\sin\theta_{12}$, and the edge $DB e_{14}$ is a circle with radius
  ($r_4\sin\theta_{14}$).
 Two vertical lines $HA$ and $HB$ are tangent to these circles as in
- Figure 5,
+ Figure \ref{fig:sideSlice},
  and we have 
  \begin{eqnarray*}
   \overline{AD} = 2 r_2 \sin\theta_{12} \cdot \overline{A'B'}/\overline{AB}\\
@@ -759,6 +800,14 @@ Next, we will obtain the coordinate of the centers of $O_2, O_4, O_6$.
 Let $O_i'(x_i, y_i)$ be a projection of the center of the sphere $O_i$
  to xy-plane (for i = 2, 4, 6.)
 \end{remark}
+
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=3.5in, height=3.5in,
+ keepaspectratio]{./img/HexahedraWithSphericalFaces/abcTriangle.png}
+ \caption{}
+ \label{fig:sideSlice}
+\end{figure}
 
 \begin{proposition}\label{angles}
  (1)$\angle O_2'A'B' = \pi/2 - \theta_{12}, \angle
@@ -811,7 +860,7 @@ in $\tilde\varepsilon(n_{ij})$. (That is, we have to show that
  Fix $(n_{ij})_{(i, j)\in E}$(which is one of combination in Lemma
  \ref{combination})
  Fix three vertices $A,B,C$. Assume that linear equations (2.A) have
- positive solutions. Then $O_1, O_3, O_5$ as in Figure 3 and
+ positive solutions. Then $O_1, O_3, O_5$ as in Figure \ref{fig:infTriangle} and
  $O_2, O_4, O_6$ as in Proposition \ref{angles} satisfy followings.
  \begin{description}
   \item[(1)] The face-angle of $O_2$ and $O_4$ (resp. $O_4$ and $O_6$,
@@ -828,13 +877,29 @@ in $\tilde\varepsilon(n_{ij})$. (That is, we have to show that
 \end{description}
 \end{theorem}
 
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=3.5in, height=3.5in,
+ keepaspectratio]{./img/HexahedraWithSphericalFaces/sideSliceDistance.png}
+ \caption{}
+ \label{fig:sideSliceDistance}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=3.5in, height=3.5in,
+ keepaspectratio]{./img/HexahedraWithSphericalFaces/adb.png}
+ \caption{}
+ \label{fig:adb}
+\end{figure}
+ 
 \begin{proof}
  (1) Let $\theta'_{24}$ be the face-angle of $O_2$ and $O_4$. From the
  law of cosine, we have
  \begin{eqnarray}
   \overline{O_2O_4}^2 = r_2^2 + r_4^2 - 2r_2r_4\cos(\pi-\theta'_{24})
  \end{eqnarray}
-From Figure 7, we get a formula
+From Figure \ref{fig:adb}, we get a formula
 \begin{eqnarray*}
  \overline{O'_2O'_4}^2 = (\overline{A'B'} - r_2\sin\theta_{12}-
   r_4\sin\theta_{14})^2 + (-r_2\cos\theta_{12} + r_4 \cos \theta_{14})^2
@@ -865,7 +930,7 @@ From Lemma 2.3, $\theta_{12} + \theta_{14} + \theta_{24} = \pi$. It
  on $O_1$. The radius of $e_{12}$(resp. $e_{14}$) is
  $r_2\sin\theta_{12}$ (resp. $r_4\sin\theta_{14}$). Let $d$ be the
  distance between two centers of two circles $e_{12}$, $e_{14}$. See
- Figure 8.
+ Figure \ref{fig:sideSliceDistance}.
 
 We have
  \begin{align*}
@@ -1115,7 +1180,7 @@ surrounded by the initial spheres. The limit set $H$ is the same as that
 of $G$.
 
 \begin{proof}
-See Figure 3. Since we assume that $n_{ij} = \pi/3$, we have
+See Figure \ref{fig:infTriangle}. Since we assume that $n_{ij} = \pi/3$, we have
 \begin{align*}
  A(1, 0, 0), B(-\frac{1}{2}, z_B), C(-\frac{1}{2}, -\frac{\sqrt{3}}{2}, z_C).
 \end{align*}
@@ -1130,7 +1195,7 @@ the segment $AB$ and
 \begin{align*}
  AD : DB = r_2\sin\theta_{12} : r_4\sin\theta_{14} = r_2 : r_4
 \end{align*}
-See Figure 5. In the same way we have
+See Figure \ref{fig:sideSlice}. In the same way we have
 \begin{align*}
  BE : EC &= r_4\sin\theta_{45} : r_6\sin\theta_{56} &= r_4:r_6\\
  CF : FA &= r_6\sin\theta_{36} : r_2\sin\theta_{23} &= r_6:r_2
@@ -1198,9 +1263,10 @@ pentahedra and hexahedra with the number of combination of face-angles
 and the dimension of $\tilde{\varepsilon}(n_{ij})$.
 classification problems besed on cube type hexahedron.
 
-阿原・荒木，蔭山は六面体の中でも立方体をベースにした球面体のみを扱った．
-中村は六面体までの球面体の描画を行なえるようにし，パラメータスペースを求
-めた．ここではそれらについて記述する
+Ahara, Araki, and Kageyama dealed with only cube.
+Nakamura draw sphairahedra based on up to hexahedra and compute
+parameter space of them.
+In this section, we describe them.
 
 \subsection{Tetrahedron}
 
@@ -1547,7 +1613,7 @@ pi / n (n >= 5)は360 / k となるkが存在しないため．
 \begin{proof}
  we transform the vertex to infinity.
  the largest face angle is $\pi / 2$
- (k - 2)\pi
+ $(k - 2)\pi$
 \end{proof}
 
 \section{Visualization}
@@ -1629,7 +1695,7 @@ the fractal bridge emerge.
 The bridge pass through the prism sphairahedron.
 The bridge seems to be discrete by n/pi.
 So, there are parameters ouy side of the parameter space.
-It is undefined that is point, curve, or regions.
+we don't know that is point, curve, or regions.
 
 The parameter space different from other fractals it is not fractal
 structure. Maskit parametrization or julia set have parameter spaces
@@ -1755,8 +1821,6 @@ The patterns of plane is generated by two-dimensional circle inversion
 fractals. It can be generated by Schottky Link (https://schottky.jp).
 
 \section{Summary \& Future Work}
-解決したこと，未解決問題のまとめ
-
 Kazushi Ahara and Yoshiaki Araki invented a new geometrical concept
 called a \textit{sphairahedron}.
 

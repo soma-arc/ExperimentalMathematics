@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024mm"
+   height="1024mm"
+   viewBox="0 0 3628.3465 3628.3464"
+   id="svg15016"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="abcTriangle.svg"
+   inkscape:export-filename="/home/soma/Documents/paper/ExperimentalMathematics/src/img/HexahedraWithSphericalFaces/abcTriangle.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs15018" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="1286.4619"
+     inkscape:cy="1901.286"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="947"
+     inkscape:window-height="605"
+     inkscape:window-x="5771"
+     inkscape:window-y="1193"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata15021">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,2575.9843)">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 2114.5488,-1863.0397 385.16759,383.53963 3375.2192,234.03703 Z"
+       id="path15024"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot15026"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-79.50258,-2727.6087)"><flowRegion
+         id="flowRegion15028"><rect
+           id="rect15030"
+           width="654.57886"
+           height="456.58896"
+           x="238.396"
+           y="3094.9858" /></flowRegion><flowPara
+         id="flowPara15032"
+         style="font-size:250px">A'</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot15034"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion15036"><rect
+           id="rect15038"
+           width="56.568542"
+           height="64.649765"
+           x="270.72089"
+           y="3135.3921" /></flowRegion><flowPara
+         id="flowPara15040"></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot15026-5"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(3153.2559,-3010.9298)"><flowRegion
+         id="flowRegion15028-9"><rect
+           id="rect15030-8"
+           width="654.57886"
+           height="456.58896"
+           x="238.396"
+           y="3094.9858" /></flowRegion><flowPara
+         id="flowPara15032-4"
+         style="font-size:250px">B'</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot15026-8"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(1751.1641,-5285.7933)"><flowRegion
+         id="flowRegion15028-1"><rect
+           id="rect15030-0"
+           width="654.57886"
+           height="456.58896"
+           x="238.396"
+           y="3094.9858" /></flowRegion><flowPara
+         id="flowPara15032-3"
+         style="font-size:250px">C'</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot15026-8-0"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(1064.3461,-3475.7221)"><flowRegion
+         id="flowRegion15028-1-4"><rect
+           id="rect15030-0-4"
+           width="654.57886"
+           height="456.58896"
+           x="238.396"
+           y="3094.9858" /></flowRegion><flowPara
+         id="flowPara15032-3-4"
+         style="font-size:250px">O'<flowSpan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="flowSpan15644">2</flowSpan></flowPara></flowRoot>    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 397.28942,377.499 1314.5079,-131.6179"
+       id="path15646"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot15678"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(70,-2565.9843)"><flowRegion
+         id="flowRegion15680"><rect
+           id="rect15682"
+           width="2173.8484"
+           height="395.9798"
+           x="727.30981"
+           y="3094.9858" /></flowRegion><flowPara
+         id="flowPara15684"
+         style="font-size:250px">π/2 - θ<flowSpan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="flowSpan15719">12</flowSpan></flowPara></flowRoot>    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 994.47718,565.32857 C 1294.2576,274.49679 752.86312,274.49679 752.86312,274.49679"
+       id="path15688"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       transform="translate(-649.02275,-3972.5702)"
+       xml:space="preserve"
+       id="flowRoot15678-7"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion15680-5"><rect
+           id="rect15682-9"
+           width="2173.8484"
+           height="395.9798"
+           x="727.30981"
+           y="3094.9858" /></flowRegion><flowPara
+         id="flowPara15684-6"
+         style="font-size:250px">π/2 - θ<flowSpan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="flowSpan15717">23</flowSpan></flowPara></flowRoot>    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 602.05092,-563.8819 c -294.96455,327.2894 48.48732,703.0661 48.48732,703.0661"
+       id="path15723"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
