@@ -702,6 +702,98 @@ Hence the four vertices lie on one plane in $R^3$.
 (j) (4, 2, 2, 4, 4, 4, 4, 4, 2, 4, 2, 4)\\
 (k) (6, 2, 2, 4, 3, 3, 6, 4, 2, 4, 2, 4)\\
 
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cubeFaces.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_a.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_b.png}
+   \subcaption{}
+   \label{}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_c.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_d.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_e.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+\begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in,
+ keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_f.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_g.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_h.png}
+   \subcaption{}
+   \label{}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_i.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_j.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_k.png}
+   \subcaption{} % TODO k is same to j
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \caption{\textit{Full-colored printing by DMM.make 3D print.}}
+  \label{fig:}
+\end{figure}
+
 We get this lemma only in combinatorical way, so we omit the proof.
 
 In order to represent a sphairahedron, we use a polyhedral graph as
@@ -938,9 +1030,9 @@ d^2&= (\overline{A'B'} - r_2\sin\theta_{12}-r_4\sin\theta_{14})^2 + \overline{BB
 &= (\overline{A'B'} - \overline{AB}/(2\overline{A'B'}))^2 + \overline{BB'}^2\\
 &= \overline{A'B'}^2 - \overline{AB}^2
   +\overline{AB}^4/(4\overline{A'B'}^2) + \overline{BB'}^2\\
-&= \overline{AB}^4 / (4 \overline{A'B'}^2)
+&= \overline{AB}^4 / (4 \overline{A'B'}^2)\\
 &=(r_2\sin\theta_{12} + r_4\sin\theta_{14})^2\\
-d&= r_2\sin\theta_12 + r_4\sin\theta_{14}
+d&= r_2\sin\theta_{12} + r_4\sin\theta_{14}
  \end{align*}
 It means that $e_{12}$ and $e_{14}$ are mutually tangent.
 
@@ -953,6 +1045,32 @@ Next we will show that the edge $e_{24}$ is tangent to both of $e_{12}$ and
  that $e_{12}$ is tangent to $e_{14}$. So the edge $e_{24}$ is tangent
  to both of $e_{12}$ and $e_{14}$. Similarly we will show it about $E$
  and $F$.
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=2in, keepaspectratio]{./img/HexahedraWithSphericalFaces/threeCircles1.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=2in, keepaspectratio]{./img/HexahedraWithSphericalFaces/threeCircles2.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=2in, keepaspectratio]{./img/HexahedraWithSphericalFaces/threeCircles3.png}
+   \subcaption{\textit{Plastic}}
+   \label{fig:3dcolPlastic}
+  \end{minipage}
+  \caption{\textit{Full-colored printing by DMM.make 3D print.}}
+  \label{fig:3dcol}
+\end{figure}
+
 
 (3) Let $\alpha$ be a plane containing 3 centers $O_2, O_4, O_6$. Let
  $C_2, C_4, C_6$ be three circles on $\alpha$ such that $C_i$ is the
@@ -1270,6 +1388,40 @@ In this section, we describe them.
 
 \subsection{Tetrahedron}
 
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/tetrahedronFaces.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/tetrahedron_a.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/tetrahedron_b.png}
+   \subcaption{}
+   \label{}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/tetrahedron_c.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \caption{\textit{Full-colored printing by DMM.make 3D print.}}
+  \label{fig:}
+\end{figure}
+
 \begin{figure}[H]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
@@ -1317,6 +1469,34 @@ They are sphere and plane, so the group is fuchsian group.
 Pentahedron has two type. They are pentahedral pyramid and pentahedral prism.
 
 \subsubsection{pyramid}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/pentahedralPyramidFaces.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=1in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/pentahedralPyramid_a.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/pentahedralPyramid_b.png}
+   \subcaption{}
+   \label{}
+  \end{minipage}
+ \hspace*{\fill}
+  \caption{\textit{Full-colored printing by DMM.make 3D print.}}
+  \label{fig:}
+\end{figure}
+
 \begin{figure}[H]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
@@ -1402,6 +1582,62 @@ Figure \ref{fig:pentahedralPyramidFinite} and Figure
 Figure \ref{fig:pentahedralPyramidFinite2} and
 Figure \ref{fig:pentahedralPyramidInf2}
 \subsubsection{prism}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/pentahedralPrismFaces.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/pentahedralPrism_a.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/pentahedralPrism_b.png}
+   \subcaption{}
+   \label{}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/pentahedralPrism_c.png}
+   \subcaption{}
+   \label{}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/pentahedralPrism_d.png}
+   \subcaption{}
+   \label{}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/pentahedralPrism_e.png}
+   \subcaption{}
+   \label{}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/pentahedralPrism_f.png}
+   \subcaption{}
+   \label{}
+  \end{minipage}
+ \hspace*{\fill}
+  \caption{\textit{Full-colored printing by DMM.make 3D print.}}
+  \label{fig:}
+\end{figure}
+
 \begin{figure}[H]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
@@ -1528,6 +1764,40 @@ verify the parameter space, and Ryo Kageyama do further experiment in
 his master thesis\cite{kageyama}. 
 
 \subsubsection{Cake}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake/hexahedralCakeFaces.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake/hexahedralCake_a.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake/hexahedralCake_b.png}
+   \subcaption{}
+   \label{}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake/hexahedralCake_c.png}
+   \subcaption{}
+   \label{fig:}
+  \end{minipage}
+ \hspace*{\fill}
+  \caption{\textit{Full-colored printing by DMM.make 3D print.}}
+  \label{fig:}
+\end{figure}
 
 \begin{figure}[H]
  \begin{minipage}{0.5\textwidth}
