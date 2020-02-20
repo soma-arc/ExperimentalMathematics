@@ -70,13 +70,6 @@ Sciences, Meiji University, Tokyo, Japan;
 \maketitle
 
 \begin{abstract}
- これまで，球面体群について，提案され
- このフラクタルは豊かな図像を見せる．
- 元来，多大な時間がかかっていた．しかし，ハードウェアの進化とアルゴリズ
- ムによってリアルタイムに図を描画できるようになった．
- 本論文では可視化された図像から数学的問題を提起し，解決する．
- その問題は．．．であり，．．．を示す．
-
  We are interested in finding examples of quasi-fuchsian subgroup of
  M\"ob$(S^3)$, the group of orientation preserving M\"obius
  transformations on $S^3$. In this article we consider a new problem of
@@ -84,12 +77,15 @@ Sciences, Meiji University, Tokyo, Japan;
  interesting examples of quasi-fuchsian groups and pictures of fractal
  two-spheres.
 
- Usually, rendering image of the fractals takes much time.
- We use an original algorithm Iterated Inversion System (IIS.)
+ Usually, rendering image of the this kind of fractals takes much time.
+ However we accelerate the speed of rendering fractals by
+ using an our original algorithm called Iterated Inversion System (IIS)
  and sphere tracing, a kind of a ray tracing techniques.
- We can render the images of fractals in real-time.
- In this paper we focus visualized images.
- We find mathematical problem from rendered images.
+ We can render the images of fractals in real-time
+ and it makes visualization experiment easily.
+ We also focus to find and solve mathematical problems about the
+ polyhedra from visualization.
+
 \end{abstract}
 
 \begin{keywords}
@@ -183,29 +179,30 @@ mathematical problems, and its solutions.
 
 There are pictures of three-dimensional, so it is hard to see whole
 appearance only by them. We can see sphairahedron based fractal renderer,
- more pictures and more movies in the
+ more pictures, and more movies in the
 our web site\footnote{\url{https://sphairahedron.net}}.
 
 \subsection{Sphairahedron}
 
 \begin{figure}[h!tbp]
- \begin{minipage}[t]{0.6\textwidth}
-  \centering
-  \begin{minipage}[t]{0.19\textwidth}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
    \includegraphics[width=1.2in, height=1.2in, keepaspectratio]
    {./img/sphairahedralPrism/sphairaAll.png}
    \subcaption{$A$}
    \label{fig:sphairaPrismAll}
   \end{minipage}
   \hspace*{\fill}
-  \begin{minipage}[t]{0.19\textwidth}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
    \includegraphics[width=1.2in, height=1.2in, keepaspectratio]
    {./img/sphairahedralPrism/sphairaHalf.png}
    \subcaption{Infinite type}
    \label{fig:sphairaPrismHalf}
   \end{minipage}
   \hspace*{\fill}
-  \begin{minipage}[t]{0.19\textwidth}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
    \includegraphics[width=1.2in, height=1.2in,
    keepaspectratio]{./img/sphairahedralPrism/sphairahedron.png} 
    \subcaption{Finite type}
@@ -214,17 +211,20 @@ our web site\footnote{\url{https://sphairahedron.net}}.
   \hspace*{\fill}
   \caption{Sphairahedron.}
   \label{fig:sphairahedron}
- \end{minipage}
- \begin{minipage}[t]{0.4\textwidth}
-  \centering
-  \begin{minipage}[t]{0.19\textwidth}
+ \end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.6\textwidth}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
    \includegraphics[width=1.2in, height=1.2in,
    keepaspectratio]{./img/sphairahedralPrism/semiSphairaAll.png}
    \subcaption{$A$}
    \label{fig:semi-sphairaAll}
   \end{minipage}
   \hspace*{\fill}
-  \begin{minipage}[t]{0.19\textwidth}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
    \includegraphics[width=1.2in, height=1.2in,
    keepaspectratio]{./img/sphairahedralPrism/semiSphairaHalf.png}
    \subcaption{Infinite type}
@@ -234,14 +234,13 @@ our web site\footnote{\url{https://sphairahedron.net}}.
   \caption{Semi-sphairahedron.}
   \label{fig:semi-sphairahedron}
  \end{minipage}
-\end{figure}
-
-\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.3\textwidth}
   \centering
  \includegraphics[width=1.2in, height=1.2in,
  keepaspectratio]{./img/sphairahedralPrism/hole.png}
  \caption{sphairahedron with hole.}
   \label{fig:brokenHole}
+ \end{minipage}
 \end{figure}
 
 We will describe the simple definition of a sphairahedron used in \cite{bridges2018}.
@@ -291,40 +290,40 @@ For example, it has unnecessary hole and so on.
 See Figure \ref{fig:brokenHole}. It shows broken sphairahedron.
 The green sphere make a hole.
 
-\subsection{Construct Fractal}
+\subsection{Construct Fractal}\label{constructFractal}
 
 \begin{figure}[H]
- \begin{minipage}[t]{0.19\textwidth}
+ \begin{minipage}[t]{0.18\textwidth}
   \centering
-  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step1.png}
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/step1.png}
   \subcaption{Step 1}
   \label{fig:sphaira-step1}
  \end{minipage}
  \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
+ \begin{minipage}[t]{0.18\textwidth}
   \centering
-  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step2.png}
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/step2.png}
   \subcaption{Step 2}
   \label{fig:sphaira-step2}
  \end{minipage}
  \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
+ \begin{minipage}[t]{0.18\textwidth}
   \centering
-  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step5.png}
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/step5.png}
   \subcaption{Step 5}
   \label{fig:sphaira-step5}
  \end{minipage}
  \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
+ \begin{minipage}[t]{0.18\textwidth}
   \centering
-  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/step10.png}
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/step10.png}
   \subcaption{Step 10}
   \label{fig:sphaira-step10}
  \end{minipage}
  \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
+ \begin{minipage}[t]{0.18\textwidth}
   \centering
-  \includegraphics[width=1.1in, height=1.1in, keepaspectratio]{./img/constructFractal/finiteProcess/final.png}
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/final.png}
   \subcaption{Final image}
   \label{fig:sphaira-final}
  \end{minipage}
@@ -334,37 +333,37 @@ The green sphere make a hole.
 \end{figure}
 
 \begin{figure}[h!tbp]
- \begin{minipage}[t]{0.19\textwidth}
+ \begin{minipage}[t]{0.18\textwidth}
   \centering
-  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step1.png}
+  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/step1.png}
   \subcaption{Step 1}
   \label{fig:terrainStep1}
  \end{minipage}
  \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
+ \begin{minipage}[t]{0.18\textwidth}
   \centering
-  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step2.png}
+  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/step2.png}
   \subcaption{Step 2}
   \label{}
  \end{minipage}
  \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
+ \begin{minipage}[t]{0.18\textwidth}
   \centering
-  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step5.png}
+  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/step5.png}
   \subcaption{Step 5}
   \label{}
  \end{minipage}
  \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
+ \begin{minipage}[t]{0.18\textwidth}
   \centering
-  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/step10.jpg}
+  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/step10.jpg}
   \subcaption{Step 10}
   \label{fig:terrainStep10}
  \end{minipage}
  \hspace*{\fill}
- \begin{minipage}[t]{0.19\textwidth}
+ \begin{minipage}[t]{0.18\textwidth}
   \centering
-  \includegraphics[height=1.2in, keepaspectratio]{./img/constructFractal/terrainProcess/final.jpg}
+  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/final.jpg}
   \subcaption{Final image}
   \label{fig:sphairaPrismFinal}
  \end{minipage}
@@ -374,7 +373,7 @@ The green sphere make a hole.
 
 \begin{figure}[h!tbp]
   \centering
- \includegraphics[width=1.2in, height=1.2in,
+ \includegraphics[width=2in,
  keepaspectratio]{./img/constructFractal/semi-terrain2.png}
  \caption{sphairahedron with hole.}
   \label{fig:semiSphairaSpheres}
@@ -706,10 +705,11 @@ Hence the four vertices lie on one plane in $R^3$.
   \begin{minipage}[t]{0.15\textwidth}
    \centering
    \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cubeFaces.png}
-   \subcaption{}
+   \caption{Faces}
    \label{fig:}
   \end{minipage}
  \hspace*{\fill}
+ \begin{minipage}[t]{0.75\textwidth}
   \begin{minipage}[t]{0.15\textwidth}
    \centering
    \includegraphics[width=0.8in,
@@ -790,14 +790,15 @@ Hence the four vertices lie on one plane in $R^3$.
    \label{fig:}
   \end{minipage}
  \hspace*{\fill}
-  \caption{\textit{Full-colored printing by DMM.make 3D print.}}
-  \label{fig:}
+  \caption{\textit{Cube-type}}
+  \label{fig:cubeGraph}
+ \end{minipage}
 \end{figure}
 
 We get this lemma only in combinatorical way, so we omit the proof.
 
 In order to represent a sphairahedron, we use a polyhedral graph as
-shown in Figure []. The graph shows an infinite cube-type sphairahedron.
+shown in Figure \ref{fig:cubeGraph}. The graph shows an infinite cube-type sphairahedron.
 The black lines represent edges, and the circles represent
 vertices. The three radial edges connect the infinite vertex and finite
 vertices. Each of the numbers beside 
@@ -805,7 +806,7 @@ the edges means a natural number $n$ for the dihedral angle $\pi / n$
 
 In this preview section we introduce that there are 7 types of
 combination of face angles. But here are 11. In fact, in case (f), (g),
-(j), and (k), there is no polyhedron with these face-angles. See section 2.6.
+(j), and (k), there is no polyhedron with these face-angles. See section \ref{paramSpace}.
 
 \subsection{Constructing hexahedron}
 
@@ -944,7 +945,7 @@ Let $O_i'(x_i, y_i)$ be a projection of the center of the sphere $O_i$
 \subsection{Compatibility}
 In this way for given parameters ($z_B, z_C$) such that $r_2, r_4, r_6$
 are all positive, we get the coordinates of three spheres 
-$O_2 O_4, O_6$. But it is not trivial whether the 6-ple($O_1, ..., O_6$) is
+$O_2, O_4, O_6$. But it is not trivial whether the 6-ple($O_1, ..., O_6$) is
 in $\tilde\varepsilon(n_{ij})$. (That is, we have to show that 
 ($O_1,..., O_6$) satisfies (P1), (P2), (P3).)
 
@@ -970,20 +971,24 @@ in $\tilde\varepsilon(n_{ij})$. (That is, we have to show that
 \end{theorem}
 
 \begin{figure}[h!tbp]
- \centering
- \includegraphics[width=3.5in, height=3.5in,
- keepaspectratio]{./img/HexahedraWithSphericalFaces/sideSliceDistance.png}
- \caption{}
- \label{fig:sideSliceDistance}
+ \begin{minipage}[t]{0.5\textwidth}
+  \centering
+  \includegraphics[width=3in, height=3in,
+  keepaspectratio]{./img/HexahedraWithSphericalFaces/sideSliceDistance.png}
+  \caption{}
+  \label{fig:sideSliceDistance}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.5\textwidth}
+  \centering
+  \includegraphics[width=3in, height=3in,
+  keepaspectratio]{./img/HexahedraWithSphericalFaces/adb.png}
+  \caption{}
+  \label{fig:adb}
+ \end{minipage}
+ \hspace*{\fill}
 \end{figure}
 
-\begin{figure}[h!tbp]
- \centering
- \includegraphics[width=3.5in, height=3.5in,
- keepaspectratio]{./img/HexahedraWithSphericalFaces/adb.png}
- \caption{}
- \label{fig:adb}
-\end{figure}
  
 \begin{proof}
  (1) Let $\theta'_{24}$ be the face-angle of $O_2$ and $O_4$. From the
@@ -1121,7 +1126,7 @@ For $(i, j) = (1, 2), (1, 4), (4, 5), (5, 6), (2, 3), (3, 6)$, it is
  at $\infty$. At $D, R, F, G,$ we have shown it in Theorem \ref{compat}(2)(3).
 \end{proof}
 
-\subsection{Parameter space}
+\subsection{Parameter space}\label{paramSpace}
 In this subsection we first consider in the case that $n_{ij} = 3$ for all
 $(i, j) \in E$. (That is, in case (a) in Lemma \ref{combination}) There are 11 cases
 in Lemma \ref{combination} The case (a) is not a special case, and we can make
@@ -1375,27 +1380,29 @@ there isn't a parameter space in cases $(f)$ nor $(j)$.
 
 \section{Various Sphairahedra}
 
-In this section, we show other type of the sphairahedra based on up to hexahedron.
-We can consider the same problem for other polyhedra. Here is a list of
-pentahedra and hexahedra with the number of combination of face-angles
+In this section, we show other type of the sphairahedra based on up to
+six faces.
+We can obtain other sphairahedra in the similar manner to cube-type
+sphairahedron.
+Here is a list of pentahedra and hexahedra with the number of combination of face-angles
 and the dimension of $\tilde{\varepsilon}(n_{ij})$.
 classification problems besed on cube type hexahedron.
 
 Ahara, Araki, and Kageyama dealed with only cube.
-Nakamura draw sphairahedra based on up to hexahedra and compute
-parameter space of them.
+Nakamura draw sphairahedra based on up to hexahedra, their infinite
+type limit set, and compute parameter space of them.
 In this section, we describe them.
 
 \subsection{Tetrahedron}
-
 \begin{figure}[h!tbp]
   \begin{minipage}[t]{0.23\textwidth}
    \centering
    \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/tetrahedronFaces.png}
-   \subcaption{}
+   \caption{Faces}
    \label{fig:}
   \end{minipage}
  \hspace*{\fill}
+  \begin{minipage}[t]{0.69\textwidth}
   \begin{minipage}[t]{0.23\textwidth}
    \centering
    \includegraphics[width=1in,
@@ -1418,8 +1425,9 @@ In this section, we describe them.
    \label{fig:}
   \end{minipage}
  \hspace*{\fill}
-  \caption{\textit{Full-colored printing by DMM.make 3D print.}}
-  \label{fig:}
+ \caption{\textit{The graph of the tetrahedron type sphairahedron}}
+ \label{fig:tetrahedronFaces}
+  \end{minipage}
 \end{figure}
 
 \begin{figure}[H]
@@ -1453,15 +1461,17 @@ In this section, we describe them.
    \subcaption{\textit{Limit set}}
   \end{minipage}
   \hspace*{\fill}
-  \caption{\textit{Finite pentahedral pyramid type.}}
+  \caption{\textit{Infinite tetrahedron type.}}
   \label{fig:tetrahedronInf}
  \end{minipage}
 \end{figure}
 
-Tetrahedron has only one type of combination of vertexes and edges.
-There is no parameter space.
+Tetrahedron has the fewest number of the faces of polyhedron.
+It has three type of combination of vertexes and edges as shown in
+Figure \ref{fig:tetrahedronFaces}.
+They have no parameter space.
 The quasi-spheres are shown in Figure \ref{fig:tetrahedronFinite}
-Figure \ref{fig:tetrahedronInf}.
+and Figure \ref{fig:tetrahedronInf}.
 They are sphere and plane, so the group is fuchsian group.
 
 \subsection{Pentahedron}
@@ -1474,10 +1484,11 @@ Pentahedron has two type. They are pentahedral pyramid and pentahedral prism.
   \begin{minipage}[t]{0.3\textwidth}
    \centering
    \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/pentahedralPyramidFaces.png}
-   \subcaption{}
+   \caption{Faces}
    \label{fig:}
   \end{minipage}
  \hspace*{\fill}
+  \begin{minipage}[t]{0.6\textwidth}
   \begin{minipage}[t]{0.3\textwidth}
    \centering
    \includegraphics[width=1in,
@@ -1493,8 +1504,9 @@ Pentahedron has two type. They are pentahedral pyramid and pentahedral prism.
    \label{}
   \end{minipage}
  \hspace*{\fill}
-  \caption{\textit{Full-colored printing by DMM.make 3D print.}}
+  \caption{\textit{Graph of the Pentahedral pyramid.}}
   \label{fig:}
+  \end{minipage}
 \end{figure}
 
 \begin{figure}[H]
@@ -1587,10 +1599,11 @@ Figure \ref{fig:pentahedralPyramidInf2}
   \begin{minipage}[t]{0.23\textwidth}
    \centering
    \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/pentahedralPrismFaces.png}
-   \subcaption{}
+   \caption{Faces}
    \label{fig:}
   \end{minipage}
  \hspace*{\fill}
+ \begin{minipage}[t]{0.69\textwidth}
   \begin{minipage}[t]{0.23\textwidth}
    \centering
    \includegraphics[width=1in,
@@ -1634,8 +1647,9 @@ Figure \ref{fig:pentahedralPyramidInf2}
    \label{}
   \end{minipage}
  \hspace*{\fill}
-  \caption{\textit{Full-colored printing by DMM.make 3D print.}}
+  \caption{\textit{Graph of pentahedra prism}}
   \label{fig:}
+ \end{minipage}
 \end{figure}
 
 \begin{figure}[H]
@@ -1709,8 +1723,8 @@ Figure \ref{fig:pentahedralPyramidInf2}
   \label{fig:pentahedralPrismInf}
  \end{minipage}
 \end{figure}
-5面体のpentahedral prism は6つの面角の組み合わせが存在する
 
+There are pentahedral prism which has six combinations of face angles.
 A part of Pentahedral prism is semi-sphairahedron.
 See Figure \ref{}. When parameter is positive, it seems like plane and
 sphere. However, their are many cavity
@@ -1769,10 +1783,11 @@ his master thesis\cite{kageyama}.
   \begin{minipage}[t]{0.23\textwidth}
    \centering
    \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake/hexahedralCakeFaces.png}
-   \subcaption{}
+   \caption{Faces}
    \label{fig:}
   \end{minipage}
  \hspace*{\fill}
+ \begin{minipage}[t]{0.69\textwidth}
   \begin{minipage}[t]{0.23\textwidth}
    \centering
    \includegraphics[width=1in,
@@ -1795,8 +1810,9 @@ his master thesis\cite{kageyama}.
    \label{fig:}
   \end{minipage}
  \hspace*{\fill}
-  \caption{\textit{Full-colored printing by DMM.make 3D print.}}
+  \caption{\textit{Graph of hexahedral cake}}
   \label{fig:}
+ \end{minipage}
 \end{figure}
 
 \begin{figure}[H]
@@ -1834,28 +1850,25 @@ his master thesis\cite{kageyama}.
    \subcaption{\textit{Limit set}}
   \end{minipage}
   \hspace*{\fill}
-  \caption{\textit{Finite pentahedral pyramid type.}}
+  \caption{\textit{Finite hexahedral cake type.}}
   \label{fig:cakeInf}
  \end{minipage}
 \end{figure}
 
-\subsection{Polyhedra which have heptahedron or }
+They are landscape-like pattern.
+They are organic shape.
+
+\subsection{Polyhedra whose number of the faces is seven and more }
 The quasi-sphere can be obtained by applying the group to sum of
 spheres, not sphairahedra themselves.
 
-
-七つ以上の面をもつ球面体
-
-七角形以上のSphairahedronはパターンが多くなること，条件を満たす
-パラメータが厳しくなることから，計算することが難しい
-角度の条件から
-五つ以上の辺が繋がる頂点があってはいけない
-Sphairahedra generated by heptamond or more polyhedra have many
+Sphairahedra generated by heptahedron or more polyhedra have many
 patterns, but it is difficult to compute them 
 because there must not be vertexes connecting to five or more edges.
-Because 
 
-polyhedra with spherical face sseven and over faces.
+Heptahedron has thirty four types of heptahedra.
+Number of the polyhedra with eight or more faces is explosively increases.
+Moreover, rationalityを満たすためには五つ以上の辺が繋がる頂点があってはいけない
 
 In many case, it is difficult to compute ideal rational sphairahedron.
 The one of the reasons why the combination of nodes and edges are 
@@ -1890,6 +1903,50 @@ pi / n (n >= 5)は360 / k となるkが存在しないため．
 
 \subsection{Methods}
 
+\begin{figure}[H]
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep1.png}
+  \subcaption{Step 1}
+  \label{}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep2.png}
+  \subcaption{Step 2}
+  \label{}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep5.png}
+  \subcaption{Step 5}
+  \label{}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep10.png}
+  \subcaption{Step 10}
+  \label{}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereFinal.png}
+  \subcaption{Final image}
+  \label{}
+ \end{minipage}
+ \hspace*{\fill}
+ \caption{Tiling of a finite cube-type sphairahedron.}
+ \label{}
+\end{figure}
+
+In section \ref{constructFractal}, we show how to construct fractals.
+We obtain sphairahedra.
+So, we have to render infinite number of sphairahedra.
+
 We can obtain quasi-sphere from applying group to sum of the spheres
 including sphairahedra.
 The proof of the fact is ...
@@ -1920,9 +1977,7 @@ spheres, not sphairahedra themselves.
 The proof of the this theorem ... ....
 classification problems besed on cube type hexahedron.
 
-IISとスフィアトレーシングで描画できるが，二つの描画方法が存在する
-球面体そのものを球の反転で移すことで描画できるが，球面体を含む複数の球を
-群の作用で移すことができる．
+The proof is as follows.
 
 \begin{proposition}
 球面体そのものでなく，球面体を含む球の和集合に群を作用させることによっても
@@ -1964,14 +2019,13 @@ When the sphairahedron at outside of the parameter space,
 the fractal bridge emerge.
 The bridge pass through the prism sphairahedron.
 The bridge seems to be discrete by n/pi.
-So, there are parameters ouy side of the parameter space.
+So, there are parameters our side of the parameter space.
 we don't know that is point, curve, or regions.
 
 The parameter space different from other fractals it is not fractal
 structure. Maskit parametrization or julia set have parameter spaces
 with fractal structures.
 
-今回はレンダリングされた図から得られた数学的問題を解決する
 In this case, we solve the mathematical problems obtained from rendered
 images.
 
@@ -2028,7 +2082,6 @@ various viewpoints.
 We feel fractal structures and its symmetry by hand.
 
 \section{Problems}
-図を見ることで考察することのできる数学的問題を提起，解決
 
 極限集合の腕がのび，違うタイルと重なるとき，非離散的であるが，
 重なりはpi/nになる．
@@ -2049,7 +2102,9 @@ parameter space, but we don't know it is points, lines, or regions.
 図を観察して こういうことができるという主張
 パラメータ空間の形状はフラクタル形状がない
 パラメータスペースが連結
-The shape of the parameter space is not fractal structures.
+
+The shape of the parameter space is not fractal structures like
+Mandelbrot set and julia set or Maskit slice. 
 The parameter space is connected.
 
 ビジュアライズされて図から読みとれること
