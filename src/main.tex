@@ -429,8 +429,6 @@ we refer color wheel with large steps to visualize each tile clearly.
 On the other hand, in the other images, we refer the wheel with smaller
 steps, and we find lots of tiles with many inversions in the blue
 parts of the fractal.
-We can also find that the blue parts themselves form the constant
-patterns.
 
 Up to this point, we showed tiling patterns without gaps between the tiles and
 intersections of the tiles.
@@ -1380,26 +1378,19 @@ there isn't a parameter space in cases $(f)$ nor $(j)$.
 
 \section{Various Sphairahedra}
 
-In this section, we show other type of the sphairahedra based on up to
-six faces.
+In this section, we show other types of the sphairahedra based on the
+number of faces up to six.
 We can obtain other sphairahedra in the similar manner to cube-type
 sphairahedron.
-Here is a list of pentahedra and hexahedra with the number of combination of face-angles
-and the dimension of $\tilde{\varepsilon}(n_{ij})$.
-classification problems besed on cube type hexahedron.
-
-Ahara, Araki, and Kageyama dealed with only cube.
-Nakamura draw sphairahedra based on up to hexahedra, their infinite
-type limit set, and compute parameter space of them.
-In this section, we describe them.
 
 \subsection{Tetrahedron}
+
 \begin{figure}[h!tbp]
   \begin{minipage}[t]{0.23\textwidth}
    \centering
    \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/tetrahedronFaces.png}
    \caption{Faces}
-   \label{fig:}
+   \label{fig:tetrahedronFaces}
   \end{minipage}
  \hspace*{\fill}
   \begin{minipage}[t]{0.69\textwidth}
@@ -1426,7 +1417,7 @@ In this section, we describe them.
   \end{minipage}
  \hspace*{\fill}
  \caption{\textit{The graph of the tetrahedron type sphairahedron}}
- \label{fig:tetrahedronFaces}
+ \label{fig:tetrahedronCombinations}
   \end{minipage}
 \end{figure}
 
@@ -1468,7 +1459,7 @@ In this section, we describe them.
 
 Tetrahedron has the fewest number of the faces of polyhedron.
 It has three type of combination of vertexes and edges as shown in
-Figure \ref{fig:tetrahedronFaces}.
+Figure \ref{fig:tetrahedronFaces} and Figure \ref{fig:tetrahedronCombinations}.
 They have no parameter space.
 The quasi-spheres are shown in Figure \ref{fig:tetrahedronFinite}
 and Figure \ref{fig:tetrahedronInf}.
@@ -1727,11 +1718,12 @@ Figure \ref{fig:pentahedralPyramidInf2}
 There are pentahedral prism which has six combinations of face angles.
 A part of Pentahedral prism is semi-sphairahedron.
 See Figure \ref{}. When parameter is positive, it seems like plane and
-sphere. However, their are many cavity
+sphere. However, they have many cavity under the plane.
 Figure \ref{fig:pentahedralPrismFinite}
 Figure \ref{fig:pentahedralPrismInf}
 
-semi-sphairahedron. It is not quasi-fuchsian group.
+Some combination of face angles is semi-sphairahedron.
+It is not quasi-fuchsian group.
 Visualize sphairahedron(semi-sphairahedron)-based fractals in real time.
 The limit set of semi-sphairahedron is many spheres touching each other and,
 it becomes not Fuchsian group,
@@ -1860,8 +1852,10 @@ his master thesis\cite{kageyama}.
  \end{minipage}
 \end{figure}
 
-They are landscape-like pattern.
-They are organic shape.
+Infinite sphairahedron generates landscape-like pattern.
+They have organic shape.
+The sphairahedron has three type of the combinations of face angles.
+They have four half planes.
 
 \subsection{Polyhedra whose number of the faces is seven and more}
 
@@ -1895,11 +1889,6 @@ The proof is as follows.
  When a sphairahedron 
  vertex $pi / n (n \geq 5)$
  is not rational sphairahedron.
-
-また，五つ以上の辺が繋がる頂点があってはいけない．
-なぜなら各頂点の辺角の合計は(k - 2)piでなければいけない
-pi / n (n >= 5)は360 / k となるkが存在しないため．
-から有理性を満たすことができないからである．
 
  To satisfy ideality, sum of the edge angles should be $(k - 2) \pi$
  we transform the vertex to infinity.
@@ -2011,7 +2000,7 @@ The proof is as follows.
  \end{minipage}
  \hspace*{\fill}
  \caption{Cube type sphairahedron}
- \label{}
+ \label{fig:cubeHoles}
 \end{figure}
 
 本セクションでは，図から観察できることを記述する．
@@ -2020,6 +2009,9 @@ HSV表色系を用いている
 青に近い色では多くの球面体が集まっている．
 この点付近は放物型固定点で，収束が遅くなっている．
 
+We can also find that the blue parts themselves form the constant
+patterns.
+
 パラメータスペースの外にでると橋ができる
 この橋は角柱型の球面体に穴が空いたところを通ってできる．
 このとき，橋はpi/nで離散的になっているようにみえる．
@@ -2027,8 +2019,30 @@ HSV表色系を用いている
 存在しているのではないかと推察される．それが点なのか曲線なのか，領域なの
 かはわからない．
 
-球面体の頂点は収束が遅い
-The convergence of the vertex of the sphairahedra is slow.
+Figure \ref{fig:cubeHoles}.
+The limit set forms a hexagram-like shape, and we call six elongated parts
+of the hexagram \textit{arms}.
+The arms get longer as the parameter approaches to the edge of the
+parameter space.
+When the parameter is at the edge (the point $B$ in Figure \ref{fig:paramSpace},)
+the arms come into contact with neighboring arms.
+
+極限集合の腕がのび，違うタイルと重なるとき，非離散的であるが，
+重なりはpi/nになる．
+The limit sets have arms. The arms get longer as the parameter approaches
+to the edge of the parameter space.
+Then the parameter is outside of the parameter space, and the
+arms overlap each other.
+In this case, the sprhairahedron corresponding to the limit set may not
+rational.
+However when the arms overlaps with rational angles.
+It may be discrete group of the group.
+So, the parameter space of the ideal rational sphairahedron has outer
+parameter space, but we don't know it is points, lines, or regions.
+
+
+The convergence of the vertex of the sphairahedra is slow
+because the vertex have many edges, and gather tiles.
 
 In this section, we observe images of sphairahedra and its tiling
 patterns.
@@ -2107,33 +2121,6 @@ We feel fractal structures and its symmetry by hand.
 
 \section{Problems}
 
-The limit set forms a hexagram-like shape, and we call six elongated parts
-of the hexagram \textit{arms}.
-The arms get longer as the parameter approaches to the edge of the
-parameter space.
-When the parameter is at the edge (the point $B$ in Figure \ref{fig:paramSpace},)
-the arms come into contact with neighboring arms.
-
-極限集合の腕がのび，違うタイルと重なるとき，非離散的であるが，
-重なりはpi/nになる．
-The limit sets have arms. The arms get longer as the parameter approaches
-to the edge of the parameter space.
-Then the parameter is outside of the parameter space, and the
-arms overlap each other.
-In this case, the sohairahedron corresponding to the limit set may not
-rational.
-However when the arms overlaps with rational angles.
-It may be discrete group of the group.
-So, the parameter space of the ideal rational sphairahedron has outer
-parameter space, but we don't know it is points, lines, or regions.
-
-パラメータ空間の境界でなにがおこるか予想
-図からよみとれることがあればよい
-
-図を観察して こういうことができるという主張
-パラメータ空間の形状はフラクタル形状がない
-パラメータスペースが連結
-
 The shape of the parameter space is not fractal structures like
 Mandelbrot set and julia set or Maskit slice. 
 The parameter space is connected.
@@ -2142,7 +2129,8 @@ The parameter space is connected.
 固定点付近は収束が遅いこと
 橋ができたときにPI/nになった，
 球面体の各頂点の収束が特に遅い(タイリングするためにはたくさんの球面体が必要)
-たくさんの円が交わる各頂点は収束が遅くなる．
+たくさんの円が交わる各頂点は収束が遅くなる．たくさんタイルが必要になるの
+で
 
 (まだできていないこと)
 Find mathematical property of the fractals.
@@ -2207,8 +2195,16 @@ and one of the clue of solution.
         数理解析研究所講究録，1329巻，2003年，109-114
 \bibitem{bridges2016}
         Kento Nakamura and Kazushi Ahara,
+        \emph{A New Algorithm for Rendering Kissing Schottky Groups}, 
+        Proceedings of Bridges 2016: Mathematics, Music, Art, Architecture,
+        Education, Culture, Tessellations Publishing,
+        Phoenix, Arizona, 2016, pp. 367--370.
 \bibitem{bridges2017}
         Kento Nakamura and Kazushi Ahara,
+        \emph{A Geometrical Representation and Visualization of M\"{o}bius Transformation Groups}, 
+        Proceedings of Bridges 2017: Mathematics, Music, Art, Architecture,
+        Education, Culture, Tessellations Publishing,
+        Phoenix, Arizona, 2017, pp. 159--166.
 \bibitem{bridges2018}
         Kento Nakamura and Kazushi Ahara,
         \emph{Sphairahedra and Three-Dimensional Fractals}, 
