@@ -815,8 +815,8 @@ In the sequel we suppose that $H = \infty$. (See Figure \ref{fig:infTriangle}) S
 edges $HA, HB, HC$ are straight lines and are parallel to each other. We
 assume that they are perpendicular to xy-plane.
 Let ($x_A, y_B, z_z$), ..., ($x_G, y_G, z_G$) be coordinates of vertices
-A, B, ..., G (except $H$) respectively. Let $A'(x_A, y_A)$, ...,$G'(x_G,
-y_G)$ be projection of these 7 vertices to the xy-plane.
+A, B, ..., G (except $H$) respectively. Let $A'(x_A, y_A)$, ...,
+$G'(x_G, y_G)$ be projection of these 7 vertices to the xy-plane.
 
 We get immediately that $\angle C'A'B' = \theta_{13}, \angle A'B'C' =
 \theta_{15}, \angle B'C'A'=\theta_{13}$. Remark that $\theta_{13} +
@@ -850,7 +850,7 @@ the radius, we have the following proposition.
 \end{proposition}
 
 \begin{proof}
- In Figure \ref{fig:sideSlice}. the edge $AD = e_{12}$ is a circle with radius
+ In Figure \ref{fig:sideSlice}, the edge $AD = e_{12}$ is a circle with radius
  $r_2\sin\theta_{12}$, and the edge $DB e_{14}$ is a circle with radius
  ($r_4\sin\theta_{14}$).
 Two vertical lines $HA$ and $HB$ are tangent to these circles as in
@@ -858,7 +858,7 @@ Two vertical lines $HA$ and $HB$ are tangent to these circles as in
  and we have 
  \begin{eqnarray*}
   \overline{AD} = 2 r_2 \sin\theta_{12} \cdot \overline{A'B'}/\overline{AB}\\
-  \overline{DB} = 2 r_4 \sin\theta_{14} \cdot \overline{A'B'}/\overline{AB}
+  \overline{DB} = 2 r_4 \sin\theta_{14} \cdot \overline{A'B'}/\overline{AB}.
  \end{eqnarray*}
  Remark that $\cos(\angle BAB') =\overline{A'B'}/\overline{AB}.$ Clearly
  $\overline{AD} + \overline{DB} = \overline{AB}$ holds, so it is easy to
@@ -867,7 +867,15 @@ Two vertical lines $HA$ and $HB$ are tangent to these circles as in
 
 \end{proof}
 
-\begin{remark}
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=3.5in, height=3.5in,
+ keepaspectratio]{./img/HexahedraWithSphericalFaces/abcTriangle.png}
+ \caption{}
+ \label{fig:sideSlice}
+\end{figure}
+
+\begin{remark}%TODO 数式番号2.Aを付す
  If we regard ($2.A$) as linear equation on $r_2, r_4, r_6$, the
  coordinate matrix of ($2.A$) is not singular. In fact,
  \begin{eqnarray*}
@@ -884,21 +892,12 @@ Two vertical lines $HA$ and $HB$ are tangent to these circles as in
  (2.A), but they may be non-positive. And, if $r_2$ or $r_4$ or $r_6$
  are too large, ($O_i$) doesn't form a hexahedron. For example, see
  subsection \ref{extend}. In this section, we know that $r_2, r_4, r_6$ are all
- 'valid' if and only if parameters ($z_B, z_C$) are in the restricted are
- area
+ 'valid' if and only if parameters ($z_B, z_C$) are in the restricted area．
 
 Next, we will obtain the coordinate of the centers of $O_2, O_4, O_6$.
 Let $O_i'(x_i, y_i)$ be a projection of the center of the sphere $O_i$
- to xy-plane (for i = 2, 4, 6.)
+ to xy-plane (for $i = 2, 4, 6$.)
 \end{remark}
-
-\begin{figure}[h!tbp]
- \centering
- \includegraphics[width=3.5in, height=3.5in,
- keepaspectratio]{./img/HexahedraWithSphericalFaces/abcTriangle.png}
- \caption{}
- \label{fig:sideSlice}
-\end{figure}
 
 \begin{proposition}\label{angles}
  (1)$\angle O_2'A'B' = \pi/2 - \theta_{12}, \angle
@@ -920,7 +919,7 @@ Let $O_i'(x_i, y_i)$ be a projection of the center of the sphere $O_i$
  (1) Since the face-angle of the plane $O_1$ and the sphere $O_2$ is
  $\theta_{12}$, the angle of a straight line $A'B'$ and a circle with
  center $O'_2$ and with radius $r_2$ is also $\theta_{12}$. It follows
- that $\angle O_2'A'B' = \pi/2 - \theta_{12}$(See Figure 6.)
+ that $\angle O_2'A'B' = \pi/2 - \theta_{12}$(See Figure \ref{fig:sideSlice}.)
  
  (2) The edge $AD = e_{12}$ is the intersection of a plane $O_1$ and a
  sphere $O_2$. This edge(= plane circle) is tangent to $AH$ (which is
@@ -932,7 +931,7 @@ Let $O_i'(x_i, y_i)$ be a projection of the center of the sphere $O_i$
  $\theta_{ij}$ and $r_i$ and $z_A, z_B, z_C$. In fact, the formula
  $\angle O'_2, A'B' = \pi/2 - \theta_{12}, \angle O'_{2}A'C' = \pi/2 -
  \theta_{23}$ means that the center $O_2'$ is a half-line with one
- end $A'$ as in Figure 6.
+ end $A'$ as in Figure \ref{fig:sideSlice}.
  And $\overline{A'O'_2} = \overline{AO_2} = r_2$ determines $A'$.
  So $O'_2$ is uniquely determined. From Lemma \ref{angles}(2), we get the
  z-coordinates $z_2$ of the center $O_2$ from $z_A(=0)$. Hence a sphere
@@ -1068,10 +1067,10 @@ Next we will show that the edge $e_{24}$ is tangent to both of $e_{12}$ and
    \centering
    \includegraphics[width=2in, keepaspectratio]{./img/HexahedraWithSphericalFaces/threeCircles3.png}
    \subcaption{\textit{Plastic}}
-   \label{fig:3dcolPlastic}
+   \label{fig:}
   \end{minipage}
-  \caption{\textit{Full-colored printing by DMM.make 3D print.}}
-  \label{fig:3dcol}
+  \caption{\textit{}}
+  \label{fig:threeCircles}
 \end{figure}
 
 
@@ -1081,10 +1080,11 @@ Next we will show that the edge $e_{24}$ is tangent to both of $e_{12}$ and
 Let R be the radical point of $C_2, C_4, C_6$. There are three cases
  here.
 (i) $R$ is inside if $C_2, C_4, C_6$.(ii) R is outside $C_2, C_4, C_6$.
-(iii)$R$ is on $C_2, C_4, C_6$. (See Figure 9)
+(iii)$R$ is on $C_2, C_4, C_6$. (See Figure \ref{fig:threeCircles}.)
 
 In the case (i), let three points $S_{24}, S_{46}, S_{26}$ be as in Figure
- 9 (left). Here we have $\angle O_2 S_{24} O_4 = \pi - \theta_{24}$,
+\ref{fig:threeCircles} (left). Here we have
+$\angle O_2 S_{24} O_4 = \pi - \theta_{24}$,
 because their face-angle of $O_2$ and $O_4$ is $\theta_{24}$.
 In the same way, $\angle O_4\theta_{46}O_6 = \pi - \theta_{46}$ and
 $\angle O_2S_{26}O_6 = \pi-\theta_{26}$ hold. Hence
@@ -1094,7 +1094,7 @@ $\angle O_2S_{26}O_6 = \pi-\theta_{26}$ hold. Hence
  \theta_{24} - \theta_{46} - \theta_{26} = 2\pi.
 \end{align*}
 
-On the other hand, from Figure 9 (left)
+On the other hand, from Figure \ref{fig:threeCircles} (left)
 
 \begin{align*}
  \angle O_2 S_{24} O_4 &< \angle O_2 R O_4
@@ -1435,7 +1435,7 @@ sphairahedron.
    \subcaption{\textit{Limit set}}
   \end{minipage}
   \hspace*{\fill}
-  \caption{\textit{Finite tetrahedron type.}}
+  \caption{\textit{Finite tetrahedron type(a).}}
   \label{fig:tetrahedronFinite}
  \end{minipage}
  \hspace*{\fill}
@@ -1452,17 +1452,55 @@ sphairahedron.
    \subcaption{\textit{Limit set}}
   \end{minipage}
   \hspace*{\fill}
-  \caption{\textit{Infinite tetrahedron type.}}
+  \caption{\textit{Infinite tetrahedron type(a).}}
   \label{fig:tetrahedronInf}
  \end{minipage}
 \end{figure}
 
-Tetrahedron has the fewest number of the faces of polyhedron.
+\begin{figure}[H]
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/tetrahedron/sphairahedralPrism_b.png}
+   \subcaption{\textit{Sphairahedron}}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitset_b.png}
+   \subcaption{\textit{Limit set}}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{\textit{Infinite tetrahedron type(b).}}
+  \label{fig:tetrahedronInf_b}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/tetrahedron/sphairahedralPrism_c.png}
+   \subcaption{\textit{Sphairahedron}}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitset_c.png}
+   \subcaption{\textit{Limit set}}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{\textit{Infinite tetrahedron type(c).}}
+  \label{fig:tetrahedronInf_c}
+ \end{minipage}
+\end{figure}
+
+Tetrahedron has the fewest number of the faces.
 It has three type of combination of vertexes and edges as shown in
 Figure \ref{fig:tetrahedronFaces} and Figure \ref{fig:tetrahedronCombinations}.
-They have no parameter space.
+They have no parameter.
 The quasi-spheres are shown in Figure \ref{fig:tetrahedronFinite}
-and Figure \ref{fig:tetrahedronInf}.
+, Figure \ref{fig:tetrahedronInf}, Figure \ref{fig:tetrahedronInf_b},
+and Figure \ref{fig:tetrahedronInf_c}.
+The tiling pattern of planes are different from infinite sphairahedra.
 They are sphere and plane, so the group is fuchsian group.
 
 \subsection{Pentahedron}
@@ -1514,7 +1552,7 @@ Pentahedron has two type. They are pentahedral pyramid and pentahedral prism.
    \subcaption{\textit{Limit set}}
   \end{minipage}
   \hspace*{\fill}
-  \caption{\textit{Finite tetrahedron type.}}
+  \caption{\textit{Finite tetrahedron type(a).}}
   \label{fig:pentahedralPyramidFinite}
  \end{minipage}
  \hspace*{\fill}
@@ -1531,7 +1569,7 @@ Pentahedron has two type. They are pentahedral pyramid and pentahedral prism.
    \subcaption{\textit{Limit set}}
   \end{minipage}
   \hspace*{\fill}
-  \caption{\textit{Finite pentahedral pyramid type.}}
+  \caption{\textit{Infinite pentahedral pyramid type(a).}}
   \label{fig:pentahedralPyramidInf}
  \end{minipage}
 \end{figure}
@@ -1550,7 +1588,7 @@ Pentahedron has two type. They are pentahedral pyramid and pentahedral prism.
    \subcaption{\textit{Limit set}}
   \end{minipage}
   \hspace*{\fill}
-  \caption{\textit{Finite tetrahedron type.}}
+  \caption{\textit{Finite tetrahedron type(b).}}
   \label{fig:pentahedralPyramidFinite2}
  \end{minipage}
  \hspace*{\fill}
@@ -1567,23 +1605,22 @@ Pentahedron has two type. They are pentahedral pyramid and pentahedral prism.
    \subcaption{\textit{Limit set}}
   \end{minipage}
   \hspace*{\fill}
-  \caption{\textit{Finite pentahedral pyramid type.}}
+  \caption{\textit{Infinite pentahedral pyramid type(b).}}
   \label{fig:pentahedralPyramidInf2}
  \end{minipage}
 \end{figure}
 
-pentahedral pyramid don't have parameter space, but it have two patterns
+pentahedral pyramid don't have parameter space. It has two patterns
 of combinations of nodes, edges and angles.
 The tiling pattern of the pyramid is sphere or plane, so it is also fuchsian group.
 However, patterns of their surface is
 different from tetrahedron according to number of edges and positions of
 vertexes.
-According to the patterns of surfaces, the patterns differ from the
-shape of the sphairahedron.
-Figure \ref{fig:pentahedralPyramidFinite} and Figure
-\ref{fig:pentahedralPyramidInf} are generated by
-Figure \ref{fig:pentahedralPyramidFinite2} and
-Figure \ref{fig:pentahedralPyramidInf2}
+They are shown in 
+Figure \ref{fig:pentahedralPyramidFinite}, Figure
+\ref{fig:pentahedralPyramidInf},
+Figure \ref{fig:pentahedralPyramidFinite2}, and
+Figure \ref{fig:pentahedralPyramidInf2}.
 \subsubsection{prism}
 
 \begin{figure}[h!tbp]
@@ -1638,12 +1675,12 @@ Figure \ref{fig:pentahedralPyramidInf2}
    \label{}
   \end{minipage}
  \hspace*{\fill}
-  \caption{\textit{Graph of pentahedra prism}}
-  \label{fig:}
+  \caption{\textit{Graph of pentahedral prism}}
+  \label{fig:pentahedralPrismList}
  \end{minipage}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h!tbp]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
    \centering
@@ -1657,7 +1694,7 @@ Figure \ref{fig:pentahedralPyramidInf2}
    \subcaption{\textit{Limit set}}
   \end{minipage}
   \hspace*{\fill}
-  \caption{\textit{Finite tetrahedron type.}}
+  \caption{\textit{Finite tetrahedron type(a).}}
   \label{fig:pentahedralPrismFinite}
  \end{minipage}
  \hspace*{\fill}
@@ -1674,12 +1711,12 @@ Figure \ref{fig:pentahedralPyramidInf2}
    \subcaption{\textit{Limit set}}
   \end{minipage}
   \hspace*{\fill}
-  \caption{\textit{Finite pentahedral pyramid type.}}
+  \caption{\textit{Finite pentahedral pyramid type(a).}}
   \label{fig:pentahedralPrismInf}
  \end{minipage}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h!tbp]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
    \centering
@@ -1693,7 +1730,7 @@ Figure \ref{fig:pentahedralPyramidInf2}
    \subcaption{\textit{Limit set}}
   \end{minipage}
   \hspace*{\fill}
-  \caption{\textit{Finite tetrahedron type.}}
+  \caption{\textit{Finite tetrahedron type(a).}}
   \label{fig:pentahedralPrismFinite}
  \end{minipage}
  \hspace*{\fill}
@@ -1710,7 +1747,7 @@ Figure \ref{fig:pentahedralPyramidInf2}
    \subcaption{\textit{Limit set}}
   \end{minipage}
   \hspace*{\fill}
-  \caption{\textit{Finite pentahedral pyramid type.}}
+  \caption{\textit{Finite pentahedral pyramid type(a).}}
   \label{fig:pentahedralPrismInf}
  \end{minipage}
 \end{figure}
@@ -1722,8 +1759,9 @@ sphere. However, they have many cavity under the plane.
 Figure \ref{fig:pentahedralPrismFinite}
 Figure \ref{fig:pentahedralPrismInf}
 
-Some combination of face angles is semi-sphairahedron.
-It is not quasi-fuchsian group.
+(a), (d), and (f) in Figure \ref{fig:pentahedralPrismList} are
+semi-sphairahedra.
+They are not quasi-fuchsian group.
 Visualize sphairahedron(semi-sphairahedron)-based fractals in real time.
 The limit set of semi-sphairahedron is many spheres touching each other and,
 it becomes not Fuchsian group,
