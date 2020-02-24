@@ -632,6 +632,16 @@ We call $\varepsilon(n_{ij})$ a moduli of polyhedra.
 
 We will show some lemmas in this subsection.
 
+First of all, we define \textit{Limit ball}.
+\begin{definition}
+ Limit ball is the shape whose limit set is its boundary surface
+ and we obtain it by tiling of the sphairahedron $P$.
+$$
+ G = G_p := \left< \text{inversion} of S | S \text{is surface of} P \right>,
+$$
+Limit ball of $P$ : LimitBall(P) := $G_p(P)$
+\end{definition}
+
 \begin{lemma}\label{sameCircle}
 For each $O_i$, the four vertices on $O_i$ lie on the same circle.
 Hence the four vertices lie on one plane in $R^3$.
@@ -2038,7 +2048,7 @@ Because of the reasons, we stop the visualization experiment at the hexahedra.
   \subcaption{Step 1}
   \label{}
  \end{minipage}
- \hspace*{\fill}
+ \hspace*{\fill}l
  \begin{minipage}[t]{0.18\textwidth}
   \centering
   \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep2.png}
@@ -2155,7 +2165,20 @@ Three-dimensional printing enable us to observe the fractals from the
 various viewpoints.
 We feel fractal structures and its symmetry by hand.
 
-\section{Problems}
+\section{Observation}
+
+\subsection{All of the parameter is zero}
+
+Cube type sphairahedron type (a) is controlled by two parameter.
+When the both parameters are zero, the limit set becomes plane (or
+sphere) and like Figure there is regular patterns. We will analyze the
+patterns.
+
+When $z_b = z_c = 0$, the every center of the three sphere $C_A, C_B, C_C$
+are on the x-y-plane. So about the face of the triangle prism and all of the
+$C_A, C_B, C_C$, Figure \ref{}
+
+
 
 \subsection{Shape of the parameter pace}
 The shape of the parameter space is not fractal structures like
@@ -2174,6 +2197,85 @@ The shape of the limit set makes circle.
 We call it ghost circle. In the three-dimensional space, there are ghost
 sphere formed by limit set.
 There are ghost spheres.
+
+For each vertex of the sphairahedron, we consider \textit{maximum vertex
+sphere}
+
+\begin{definition}
+ Let P be an ideal sphairahedron and let X be one of the vertex at P.
+ Remark that, The edges are mutually tangent at the vertex X.
+ Open sphere $B_x$ is maximum vertex when the sphere meet as below
+
+ \begin{description}
+  \item[1)] The boundary surface $\eth B_x$ of sphere $B_x$ pass through
+             the vertex $X$ and $\eth B_x$ is orthogonal to all of the
+             edges gathered at vertex $X$.
+  \item[2)] $B_X \cap P \neq \phi$ and $B_X$ don't contains a vertex of
+             $P$
+  \item[3)] $B_X$ is a sphere satisfies 1) and 2)
+             maximal to inclusive relation.
+ \end{description}
+
+Remark: \\
+1)maximum vertex sphere is well-defined to each vertex of sphairahedron
+$P$.
+2) When the vertex $X$ of the sphairahedron $P$ is infinity point,
+ crossing with $P$ 
+ maximum half space doesn't contain the vertex of $P$ (not infinity
+ point) is maximum vertex sphere of $X$.
+\end{definition}
+
+\begin{proposition}\label{prop:limitBall}
+ For sphairahedron $P$ and its vertex $X$, limit ball defined by $P$
+ includes maximum vertex sphere $B_x$ in $x$.
+\end{proposition}
+
+\begin{proof}
+ Maximum vertex ball is equivariant for M\"obius transformations in
+ $S^3$. That is to say, for any M\"obius transformation $F$,
+ considering maximum vertex sphere $B_x$ of the vertex $X$ of
+ sphairahedron $P$,
+ the vertex $F(x)$ of $F(P)$ maximum vertex sphere is $F(B_x)$.
+ This case realization requirements 1) 2) 3) are kept by M\"obius
+ transformation. 
+
+ For any sphairahedron $P$ and vertex $X$, we choose proper M\"obius
+ transformation $F$, we can do following operations.
+ \begin{description}
+  \item[a)] transform $X$ to infinity point.
+  \item[b)] $F(P)=P'$ neighborhood of $F(x)$ is infinitely elongated
+             to z-axis negative direction right cylinder.
+ \end{description}
+ At this time, due to the above remark, in vertex $X' = F(X)$
+ $F(Bx = B'x')$ is maximum open half space not include all of the vertex of
+ $F(P)$ (other than $x'$).
+ 
+ It is given by $B'x' = {(x, y, z) | z < z_0}$ when
+ $z_0 := \min{ z | (x, y, z) \text{is an vertex of} F(P) }$
+
+$V'_{x'} \cap P'$ is right cylinder infinitely elongated for z-axis
+ negative direction and its dihedral angle is $pi/n$ where $n \geq 2$
+ for $n$ is integer.
+
+ From this, Let $G'$ be $G'=F \circ G$
+ $G'(B'x' \cap P') = B'x'$ and
+ We obtain $B'x' \subset G'(P') : Limit Ball$
+\end{proof}
+
+\begin{theorem}
+ When $\bigcup_{x \text{is vertex of} P} B_x \subset P$,
+ $\bigcup_{x \text{is vertex of} P} G_{B_x} = G_{p}(P)$,
+\end{theorem}
+
+\begin{proof}
+ From the assumption 
+ $\bigcup G_p(B_x) = G_p (\bigcup B_x) \supset G_p(p)$.
+ Conversely, from proposition \ref{prop:limitBall}
+ $B_x \subset G_p(P)$ and $\bigcup_xB_x \subset G_p(P)$
+ from the above, $\bigcup_x G_p(B_x) = G_p(P)$.
+\end{proof}
+Remark that by this in order to render limit ball,
+for each vertex $X$, we compute $B_x$ and render $G_p(\bigcup_x B_x)$
 
 \subsection{Outside of the parameter space}
 
@@ -2208,7 +2310,7 @@ The limit set forms a hexagram-like shape, and we call six elongated parts
 of the hexagram \textit{arms}.
 The arms get longer as the parameter approaches to the edge of the
 parameter space.
-When the parameter is at the edge (the point $B$ in Figure \ref{fig:paramSpace},)
+When the parameter is at the edge,
 the arms come into contact with neighboring arms.
 
 The limit sets have arms. The arms get longer as the parameter approaches
@@ -2221,7 +2323,6 @@ However when the arms overlaps with rational angles.
 It may be discrete group of the group.
 So, the parameter space of the rational ideal sphairahedron has outer
 parameter space, but we don't know it is points, lines, or regions.
-
 
 The convergence of the vertex of the sphairahedra is slow
 because the vertex have many edges, and gather tiles.
