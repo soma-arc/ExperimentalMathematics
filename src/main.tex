@@ -435,7 +435,7 @@ intersections of the tiles.
 However, not every sphairahedra can generate such proper tiling patterns.
 To obtain them, we have to consider two mathematical properties
 of the original sphairahedron, that is, the sphairahedron should be
-ideal and rational.
+rational and ideal.
 In the following sections, we will introduce these properties and
 compute parameter space for the rational ideal sphairahedron.
 
@@ -460,7 +460,7 @@ $$
 The complement $\Lambda(G) := S^3 \backslash \Omega(G)$ is called the
 limit set of the group $G$. $G$ is a Kleinian group if $\Omega(G)$ is
 not empty. The limit set $\Lambda(G)$ consists either of 0 or 1 or 2 or
-infinitely many points. Here we consider only the case that $\Lambda$
+infinitely many points. Here we consider only the case that $\Lambda(G)$
 is infinite and two-dimensional. A Kleinian group $G$ is a fuchsian
 group if $\Lambda(G)$ is a closed round sphere. $G$ is called a
 quasi-fuchsian group is $\Lambda(G)$ is homeomorphic to a closed sphere
@@ -632,14 +632,15 @@ We call $\varepsilon(n_{ij})$ a moduli of polyhedra.
 
 We will show some lemmas in this subsection.
 
-First of all, we define \textit{Limit ball}.
+First of all, we define \textit{limit ball}.
 \begin{definition}
  Limit ball is the shape whose limit set is its boundary surface
  and we obtain it by tiling of the sphairahedron $P$.
 $$
- G = G_p := \left< \text{inversion} of S | S \text{is surface of} P \right>,
+ G = G_p := \left< \text{inversion of}~ S | S~\text{is surface of}~P
+ \right>,
+ \text{Limit ball of}~P : LimitBall(P) := G_p(P)
 $$
-Limit ball of $P$ : LimitBall(P) := $G_p(P)$
 \end{definition}
 
 \begin{lemma}\label{sameCircle}
@@ -2103,18 +2104,89 @@ Four spheres transformed by elements of the group and finally we get
 quasi-sphere same to the tiling pattern of the sphairahedron.
 
 We can obtain quasi-sphere from applying group to sum of the spheres
-including sphairahedra.
-The proof is as follows.
+including sphairahedra. The proof is as below.
 
-\begin{proposition}
- In order to obtain tiling patterns of sphairahedra, we apply a group to
- sphairahedra. 
- We consider sum of spheres include a sphairahedron, and we transform
- the spheres using the group. and we obtain quasi-sphere.
+For each vertex of the sphairahedron, we consider \textit{maximum vertex
+sphere} defined below.
+
+\begin{definition}
+ Let $P$ be an ideal sphairahedron and let $X$ be one of the vertex on $P$.
+ Remark that, The edges are mutually tangent at the vertex $X$.
+ Open sphere $B_x$ is maximum vertex ball about vertex X when the sphere
+ meets the conditions written below
+
+ \begin{description}
+  \item[1)] The boundary surface $\eth B_x$ of sphere $B_x$ pass through
+             the vertex $X$ and $\eth B_x$ is orthogonal to all of the
+             edges gathered at vertex $X$.
+  \item[2)] $B_X \cap P \neq \phi$ and $B_x$ don't contains a vertex of
+             $P$
+  \item[3)] $B_X$ is a sphere satisfies 1) and 2), and it is
+             maximal to inclusive relation.
+ \end{description}
+\end{definition}
+
+Remark: \\
+1) Maximum vertex sphere is well-defined to each vertex of sphairahedron
+$P$.\\
+2) When the vertex $X$ of the sphairahedron $P$ is infinity point,
+ maximum half space crossing with $P$ and doesn't contain the vertex of
+ $P$ (not infinity point)
+ is maximum vertex sphere of $X$.
+
+\begin{proposition}\label{prop:limitBall}
+ For sphairahedron $P$ and its vertex $X$, limit ball defined by
+ sphairahedron $P$ includes maximum vertex sphere $B_x$ about $x$.
 \end{proposition}
 
 \begin{proof}
+ Maximum vertex sphere is equivariant for M\"obius transformations in
+ $S^3$. That is to say, for any M\"obius transformation $F$,
+ considering maximum vertex sphere $B_x$ of the vertex $X$ of
+ sphairahedron $P$,
+ the vertex $F(x)$ of $F(P)$ maximum vertex sphere is $F(B_x)$.
+ This case realization requirements 1) 2) 3) are kept by M\"obius
+ transformation. 
+
+ For any sphairahedron $P$ and vertex $X$, we choose proper M\"obius
+ transformation $F$, we can do following operations.
+ \begin{description}
+  \item[a)] Transform $X$ to infinity point.
+  \item[b)] For $F(P)=P'$, neighborhood of $F(x)$ is infinitely elongated
+             to z-axis negative direction right cylinder.
+ \end{description}
+ At this time, due to the above remark, in vertex $X' = F(X)$
+ $F(Bx) = B'x'$ is maximum open half space doesn't include all of the
+ vertex of $F(P)$ other than $x'$.
+ 
+ It is given by $B'x' = \{(x, y, z) | z < z_0\}$ when
+ $z_0 := \min\{ z | (x, y, z) \text{is an vertex of} F(P) \}$
+
+$B'_{x'} \cap P'$ is right cylinder infinitely elongated for z-axis
+ negative direction and its dihedral angle is $pi/n$ where $n \geq 2$
+ for $n$ is integer.
+
+ From this, Let $G'$ be $G'=F \circ G$
+ $G'(B'_{x'} \cap P') = B'_{x'}$ and
+ we obtain $B'x' \subset G'(P') : Limit Ball$
 \end{proof}
+
+\begin{theorem}
+ When $\bigcup_{x \text{is vertex of} P} B_x \supset P$,
+ $\bigcup_{x \text{is vertex of} P} G_P{B_x} = G_{p}(P)$,
+\end{theorem}
+
+\begin{proof}
+ From the assumption 
+ $\bigcup G_p(B_x) = G_p (\bigcup B_x) \supset G_p(p)$.
+ Conversely, from proposition \ref{prop:limitBall}
+ $B_x \subset G_p(P)$ and $\bigcup_xB_x \subset G_p(P)$.
+ From the above, $\bigcup_x G_p(B_x) = G_p(P)$.
+\end{proof}
+From above, remark that in order to render limit ball,
+in many cases for each vertex $X$, we compute $B_x$ and render
+$G_p(\bigcup_x B_x)$.
+
 
 \subsection{Three-dimensional Printing}
 
@@ -2170,23 +2242,77 @@ We feel fractal structures and its symmetry by hand.
 
 \section{Observation}
 
-\subsection{All of the parameter is zero}
+\subsection{Patterns of Planes}
 
-Cube type sphairahedron type (a) is controlled by two parameter.
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/plane/cubeType0.png}
+   \subcaption{Cube}
+   \label{fig:planeCube}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/plane/hexahedralCake2Type0.png}
+   \subcaption{Hexahedral Cake}
+   \label{fig:planeCake}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/plane/tetrahedronType0.png}
+   \subcaption{Tetrahedron}
+   \label{fig:planeTetra}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in,
+   keepaspectratio]{./img/plane/pentahedralPrismType2.png}
+   \subcaption{Pentahedral Prism}
+   \label{fig:planePentaPrism}
+  \end{minipage}
+ \caption{\textit{The graph of the tetrahedron type sphairahedron}}
+ \label{fig:planes}
+ \hspace*{\fill}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.5\textwidth}
+ \centering
+ \includegraphics[width=3in,
+ keepaspectratio]{./img/Observation/triangle.png}
+ \caption{}
+ \label{fig:obsTriangle}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.5\textwidth}
+  \centering
+  \includegraphics[width=3in,
+  keepaspectratio]{./img/Observation/rect.png}
+  \caption{}
+  \label{fig:obsRect}
+ \end{minipage}
+ \hspace*{\fill}
+\end{figure}
+
+Cube type sphairahedron type (a) is controlled by two parameter $z_b$
+and $z_c$.
 When the both parameters are zero, the limit set becomes plane (or
-sphere) and like Figure there is regular patterns. We will analyze the
-patterns.
+sphere) and like Figure \ref{fig:planes}\subref{fig:planeCube} there is
+regular patterns. We will analyze the patterns.
 
-When $z_b = z_c = 0$, the every center of the three sphere $C_A, C_B, C_C$
-are on the x-y-plane. So about the face of the triangle prism and all of the
-$C_A, C_B, C_C$, we consider crossing with x-y plane, we obtain Figure
+When $z_b = z_c = 0$, the every center of the three spheres $C_A, C_B, C_C$
+are on the xy-plane. So about the face of the triangle prism and all of the
+$C_A, C_B, C_C$, we consider crossing with xy-plane, we obtain Figure
 \ref{}.
 By we apply proper similarity transformation, we can make $P$ and $Q$ in
-Figure {} to
-$Q_3 = { a+bw | w=\dfrac{1 + \sqrt{3}i}{\alpha}, a, b \in \mathbb{Z}}$
+Figure \ref{fig:obsTriangle} to
+$Q_3 = \{ a+bw | w=\dfrac{1 + \sqrt{3}i}{\alpha}, a, b \in \mathbb{Z}\}$
 (Eisenstein ring)
 
-At this time about the line symmetry transformation related to edge of
+At this time about the line symmetry transformation related to edges of
 the triangles and inversion transformation related to three circles 
 are represented by
 $f(z) = \dfrac{a\overline{z} + b}{c\overline{z}+ d} (a, b, c, d \in O_3)$
@@ -2195,11 +2321,15 @@ From this, we can find the pattern emerge in cube type (a) $z_b = z_c$
 are originated to broad M\"obius transformation $O_3$
 
 Similar phenomenon is happen in hexahedral cake type sphairahedron.
+The pattern is shown in Figure \ref{fig:planes}\subref{fig:planeCake}
 In this time, the patterns are originated from M\"obius transformations
 on $\mathbb{Z}[i]$ gaussian ring of integer.
+The cake type is shown in Figure \ref{fig:obsRect}.
 
 Other types will have some relation about finite index field on
  $\mathbb{Q}$ of ring of integers.
+For example there are Figure \ref{fig:planes}\subref{fig:planeTetra} or
+ Figure \ref{fig:planes}\subref{fig:planePentaPrism}.
 
 \subsection{Shape of the parameter pace}
 The shape of the parameter space is not fractal structures like
@@ -2212,91 +2342,6 @@ The limit set of the infinite sphairahedron, how high or low
 the limit set.
 The limit set of the semi-sphairahedron is not known.
 However, we visualize semi-sphairahedron and its tessellation.
-
-\subsection{Ghost Sphere}
-The shape of the limit set makes circle.
-We call it ghost circle. In the three-dimensional space, there are ghost
-sphere formed by limit set.
-There are ghost spheres.
-
-For each vertex of the sphairahedron, we consider \textit{maximum vertex
-sphere}
-
-\begin{definition}
- Let P be an ideal sphairahedron and let X be one of the vertex at P.
- Remark that, The edges are mutually tangent at the vertex X.
- Open sphere $B_x$ is maximum vertex when the sphere meet as below
-
- \begin{description}
-  \item[1)] The boundary surface $\eth B_x$ of sphere $B_x$ pass through
-             the vertex $X$ and $\eth B_x$ is orthogonal to all of the
-             edges gathered at vertex $X$.
-  \item[2)] $B_X \cap P \neq \phi$ and $B_X$ don't contains a vertex of
-             $P$
-  \item[3)] $B_X$ is a sphere satisfies 1) and 2)
-             maximal to inclusive relation.
- \end{description}
-
-Remark: \\
-1)maximum vertex sphere is well-defined to each vertex of sphairahedron
-$P$.
-2) When the vertex $X$ of the sphairahedron $P$ is infinity point,
- crossing with $P$ 
- maximum half space doesn't contain the vertex of $P$ (not infinity
- point) is maximum vertex sphere of $X$.
-\end{definition}
-
-\begin{proposition}\label{prop:limitBall}
- For sphairahedron $P$ and its vertex $X$, limit ball defined by $P$
- includes maximum vertex sphere $B_x$ in $x$.
-\end{proposition}
-
-\begin{proof}
- Maximum vertex ball is equivariant for M\"obius transformations in
- $S^3$. That is to say, for any M\"obius transformation $F$,
- considering maximum vertex sphere $B_x$ of the vertex $X$ of
- sphairahedron $P$,
- the vertex $F(x)$ of $F(P)$ maximum vertex sphere is $F(B_x)$.
- This case realization requirements 1) 2) 3) are kept by M\"obius
- transformation. 
-
- For any sphairahedron $P$ and vertex $X$, we choose proper M\"obius
- transformation $F$, we can do following operations.
- \begin{description}
-  \item[a)] transform $X$ to infinity point.
-  \item[b)] $F(P)=P'$ neighborhood of $F(x)$ is infinitely elongated
-             to z-axis negative direction right cylinder.
- \end{description}
- At this time, due to the above remark, in vertex $X' = F(X)$
- $F(Bx = B'x')$ is maximum open half space not include all of the vertex of
- $F(P)$ (other than $x'$).
- 
- It is given by $B'x' = {(x, y, z) | z < z_0}$ when
- $z_0 := \min{ z | (x, y, z) \text{is an vertex of} F(P) }$
-
-$V'_{x'} \cap P'$ is right cylinder infinitely elongated for z-axis
- negative direction and its dihedral angle is $pi/n$ where $n \geq 2$
- for $n$ is integer.
-
- From this, Let $G'$ be $G'=F \circ G$
- $G'(B'x' \cap P') = B'x'$ and
- We obtain $B'x' \subset G'(P') : Limit Ball$
-\end{proof}
-
-\begin{theorem}
- When $\bigcup_{x \text{is vertex of} P} B_x \subset P$,
- $\bigcup_{x \text{is vertex of} P} G_{B_x} = G_{p}(P)$,
-\end{theorem}
-
-\begin{proof}
- From the assumption 
- $\bigcup G_p(B_x) = G_p (\bigcup B_x) \supset G_p(p)$.
- Conversely, from proposition \ref{prop:limitBall}
- $B_x \subset G_p(P)$ and $\bigcup_xB_x \subset G_p(P)$
- from the above, $\bigcup_x G_p(B_x) = G_p(P)$.
-\end{proof}
-Remark that by this in order to render limit ball,
-for each vertex $X$, we compute $B_x$ and render $G_p(\bigcup_x B_x)$
 
 \subsection{Outside of the parameter space}
 
@@ -2378,53 +2423,6 @@ Different edge it makes a hole by different sphere.
 It is not discrete, but when the arms crossing at rational angle, it becomes
 discrete.
 
-\subsection{Patterns of Plane}
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/plane/tetrahedronType0.png}
-   \subcaption{Tetrahedron}
-   \label{fig:}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in,
-   keepaspectratio]{./img/plane/pentahedralPrismType2.png}
-   \subcaption{Pentahedral Prism}
-   \label{}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/plane/cubeType0.png}
-   \subcaption{Cube}
-   \label{}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/plane/hexahedralCake2Type0.png}
-   \subcaption{Hexahedral Cake}
-   \label{fig:}
-  \end{minipage}
- \caption{\textit{The graph of the tetrahedron type sphairahedron}}
- \label{fig:planes}
- \hspace*{\fill}
-\end{figure}
-When all of the parameter is zero, the limit set becomes plane.
-The patterns of plane are different from sphairahedron respectively.
-See Figure \ref{fig:planes}.
-The blue points represent patterns of parabolic fixed points.
-The patterns of plane is generated by two-dimensional circle inversion
-fractals, so we prepare half planes and inversion circles.
-It can be generated by Schottky Link (https://schottky.jp).
-
-
-We can also find that the blue parts themselves form the constant
-patterns. The point is parabolic fixed point and the convergence is
-slow.
-The vertex which many circles cross is slow convergence.
 \begin{thebibliography}{99}
 \bibitem{AharaAraki}
         Kazushi Ahara and Yoshiaki Araki,
