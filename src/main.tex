@@ -70,20 +70,20 @@ Sciences, Meiji University, Tokyo, Japan;
 \maketitle
 
 \begin{abstract}
- We are interested in finding examples of quasi-fuchsian subgroup of
+ We are interested in finding examples of a quasi-fuchsian subgroup of
  M\"ob$(S^3)$, the group of orientation preserving M\"obius
- transformations on $S^3$. In this article we consider a new problem of
- Euclidian geometry about polyhedra with spherical faces and we obtain
+ transformations on $S^3$. In this article, we consider a new problem of
+ Euclidian geometry about polyhedra with spherical faces, and we obtain
  interesting examples of quasi-fuchsian groups and pictures of fractal
  two-spheres.
 
- Usually, rendering image of the this kind of fractals takes much time.
- However we accelerate the speed of rendering fractals by
- using an our original algorithm called Iterated Inversion System (IIS)
+ Usually, rendering an image of this kind of fractal takes much time.
+ However, we accelerate the speed of rendering fractals by
+ using our original algorithm called Iterated Inversion System (IIS)
  and sphere tracing, a kind of a ray tracing techniques.
  We can render the images of fractals in real-time
- and it makes visualization experiment easily.
- We also focus to find and solve mathematical problems about the
+ , and it makes a visualization experiment easily.
+ We also focus on finding and solving mathematical problems about the
  polyhedra from visualization.
 
 \end{abstract}
@@ -134,7 +134,7 @@ mathematics; visualization; fractals; Kleinian groups; circle inversion;
 
 \subsection{Background}
 
-In this paper, we deal with geometrical concept called
+In this paper, we deal with a geometrical concept called
 \textit{Sphairahedron}. Sphairahedron is invented by Kazushi Ahara and
 Yoshiaki Araki \cite{AharaAraki} in 2003. Sphairahedron is a coined word
 combining two words sphaira- (a prefix that means 'spherical') and
@@ -144,42 +144,43 @@ sphairahedron. As we can see, each face of the cube is a part of a
 sphere.
 
 Moreover, we can make a tiling pattern of sphairahedra using inversions
-of each spherical faces. In many cases, the boundary of the tiling
-patterns converges to three-dimensional fractal structure. 
+of each spherical face. In many cases, the boundary of the tiling
+patterns converges to a three-dimensional fractal structure. 
 The union of all the tiles is mostly homeomorphic to a three-dimensional
 ball. Thus, this is called a \textit{quasi-sphere} and shown in Figure
 \ref{fig:quasi-sphere}.
 Quasi-sphere has complicated and beautiful fractal structures.
-So, it interested fractal art community because it is beginning of
+So, it interested the fractal art community because it is the beginning of
 the complicated three-dimensional fractal.
 
-In spite of innovative idea, there are few publications
+In spite of an innovative idea, there are few publications
 \cite{AharaAraki}\cite{AharaJa}.
 After Ahara and Araki publish two articles, the research of the
 sphairahedra stop. 
 One of the reasons is that it takes too much time to render the image of
-the quasi-sphere with the computer in those days.
+the quasi-sphere.
+We render the images with the computer in those days.
 
-After that Ryo Kageyama perform further experiment of
+After that, Ryo Kageyama performs further experiments of
 cube-type sphairahedron in his master thesis \cite{kageyama}. 
-He use a geometrical concept called \textit{lens} to study sphairahedra. 
+He uses a geometrical concept called \textit{lens} to study sphairahedra. 
 
-In 2017, breakthrough is came out. We develop an algorithm called
+In 2017, a breakthrough is came out. We develop an algorithm called
 \textit{Iterated Inversion System (IIS)} to visualize fractals based on
 inversions in circles or spheres.
 Combining IIS and \textit{Sphere tracing}, a kind of ray tracing
-technique, we can render image of quasi-sphere in real time.
+technique, we can render image of a quasi-sphere in real-time.
 For more details of IIS, see
 \cite{bridges2016} or \cite{bridges2017}.
 
-The our previous paper \cite{bridges2018} is focused on the artistical
+Our previous paper \cite{bridges2018}, is focused on the artistical
 perspective of the sphairahedron and its fractals.
-In this article we introduce mathematical details,
-mathematical problems, and its solutions. 
+In this article, we introduce mathematical details,
+mathematical problems, and solutions. 
 
-There are many pictures of three-dimensional, so it is hard to see whole
+There are many pictures of three-dimensional, so it is hard to see the whole
 appearance only by them. We can see sphairahedron based fractal renderer,
- more pictures, and more movies in the
+ more pictures, and more movies in
 our web site\footnote{\url{https://sphairahedron.net}}.
 
 \subsection{Sphairahedron}
@@ -256,7 +257,7 @@ a sphairahedron.
 
 The image in Figure \ref{fig:sphairahedron}\subref{fig:sphairaPrismAll}
 is an example of $A$.
-We hollow out the $S^3$ with six balls: we remove three half space
+We hollow out the $S^3$ with six balls: we remove three half-space
 (three balls with infinite radius,) from $S^3$ and obtain the prism of
 infinite length, and we scoop out the prism by the remaining
 three-colored transparent balls as in Figure
@@ -264,7 +265,7 @@ three-colored transparent balls as in Figure
 $A$ is composed of two parts, and each of the components is simply connected.
 Since it has six faces, and these faces are arranged as those of faces of
 a cube, it is called a cube-type sphairahedron.
-Especially, the sphairahedron shown in Figure 
+Especially, the sphairahedron showned in Figure 
 \ref{fig:sphairahedron}\subref{fig:sphairaPrismHalf}
 is also called an \textit{infinite type sphairahedron},
 because one of the vertices of the sphairahedron is at the infinity.
@@ -273,22 +274,22 @@ Similarly, the shape hollowed out by six finite balls in Figure
 \textit{finite type sphairahedron}.
 
 Moreover, we can loosen the definition of sphairahedron,
-that is, the case $A$ has simply connected three or more components.
+that is, case $A$ has simply connected three or more components.
 Figure \ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaAll} shows an
 example of $A$ with simply connected three components.
 It is the $S^3$ scooped out by five balls and a pentahedral prism type
 sphairahedron.
-We divide $A$ so that one part of $A$ has five faces as shown in
+We divide $A$ so that one part of $A$ has five faces, as shown in
 Figure \ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaHalf}.
 We can regard the resulting shape as a singular case of a pentahedron,
 and we call it a \textit{semi-sphairahedron}.
-Ahara, Araki and Kageyama did not deal with semi-sphairahedron and
+Ahara, Araki, and Kageyama did not deal with semi-sphairahedron and
 did not render its tiling patterns.
 
 When the sphairahedron is not discrete, the sphairahedron is broken.
-For example, it has unnecessary hole and so on.
-See Figure \ref{fig:brokenHole}. It shows broken sphairahedron.
-The green sphere make a hole.
+For example, it has an unnecessary hole, and so on.
+See Figure \ref{fig:brokenHole}. It shows a broken sphairahedron.
+The green sphere makes a hole.
 
 \subsection{Construct Fractal}\label{constructFractal}
 
@@ -385,19 +386,19 @@ The sphairahedron shown in Figure
 \ref{fig:sphairahedronTile}\subref{fig:sphaira-step1} has six spherical
 faces.
 We apply inversions in each spherical face to original sphairahedron,
-and we obtain new six sphairahedra surrounding the initial sphairahedron
+and we obtain new six sphairahedra surrounding the initial sphairahedron,
 as shown in Figure
 \ref{fig:sphairahedronTile}\subref{fig:sphaira-final}.
 Next, we apply inversions in each of the new faces to the new sphairahedra,
 and we obtain more sphairahedra.
 We continue iterating inversions, and finally, we get a three-dimensional
-fractal shape as presented in Figure
+fractal shape, as presented in Figure
 \ref{fig:sphairahedronTile}\subref{fig:sphaira-final}.
 
-Also, an infinite type sphairahedron can be tiled as presented in Figure
+Also, an infinite type of sphairahedron can be tiled, as presented in Figure
 \ref{fig:sphairahedralPrismTile}.
 The pattern converges to fractal terrain owing to reflections over side
-faces of the sphairahedron as shown in Figure 
+faces of the sphairahedron, as shown in Figure 
 \ref{fig:sphairahedralPrismTile}\subref{fig:terrainStep1}.
 In the fractal terrain, we can find symmetry easily.
 For example, we can see hexagram-like terrain patterns in Figure
@@ -434,7 +435,7 @@ Up to this point, we showed tiling patterns without gaps between the tiles and
 intersections of the tiles.
 However, not every sphairahedra can generate such proper tiling patterns.
 To obtain them, we have to consider two mathematical properties
-of the original sphairahedron, that is, the sphairahedron should be
+of the original sphairahedron. That is, the sphairahedron should be
 rational and ideal.
 In the following sections, we will introduce these properties and
 compute parameter space for the rational ideal sphairahedron.
@@ -464,14 +465,14 @@ infinitely many points. Here we consider only the case that $\Lambda(G)$
 is infinite and two-dimensional. A Kleinian group $G$ is a fuchsian
 group if $\Lambda(G)$ is a closed round sphere. $G$ is called a
 quasi-fuchsian group is $\Lambda(G)$ is homeomorphic to a closed sphere
-and there exits a homeomorphism $f:S^3 \rightarrow S^3$ which conjugates
+,and there exists a homeomorphism $f:S^3 \rightarrow S^3$ which conjugates
 $G$ to a fuchsian group. If $G$ is a quasi-fuchsian group, the limit set
 $\Lambda(G)$ may be a fractal sphere, that is, a sphere in $S^3$ with
 fractal structure.
 
 In two dimensional case, that is, $G$ is a subgroup of M\"ob$_+(S^2)$
 (or equivalently M\"ob$_+(H^3)$, we have many examples of quasi-fuchsian
-groups.) One of important examples is a kissing Schottky group.
+groups.) One of the important examples is a kissing Schottky group.
 Let $O_1^+, O_2^+, O_1^-, O_2^-$ be circles in $S^2$ such that
 $O_1^{\pm}$ are tangential to $O_2^{\pm}$. Let $f_i$ be a M\"obius
 transformation which maps the exterior of $O_i^+$ onto the interior of
@@ -483,28 +484,28 @@ If the four circles are disjoint to each
 other, we call $G$ a Schottky group and $\Lambda(G)$ is an infinite set
 but is not homeomorphic to a circle. We may consider the case that
 $O_1^{\pm}$ intersects to $O_2^{\pm}$ by $\pi/n$ for a natural number
-$n$. In this case we also have a circle-wise limit set $\Lambda(G)$.
+$n$. In this case, we also have a circle-wise limit set $\Lambda(G)$.
 See p361 of \cite{indra}.
 
-Coxeter-like group is another example. Consider 4 (or more) circles in
-$S^2$ (, we call them 'initial circles'.) Let $\tilde G$ be a group generated
+The Coxeter-like group is another example. Consider 4 (or more) circles in
+$S^2$ (we call them 'initial circles.') Let $\tilde G$ be a group generated
 by the inversions of these initial circles.% Here we assume that any two
 initial circles are disjoint or tangential or intersecting  by angle
-$\pi/n$ for $n \in N$. Then a subgroup $G$ which is defined by a set of
-all even-length-elements of $\tilde G$ is well-defined.
+$\pi/n$ for $n \in N$. Then a subgroup $G$, which is defined by a set of
+all even-length-elements of $\tilde G$, is well-defined.
 
-In this article we consider an extension of kissing Schottky groups and
+In this article, we consider an extension of kissing Schottky groups and
 Coxeter-like groups to M\"ob($S^3$). In order to do that, we have to
 obtain a set of initial spheres (instead of 'initial circles') with some
-conditions. In fact, the following new problem of Eucliduan geometry is
-one of good approaches.
+conditions. the following new problem of Euclidean geometry is
+one of the good approaches.
 
 \begin{problem}
  Let $S^3 = R^3 \bigcup {\infty}$. Find a polyhedron in $S^3$ satisfying
  the following conditions.
  \begin{description}
   \item[Condition 1:] Each face of a polyhedron is a sphere in $S^3$.
-  \item[Condition 2 (rationality):] For each edge, the face-angle equals to $\pi/n$
+  \item[Condition 2 (rationality):] For each edge, the face-angle equals $\pi/n$
              for a natural number $n$.
   \item[Condition 3 (ideality):] For each vertex, edges with the vertex are
              mutually tangent at the vertex.
@@ -513,21 +514,21 @@ one of good approaches.
 
 In the following sections, we derive rational ideal sphairahedron.
 
-Usually a polyhedron has a planer faces. But easily we can consider an
-extension of polyhedron such that the faces are a part of a
+Usually, a polyhedron has planar faces. But easily, we can consider an
+extension of a polyhedron such that the faces are a part of a
 sphere. (Hence each edge is an arc.) If we have such polyhedron with
-above conditions, we consider spheres of the faces as initial
+the above conditions, we consider spheres of the faces as initial
 spheres. Easily we can consider a Coxeter-like group generated by the
 inversions of them.
 
-In this article we first consider a polyhedron with the same cellular
-structure as that of cube. (Hence the number of the initial spheres is
+In this article, we first consider a polyhedron with the same cellular
+structure as that of a cube. (Hence the number of the initial spheres is
 6.) And we have the following result.
 
 \begin{theorem}\label{main}
  If a polyhedron with the above conditions is of cube-type (that is,
- the one skeleton of the polyhedron is same as that of a cube,) then
- there are 7 combinations of face-angles. For each combination of
+ the one skeleton of the polyhedron is the same as that of a cube), then
+ there are seven combinations of face-angles. For each combination of
  face-angles, a set of conformal equivalent classes of polyhedra is two
  dimensional.
 \end{theorem}
@@ -537,7 +538,7 @@ a Coxeter-like subgroup $G=G(P)$ of M\"ob$_+(S^3)$. Through proving this
 theorem, we obtain that for each combination of dihedral angles, there is a
 polyhedron such that the limit set $\Lambda{G}$ is a round sphere. So,
 other polyhedra give us quasi-fuchsian groups. So we get a family of
-quasi-fuchsian group with two parameters. At the same time, we have a
+a quasi-fuchsian group with two parameters. At the same time, we have a
 family of fractal spheres with two parameters.
 
 % This paper is organized as follows. In the section 2 we will show the
@@ -545,11 +546,12 @@ family of fractal spheres with two parameters.
 % of polyhedra and show a similar theorems.
 
 \subsection{Compute cube-type sphairahedra}
-In this paper, We deal with cube because it is simple, but it generate
+In this paper, We deal with cube because it is simple, but it generates
 complicated quasi-sphere.
-Kageyama also calculate parameter space of the cube-type sphairahedron\cite{kageyama}.
-We will formulate hexahedron of cube type in $S^3 = R^2 \cup \{\infty\}$.
-First let $E$ be a set of edges if hexahedron of cube type. That is,
+Kageyama also calculates the parameter space of the cube-type
+sphairahedron\cite{kageyama}.
+We will formulate hexahedron of cube-type in $S^3 = R^2 \cup \{\infty\}$.
+First, let $E$ be a set of edges if hexahedron of cube-type. That is,
 $$
 E = \{(1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 6), (3, 5),
 (3, 6), (4, 5), (4, 6), (5, 6)\}.
@@ -574,7 +576,7 @@ satisfying the following conditions.
             $\theta_{ij} = \pi/n_ij$ ($n_{ij} is a natural number.$)
  \item[(P3):] For each $(i, j, k) \in V, e_{ij}, e_{jk}$ and $e_{ik}$
             are mutually tangent at one point. Let $v_{ijk}$ be 
-            the point and we call it a vertex. For simplisity of
+            the point, and we call it a vertex. For simplicity of
             notation, we denote
 \end{description}
 \begin{eqnarray*}
@@ -593,13 +595,13 @@ If we parameterize $\tilde\varepsilon$ by coordinates of the center of
 $O_i$, then it is naturally embedded in the Euclidean space. We consider
 a natural topology on $\tilde\varepsilon$. The group M\"ob$(S3)$ of all
 M\"obius transformations in $S^3$ acts $\tilde\varepsilon$ in a natural way.
-Let $\varepsilon(n_{ij})$ be its quatient space. That is,
+Let $\varepsilon(n_{ij})$ be its quotient space. That is,
 
 $$
 \varepsilon (n_{ij}) = \tilde\varepsilon(n_{ij}) / \text{M\"ob}(S^3)
 $$
 
-We call $\varepsilon(n_{ij})$ a moduli of polyhedra.
+We call $\varepsilon(n_{ij})$ moduli of polyhedra.
 
 \begin{figure}[h!tbp]
  \centering
@@ -632,10 +634,10 @@ We call $\varepsilon(n_{ij})$ a moduli of polyhedra.
 
 We will show some lemmas in this subsection.
 
-First of all, we define \textit{limit ball}.
+First of all, we define a \textit{limit ball}.
 \begin{definition}
- Limit ball is the shape whose limit set is its boundary surface
- and we obtain it by tiling of the sphairahedron $P$.
+ The Limit ball is the shape whose limit set is its boundary surface
+ , and we obtain it by tiling of the sphairahedron $P$.
 $$
  G = G_p := \left< \text{inversion of}~ S | S~\text{is surface of}~P
  \right>,
@@ -649,13 +651,13 @@ Hence the four vertices lie on one plane in $R^3$.
 \end{lemma}
 
 \begin{proof}
- We know the following famous lemma about four circles : If four circles 
- $C_1, C_2, C_3, C_4$ on a plane and they are mutually tangent like a
+ We know the following famous lemma about four circles: If four circles 
+ $C_1, C_2, C_3, C_4$ on a plane, and they are mutually tangent like a
  chain as in Figure \ref{fig:chainCircles}, then the four tangent points lie on one circle.
  (See figure \ref{fig:chainCircles}) Using this lemma we will show lemma \ref{sameCircle} We fix $i$ and
  consider only on $O_i$. If $O_i$ is not a plane, we transform 
  ($O_1, ..., O_6$) by a M\"obius transformation such that $O_i$ is a
- plane. There are four edges on $O_i$ and they are circles and are
+ plane. There are four edges on $O_i$, and they are circles and are
  mutually tangent like a chain. From the above well-known lemma. The
  four vertices on $O_i$ lie on one circle on $O_i$. If we re-transform
  ($O_i, ..., O_6$) back, the four vertices still lie on one circle,
@@ -663,15 +665,15 @@ Hence the four vertices lie on one plane in $R^3$.
 \end{proof}
 
 \begin{lemma}\label{eightVertices}
- Eight vertices of a polyhedron of cube-type lie on the same sphere.
+ Eight vertices of a polyhedron of cube-type lie in the same sphere.
 \end{lemma}
 
 \begin{proof}
  There is a M\"obius transformation $\phi$ such that it moves the vertex
  $H$ to the infinity point. (See Figure \ref{fig:infTriangle}.) From Lemma \ref{sameCircle}, the three
  vertices $A, D,$ and $B$ lie on one straight line. In the same way,
- three vertices $A, D, G,$ and $F$ lie on one planercircle, all vertices
- except $H$ line on one plane. We transform them back by $\phi^{-1}$ and
+ three vertices $A, D, G,$ and $F$ lie on one planar circle, all vertices
+ except $H$ line on one plane. We transform them back by $\phi^{-1}$, and
  we get the conclusion of Lemma \ref{eightVertices}.
 \end{proof}
 
@@ -683,14 +685,14 @@ Hence the four vertices lie on one plane in $R^3$.
 \begin{proof}
  Let $\phi$ be a M\"obius transformation such that it maps the vertex to
  the infinity point. Then the three edges with the vertex are mapped to
- parallel lines and they form a triangle column. If we consider a
- regular section of the tiangle column then the angles of the section
+ parallel lines, and they form a triangle column. If we consider a
+ regular section of the triangle column, then the angles of the section
  are equal to face-angles, and the sum of them is $\pi$ clearly. This
  completes the proof.
 \end{proof}
 
- Using this Lemma \ref{sum}, we obtain the following lemma in a combinatorical way.
-
+ Using this Lemma \ref{sum}, we obtain the following lemma in a combinatorial way.
+% 12-pre or twelve-pre
 \begin{lemma}\label{combination}
  12-ple($n_{ij}$) = ($n_{12}, n_{13}, n_{14}, n_{15}, n_{23}, n_{24},
  n_{26}, n_{35}, n_{36}, n_{45}, n_{46}, n_{56}$) of face-angle
@@ -804,17 +806,17 @@ Hence the four vertices lie on one plane in $R^3$.
  \end{minipage}
 \end{figure}
 
-We get this lemma only in combinatorical way, so we omit the proof.
+We get this lemma only in a combinatorial way, so we omit the proof.
 
-In order to represent a sphairahedron, we use a polyhedral graph as
+In order to represent a sphairahedron, we use a polyhedral graph, as
 shown in Figure \ref{fig:cubeGraph}. The graph shows an infinite cube-type sphairahedron.
 The black lines represent edges, and the circles represent
 vertices. The three radial edges connect the infinite vertex and finite
 vertices. Each of the numbers beside 
 the edges means a natural number $n$ for the dihedral angle $\pi / n$
 
-In this preview section we introduce that there are 7 types of
-combination of face angles. But here are 11. In fact, in case (f), (g),
+In this preview section, we introduce that there are seven types of
+combinations of face angles. But here are 11. In fact, in case (f), (g),
 (j), and (k), there is no polyhedron with these face-angles. See section \ref{paramSpace}.
 
 \subsection{Constructing hexahedron}
@@ -822,12 +824,12 @@ combination of face angles. But here are 11. In fact, in case (f), (g),
 We fix a set($n_{ij}$) of face-angles and consider conformal equivalent
 classes of polyhedra with (P1), (P2), (P3).
 
-In the sequel we suppose that $H = \infty$. (See Figure \ref{fig:infTriangle}) So the three
+In the sequel, we suppose that $H = \infty$. (See Figure \ref{fig:infTriangle}) So the three
 edges $HA, HB, HC$ are straight lines and are parallel to each other. We
 assume that they are perpendicular to xy-plane.
 Let ($x_A, y_B, z_z$), ..., ($x_G, y_G, z_G$) be coordinates of vertices
-A, B, ..., G (except $H$) respectively. Let $A'(x_A, y_A)$, ...,
-$G'(x_G, y_G)$ be projection of these 7 vertices to the xy-plane.
+A, B, ..., G (except $H$), respectively. Let $A'(x_A, y_A)$, ...,
+$G'(x_G, y_G)$ be projection of these seven vertices to the xy-plane.
 
 We get immediately that $\angle C'A'B' = \theta_{13}, \angle A'B'C' =
 \theta_{15}, \angle B'C'A'=\theta_{13}$. Remark that $\theta_{13} +
@@ -837,7 +839,7 @@ Here we may assume that the radius of the circumcircle of $A'B'C'$ is 1,
 that the circumcenter of $A'B'C'$ is $(0, 0, 0)$, and that $A'$ is on
 the x-axis. If it is not, by a proper M\"obius transformation(such that
 it fixes the infinity point,) and it is easy to let the polyhedron
-satisfy these conditions. By parallel transformation along z-axis, we
+satisfy these conditions. By parallel transformation along the z-axis, we
 may assume that $A$ is on xy-plane. (That is, $A = A'$ and $z_A = 0.$)
 
 See Figure \ref{fig:infTriangle} again. $O_2, O_4, O_6$ are spheres Let $O_i(x_i, y_i, z_i)$
@@ -882,7 +884,7 @@ Two vertical lines $HA$ and $HB$ are tangent to these circles as in
   \overline{AD} = 2 r_2 \sin\theta_{12} \cdot \overline{A'B'}/\overline{AB}\\
   \overline{DB} = 2 r_4 \sin\theta_{14} \cdot \overline{A'B'}/\overline{AB}.
  \end{eqnarray*}
- Remark that $\cos(\angle BAB') =\overline{A'B'}/\overline{AB}.$ Clearly
+ Remark that $\cos(\angle BAB') =\overline{A'B'}/\overline{AB}.$ Clearly,
  $\overline{AD} + \overline{DB} = \overline{AB}$ holds, so it is easy to
  show the first formula of Proposition \ref{angles}. Others are shown in the same
  way.
@@ -890,7 +892,7 @@ Two vertical lines $HA$ and $HB$ are tangent to these circles as in
 \end{proof}
 
 \begin{remark}%TODO 数式番号2.Aを付す
- If we regard ($2.A$) as linear equation on $r_2, r_4, r_6$, the
+ If we regard ($2.A$) as a linear equation on $r_2, r_4, r_6$, the
  coordinate matrix of ($2.A$) is not singular. In fact,
  \begin{eqnarray*}
   \left| 
@@ -902,7 +904,7 @@ Two vertical lines $HA$ and $HB$ are tangent to these circles as in
   \right|
  \end{eqnarray*}
  is positive.
- If we fix three vertices $A, B, C$ then always there are solutions of
+ If we fix three vertices $A, B, C$, then always there are solutions of
  (2.A), but they may be non-positive. And, if $r_2$ or $r_4$ or $r_6$
  are too large, ($O_i$) doesn't form a hexahedron. For example, see
  subsection \ref{extend}. In this section, we know that $r_2, r_4, r_6$ are all
@@ -954,7 +956,7 @@ Let $O_i'(x_i, y_i)$ be a projection of the center of the sphere $O_i$
 \end{proof}
 
 \subsection{Compatibility}
-In this way for given parameters ($z_B, z_C$) such that $r_2, r_4, r_6$
+In this way, for given parameters ($z_B, z_C$) such that $r_2, r_4, r_6$
 are all positive, we get the coordinates of three spheres 
 $O_2, O_4, O_6$. But it is not trivial whether the 6-ple($O_1, ..., O_6$) is
 in $\tilde\varepsilon(n_{ij})$. (That is, we have to show that 
@@ -1088,7 +1090,7 @@ Next we will show that the edge $e_{24}$ is tangent to both of $e_{12}$ and
 \end{figure}
 
 
-(3) Let $\alpha$ be a plane containing 3 centers $O_2, O_4, O_6$. Let
+(3) Let $\alpha$ be a plane containing three centers $O_2, O_4, O_6$. Let
  $C_2, C_4, C_6$ be three circles on $\alpha$ such that $C_i$ is the
  intersection of the sphere $O_i$ and the plane $\alpha$. ($i=2, 4, 6$.)
 Let R be the radical point of $C_2, C_4, C_6$. There are three cases
@@ -1119,10 +1121,10 @@ and
 \begin{align*}
  \angle O_2 R O_4 + \angle O_4 R O_6 + \angle O_2 R O_6 = 2\pi
 \end{align*}
-This is a contradiction. So this case cannnot happen. In the same way,
- the case (ii) cannnot happen. These follow that the radical point $R$
- is on the intersection of 3 circles $C_2, C_4, C_6.$ this means that
- $R$ is the unique intersection of 3 spheres $O_2, O_4, O_6$. this must
+This is a contradiction. So this case cannot happen. In the same way,
+ the case (ii) cannot happen. These follow that the radical point $R$
+ is on the intersection of three circles $C_2, C_4, C_6.$ This means that
+ $R$ is the unique intersection of 3 spheres $O_2, O_4, O_6$. This must
  be $G$.
 
 (4) The 6-pre ($O_1, ..., O_6$) satisfies (P1) by definition.
@@ -1134,12 +1136,12 @@ For $(i, j) = (1, 2), (1, 4), (4, 5), (5, 6), (2, 3), (3, 6)$, it is
  good from Lemma\ref{angles}. In other cases, it is good from Theorem
  \ref{compat}(1).
 
-(P3): At $H = \infty, AH, BH, CH$ are parallel lines so they are tangent
+(P3): At $H = \infty, AH, BH, CH$ are parallel lines, so they are tangent
  at $\infty$. At $D, R, F, G,$ we have shown it in Theorem \ref{compat}(2)(3).
 \end{proof}
 
 \subsection{Parameter space}\label{paramSpace}
-In this subsection we first consider in the case that $n_{ij} = 3$ for all
+In this subsection, we first consider in the case that $n_{ij} = 3$ for all
 $(i, j) \in E$. (That is, in case (a) in Lemma \ref{combination}) There are 11 cases
 in Lemma \ref{combination} The case (a) is not a special case, and we can make
 similar observation in other cases.
@@ -1154,7 +1156,7 @@ Here $\overline{A'B'} = \overline{B'C'} = \overline{A'C'} = \sqrt{3}$
 because $\Delta{A'B'C'}$ is a regular triangle and the radius of the
 circumcircle is 1.(In all cases, $\overline{A'B'} = 2\sin\theta_{35},
 \overline{B'C'} = 2\sin\theta{13}, \overline{A'C'} = 2\sin\theta{15}$.)
-We solve these equations and we have 
+We solve these equations, and we have 
 \begin{align}
  r2 &= (-2z_Bz_C + 2Z^2_C + 3) / 6 \\
  r4 &= (2z_Bz_C + 3) / 6 \\
@@ -1168,13 +1170,13 @@ equivalent to the followings.
  -3 / 2 &< z^2_B - z_Bz_C
 \end{align}
 So we assume (3.B). We will determine $O_1, ... , O_6$ as in the
-previous section. It is clear that 6 faces $O_1, ... , O_6$ surround
+previous section. It is clear that six faces $O_1, ... , O_6$ surround
 a hexahedron if and only if $O_2$ doesn't interest to $O_5$ nor $O_3$
 doesn't intersect to $O_4$ nor $O_1$ doesn't intersect to $O_6$.
 
 $O_2$ doesn't interest to $O_5$ if and only if the distance from the center
-of the sphere $O_2$ to the plane $O_5$ is more than $r_2$. In this case
-the distance is $3 / 2 - r_2$ and hence $O_2$ doesn't intersect to $O_5$
+of the sphere $O_2$ to the plane $O_5$ is more than $r_2$. In this case,
+the distance is $3 / 2 - r_2$, and hence $O_2$ doesn't intersect to $O_5$
 if and only if $r_2 < 3/4$. In the same way $r_4 < 3/4$ and $r_6 <
 3/4$. These three inequalities are equivalent to
 \begin{align}
@@ -1184,13 +1186,13 @@ if and only if $r_2 < 3/4$. In the same way $r_4 < 3/4$ and $r_6 <
 \end{align}
 
 See Figure 10 ($z_B, z_C$) in the shaded area of this figure satisfies
-all of(2.D) an (2.E) and $z_B \geq 0$.
+all of(2.D), (2.E), and $z_B \geq 0$.
 
-In case (a), original three parameters $z_A, z_B, z_C$ have symmetry,
+In case (a), the original three parameters $z_A, z_B, z_C$ have symmetry,
 because $O_1, O_3, O_5$ form a \textit{regular} triangle prism.
-If $z_C < 0$ then we exchange the roles of $z_A$ and $z_C$ and we can reduce
+If $z_C < 0$, then we exchange the roles of $z_A$ and $z_C$, and we can reduce
 ($z_B, z_C$) to ($z_B - z_C, -z_C$) in the case of $z_C > 0$.
-If $z_B \leq z_C < 2z_B$ then we exchange the roles of $z_B$ and $z_C$
+If $z_B \leq z_C < 2z_B$, then we exchange the roles of $z_B$ and $z_C$, 
 and we can reduce $(z_B, z_C)$ to $(z_C -z_B,z_C)$ in case of 
 $z_C \geq 2z_B$. In this way, the correct parameter space is as in Figure
 11.
@@ -1205,7 +1207,7 @@ to $O_4$.
 In the same way, we have a similar result in case $(b), (c), (d), (e),
 (h), (i)$. The figures below are parameter space in each case.
 
-In case $(f), (g), (j) and (k)$, there are no solution of $(z_B, z_C)$
+In case $(f), (g), (j), and (k)$, there is no solution of $(z_B, z_C)$
 to be a hexahedron. In fact, in case (f),
 \begin{align*}
 \begin{cases}
@@ -1259,28 +1261,28 @@ have relations
  (\gamma_i \gamma_j)^{n_{ij}} = 1
 \end{align*}
 for $(i, j) \in E.$ (Here $1$ is the identity map.) If $(i, j) \notin E$,
-there are no relation between $\gamma_i$ and $\gamma_j$.
-And at each vertex, three edges with the vertex are mutually tangent,
+there is no relation between $\gamma_i$ and $\gamma_j$.
+And at each vertex, three edges with the vertex are mutually tangent.
 there are no more relations. So we have that
 \begin{align*}
  \tilde G = <\gamma_1, ...,\gamma_6 | (\gamma_i\gamma_j)^{n_{ij}} = 1 for
  (i, j) \in E.>
 \end{align*}
-The length of all relations are even, so we can consider a set $G = G(P)$
+The length of all relations is even, so that we can consider a set $G = G(P)$
 of elements of even length. $G$ is a subset of $G'$. Here we remark
-that each $\gamma_i$ is a inversion and it is orientation reversing. So
+that each $\gamma_i$ is an inversion, and it is orientation reversing. So
 each element of $G$ is orientation preserving M\"obius transformation.
 It follows that $G$ is a subset of M\"ob$_+(S^3)$.
 
-In the previous subsection we got a parameter space for $P$ to be a
+In the previous subsection, we got a parameter space for $P$ to be a
 hexahedron with the initial conditions. Here are some pictures of the
 limit sets $\Gamma(G)$. However, if we take $O_1, ..., O_6$ as in the
-previous section, the limit set contains a infinity point $\infty$. So
+previous section, the limit set contains an infinity point $\infty$. So
 we transform $\O_1, ..., O_6$ by an inversion of a proper sphere in
 order to make $\Gamma(G)$ doesn't contain the infinity point.
 
-Only when $(z_B, z_C) =(0, 0), \Delta(G)$ is a round sphere and hence
-$G$ is fuchsian. In other cases we get a homotopy to the case 
+Only when $(z_B, z_C) =(0, 0), \Delta(G)$ is a round sphere, and hence
+$G$ is fuchsian. In other cases, we get a homotopy to the case 
 $(z_B, z_C) = (0, 0)$, we know that $G$ is quasi-fuchsian.
 
 \subsection{Extended Schottky group for a cube with spherical faces}\label{extend}
@@ -1325,12 +1327,12 @@ Let $O_2$ be the center of the spheres $O_2$, then we have
 \begin{align*}
  O_2(1 - r_2, 0, 0).
 \end{align*}
-From Lemmma\ref{eightVertices}, 7 points A, B, C, D, E, F, G lie on one plane. D is on
+From Lemma\ref{eightVertices}, 7 points A, B, C, D, E, F, G lie on one plane. D is on
 the segment $AB$ and
 \begin{align*}
  AD : DB = r_2\sin\theta_{12} : r_4\sin\theta_{14} = r_2 : r_4
 \end{align*}
-See Figure \ref{fig:sideSlice}. In the same way we have
+See Figure \ref{fig:sideSlice}. In the same way, we have
 \begin{align*}
  BE : EC &= r_4\sin\theta_{45} : r_6\sin\theta_{56} &= r_4:r_6\\
  CF : FA &= r_6\sin\theta_{36} : r_2\sin\theta_{23} &= r_6:r_2
@@ -1361,11 +1363,11 @@ Using Proposition \ref{angles} we have $\overline{O_2G'} = r_2$. Remark that we
 use equations $z_B^2 = 3(r_2 + r_4 - 1), z_C^2 = 3(r_2 + r_6 - 1)$, and
 $2z_Bz_C = 6r_2 - 3$.
 
-In the same way we get $\overline{O_4G'} = r_4$ and 
+In the similar way, we get $\overline{O_4G'} = r_4$ and 
 $\overline{O_6G'} = r_6$. These mean that $G' = G$.
 
-From Lemma \ref{sameCircle} $B, D, G, E$ are on one circle. Hence
-$CE \cdot CB = CG \cdot CD$. In the same way we obtain 
+From Lemma \ref{sameCircle}, $B, D, G, E$ are on one circle. Hence
+$CE \cdot CB = CG \cdot CD$. In the same way, we obtain 
 $CG \cdot CD = CF \cdot CA$. So let $O$ be a sphere with center $C$ and
 radius $\sqrt{CE \cdot CB}$ and let $f_O$ be the inversion of $O$
 The above two equations follows that
@@ -1379,22 +1381,22 @@ $f_1$ is an orientation preserving M\"obius transformation and
  f_1 : A \mapsto F, D \mapsto G, B \mapsto E, H \mapsto C.
 \end{align*}
 It is easy to check that $f_1(O_1) = O_6$ because a sphere is determined
-by four points on it. And also $f_1$ maps the inside of $O_1$ to the
+by four points on it. And also, $f_1$ maps the inside of $O_1$ to the
 outside of $O_6$. Here the inside of $O_1$ means the area which doesn't
-contain the prism consistint of $O_1, O_3, O_5$. The we finish the
+contain the consistent prism of $O_1, O_3, O_5$. We finish the
 proof.
 
 Remark:
 In other cases $(b),...,(j)$, we don't have a similar result. Three
-segments $AE, BF, CD$ meets at one point only in case $(a), (f), (j)$, but
+segments $AE, BF, CD,$ meet at one point only in case $(a), (f), (j)$, but
 there isn't a parameter space in cases $(f)$ nor $(j)$.
 
 
 \section{Various Sphairahedra}
 
-In this section, we show other types of the sphairahedra based on the
+In this section, we show other types of sphairahedra based on the
 number of faces up to six.
-We can obtain other sphairahedra in the similar manner to cube-type
+We can obtain other sphairahedra in a similar manner to cube-type
 sphairahedron.
 
 \subsection{Tetrahedron}
@@ -1507,19 +1509,19 @@ sphairahedron.
  \end{minipage}
 \end{figure}
 
-Tetrahedron has the fewest number of the faces.
-It has three type of combination of vertexes and edges as shown in
+The tetrahedron has the fewest number of faces.
+It has three types of combinations of vertexes and edges, as shown in
 Figure \ref{fig:tetrahedronFaces} and Figure \ref{fig:tetrahedronCombinations}.
 They have no parameter.
 The quasi-spheres are shown in Figure \ref{fig:tetrahedronFinite}
 , Figure \ref{fig:tetrahedronInf}, Figure \ref{fig:tetrahedronInf_b},
 and Figure \ref{fig:tetrahedronInf_c}.
-The tiling pattern of planes are different from infinite sphairahedra.
-They are sphere and plane, so the group is fuchsian group.
+The tiling pattern of planes is different from the infinite sphairahedra.
+They are sphere and plane, so the group is a fuchsian group.
 
 \subsection{Pentahedron}
 
-Pentahedron has two type. They are pentahedral pyramid and pentahedral prism.
+The pentahedron has two types. They are a pentahedral pyramid and pentahedral prism.
 
 \subsubsection{pyramid}
 
@@ -1624,11 +1626,11 @@ Pentahedron has two type. They are pentahedral pyramid and pentahedral prism.
  \end{minipage}
 \end{figure}
 
-pentahedral pyramid don't have parameter space. It has two patterns
-of combinations of nodes, edges and angles.
-The tiling pattern of the pyramid is sphere or plane, so it is also fuchsian group.
-However, patterns of their surface is
-different from tetrahedron according to number of edges and positions of
+The Pentahedral pyramid doesn't have a parameter. It has two patterns
+of combinations of nodes, edges, and angles.
+The tiling pattern of the pyramid is a sphere or plane, so it is also a fuchsian group.
+However, patterns of their surface are
+different from tetrahedron according to the number of edges and positions of
 vertexes.
 They are shown in 
 Figure \ref{fig:pentahedralPyramidFinite}, Figure
@@ -1768,20 +1770,20 @@ Figure \ref{fig:pentahedralPyramidInf2}.
  \end{minipage}
 \end{figure}
 
-There are pentahedral prism which has six combinations of face angles
+There is the pentahedral prism, which has six combinations of face angles
 and one parameter.
 (a), (d), and (f) in Figure \ref{fig:pentahedralPrismList} are
 semi-sphairahedra.
 
-When parameter is positive, it seems like plane as shown in 
+When the parameter is positive, it seems like a plane, as shown in 
 Figure \ref{fig:pentahedralPrismInfPositive}\subref{fig:pentahedralPrismInfPositiveLimit}.
  However, When we decrease the height of the green ball, the
  semi-sphairahedron
  becomes to be composed of two components as shown in Figure
 
 The hollows rise, and they emerge on the plane as balls
-as presented in Figure \ref{fig:pentahedralPrismInfNeg}\subref{fig:pentahedralPrismInfNegLimit}
-The limit set of semi-sphairahedron is many spheres touching each other and,
+, as presented in Figure \ref{fig:pentahedralPrismInfNeg}\subref{fig:pentahedralPrismInfNegLimit}
+The limit set of semi-sphairahedron is many spheres touching each other, and
 it becomes not a fuchsian group or a quasi-fuchsian group.
 
 \subsection{Hexahedron}
@@ -1827,7 +1829,7 @@ it becomes not a fuchsian group or a quasi-fuchsian group.
 \end{figure}
 
 In the cube type polyhedra, Kazushi Ahara and Yoshiaki Araki
-verify the parameter space, and Ryo Kageyama do further experiment in
+verify the parameter space, and Ryo Kageyama does further experiment in
 his master thesis\cite{kageyama}. 
 
 \subsubsection{Cake}
@@ -1993,23 +1995,24 @@ his master thesis\cite{kageyama}.
  \end{minipage}
 \end{figure}
 
-Hexahedral cake is shown in Figure \ref{fig:cake}. There are three
+The hexahedral cake is shown in Figure \ref{fig:cake}. There are three
 types of sphairahedra based on the cake.
-Infinite sphairahedra generate landscape-like pattern.
-They have organic shape.
-The sphairahedron has three type of the combinations of face angles.
+Infinite sphairahedra generate a landscape-like pattern.
+They have an organic shape.
+The sphairahedron has three types of combinations of face angles.
+There is one parameter.
 
 \subsection{Polyhedra whose number of the faces is seven and more}
 
 It is difficult to compute rational ideal sphairahedra based on
 heptahedron or polyhedra with more faces.
 There are two reasons.
-Firstly, the sphairahedra have many combinations of arrangement of
+Firstly, the sphairahedra have many combinations of an arrangement of
 vertexes and edges. 
-Heptahedron has thirty four types of arrangement and
-the number of the polyhedra with eight or more faces explosively
+Heptahedron has thirty-four types of arrangement, and
+the number of polyhedra with eight or more faces explosively
 increases. See also \cite{countingPolyhedra}.
-Secondly, to satisfy rationality of the sphairahedra, they should not
+Secondly, to satisfy the rationality of the sphairahedra, they should not
 have vertexes connecting five or more edges.
 The proof is as follows.
 
@@ -2019,7 +2022,7 @@ The proof is as follows.
 \end{proposition}
 
 \begin{proof}
- In order to satisfy ideality, sum of the edge angles of the each vertex
+ In order to satisfy ideality, a sum of the edge angles of each vertex
  should be $(k - 2) \pi$ where $k$ is the number of the edges connecting
  the vertex and $k \geq 3$ for natural number $k$.
 
@@ -2032,13 +2035,13 @@ The proof is as follows.
  vertex $pi / n (n \geq 5)$
  is not rational sphairahedron.
 
- To satisfy ideality, sum of the edge angles should be $(k - 2) \pi$
- we transform the vertex to infinity.
+ To satisfy ideality, the sum of the edge angles should be $(k - 2) \pi$.
+ We transform the vertex into infinity.
  the largest face angle is $\pi / n (n > 1)$
  $(k - 2)\pi$
 \end{proof}
 
-So, the condition of vertexes are greatly restricted.
+So, the condition of vertexes is greatly restricted.
 Because of the reasons, we stop the visualization experiment at the hexahedra.
 
 \section{Visualization}
@@ -2087,52 +2090,52 @@ Because of the reasons, we stop the visualization experiment at the hexahedra.
 
 In section \ref{constructFractal}, we show how to construct the tiling
 patterns of sphairahedra and their coloring.
-After we compute sphairahedra, we have to draw infinite number of
+After we compute sphairahedra, we have to draw an infinite number of
 sphairahedra, and it takes much time.
 So, we use an algorithm to render fractals based on
 inversions. It is called Iterated Inversion System (IIS.)
-We successfully implement fast rendering algorithm
+We successfully implement a fast rendering algorithm
 combining IIS and sphere tracing, that is, a kind of ray tracing technique.
 For more details, see also \cite{bridges2017} and \cite{bridges2018}.
 
-There are two approach of visualization.
-Tile sphairahedra directory using elements of the group.
-Secondly, we prepare sum of spheres include a sphairahedron, and we
+There are two approaches of visualization.
+First, Tile sphairahedra directory using elements of the group.
+Secondly, we prepare the sum of spheres includes a sphairahedron, and we
 transform the spheres.
 See Figure \ref{fig:visualizeSpheres}.
-Four spheres transformed by elements of the group and finally we get
-quasi-sphere same to the tiling pattern of the sphairahedron.
+Four spheres transformed by elements of the group, and finally, we get
+quasi-sphere the same to the tiling pattern of the sphairahedron.
 
-We can obtain quasi-sphere from applying group to sum of the spheres
-including sphairahedra. The proof is as below.
+We can obtain a quasi-sphere from applying group to the sum of the spheres
+, including sphairahedra. The proof is as below.
 
 For each vertex of the sphairahedron, we consider \textit{maximum vertex
 sphere} defined below.
 
 \begin{definition}
- Let $P$ be an ideal sphairahedron and let $X$ be one of the vertex on $P$.
+ Let $P$ be an ideal sphairahedron and let $X$ be one of the vertexes on $P$.
  Remark that, The edges are mutually tangent at the vertex $X$.
  Open sphere $B_x$ is maximum vertex ball about vertex X when the sphere
  meets the conditions written below
 
  \begin{description}
-  \item[1)] The boundary surface $\eth B_x$ of sphere $B_x$ pass through
-             the vertex $X$ and $\eth B_x$ is orthogonal to all of the
+  \item[1)] The boundary surface $\eth B_x$ of sphere $B_x$ passes through
+             the vertex $X$, and $\eth B_x$ is orthogonal to all of the
              edges gathered at vertex $X$.
   \item[2)] $B_X \cap P \neq \phi$ and $B_x$ don't contains a vertex of
              $P$
-  \item[3)] $B_X$ is a sphere satisfies 1) and 2), and it is
+  \item[3)] $B_X$ is a sphere that satisfies 1) and 2), and it is
              maximal to inclusive relation.
  \end{description}
 \end{definition}
 
 Remark: \\
-1) Maximum vertex sphere is well-defined to each vertex of sphairahedron
+1) The maximum vertex sphere is well-defined to each vertex of sphairahedron
 $P$.\\
 2) When the vertex $X$ of the sphairahedron $P$ is infinity point,
- maximum half space crossing with $P$ and doesn't contain the vertex of
+ maximum half-space crossing with $P$ and doesn't contain the vertex of
  $P$ (not infinity point)
- is maximum vertex sphere of $X$.
+ is the maximum vertex sphere of $X$.
 
 \begin{proposition}\label{prop:limitBall}
  For sphairahedron $P$ and its vertex $X$, limit ball defined by
@@ -2149,25 +2152,25 @@ $P$.\\
  transformation. 
 
  For any sphairahedron $P$ and vertex $X$, we choose proper M\"obius
- transformation $F$, we can do following operations.
+ transformation $F$. We can do the following operations.
  \begin{description}
-  \item[a)] Transform $X$ to infinity point.
-  \item[b)] For $F(P)=P'$, neighborhood of $F(x)$ is infinitely elongated
+  \item[a)] Transform $X$ to the infinity point.
+  \item[b)] For $F(P)=P'$, a neighborhood of $F(x)$ is infinitely elongated
              to z-axis negative direction right cylinder.
  \end{description}
- At this time, due to the above remark, in vertex $X' = F(X)$
- $F(Bx) = B'x'$ is maximum open half space doesn't include all of the
- vertex of $F(P)$ other than $x'$.
+ At this time, due to the above remark, in vertex $X' = F(X)$,
+ $F(Bx) = B'x'$ is maximum open half-space doesn't include all of the
+ vertexes of $F(P)$ other than $x'$.
  
  It is given by $B'x' = \{(x, y, z) | z < z_0\}$ when
- $z_0 := \min\{ z | (x, y, z) \text{is an vertex of} F(P) \}$
+ $z_0 := \min\{ z | (x, y, z) \text{is a vertex of} F(P) \}$
 
-$B'_{x'} \cap P'$ is right cylinder infinitely elongated for z-axis
- negative direction and its dihedral angle is $pi/n$ where $n \geq 2$
- for $n$ is integer.
+ $B'_{x'} \cap P'$ is right cylinder infinitely elongated for negative
+ z-axis direction, and its dihedral angle is $pi/n$ where $n \geq 2$
+ for $n$ is an integer.
 
  From this, Let $G'$ be $G'=F \circ G$
- $G'(B'_{x'} \cap P') = B'_{x'}$ and
+ $G'(B'_{x'} \cap P') = B'_{x'}$, and
  we obtain $B'x' \subset G'(P') : Limit Ball$
 \end{proof}
 
@@ -2331,7 +2334,7 @@ Other types will have some relation about finite index field on
 For example there are Figure \ref{fig:planes}\subref{fig:planeTetra} or
  Figure \ref{fig:planes}\subref{fig:planePentaPrism}.
 
-\subsection{Shape of the parameter pace}
+\subsection{Shape of the parameter space}
 The shape of the parameter space is not fractal structures like
 Mandelbrot set and julia set or Maskit slice. 
 The parameter space is connected.
@@ -2348,22 +2351,22 @@ However, we visualize semi-sphairahedron and its tessellation.
 \begin{figure}[H]
  \begin{minipage}[t]{0.3\textwidth}
   \centering
-  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/cubePrism.png}
-  \subcaption{Step 5}
+  \includegraphics[width=1.5in, keepaspectratio]{./img/visualization/cubePrism.png}
+  \subcaption{}
   \label{}
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[t]{0.3\textwidth}
   \centering
-  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/cubeSmallHole.png}
-  \subcaption{Step 10}
+  \includegraphics[width=1.5in, keepaspectratio]{./img/visualization/cubeSmallHole.png}
+  \subcaption{}
   \label{}
   \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[t]{0.3\textwidth}
   \centering
-  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/cubeHole.png}
-  \subcaption{Final image}
+  \includegraphics[width=1.5in, keepaspectratio]{./img/visualization/cubeHole.png}
+  \subcaption{}
   \label{}
  \end{minipage}
  \hspace*{\fill}
