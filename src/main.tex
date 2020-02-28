@@ -606,7 +606,7 @@ $$
 \begin{figure}[h!tbp]
  \centering
  \includegraphics[width=3.5in,
- keepaspectratio]{./im.g/HexahedraWithSphericalFaces/cubes.png}
+ keepaspectratio]{./img/HexahedraWithSphericalFaces/cubes.png}
  \caption{}
  \label{fig:cubes}
 \end{figure}
@@ -711,7 +711,7 @@ Hence the four vertices lie on one plane in $R^3$.
 (i) (4, 2, 2, 4, 4, 4, 2, 4, 4, 4, 4, 2)\\
 (j) (4, 2, 2, 4, 4, 4, 4, 4, 2, 4, 2, 4)\\
 (k) (6, 2, 2, 4, 3, 3, 6, 4, 2, 4, 2, 4)\\
-
+%TODO 画像との整合性を確認
 \begin{figure}[h!tbp]
   \begin{minipage}[t]{0.15\textwidth}
    \centering
@@ -821,10 +821,11 @@ combinations of face angles. But here are 11. In fact, in case (f), (g),
 
 \subsection{Constructing hexahedron}
 
-We fix a set($n_{ij}$) of face-angles and consider conformal equivalent
+We fix a set ($n_{ij}$) of face-angles and consider conformal equivalent
 classes of polyhedra with (P1), (P2), (P3).
 
-In the sequel, we suppose that $H = \infty$. (See Figure \ref{fig:infTriangle}) So the three
+In the sequel, we suppose that $H = \infty$. (See Figure
+\ref{fig:infTriangle}.) So the three
 edges $HA, HB, HC$ are straight lines and are parallel to each other. We
 assume that they are perpendicular to xy-plane.
 Let ($x_A, y_B, z_z$), ..., ($x_G, y_G, z_G$) be coordinates of vertices
@@ -832,17 +833,17 @@ A, B, ..., G (except $H$), respectively. Let $A'(x_A, y_A)$, ...,
 $G'(x_G, y_G)$ be projection of these seven vertices to the xy-plane.
 
 We get immediately that $\angle C'A'B' = \theta_{13}, \angle A'B'C' =
-\theta_{15}, \angle B'C'A'=\theta_{13}$. Remark that $\theta_{13} +
+\theta_{15}, \angle B'C'A'=\theta_{35}$. Remark that $\theta_{13} +
 \theta_{15} + \theta_{35} = \pi$ by Lemma\ref{sum}.
 
 Here we may assume that the radius of the circumcircle of $A'B'C'$ is 1,
-that the circumcenter of $A'B'C'$ is $(0, 0, 0)$, and that $A'$ is on
+that the circumcenter of $A'B'C'$ is $(0, 0, 0,)$ and that $A'$ is on
 the x-axis. If it is not, by a proper M\"obius transformation(such that
 it fixes the infinity point,) and it is easy to let the polyhedron
 satisfy these conditions. By parallel transformation along the z-axis, we
 may assume that $A$ is on xy-plane. (That is, $A = A'$ and $z_A = 0.$)
 
-See Figure \ref{fig:infTriangle} again. $O_2, O_4, O_6$ are spheres Let $O_i(x_i, y_i, z_i)$
+See Figure \ref{fig:infTriangle} again. $O_2, O_4, O_6$ are spheres. Let $O_i(x_i, y_i, z_i)$
 and $r_i$ be the center and the radius of $O_i$ for $i = 2, 4, 6.$ About
 the radius, we have the following proposition.
 
@@ -876,13 +877,13 @@ the radius, we have the following proposition.
 \begin{proof}
  In Figure \ref{fig:sideSlice}, the edge $AD = e_{12}$ is a circle with radius
  $r_2\sin\theta_{12}$, and the edge $DB e_{14}$ is a circle with radius
- ($r_4\sin\theta_{14}$).
+ ($r_4\sin\theta_{14}$.)
 Two vertical lines $HA$ and $HB$ are tangent to these circles as in
  Figure \ref{fig:sideSlice},
  and we have 
  \begin{eqnarray*}
   \overline{AD} = 2 r_2 \sin\theta_{12} \cdot \overline{A'B'}/\overline{AB}\\
-  \overline{DB} = 2 r_4 \sin\theta_{14} \cdot \overline{A'B'}/\overline{AB}.
+  \overline{DB} = 2 r_4 \sin\theta_{14} \cdot \overline{A'B'}/\overline{AB}
  \end{eqnarray*}
  Remark that $\cos(\angle BAB') =\overline{A'B'}/\overline{AB}.$ Clearly,
  $\overline{AD} + \overline{DB} = \overline{AB}$ holds, so it is easy to
@@ -950,28 +951,28 @@ Let $O_i'(x_i, y_i)$ be a projection of the center of the sphere $O_i$
  end $A'$ as in Figure \ref{fig:sideSlice}.
  And $\overline{A'O'_2} = \overline{AO_2} = r_2$ determines $A'$.
  So $O'_2$ is uniquely determined. From Lemma \ref{angles}(2), we get the
- z-coordinates $z_2$ of the center $O_2$ from $z_A(=0)$. Hence a sphere
+ z-coordinates $z_2$ of the center $O_2$ from $z_A(=0.)$ Hence a sphere
  $O_2$ is uniquely determined from $\theta_{ij}$'s and positive $r_2$
- and $z_A(= 0)$.
+ and $z_A(= 0.)$
 \end{proof}
 
 \subsection{Compatibility}
-In this way, for given parameters ($z_B, z_C$) such that $r_2, r_4, r_6$
+In this way, for given parameters ($z_B,~z_C$) such that $r_2,~r_4,~r_6$
 are all positive, we get the coordinates of three spheres 
-$O_2, O_4, O_6$. But it is not trivial whether the 6-ple($O_1, ..., O_6$) is
+$O_2, O_4, O_6$. But it is not trivial whether the 6-ple($O_1,~...,~O_6$) is
 in $\tilde\varepsilon(n_{ij})$. (That is, we have to show that 
 ($O_1,..., O_6$) satisfies (P1), (P2), (P3).)
 
 \begin{theorem}\label{compat}
  Fix $(n_{ij})_{(i, j)\in E}$(which is one of combination in Lemma
  \ref{combination})
- Fix three vertices $A,B,C$. Assume that linear equations (2.A) have
- positive solutions. Then $O_1, O_3, O_5$ as in Figure \ref{fig:infTriangle} and
- $O_2, O_4, O_6$ as in Proposition \ref{angles} satisfy followings.
+ Fix three vertices $A,~B,~C$. Assume that linear equations (2.A) have
+ positive solutions. Then $O_1,~O_3,~O_5$ as in Figure \ref{fig:infTriangle} and
+ $O_2,~O_4,~O_6$ as in Proposition \ref{angles} satisfy followings.
  \begin{description}
   \item[(1)] The face-angle of $O_2$ and $O_4$ (resp. $O_4$ and $O_6$,
              $O_2$ and $O_6$) is equal to $\theta_{24}$
-             (resp. $\theta{46}$, $\theta_{26}$.)
+             (resp. $\theta_{46}$, $\theta_{26}$.)
   \item[(2)] The intersecrion set of two spheres $O_2$, $O_4$ and a plane
              $O_1$ consists of only one point. The point is 
              $D = v_{124}$. Similarly other two vertices $E = v_{245}$
@@ -979,7 +980,7 @@ in $\tilde\varepsilon(n_{ij})$. (That is, we have to show that
   \item[(3)] The intersection set of the three spheres $O_2, O_4, O_6$
              consists of only one point. The point is $G = v_{246}$.
              
-  \item[(4)] $(O_1, ..., O_6) \in \tilde\varepsilon(n_{ij}))$.
+  \item[(4)] $(O_1, ..., O_6) \in \tilde\varepsilon(n_{ij})$.
 \end{description}
 \end{theorem}
 
@@ -1032,8 +1033,8 @@ Using (2.B) and $\overline{A'B'}^2 + (z_A-z_B)^2 = \overline{AB}^2$,
  \cos(\theta_{12} + \theta_{14}) = \cos(\pi - \theta'_{24})
 \end{eqnarray*}
 From Lemma 2.3, $\theta_{12} + \theta_{14} + \theta_{24} = \pi$. It
- follows that $\theta_24 = \theta'_24$. In the same way $\theta_{46}$
- (resp.$\theta{26}$) is equal to the face-angle of $O_4$ and $O_6$(resp
+ follows that $\theta_{24} = \theta'_{24}$. In the same way $\theta_{46}$
+ (resp.$\theta_{26}$) is equal to the face-angle of $O_4$ and $O_6$(resp
  $O_2$ and $O_6$.)
 
 (2) First we show that two edges $e_{12}$ and $e_{14}$ are mutually tangent
@@ -1102,7 +1103,7 @@ In the case (i), let three points $S_{24}, S_{46}, S_{26}$ be as in Figure
 \ref{fig:threeCircles} (left). Here we have
 $\angle O_2 S_{24} O_4 = \pi - \theta_{24}$,
 because their face-angle of $O_2$ and $O_4$ is $\theta_{24}$.
-In the same way, $\angle O_4\theta_{46}O_6 = \pi - \theta_{46}$ and
+In the same way, $\angle O_4 S_{46}O_6 = \pi - \theta_{46}$ and
 $\angle O_2S_{26}O_6 = \pi-\theta_{26}$ hold. Hence
 
 \begin{align*}
@@ -1113,9 +1114,9 @@ $\angle O_2S_{26}O_6 = \pi-\theta_{26}$ hold. Hence
 On the other hand, from Figure \ref{fig:threeCircles} (left)
 
 \begin{align*}
- \angle O_2 S_{24} O_4 &< \angle O_2 R O_4
- \angle O_2 S_{24} O_4 &< \angle O_2 R O_4
- \angle O_2 S_{24} O_4 &< \angle O_2 R O_4
+ \angle O_2 S_{24} O_4 &< \angle O_2 R O_4\\
+ \angle O_2 S_{24} O_4 &< \angle O_2 R O_4\\
+ \angle O_2 S_{24} O_4 &< \angle O_2 R O_4\\
 \end{align*}
 and
 \begin{align*}
@@ -1137,7 +1138,9 @@ For $(i, j) = (1, 2), (1, 4), (4, 5), (5, 6), (2, 3), (3, 6)$, it is
  \ref{compat}(1).
 
 (P3): At $H = \infty, AH, BH, CH$ are parallel lines, so they are tangent
- at $\infty$. At $D, R, F, G,$ we have shown it in Theorem \ref{compat}(2)(3).
+ at $\infty$. At $A, B, C,$ Proposition \ref{angles} (2) follows that three edges
+ with each vertex are tangent to each other. At $D, E, F, G,$ we have
+ shown it in Theorem \ref{compat}(2)(3). 
 \end{proof}
 
 \subsection{Parameter space}\label{paramSpace}
@@ -1155,7 +1158,7 @@ The linear equations (2.A) are:
 Here $\overline{A'B'} = \overline{B'C'} = \overline{A'C'} = \sqrt{3}$
 because $\Delta{A'B'C'}$ is a regular triangle and the radius of the
 circumcircle is 1.(In all cases, $\overline{A'B'} = 2\sin\theta_{35},
-\overline{B'C'} = 2\sin\theta{13}, \overline{A'C'} = 2\sin\theta{15}$.)
+\overline{B'C'} = 2\sin\theta_{13}, \overline{A'C'} = 2\sin\theta_{15}$.)
 We solve these equations, and we have 
 \begin{align}
  r2 &= (-2z_Bz_C + 2Z^2_C + 3) / 6 \\
@@ -1176,7 +1179,7 @@ doesn't intersect to $O_4$ nor $O_1$ doesn't intersect to $O_6$.
 
 $O_2$ doesn't interest to $O_5$ if and only if the distance from the center
 of the sphere $O_2$ to the plane $O_5$ is more than $r_2$. In this case,
-the distance is $3 / 2 - r_2$, and hence $O_2$ doesn't intersect to $O_5$
+the distance is $3 / 2 - r_2$ and hence $O_2$ doesn't intersect to $O_5$
 if and only if $r_2 < 3/4$. In the same way $r_4 < 3/4$ and $r_6 <
 3/4$. These three inequalities are equivalent to
 \begin{align}
@@ -1186,21 +1189,23 @@ if and only if $r_2 < 3/4$. In the same way $r_4 < 3/4$ and $r_6 <
 \end{align}
 
 See Figure 10 ($z_B, z_C$) in the shaded area of this figure satisfies
-all of(2.D), (2.E), and $z_B \geq 0$.
+all of(2.D) and (2.E) and $z_B \geq 0$.
 
 In case (a), the original three parameters $z_A, z_B, z_C$ have symmetry,
 because $O_1, O_3, O_5$ form a \textit{regular} triangle prism.
-If $z_C < 0$, then we exchange the roles of $z_A$ and $z_C$, and we can reduce
+If $z_C < 0$, then we exchange the roles of $z_A$ and $z_C$ and we can reduce
 ($z_B, z_C$) to ($z_B - z_C, -z_C$) in the case of $z_C > 0$.
-If $z_B \leq z_C < 2z_B$, then we exchange the roles of $z_B$ and $z_C$, 
-and we can reduce $(z_B, z_C)$ to $(z_C -z_B,z_C)$ in case of 
-$z_C \geq 2z_B$. In this way, the correct parameter space is as in Figure
-11.
+If $0 \leq z_C < z_B$, then we exchange the roles of $z_B$ and $z_C$, 
+and we can reduce $(z_B, z_C)$ to $(z_C, z_B)$ in case of 
+$z_B < z_C$. If $z_B \leq z_C < 2z_B$ then we exchange the roles of
+$z_A$ and $z_C$ and we can reduce($z_B, z_C$) to ($z_C-z_B,z_C$) in case
+of $z_C \geq 2z_B$. In this way, the correct parameter space is as in
+Figure 11.
 
-Here two hyperbola $z^2_C - z_bz_C = 3/4$ and $z_B z_C = 3/4$ intersects
+Here two hyperbola $z^2_C - z_Bz_C = 3/4$ and $z_B z_C = 3/4$ intersects
 at ($\sqrt{6} / 4, \sqrt{6}/2$) and this point is on the straight line
 $z_C=2z_B$. In Figure 11, points on $z^2_C - z_Bz_C = 3/4$ aren't
-contained in the area. When ($z_b, z_C$) is on this parabola, the face
+contained in the area. When ($z_B, z_C$) is on this parabola, the face
 $O_2$ is tangent to $O_5$. Moreover when
 $(z_B, z_C) = (\sqrt{6} / 4, \sqrt{6}/2)$, the face $O_3$ is also tangent
 to $O_4$.
@@ -1248,7 +1253,7 @@ In case (k),
   {2(\sqrt{6} + \sqrt{2})} < \dfrac{\sqrt{2}}{2}
  \end{cases}
 \end{align*}
-In these cases, there is no answer for ($z_b, z_C$).
+In these cases, there is no answer for ($z_B, z_C$).
 
 We complete the proof of the main Theorem \ref{main}.
 
@@ -1263,9 +1268,9 @@ have relations
 for $(i, j) \in E.$ (Here $1$ is the identity map.) If $(i, j) \notin E$,
 there is no relation between $\gamma_i$ and $\gamma_j$.
 And at each vertex, three edges with the vertex are mutually tangent.
-there are no more relations. So we have that
+There are no more relations. So we have that
 \begin{align*}
- \tilde G = <\gamma_1, ...,\gamma_6 | (\gamma_i\gamma_j)^{n_{ij}} = 1 for
+ \tilde G = <\gamma_1, ...,\gamma_6~|~(\gamma_i\gamma_j)^{n_{ij}} = 1 \text{for}
  (i, j) \in E.>
 \end{align*}
 The length of all relations is even, so that we can consider a set $G = G(P)$
@@ -1276,12 +1281,12 @@ It follows that $G$ is a subset of M\"ob$_+(S^3)$.
 
 In the previous subsection, we got a parameter space for $P$ to be a
 hexahedron with the initial conditions. Here are some pictures of the
-limit sets $\Gamma(G)$. However, if we take $O_1, ..., O_6$ as in the
+limit sets $\Lambda(G)$. However, if we take $O_1, ..., O_6$ as in the
 previous section, the limit set contains an infinity point $\infty$. So
-we transform $\O_1, ..., O_6$ by an inversion of a proper sphere in
-order to make $\Gamma(G)$ doesn't contain the infinity point.
+we transform $O_1, ..., O_6$ by an inversion of a proper sphere in
+order to make $\Lambda(G)$ doesn't contain the infinity point.
 
-Only when $(z_B, z_C) =(0, 0), \Delta(G)$ is a round sphere, and hence
+Only when $(z_B, z_C) =(0, 0), \Lambda(G)$ is a round sphere, and hence
 $G$ is fuchsian. In other cases, we get a homotopy to the case 
 $(z_B, z_C) = (0, 0)$, we know that $G$ is quasi-fuchsian.
 
@@ -1310,7 +1315,7 @@ Let $\{n_{ij}\}$ be of type (a) in Lemma \ref{combination}. Then there exist thr
 Let $H$ be a sub group of M\"ob$_+(S^3)$ generated by $f_1, f_2,
 f_3$. This proposition follows that
 \begin{align*}
- H = <f_1, f_2, f_3|(f_1f_2)^3 = (f_2f_3)^3 = (f_1f_3)^3 = e>.
+ H = <f_1, f_2, f_3~|~(f_1f_2)^3 = (f_2f_3)^3 = (f_1f_3)^3 = e>.
 \end{align*}
 It is easy to show that the fundamental domain of $H$ is a polyhedron
 surrounded by the initial spheres. The limit set $H$ is the same as that
@@ -1319,7 +1324,7 @@ of $G$.
 \begin{proof}
 See Figure \ref{fig:infTriangle}. Since we assume that $n_{ij} = \pi/3$, we have
 \begin{align*}
- A(1, 0, 0), B(-\frac{1}{2}, z_B), C(-\frac{1}{2}, -\frac{\sqrt{3}}{2}, z_C).
+ A(1, 0, 0), B(-\frac{1}{2}, \dfrac{\sqrt{3}}{2}, z_B), C(-\frac{1}{2}, -\frac{\sqrt{3}}{2}, z_C).
 \end{align*}
 \end{proof}
 
@@ -1334,8 +1339,8 @@ the segment $AB$ and
 \end{align*}
 See Figure \ref{fig:sideSlice}. In the same way, we have
 \begin{align*}
- BE : EC &= r_4\sin\theta_{45} : r_6\sin\theta_{56} &= r_4:r_6\\
- CF : FA &= r_6\sin\theta_{36} : r_2\sin\theta_{23} &= r_6:r_2
+ BE : EC &= r_4\sin\theta_{45} : r_6\sin\theta_{56} = r_4:r_6\\
+ CF : FA &= r_6\sin\theta_{36} : r_2\sin\theta_{23} = r_6:r_2
 \end{align*}
 Using these, we have coordinates of $E$. In fact,
 \begin{align*}
@@ -1344,7 +1349,7 @@ Using these, we have coordinates of $E$. In fact,
 \end{align*}
 And we have
 \begin{align*}
- \dfrac{AD}{DB} \cdot \dfrac{BE}{EC} \cdot \dfrac{CF}{FA} = \dfrac{r_2r_4r_6}{r_4r_6r_2} = 1
+ \dfrac{AD}{DB} \cdot \dfrac{BE}{EC} \cdot \dfrac{CF}{FA} = \dfrac{r_2r_4r_6}{r_4r_6r_2} = 1.
 \end{align*}
 From Ceva's theorem, the three lines $AE$, $BF$, and $CD$ meet at one
 point. Let $G'$ be the intersection. Using Menelaus's theorem, we have
@@ -1369,7 +1374,7 @@ $\overline{O_6G'} = r_6$. These mean that $G' = G$.
 From Lemma \ref{sameCircle}, $B, D, G, E$ are on one circle. Hence
 $CE \cdot CB = CG \cdot CD$. In the same way, we obtain 
 $CG \cdot CD = CF \cdot CA$. So let $O$ be a sphere with center $C$ and
-radius $\sqrt{CE \cdot CB}$ and let $f_O$ be the inversion of $O$
+radius $\sqrt{CE \cdot CB}$ and let $f_O$ be the inversion of $O$.
 The above two equations follows that
 \begin{align*}
  f_O: A \mapsto F, D \mapsto G, B \mapsto E, H \mapsto C.
@@ -1777,9 +1782,9 @@ semi-sphairahedra.
 
 When the parameter is positive, it seems like a plane, as shown in 
 Figure \ref{fig:pentahedralPrismInfPositive}\subref{fig:pentahedralPrismInfPositiveLimit}.
- However, When we decrease the height of the green ball, the
+ However, when we decrease the height of the green ball, the
  semi-sphairahedron
- becomes to be composed of two components as shown in Figure
+ becomes to be composed of two components as shown in Figure \ref{fig:pentahedralPrismInfNeg}
 
 The hollows rise, and they emerge on the plane as balls
 , as presented in Figure \ref{fig:pentahedralPrismInfNeg}\subref{fig:pentahedralPrismInfNegLimit}
