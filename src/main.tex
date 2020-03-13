@@ -1,7 +1,7 @@
   % interacttfssample.tex
 % v1.05 - August 2017
 
-\documentclass[dvipdfmx]{interact}
+\documentclass[suppldata, dvipdfmx]{interact}
 
 %\usepackage{epstopdf}% To incorporate .eps illustrations using PDFLaTeX, etc.
 %\usepackage[caption=false]{subfig}% Support for small, `sub' figures and tables
@@ -13,6 +13,10 @@
 \usepackage{algorithmic}
 \usepackage{hyperref}
 \usepackage{amsmath,amssymb}
+
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
 
 %\usepackage[doublespacing]{setspace}% To produce a `double spaced' document if required
 %\setlength\parindent{24pt}% To increase paragraph indentation when line spacing is doubled
@@ -49,6 +53,7 @@
 
 \newtheorem{problem}{Problem}[section] % Comment out [section] to remove section number dependence
 
+\date{\empty}
 
 \begin{document}
 
@@ -81,8 +86,8 @@ Sciences, Meiji University, Tokyo, Japan;
  However, we accelerate the speed of rendering fractals by
  using our original algorithm called Iterated Inversion System (IIS)
  and sphere tracing, a kind of a ray tracing techniques.
- We can render the images of fractals in real-time
- , and it makes a visualization experiment easily.
+ We can render the images of fractals in real-time,
+ and it makes a visualization experiment easily.
  We also focus on finding and solving mathematical problems about the
  polyhedra from visualization.
 
@@ -258,7 +263,7 @@ a sphairahedron.
 
 The image in Figure \ref{fig:sphairahedron}\subref{fig:sphairaPrismAll}
 is an example of $A$.
-We hollow out the $S^3$ with six balls: we remove three half-space
+We hollow out the $S^3$ with six balls: we remove three half-spaces
 (three balls with infinite radius,) from $S^3$ and obtain the prism of
 infinite length, and we scoop out the prism by the remaining
 three-colored transparent balls as in Figure
