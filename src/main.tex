@@ -711,7 +711,7 @@ Hence the four vertexes lie on one plane in $R^3$.
 (d) (6, 2, 3, 3, 3, 2, 3, 6, 3, 3, 6, 2)\\
 (e) (3, 2, 2, 3, 6, 6, 2, 6, 3, 6, 3, 2)\\
 (f) (3, 2, 2, 3, 6, 6, 3, 6, 2, 6, 2, 3)\\
-(g) (6, 2, 2, 3, 3, 3, 6, 5, 2, 6, 2, 3)\\
+(g) (6, 2, 2, 3, 3, 3, 6, 6, 2, 6, 2, 3)\\
 (h) (3, 2, 6, 3, 6, 2, 3, 6, 2, 2, 6, 3)\\
 (i) (4, 2, 2, 4, 4, 4, 2, 4, 4, 4, 4, 2)\\
 (j) (4, 2, 2, 4, 4, 4, 4, 4, 2, 4, 2, 4)\\
@@ -1193,7 +1193,32 @@ if and only if $r_2 < 3/4$. In the same way $r_4 < 3/4$ and $r_6 <
  z^2_B - z_B z_C &< 3/ 4
 \end{align}
 
-See Figure 10 ($z_B, z_C$) in the shaded area of this figure satisfies
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.5\textwidth}
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeA.png}
+ \caption{}
+ \label{fig:graphCubeA}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.5\textwidth}
+  \centering
+  \includegraphics[width=2in,
+  keepaspectratio]{./img/graph/cubeALimit.png}
+  \caption{}
+  \label{fig:graphCubeALimit}
+ \end{minipage}
+ \hspace*{\fill}
+\end{figure}
+
+\begin{align*}
+(1)& z_Bz_C = 3/4\\
+(2)& z_C^2 - z_B z_C = 3/4\\
+(3)& z_B^2 - z_B z_C = 3/4
+\end{align*}
+
+See Figure \ref{fig:graphCubeA} ($z_B, z_C$) in the shaded area of this figure satisfies
 all of(2.D) and (2.E) and $z_B \geq 0$.
 
 In case (a), the original three parameters $z_A, z_B, z_C$ have symmetry,
@@ -1205,17 +1230,20 @@ and we can reduce $(z_B, z_C)$ to $(z_C, z_B)$ in case of
 $z_B < z_C$. If $z_B \leq z_C < 2z_B$ then we exchange the roles of
 $z_A$ and $z_C$ and we can reduce($z_B, z_C$) to ($z_C-z_B,z_C$) in case
 of $z_C \geq 2z_B$. In this way, the correct parameter space is as in
-Figure 11.
+Figure \ref{fig:graphCubeALimit}.
 
 Here two hyperbola $z^2_C - z_Bz_C = 3/4$ and $z_B z_C = 3/4$ intersects
 at ($\sqrt{6} / 4, \sqrt{6}/2$) and this point is on the straight line
-$z_C=2z_B$. In Figure 11, points on $z^2_C - z_Bz_C = 3/4$ aren't
+$z_C=2z_B$. In Figure \ref{fig:graphCubeALimit}, points on $z^2_C - z_Bz_C = 3/4$ aren't
 contained in the area. When ($z_B, z_C$) is on this parabola, the face
 $O_2$ is tangent to $O_5$. Moreover when
 $(z_B, z_C) = (\sqrt{6} / 4, \sqrt{6}/2)$, the face $O_3$ is also tangent
 to $O_4$.
-In the same way, we have a similar result in case $(b), (c), (d), (e),
-(h), (i)$. The figures below are parameter space in each case.
+
+In the same way, we have a similar result in case 
+$(b), (c), (d), (e), (h), (i)$. 
+The figures below are parameter space in each case.
+We show parameter spaces not considering symmetry.
 
 In case $(f), (g), (j), and (k)$, there is no solution of $(z_B, z_C)$
 to be a hexahedron. In fact, in case (f),
@@ -1226,6 +1254,132 @@ to be a hexahedron. In fact, in case (f),
  0 &< \dfrac{3 + z^2_C - z_Bz_C}{2\sqrt{3}} < \dfrac{\sqrt{3}}{2}.
 \end{cases}
 \end{align*}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.5\textwidth}
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeB.png}
+ \caption{}
+ \label{fig:graphCubeB}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.5\textwidth}
+  case(b)
+  \centering
+  \begin{align*}
+   (1)& -2\sqrt{3} z_B z_C + 54 - 30\sqrt{3} = 0\\
+   (2)& -3z_B^2 + 4 z_B z_C + 15/4 = 0\\
+   (3)& +2z_B z_C - 3z_C^2 + 3/4 = 0
+  \end{align*}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.5\textwidth}
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeC.png}
+ \caption{}
+ \label{fig:graphCubeC}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.5\textwidth}
+  \centering
+  case(c)
+  \begin{align*}
+   (1)& -\sqrt{3}z_B^2 - 2\sqrt{3}z_Bz_C + 90 - 51\sqrt{3} = 0\\
+   (2)& -3\sqrt{3}z_B^2 + 4\sqrt{3}z_B z_C + 90 - 48\sqrt{3} = 0\\
+   (3)& z_B^2 + 2 z_B z_C - 5z_C^2 + 9/4 = 0
+  \end{align*}
+ \end{minipage}
+ \hspace*{\fill}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.5\textwidth}
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeD.png}
+ \caption{}
+ \label{fig:graphCubeD}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.5\textwidth}
+  \centering
+  case(d)
+  \begin{align*}
+   (1)& -3z_B^2 - 6z_B z_C - z_C^2 -60 +36\sqrt{3} = 0\\
+   (2)& -15 z_B^2 + 6z_Bz_C + z_C^2 - 120 + 72\sqrt{3} = 0\\
+   (3)& 3z_B^2 + 6z_Bz_C - 5z_C^2 - 120 + 72 \sqrt{3} = 0
+  \end{align*}
+ \end{minipage}
+ \hspace*{\fill}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.5\textwidth}
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeE.png}
+ \caption{}
+ \label{fig:graphCubeE}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.5\textwidth}
+  \centering
+  case(e)
+  \begin{align*}
+   (1)& -6z_Bz_C - z_C^2 9/4 = 0\\
+   (2)& 7z_B^2 - 6z_Bz_C - z_C^2 - 3 = 0\\
+   (3)& z_bz_C - z_C^2 - 24 + 14\sqrt{3} = 0
+  \end{align*}
+ \end{minipage}
+ \hspace*{\fill}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.5\textwidth}
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeH.png}
+ \caption{}
+ \label{fig:graphCubeH}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.5\textwidth}
+  \centering
+  case(h)
+  \begin{align*}
+   (1)& -3z_B^2 - 2z_Bz_C + 3/4 = 0\\
+   (2)& -3z_B^2 + 3 z_Bz_C + 2 = 0\\
+   (3)&  3z_B^2 + 2z_Bz_C -5z_C^2 + 3 = 0
+  \end{align*}
+ \end{minipage}
+ \hspace*{\fill}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.5\textwidth}
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeI.png}
+ \caption{}
+ \label{fig:graphCubeI}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.5\textwidth}
+  \centering
+  case(i)
+  \begin{align*}
+   (1)& -2z_Bz_C - z_C^2 + 1 = 0\\
+   (2)& -3z_B^2 + 2 z_B z_C + z_C^2 + 2 = 0\\
+   (3)& z_Bz_C - z_C^2 - 8 + 6\sqrt{2} = 0
+  \end{align*}
+ \end{minipage}
+ \hspace*{\fill}
+\end{figure}
+
 In case (g),
 
 \begin{align*}
@@ -1796,6 +1950,13 @@ The hollows rise, and they emerge on the plane as balls
 The limit set of semi-sphairahedron is many spheres touching each other, and
 it becomes not a fuchsian group or a quasi-fuchsian group.
 
+In case (a), $-1.5 < Z_B < 0 or 0 < z_B < 1.5$.
+In case (b), 
+In case (c),
+In case (d),
+In case (e),
+In case (f),
+
 \subsection{Hexahedron}
 \subsubsection{Cube}
 \begin{figure}[H]
@@ -2012,6 +2173,10 @@ They have an organic shape.
 The sphairahedron has three types of combinations of face angles.
 There is one parameter.
 
+In case (a),
+In case (b),
+In case (c),
+
 \subsection{Polyhedra whose number of the faces is seven and more}
 
 It is difficult to compute rational ideal sphairahedra based on
@@ -2039,7 +2204,7 @@ The proof is as follows.
 
  For rationality, 
  the largest dihedral angle is $\pi / 2$.
- So, sum of the largest angle is $k\pi / 2$
+ So, largest sum of the angle is $k\pi / 2$
  $(k -  2)\pi > k\pi / 2$
 
  When a sphairahedron 
@@ -2186,8 +2351,8 @@ $P$.\\
 \end{proof}
 
 \begin{theorem}
- When $\bigcup_{x \text{is vertex of} P} B_x \supset P$,
- $\bigcup_{x \text{is vertex of} P} G_P{B_x} = G_{p}(P)$,
+ When $\bigcup_{x \text{ is vertex of } P} B_x \supset P$,
+ $\bigcup_{x \text{ is vertex of } P} G_P{B_x} = G_{p}(P)$,
 \end{theorem}
 
 \begin{proof}
@@ -2199,7 +2364,7 @@ $P$.\\
 \end{proof}
 From above, remark that in order to render limit ball,
 in many cases for each vertex $X$, we compute $B_x$ and render
-$G_p(\bigcup_x B_x)$.
+$G_p($ {\scriptsize$\displaystyle\bigcup_x$} $ B_x)$.
 
 
 \subsection{Three-dimensional Printing}
