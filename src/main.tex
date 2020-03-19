@@ -62,8 +62,7 @@
 \title{Polyhedra with Spherical Faces and Four-Dimensional Kleinian Groups}
 
 \author{
-\name{Kento Nakamura \textsuperscript{a}\thanks{CONTACT
-Kento Nakamura. Email: somaarcr@gmail.com Web: soma-arc.net}, Yoshiaki Araki \textsuperscript{b}
+\name{Kento Nakamura\textsuperscript{a}, Yoshiaki Araki\textsuperscript{b}
  and Kazushi Ahara\textsuperscript{c}}
 \affil{\textsuperscript{a}Graduate School of Advanced Mathematical
 Sciences, Meiji University, Tokyo, Japan; 
@@ -98,7 +97,7 @@ mathematics; visualization; fractals; Kleinian groups; circle inversion;
  sphere inversion
 \end{keywords}
 
-\tableofcontents
+%\tableofcontents
 
 \section{Introduction}
 
@@ -136,6 +135,21 @@ mathematics; visualization; fractals; Kleinian groups; circle inversion;
   \label{fig:quasi-sphere}
  \end{minipage}
 \end{figure}
+
+We are interested in finding examples and rendering the limit sets of
+quasi-Fuchsian subgroups of $\tilde{\text{M\"ob}}(S^3)$, the group of all
+orientation preserving/reversing M\"obius transformations on $S^3$. 
+
+In this article, first, we show an overview of such groups arising from
+sphairahedra, which is announced by Ahara and Araki \cite{AharaAraki}.
+Next, we introduce a rendering system of sphairahedra and their limit
+sets and observe some mathematical problems. 
+Usually, rendering an image of this kind of fractal takes much time.
+However, using an algorithm called Iterated Inversion System (IIS),
+introduced by Nakamura and Ahara \cite{bridges2016}\cite{bridges2017},
+we can render images of these fractals in real-time, and this system
+makes a visualization experiment easily. We also focus on finding and
+solving mathematical problems about the polyhedra from visualization.
 
 \subsection{Background}
 
@@ -339,6 +353,21 @@ The green sphere makes an unnecessary hole to $A$.
  \label{fig:sphairahedronTile}
 \end{figure}
 
+In Figure \ref{fig:sphairahedronTile}, we show a process of the tiling of
+sphairahedra.
+The sphairahedron shown in Figure
+\ref{fig:sphairahedronTile}\subref{fig:sphaira-step1} has six spherical
+faces.
+We apply inversions in each spherical face to original sphairahedron,
+and we obtain new six sphairahedra surrounding the initial sphairahedron,
+as shown in Figure
+\ref{fig:sphairahedronTile}\subref{fig:sphaira-final}.
+Next, we apply inversions in each of the new faces to the new sphairahedra,
+and we obtain more sphairahedra.
+We continue iterating inversions, and finally, we get a three-dimensional
+fractal shape, as presented in Figure
+\ref{fig:sphairahedronTile}\subref{fig:sphaira-final}.
+
 \begin{figure}[h!tbp]
  \begin{minipage}[t]{0.18\textwidth}
   \centering
@@ -385,21 +414,6 @@ The green sphere makes an unnecessary hole to $A$.
  \caption{sphairahedron with hole.}
   \label{fig:semiSphairaSpheres}
 \end{figure}
-
-In Figure \ref{fig:sphairahedronTile}, we show a process of the tiling of
-sphairahedra.
-The sphairahedron shown in Figure
-\ref{fig:sphairahedronTile}\subref{fig:sphaira-step1} has six spherical
-faces.
-We apply inversions in each spherical face to original sphairahedron,
-and we obtain new six sphairahedra surrounding the initial sphairahedron,
-as shown in Figure
-\ref{fig:sphairahedronTile}\subref{fig:sphaira-final}.
-Next, we apply inversions in each of the new faces to the new sphairahedra,
-and we obtain more sphairahedra.
-We continue iterating inversions, and finally, we get a three-dimensional
-fractal shape, as presented in Figure
-\ref{fig:sphairahedronTile}\subref{fig:sphaira-final}.
 
 Also, an infinite sphairahedron can be tiled, as presented in Figure
 \ref{fig:sphairahedralPrismTile}.
@@ -701,7 +715,7 @@ Hence the four vertexes lie on one plane in $R^3$.
 \begin{lemma}\label{combination}
  12-ple($n_{ij}$) = ($n_{12}, n_{13}, n_{14}, n_{15}, n_{23}, n_{24},
  n_{26}, n_{35}, n_{36}, n_{45}, n_{46}, n_{56}$) of face-angle
- parameters is one of the following 11.(See Figire 4.)
+ parameters is one of the following 11.(See Figire \ref{fig:cubeGraph}.)
 \end{lemma}
 
 \noindent
@@ -716,7 +730,7 @@ Hence the four vertexes lie on one plane in $R^3$.
 (i) (4, 2, 2, 4, 4, 4, 2, 4, 4, 4, 4, 2)\\
 (j) (4, 2, 2, 4, 4, 4, 4, 4, 2, 4, 2, 4)\\
 (k) (6, 2, 2, 4, 3, 3, 6, 4, 2, 4, 2, 4)\\
-%TODO 画像との整合性を確認
+
 \begin{figure}[h!tbp]
   \begin{minipage}[t]{0.15\textwidth}
    \centering
@@ -802,7 +816,7 @@ Hence the four vertexes lie on one plane in $R^3$.
   \begin{minipage}[t]{0.15\textwidth}
    \centering
    \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_k.png}
-   \subcaption{} % TODO k is same to j
+   \subcaption{}
    \label{fig:}
   \end{minipage}
  \hspace*{\fill}
@@ -1958,12 +1972,14 @@ The hollows rise, and they emerge on the plane as balls
 The limit set of semi-sphairahedron is many spheres touching each other, and
 it becomes not a fuchsian group or a quasi-fuchsian group.
 
-In case (a), $-1.5 < z_B < 0 \text{ or } 0 < z_B < 1.5$.
-In case (b), $-\sqrt{3}/2 < z_B < \sqrt{3}/2$
-In case (c), $-\sqrt{21}/2 < z_B < -sqrt{3} \text{ or } \sqrt{3} < z_B < \sqrt{21}/2$
-In case (d),
-In case (e), $-\sqrt{3} < z_B < -\sqrt{2} \text{ or } \sqrt{2} < z_B < \sqrt{3}$
-In case (f), $-1 < z_B < 0 \text{ or } 0 < z_B < 1$
+\begin{align*} 
+ In~case~(a),&~-1.5 < z_B < 0 \text{ or } 0 < z_B < 1.5.\\
+ In~case~(b),&~-\sqrt{3}/2 < z_B < \sqrt{3}/2.\\
+ In~case~(c),&~-\sqrt{21}/2 < z_B < -\sqrt{3} \text{ or } \sqrt{3} < z_B < \sqrt{21}/2.\\
+ In~case~(d),&~\\%TODO 
+ In~case~(e),&~-\sqrt{3} < z_B < -\sqrt{2} \text{ or } \sqrt{2} < z_B < \sqrt{3}.\\
+ In~case~(f),&~-1 < z_B < 0 \text{ or } 0 < z_B < 1.
+\end{align*}
 
 \subsection{Hexahedron}
 \subsubsection{Cube}
@@ -2004,7 +2020,7 @@ In case (f), $-1 < z_B < 0 \text{ or } 0 < z_B < 1$
   \hspace*{\fill}
   \caption{\textit{Finite pentahedral pyramid type.}}
   \label{fig:cubeInf}
- \end{minipage}
+  \end{minipage}
 \end{figure}
 
 In the cube type polyhedra, Kazushi Ahara and Yoshiaki Araki
@@ -2180,11 +2196,11 @@ Infinite sphairahedra generate a landscape-like pattern.
 They have an organic shape.
 The sphairahedron has three types of combinations of face angles.
 There is one parameter.
-
-In case (a), $- \sqrt{\dfrac{10 - 4 \sqrt{3}}{3 + 2 \sqrt{3}}} < z_B <
-\sqrt{\dfrac{10 - 4 \sqrt{3}}{3 + 2 \sqrt{3}}}$, 
-In case (b), $-\sqrt{8\sqrt{2}-10} < z_B < \sqrt{8\sqrt{2} - 10}$,
-In case (c), .
+\begin{align*}
+ In~case~(a),&~- \sqrt{\dfrac{10 - 4 \sqrt{3}}{3 + 2 \sqrt{3}}} < z_B <\sqrt{\dfrac{10 - 4 \sqrt{3}}{3 + 2 \sqrt{3}}}.\\ 
+ In~case~(b),&~-\sqrt{8\sqrt{2}-10} < z_B < \sqrt{8\sqrt{2} - 10}.\\
+ In~case~(c),&~.%TODO
+\end{align*}
 
 \subsection{Polyhedra whose number of the faces is seven and more}
 
@@ -2212,15 +2228,13 @@ The proof is as follows.
  the vertex and $k \geq 3$ for natural number $k$.
 
  For rationality, 
- the largest dihedral angle is $\pi / 2$.
- So, largest sum of the angle is $k\pi / 2$
- $(k -  2)\pi > k\pi / 2$
+ the largest dihedral angle is $\pi / 2$, and 
+ $(k-2)\pi$ is sum of the interior angle.
+ So, largest sum of the angle is $k\pi / 2$.
+ That is,  $(k -  2)\pi > k\pi / 2$
 
- When a sphairahedron 
- vertex $pi / n (n \geq 5)$
- is not rational sphairahedron.
-
- To satisfy ideality, the sum of the edge angles should be $(k - 2) \pi$.
+ To satisfy ideality, the sum of the dihedral angles should be $(k - 2)
+ \pi$. 
  We transform the vertex into infinity.
  the largest dihedral angle is $\pi / n (n > 1)$
  $(k - 2)\pi$
@@ -2594,7 +2608,7 @@ For example, there are other patterns in Figure
 
 In this subsection we observe cube-type infinite sphairahedron whose
 dihedral angles are $\pi / 3$ and its parameter space.
-The parameter space is shown in Figure \ref{fig:paramSpace}.% TODO replace image
+The parameter space is shown in Figure \ref{fig:paramSpace}.
 The gray region shows ideal rational parameter. The red point shows the
 parameter of Figure \ref{fig:cubeArms}.
 We consider infinite sphairahedra because it is easy to understand
@@ -2678,7 +2692,7 @@ The parameter space is connected.
         Phoenix, Arizona, 2018, pp. 171--178.
 \bibitem{kageyama}
         蔭山亮, 
-        \emph{円辺形ち球面体の変形空間及び極限集合},
+        \emph{円辺形と球面体の変形空間及び極限集合},
         Master thesis, 2016
 \bibitem{araki2006materializing}
         Yoshiaki Araki,
@@ -2686,11 +2700,11 @@ The parameter space is connected.
         In: Forma 21.1 (2006), pp. 19–27.
 \bibitem{indra}
         David Mumford, Caroline Series, and David Wright.
-        \emph{Indra’s Pearls: The Vision of Felix Klein.}
+        \emph{Indra’s Pearls: The Vision of Felix Klein},
         1st ed. Apr. 2002.
 \bibitem{countingPolyhedra}
         G\'erard P. Michon, 
-        \emph{Counting Polyhedra}
+        \emph{Counting Polyhedra},
         http://www.numericana.com/data/polyhedra.htm
         (as of February 23 2020)
 \end{thebibliography}
