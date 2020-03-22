@@ -173,7 +173,7 @@ graphics and the simplest parameter space of cube-type sphairahedra
 with the graphics rendered by POV-Ray.
 After that, Ahara presented the paper written in Japanese\cite{AharaJa}
 ,showing the varieties of sphairahedra and dimensions of parameter space.
-In 2016, Ryo Kageyama decided the parameter space of the cube type
+In 2016, Ryo Kageyama\cite{kageyama} decided the parameter space of the cube type
 sphairahedron, and moreover, introduced varieties of deformations of
 quasi-spheres.
 
@@ -284,22 +284,25 @@ If $A$ consists of two components and all components are simply-connected,
 we call a component of $A$ a sphairahedron.
 \end{definition}
 The image in Figure \ref{fig:sphairahedron}\subref{fig:sphairaPrismAll}
-is an example of a sphairahedron.
+is an example of a sphairahedron. 
 
 Because of that definition, a sphairahedron has faces, edges, and
-vertexes. 
+vertexes. We define \emph{ideality} and \emph{rationality} of a spairahedron.
+
+\begin{definition}
+(1)\ Let $S$ be a sphairahedron.  For each vertex, if all edges passing through the vertex are tangential to each other, we all it an \emph{ideal} sphairahedron.\par 
+(2)\ Let $S$ be a sphairahedron.  For each edge, if the dihedral angle at the edge is rational (that is, the angle equals to $\pi/n$, where $n$ is a natural number,) we call it an \emph{rational} sphairahedron.
+\end{definition}
+
+In the sequel, we mainly consider a ideal rational spairahedron.  
 When one of the vertexes is the infinity-point $\infty$ of $S^3$,
 we call the sphairahedron \textit{infinite sphairahedron}.
-One of the example is Figure
+One example is shown in Figure
 \ref{fig:sphairahedron}\subref{fig:sphairaPrismHalf}.
-Here, we consider the shape infinitely long triangular prism hollowed
-out by three balls, and one of the connected components is sphairahedron.
+Here, we consider a triangular prism with infinitely length and we hollow
+out it by three balls, and select one of the connected components as a  sphairahedron.  At infinite, a face adjacent to the infinite vertex is a plane, the boundary of the half space.  Thus the neighborhood of the infinite vertex is a prism.
 
-In infinite, sphairahedron 
-a face adjacent to infinite-point is the boundary of half-space, that is to
-say, a plane.
-In the neighborhood of infinite-point, sphairahedron becomes prism.
-When the closure of sphairahedron doesn't include infinite-point,
+When the closure of a sphairahedron does not contain the infinite point,
 we call it \textit{finite sphairahedron}.
 See Figure\ref{fig:sphairahedron}\subref{fig:sphairahedronFinite}.
 
@@ -321,33 +324,32 @@ See Figure\ref{fig:sphairahedron}\subref{fig:sphairahedronFinite}.
 % \textit{finite type sphairahedron}.
 %---------- 
 
-Moreover, we can loosen the definition of sphairahedron, that is, case
-$A$ has simply connected three or more components.
+Moreover, we can loosen the definition of an ideal rational sphairahedron, 
+that is, we allow the case $A$ has simply connected three or more components.
+
 \begin{definition}
 Let $\overline{D_1}, \overline{D_2},\ldots, \overline{D_p}$ be ball or
 half-space in $S^3$.  If the complement $A$ of the unions of
 $\overline{D_i}$'s has more than two connected components and all
 components are simply connected, we call one component (or the union of
-two components) a semi-sphairahedron.
+two of components) a semi-sphairahedron.
 \end{definition}
 Figure \ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaAll} shows an
-example of a semi-sphairahedron.  We can get this shape by scooping a
+example of a ideal rational semi-sphairahedron.  We can get this shape by scooping a
 triangle prism out by two balls.  Complement $A$ consists of three
-connected components. Lower two of them are tetrahedra, and the upper one is a
-pentahedron.  We can regard the unions of lower two components as a
-sphairahedron with a singular point.
+connected components. Lower two of them are tetrahedra, and the upper 
+one is a pentahedron.  If we $S$ be the unions of lower two components,  
+then $S$ is a semi-sphairahedron and we can regard it as a spairahedron with a singular point.  See Figure \ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaHalf}.
 
-See Figure \ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaHalf}.
-We can regard the resulting shape as a singular case of a pentahedron,
-and we call it a \textit{semi-sphairahedron}.  Remark that Ahara, Araki,
-and Kageyama did not deal with a semi-sphairahedron and did not render
-its tiling patterns.
+
+Remark that Ahara, Araki\cite{AharaAraki}.,
+and Kageyama\cite{kageyama} did not deal with semi-sphairahedra and their rendering images.
 
 Other than semi-sphairahedra, we have much more 'sphairahedron-like
-shapes' in this situation.  See Figure \ref{fig:brokenHole}. In this
+shapes' in the ideal and rational situation.  See Figure \ref{fig:brokenHole}. In this
 figure, we see a hole at one of the faces.  This shape does not generate a
-sphairahedron, but we can apply the tiling method in the below section
-,and we have a (non-simply-connected) limit set.  We have not classified
+sphairahedron, but we can apply the tiling method in the below section, 
+and we have a (non-simply-connected) limit set.  We have not classified
 these figures mathematically yet, but possibly it occurs some
 interesting geometry problems from here.
 
