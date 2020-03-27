@@ -24,7 +24,7 @@
 
 \usepackage[numbers,sort&compress]{natbib}% Citation support using natbib.sty
 \bibpunct[, ]{[}{]}{,}{n}{,}{,}% Citation support using natbib.sty
-\renewcommand\bibfont{\fontsize{10}{12}\selectfont}% Bibliography support using natbib.sty
+%\renewcommand\bibfont{\fontsize{10}{12}\selectfont}% Bibliography support using natbib.sty
 
 \theoremstyle{plain}% Theorem-like structures provided by amsthm.sty
 \newtheorem{theorem}{Theorem}[section]
@@ -40,15 +40,7 @@
 \newtheorem{remark}{Remark}
 \newtheorem{notation}{Notation}
 
-\newtheoremstyle{problemstyle}  % <name>
-        {3pt}                                               % <space above>
-        {3pt}                                               % <space below>
-        {\normalfont}                               % <body font>
-        {}                                                  % <indent amount}
-        {\bfseries\itshape}                 % <theorem head font>
-        {\normalfont\bfseries:}         % <punctuation after theorem head>
-        {.5em}                                          % <space after theorem head>
-        {}                                                  % <theorem % head spec (can be left empty, meaning `normal')>
+
 \theoremstyle{problemstyle}
 
 \newtheorem{problem}{Problem}[section] % Comment out [section] to remove section number dependence
@@ -777,7 +769,7 @@ Hence the four vertexes lie on one plane in $R^3$.
    \centering
    \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cubeFaces.png}
    \caption{Faces}
-   \label{fig:}
+   \label{}
   \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[t]{0.75\textwidth}
@@ -2017,7 +2009,7 @@ it becomes not a fuchsian group or a quasi-fuchsian group.
  In~case~(a),&~-1.5 < z_B < 0 \text{ or } 0 < z_B < 1.5.\\
  In~case~(b),&~-\sqrt{3}/2 < z_B < \sqrt{3}/2.\\
  In~case~(c),&~-\sqrt{21}/2 < z_B < -\sqrt{3} \text{ or } \sqrt{3} < z_B < \sqrt{21}/2.\\
- In~case~(d),&~\\%TODO compute parameter space
+ In~case~(d),&~-\sqrt{3}/2 < z_B < 0 \text{ or } 0 < z_B < \sqrt{3}/2\\
  In~case~(e),&~-\sqrt{3} < z_B < -\sqrt{2} \text{ or } \sqrt{2} < z_B < \sqrt{3}.\\
  In~case~(f),&~-1 < z_B < 0 \text{ or } 0 < z_B < 1.
 \end{align*}
@@ -2082,7 +2074,7 @@ his master thesis\cite{kageyama}.
    \centering
    \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake/hexahedralCakeFaces.png}
    \caption{Faces}
-   \label{fig:}
+   \label{}
   \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[t]{0.6\textwidth}
@@ -2091,7 +2083,7 @@ his master thesis\cite{kageyama}.
    \includegraphics[width=1in,
    keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake/hexahedralCake_a.png}
    \subcaption{}
-   \label{fig:}
+   \label{}
   \end{minipage}
   \hspace*{\fill}
   \begin{minipage}[t]{0.19\textwidth}
@@ -2105,11 +2097,11 @@ his master thesis\cite{kageyama}.
    \centering
    \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake/hexahedralCake_c.png}
    \subcaption{}
-   \label{fig:}
+   \label{}
   \end{minipage}
  \hspace*{\fill}
   \caption{\textit{Graph of hexahedral cake}}
-  \label{fig:}
+  \label{}
  \end{minipage}
 \end{figure}
 
@@ -2240,7 +2232,7 @@ There is one parameter.
 \begin{align*}
  In~case~(a),&~- \sqrt{\dfrac{10 - 4 \sqrt{3}}{3 + 2 \sqrt{3}}} < z_B <\sqrt{\dfrac{10 - 4 \sqrt{3}}{3 + 2 \sqrt{3}}}.\\ 
  In~case~(b),&~-\sqrt{8\sqrt{2}-10} < z_B < \sqrt{8\sqrt{2} - 10}.\\
- In~case~(c),&~.%TODO compute parameter space
+ In~case~(c),&~-\sqrt{2(8\sqrt{3} - 13)} < z_B < \sqrt{2(8\sqrt{3} - 13)}.
 \end{align*}
 
 \subsection{Polyhedra whose number of the faces is seven and more}
@@ -2448,14 +2440,14 @@ $G_p(\displaystyle\bigcup_x B_x)$.
    \centering
    \includegraphics[width=2in, keepaspectratio]{./img/sphairahedron/3dprint/mono1.jpg}
    \subcaption{}
-   \label{fig:}
+   \label{}
   \end{minipage}
  \hspace*{\fill}
   \begin{minipage}[t]{0.5\textwidth}
    \centering
    \includegraphics[width=2in, keepaspectratio]{./img/sphairahedron/3dprint/mono2.jpg}
    \subcaption{}
-   \label{fig:}
+   \label{}
   \end{minipage}
   \hspace*{\fill}
   \caption{\textit{Monochrome printing by Makerbot Replicater Z18 with PLA resin.}}
@@ -2745,7 +2737,7 @@ The parameter space is connected.
         1st ed. Apr. 2002.
 \bibitem{countingPolyhedra}
         G\'erard P. Michon, 
-        \emph{Counting Polyhedra},
+        \emph{Counting Polyhedra},\\
         http://www.numericana.com/data/polyhedra.htm
         (as of February 23 2020)
 \end{thebibliography}
