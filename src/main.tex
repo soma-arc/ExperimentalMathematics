@@ -612,18 +612,17 @@ See an example in Figure \ref{fig:semiSphairaSpheres}.  Here we see an plane and
 In this section we consider ideal rational sphairahedra of various types. 
 In order to classify such sphairahedra, we need three steps.  In the first step, we classify the polyhedral structure of a sphairahedron.  See Figure \ref{fig:tetrahedronFinite} for a tetraheron.  This example is a sphairahedron of tetrahedon type, this means that the polyhedral structure is same as that of a tetrahedron as in Figure \ref{fig:tetrahedronFaces}.  
 In the second step, we classify combinations of dihedral angles of edges.  In tetrahedron case, there are three combinations as seen in Figure \ref{fig:tetrahedronCombinations}.  Here a number $n$ at each edge means that the dihedral angle at the edge is $\pi / n$. 
-In the third step, we calculate the parameter space of the shape of sphairahedra.  Here we assume that two sphairahedra $T_1, T_2$ are `same' if there exists a (orientation preserving/reversing) M\"obius transformation $f$ on $S^3$ such that $f(T_1) = T_2$.  In the tetrahedron case, the parameter space consists of only one point.  
+In the third step, we calculate the parameter space of the shape of sphairahedra.  Here we assume that two sphairahedra $T_1, T_2$ are equivalent if there exists a (orientation preserving/reversing) M\"obius transformation $f$ on $S^3$ such that $f(T_1) = T_2$.  In the tetrahedron case, the parameter space consists of only one point.  
 
 %阿原荒木の仕事
 Ahara and Araki \cite{AharaAraki} determine all of combinations of dihedral angles of the cube type sphairahedra and they show one of the parameter space without a proof.  
 %阿原の仕事
 Ahara \cite{AharaJa} determines all of polyhedral structures of sphairahedra with 5 or 6 faces.  He also shows the number of combinations of dihedral angles for each structure without a proof.  
-Ahara and Araki \cite{AharaAraki2} determines all of the parameter spaces for the cube case with a proof.  But this is only a preprint and was not published.
+Ahara and Araki \cite{AharaAraki2} determines all of the parameter spaces for the cube case with a proof.  This paper was quoted in other papers, however it is an unpublished preprint.
 %影山さんの仕事（の関連部分）の紹介
-Kageyama \cite{kageyama} introduce the result of \cite{AharaAraki2} without a proof. 
+Kageyama \cite{kageyama} introduces the result of \cite{AharaAraki2} without a proof. 
 %この論文での守備範囲の紹介
-In this paper, we introduce all (!!!) of the parameter spaces of sphairahedra with 5 or 6 faces, including existing results.
- 
+In this paper, we introduce all of the parameter spaces of sphairahedra with 5 or 6 faces, including current results. The proof is so similar to that of \cite{AharaAraki2}, and we introduce it in the appendix.
 
 
 %Usually, a polyhedron has planar faces. But easily, we can consider an
@@ -675,6 +674,25 @@ $\left( \frac{\pi}{2}, \frac{\pi}{2}, \frac{\pi}{2}, \frac{\pi}{2}\right)$. The 
  are equal to dihedral angles, and the sum of them is $(k-1)\pi$.  This
  completes the proof.  We easily have all combinations of dihedral angles.
 \end{proof}
+
+Next, we prepare some lemmas to calculate the parameter space of sphairahedra. First, we recall a simple condition to be the equivalence of two sphairahedra.  This lemma is clear because it is well known that these transformations are M\"obius transformations. 
+
+\begin{lemma}
+Suppose that two sphairahedra $T_1, T_2$ satisfy that $T_2=\phi(T_1)$, where $\phi$ is a parallel translation or a rotation or a dilation or a plane-symmetry or a composite of these transformations.  Then $T_1, T_2$ are equivalent. 
+\end{lemma}
+
+Next, we consider a sphairahedron of infinite type without loss of generality.  In fact, $T$ is a spahairahedron, and  let $P$ be one of vertices and let $\varphi$ be a M\''obius transformation satisfying $\varphi(P)=\infty$.  $T'=\varphi(T)$ has the infinite vertex.  Thus we assume that one of the vertices is the infinite point.
+
+Beacause of the ideality, edges with the infinite vertex are parallel straight lines.  Using rotations, we assume that the edges are parallel to $z$-axis.  It follows that the faces with the finite vertex are perpendicular with $xy$-plane.
+
+Let $A$ be one of finite vertices next to the infinity vertex, that is, there exists an edge $e$ that connects $A$ and the infinity point.  After applying translations, we assume the followings:
+\begin{align*}
+A &= (0,0,0),\\ 
+{S_1}  &\subset \{ 0 = y \} ,\\
+{S_2}  &= \{ 0 = x\sin\theta_{12} - y\cos\theta_{12} \} ,\\
+{S_3}  &= \{ (x-x_3)^2+(y-y_3)^2+(z-z_3)^2 = r_3^2 \}, 
+\end{align*}
+where $S_i$'s are faces, $theta_{12}$ is the dihedral angle of $S_1$ and $S_2$,  $(x_3, y_3, z_3)$ is the center of the face $S_3$, and $r_3$ is the radius of the face $S_3$
 
 
 \subsection{Tetrahedron}
