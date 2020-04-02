@@ -610,18 +610,19 @@ See an example in Figure \ref{fig:semiSphairaSpheres}.  Here we see an plane and
 %In the following sections, we derive rational ideal sphairahedron.
 
 In this section we consider ideal rational sphairahedra of various types. 
-In order to classify such sphairahedra, we need three steps.  In the first step, we classify the polyhedral structure of a sphairahedron.  See Figure \ref{fig:tetrahedronFinite} for a tetraheron.  This example is a sphairahedron of tetrahedon type, this means that the polyhedral structure is same as that of a tetrahedron.  That is, the polyhedral stucture (faces, edges, and vertices) are as in Figure \ref{fig:tetrahedronFaces}.  In the second step, we classify combinations of dihedral angles of edges.  In tetrahedron case, there are three combinations as seen in Figure \ref{fig:tetrahedronCombinations}.  In the third step, we calculate the parameter space of the shape of sphairahedra.  Here we assume that two sphairahedra $T_1, T_2$ are `same' if there exists a (orientation preserving/reversing) M\"obius transformation $f$ on $S^3$ such that $f(T_1) = T_2$.  In the tetrahedron case, the parameter space consists of only one point.  
+In order to classify such sphairahedra, we need three steps.  In the first step, we classify the polyhedral structure of a sphairahedron.  See Figure \ref{fig:tetrahedronFinite} for a tetraheron.  This example is a sphairahedron of tetrahedon type, this means that the polyhedral structure is same as that of a tetrahedron as in Figure \ref{fig:tetrahedronFaces}.  
+In the second step, we classify combinations of dihedral angles of edges.  In tetrahedron case, there are three combinations as seen in Figure \ref{fig:tetrahedronCombinations}.  Here a number $n$ at each edge means that the dihedral angle at the edge is $\pi / n$. 
+In the third step, we calculate the parameter space of the shape of sphairahedra.  Here we assume that two sphairahedra $T_1, T_2$ are equivalent if there exists a (orientation preserving/reversing) M\"obius transformation $f$ on $S^3$ such that $f(T_1) = T_2$.  In the tetrahedron case, the parameter space consists of only one point.  
 
 %阿原荒木の仕事
 Ahara and Araki \cite{AharaAraki} determine all of combinations of dihedral angles of the cube type sphairahedra and they show one of the parameter space without a proof.  
 %阿原の仕事
 Ahara \cite{AharaJa} determines all of polyhedral structures of sphairahedra with 5 or 6 faces.  He also shows the number of combinations of dihedral angles for each structure without a proof.  
-Ahara and Araki \cite{AharaAraki2} determines all of the parameter spaces for the cube case with a proof.  But this is only a preprint and was not published.
+Ahara and Araki \cite{AharaAraki2} determines all of the parameter spaces for the cube case with a proof.  This paper was quoted in other papers, however it is an unpublished preprint.
 %影山さんの仕事（の関連部分）の紹介
-Kageyama \cite{kageyama} introduce the result of \cite{AharaAraki2} without a proof. 
+Kageyama \cite{kageyama} introduces the result of \cite{AharaAraki2} without a proof. 
 %この論文での守備範囲の紹介
-In this paper, we introduce all (!!!) of the parameter spaces of sphairahedra with 5 or 6 faces, including existing results.
- 
+In this paper, we introduce all of the parameter spaces of sphairahedra with 5 or 6 faces, including current results. The proof is so similar to that of \cite{AharaAraki2}, and we introduce it in the appendix.
 
 
 %Usually, a polyhedron has planar faces. But easily, we can consider an
@@ -654,6 +655,71 @@ In this paper, we introduce all (!!!) of the parameter spaces of sphairahedra wi
 % This paper is organized as follows. In the section 2 we will show the
 % above theorem. In the section 4 we consider other type
 % of polyhedra and show a similar theorems.
+
+We prepare some lemmas to execute classifications.
+
+\begin{lemma}\label{sum}
+Suppose that there are $k$ edges with a vertex. Then the sum of
+ dihedral angles of these three edges is $(k-2)\pi$.  If $k=3$ then the combination of dihedral angles is 
+one of $\left( \frac{\pi}{3}, \frac{\pi}{3}, \frac{\pi}{3}\right)$, $\left( \frac{\pi}{2}, \frac{\pi}{4}, \frac{\pi}{4}\right)$, and $\left( \frac{\pi}{2}, \frac{\pi}{3}, \frac{\pi}{6}\right)$.
+If $k=4$ then the combination of dihedral angles is 
+$\left( \frac{\pi}{2}, \frac{\pi}{2}, \frac{\pi}{2}, \frac{\pi}{2}\right)$. The case $k>4$ cannot happen.
+\end{lemma}
+
+\begin{proof}
+ Let $\phi$ be a M\"obius transformation such that it maps the vertex to
+ the infinity point. Then all of edges with the vertex are mapped to
+ parallel lines, and they form a prism. If we consider a
+ regular section of a prism, then the internal angles of the section 
+ are equal to dihedral angles, and the sum of them is $(k-1)\pi$.  This
+ completes the proof.  We easily have all combinations of dihedral angles.
+\end{proof}
+
+Next, we prepare some lemmas to calculate the parameter space of sphairahedra. First, we recall simple conditions to be equivalent of two sphairahedra.  This lemma is clear because it is well known that these transformations are M\"obius transformations. 
+
+\begin{lemma}
+Suppose that two sphairahedra $T_1, T_2$ satisfy that $T_2=\varphi(T_1)$, where $\varphi$ is a parallel translation or a rotation or a dilation or a plane-symmetry or a composite of these transformations.  Then $T_1, T_2$ are equivalent. 
+\end{lemma}
+
+Next, we consider a sphairahedron of infinite type without loss of generality.  In fact, $T$ is a spahairahedron, and  let $P$ be one of vertices and let $\varphi$ be a M\"obius transformation satisfying $\varphi(P)=\infty$.  Thus, $T'=\varphi(T)$ has the infinite vertex, and we may assume that one of the vertices is the infinite point.
+
+Beacause of the ideality of a sphairahedron, all edges with the infinite vertex are parallel straight lines.  Using rotations, we assume that these edges are parallel to the $z$-axis.  It follows that the faces with the finite vertex are perpendicular with $xy$-plane.
+
+Let $A$ be one of finite vertices next to the infinity vertex, that is, there exists an edge $e_{12}$ that connects $A$ and $\infty$.  After applying translations, we assume that the edge $e_{12}$ lies on the $z$-axis.  In fact we suppose the followings:
+\begin{align*}
+A &= (0,0,z_A),\\ 
+\overline{D_1}  &= \{ 0 \le y \} ,\\
+\overline{D_2}  &= \{ 0 \le x\sin\theta_{12} - y\cos\theta_{12} \} ,\\
+\overline{D_3}  &= \{ (x-x_3)^2+(y-y_3)^2+(z-z_3)^2 \le r_3^2 \}, \\
+S_i & = \partial(\overline{D_i}) \qquad(i=1,2,3,)
+\end{align*}
+where the vertex $A$ is on the $z$-axis, $\overline{D_i}$'s are closed balls, $\theta_{12}$ is the dihedral angle of $S_1$ and $S_2$,  $O_3(x_3, y_3, z_3)$ is the center of the face $S_3$, and $r_3$ is the radius of $S_3$.  We assume that $A$ is the intersection of $S_1, S_2, S_3$.  We have the following equation including dihedral angles and  $x_3, y_3, z_3, r_3$.
+
+\begin{lemma}
+Suppose $\theta_{13}$ is the dihedral angle of $S_1$ and $S_3$   We have the followings.\par
+(1) $z_3=z_A$,\par
+(2) $r_3^2 = x_3^2+y_3^2$, \par
+(3) $x_3\cos\theta_{13} - y_3\sin\theta_{13}=0$.\par
+\end{lemma}
+
+\begin{proof}
+Figure \ref{fig:sectionAtVertex} shows the section at $z=z_A$.  Let points $B, C$ be as seen in Figure \ref{fig:sectionAtVertex}.  By definition, $\angle BAC=\theta_{12}$.  Let $e_{13}$ be the intersection of the plane $S_1$ and the sphere $S_3$.  Then $e_{13}$ is a circle on the $xz$ plane and it is tangent to the $z$-axis at $A$ because of the ideality.  Therefore the height $z_3$ of the center $O_3$ must be the same as that $A$, and we have $z_3 = z_A$.\par
+The center $O_3$ of $S_3$ lies on the section $z=z_A$ and the sphere $S_3$ includes the point $A$, hence $r_3^2 = x_3^2+y_3^2$.  
+Because the dihedral angle of the plane $S_1$ and the sphere $S_3$ is $\theta_{13}$,  the angle $\angle BAO_3$ is $\frac{\pi}{2}-\theta_{13}$.  $x_3\cos\theta_{13} - y_3\sin\theta_{13}=0$ follows immediately. 
+\end{proof}
+
+\begin{remark}
+If the vertex $A$ is of degree $3$, the same observation works on the dihedral angle $\theta_{23}$ of $S_2$ and $S_3$.  In fact $\angle O_3AC=\frac{\pi}{2}-\theta_{23}$ in Figure \ref{fig:sectionAtVertex}. 
+\end{remark}
+
+\begin{figure}[h!tbp]
+\begin{center}
+   \includegraphics[width=1.5in, height=1.5in,
+  keepaspectratio]{./img/HexahedraWithSphericalFaces/abcTriangle.png}
+  \caption{section at $a=z_A$}
+  \label{fig:sectionAtVertex}
+\end{center}
+\end{figure}
 
 \subsection{Tetrahedron}
 
@@ -909,19 +975,6 @@ Hence the four vertexes lie on one plane in $R^3$.
  we get the conclusion of Lemma \ref{eightVertexes}.
 \end{proof}
 
-\begin{lemma}\label{sum}
- For each vertex, there are three edges with the vertex. The sum of
- face-angles of these three edges is $\pi$.
-\end{lemma}
-
-\begin{proof}
- Let $\phi$ be a M\"obius transformation such that it maps the vertex to
- the infinity point. Then the three edges with the vertex are mapped to
- parallel lines, and they form a triangle column. If we consider a
- regular section of the triangle column, then the angles of the section
- are equal to face-angles, and the sum of them is $\pi$ clearly. This
- completes the proof.
-\end{proof}
 
  Using this Lemma \ref{sum}, we obtain the following lemma in a combinatorial way.
 % 12-pre or twelve-pre
@@ -2893,19 +2946,19 @@ The parameter space is connected.
 \bibitem[Ahara 2003]{AharaJa}
         Ahara, K., \emph{Sphairahedra and three dimensional quasi-fuchsian group},
         (in Japanese), RIMS Kokyuroku (Kyoto University), {\bfseries 1329}, (2003), pp.109-114
-\bibitem[Nakamura and Ahara 2016]{bridges2016}
+\bibitem[Nakamura et al. 2016]{bridges2016}
         Nakamura, K. and Kazushi Ahara,
         \emph{A New Algorithm for Rendering Kissing Schottky Groups}, 
         Proceedings of Bridges 2016: Mathematics, Music, Art, Architecture,
         Education, Culture, Tessellations Publishing,
         Phoenix, Arizona, (2016), pp. 367--370.
-\bibitem[Nakamura and Ahara 2017]{bridges2017}
+\bibitem[Nakamura et al. 2017]{bridges2017}
         Kento Nakamura and Kazushi Ahara,
         \emph{A Geometrical Representation and Visualization of M\"{o}bius Transformation Groups}, 
         Proceedings of Bridges 2017: Mathematics, Music, Art, Architecture,
         Education, Culture, Tessellations Publishing,
         Phoenix, Arizona, 2017, pp. 159--166.
-\bibitem[Nakamura and Ahara 2018]{bridges2018}
+\bibitem[Nakamura et al. 2018]{bridges2018}
         Kento Nakamura and Kazushi Ahara,
         \emph{Sphairahedra and Three-Dimensional Fractals}, 
         Proceedings of Bridges 2018: Mathematics, Music, Art, Architecture,
