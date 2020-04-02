@@ -675,25 +675,51 @@ $\left( \frac{\pi}{2}, \frac{\pi}{2}, \frac{\pi}{2}, \frac{\pi}{2}\right)$. The 
  completes the proof.  We easily have all combinations of dihedral angles.
 \end{proof}
 
-Next, we prepare some lemmas to calculate the parameter space of sphairahedra. First, we recall a simple condition to be the equivalence of two sphairahedra.  This lemma is clear because it is well known that these transformations are M\"obius transformations. 
+Next, we prepare some lemmas to calculate the parameter space of sphairahedra. First, we recall simple conditions to be equivalent of two sphairahedra.  This lemma is clear because it is well known that these transformations are M\"obius transformations. 
 
 \begin{lemma}
-Suppose that two sphairahedra $T_1, T_2$ satisfy that $T_2=\phi(T_1)$, where $\phi$ is a parallel translation or a rotation or a dilation or a plane-symmetry or a composite of these transformations.  Then $T_1, T_2$ are equivalent. 
+Suppose that two sphairahedra $T_1, T_2$ satisfy that $T_2=\varphi(T_1)$, where $\varphi$ is a parallel translation or a rotation or a dilation or a plane-symmetry or a composite of these transformations.  Then $T_1, T_2$ are equivalent. 
 \end{lemma}
 
-Next, we consider a sphairahedron of infinite type without loss of generality.  In fact, $T$ is a spahairahedron, and  let $P$ be one of vertices and let $\varphi$ be a M\''obius transformation satisfying $\varphi(P)=\infty$.  $T'=\varphi(T)$ has the infinite vertex.  Thus we assume that one of the vertices is the infinite point.
+Next, we consider a sphairahedron of infinite type without loss of generality.  In fact, $T$ is a spahairahedron, and  let $P$ be one of vertices and let $\varphi$ be a M\"obius transformation satisfying $\varphi(P)=\infty$.  Thus, $T'=\varphi(T)$ has the infinite vertex, and we may assume that one of the vertices is the infinite point.
 
-Beacause of the ideality, edges with the infinite vertex are parallel straight lines.  Using rotations, we assume that the edges are parallel to $z$-axis.  It follows that the faces with the finite vertex are perpendicular with $xy$-plane.
+Beacause of the ideality of a sphairahedron, all edges with the infinite vertex are parallel straight lines.  Using rotations, we assume that these edges are parallel to the $z$-axis.  It follows that the faces with the finite vertex are perpendicular with $xy$-plane.
 
-Let $A$ be one of finite vertices next to the infinity vertex, that is, there exists an edge $e$ that connects $A$ and the infinity point.  After applying translations, we assume the followings:
+Let $A$ be one of finite vertices next to the infinity vertex, that is, there exists an edge $e_{12}$ that connects $A$ and $\infty$.  After applying translations, we assume that the edge $e_{12}$ lies on the $z$-axis.  In fact we suppose the followings:
 \begin{align*}
-A &= (0,0,0),\\ 
-{S_1}  &\subset \{ 0 = y \} ,\\
-{S_2}  &= \{ 0 = x\sin\theta_{12} - y\cos\theta_{12} \} ,\\
-{S_3}  &= \{ (x-x_3)^2+(y-y_3)^2+(z-z_3)^2 = r_3^2 \}, 
+A &= (0,0,z_A),\\ 
+\overline{D_1}  &= \{ 0 \le y \} ,\\
+\overline{D_2}  &= \{ 0 \le x\sin\theta_{12} - y\cos\theta_{12} \} ,\\
+\overline{D_3}  &= \{ (x-x_3)^2+(y-y_3)^2+(z-z_3)^2 \le r_3^2 \}, \\
+S_i & = \partial(\overline{D_i}) \qquad(i=1,2,3,)
 \end{align*}
-where $S_i$'s are faces, $theta_{12}$ is the dihedral angle of $S_1$ and $S_2$,  $(x_3, y_3, z_3)$ is the center of the face $S_3$, and $r_3$ is the radius of the face $S_3$
+where the vertex $A$ is on the $z$-axis, $\overline{D_i}$'s are closed balls, $\theta_{12}$ is the dihedral angle of $S_1$ and $S_2$,  $O_3(x_3, y_3, z_3)$ is the center of the face $S_3$, and $r_3$ is the radius of $S_3$.  We assume that $A$ is the intersection of $S_1, S_2, S_3$.  We have the following equation including dihedral angles and  $x_3, y_3, z_3, r_3$.
 
+\begin{lemma}
+Suppose $\theta_{13}$ is the dihedral angle of $S_1$ and $S_3$   We have the followings.\par
+(1) $z_3=z_A$,\par
+(2) $r_3^2 = x_3^2+y_3^2$, \par
+(3) $x_3\cos\theta_{13} - y_3\sin\theta_{13}=0$.\par
+\end{lemma}
+
+\begin{proof}
+Figure \ref{fig:sectionAtVertex} shows the section at $z=z_A$.  Let points $B, C$ be as seen in Figure \ref{fig:sectionAtVertex}.  By definition, $\angle BAC=\theta_{12}$.  Let $e_{13}$ be the intersection of the plane $S_1$ and the sphere $S_3$.  Then $e_{13}$ is a circle on the $xz$ plane and it is tangent to the $z$-axis at $A$ because of the ideality.  Therefore the height $z_3$ of the center $O_3$ must be the same as that $A$, and we have $z_3 = z_A$.\par
+The center $O_3$ of $S_3$ lies on the section $z=z_A$ and the sphere $S_3$ includes the point $A$, hence $r_3^2 = x_3^2+y_3^2$.  
+Because the dihedral angle of the plane $S_1$ and the sphere $S_3$ is $\theta_{13}$,  the angle $\angle BAO_3$ is $\frac{\pi}{2}-\theta_{13}$.  $x_3\cos\theta_{13} - y_3\sin\theta_{13}=0$ follows immediately. 
+\end{proof}
+
+\begin{remark}
+If the vertex $A$ is of degree $3$, the same observation works on the dihedral angle $\theta_{23}$ of $S_2$ and $S_3$.  In fact $\angle O_3AC=\frac{\pi}{2}-\theta_{23}$ in Figure \ref{fig:sectionAtVertex}. 
+\end{remark}
+
+\begin{figure}[h!tbp]
+\begin{center}
+   \includegraphics[width=1.5in, height=1.5in,
+  keepaspectratio]{./img/HexahedraWithSphericalFaces/abcTriangle.png}
+  \caption{section at $a=z_A$}
+  \label{fig:sectionAtVertex}
+\end{center}
+\end{figure}
 
 \subsection{Tetrahedron}
 
