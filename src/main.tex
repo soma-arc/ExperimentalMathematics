@@ -658,7 +658,7 @@ In this paper, we introduce all of the parameter spaces of sphairahedra with 5 o
 
 We prepare some lemmas to execute classifications.
 
-\begin{lemma}\label{sum}
+\begin{lemma}\label{lemma:sum}
 Suppose that there are $k$ edges with a vertex. Then the sum of
  dihedral angles of these three edges is $(k-2)\pi$.  If $k=3$ then the combination of dihedral angles is 
 one of $\left( \frac{\pi}{3}, \frac{\pi}{3}, \frac{\pi}{3}\right)$, $\left( \frac{\pi}{2}, \frac{\pi}{4}, \frac{\pi}{4}\right)$, and $\left( \frac{\pi}{2}, \frac{\pi}{3}, \frac{\pi}{6}\right)$.
@@ -709,7 +709,7 @@ Because the dihedral angle of the plane $S_1$ and the sphere $S_3$ is $\theta_{1
 \end{proof}
 
 \begin{remark}
-If the vertex $A$ is of degree $3$, the same observation works on the dihedral angle $\theta_{23}$ of $S_2$ and $S_3$.  In fact $\angle O_3AC=\frac{\pi}{2}-\theta_{23}$ in Figure \ref{fig:sectionAtVertex}. 
+If the vertex $A$ is of degree $3$, the same observation works on the dihedral angle $\theta_{23}$ of $S_2$ and $S_3$.  In fact $\angle O_3AC=\frac{\pi}{2}-\theta_{23}$ in Figure \ref{fig:sectionAtVertex}.  Thus we have $\theta_{12}+\theta_{23}+\theta_{13}=\pi$ and this equation is compatible with Lemma \ref{lemma:sum}.
 \end{remark}
 
 \begin{figure}[h!tbp]
@@ -726,8 +726,8 @@ If the vertex $A$ is of degree $3$, the same observation works on the dihedral a
   \begin{minipage}[t]{0.5\textwidth}
    \centering
    \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/tetrahedron.jpg}
-   \caption{Tetrahedral pyramid}
-   \label{}
+   \caption{Tetrahedron}
+   \label{fig:tetrahedron}
   \end{minipage}
  \hspace*{\fill}
   \begin{minipage}[t]{0.5\textwidth}
@@ -838,10 +838,10 @@ If the vertex $A$ is of degree $3$, the same observation works on the dihedral a
  \end{minipage}
 \end{figure}
 
-The tetrahedron has the fewest number of faces.
-It has three types of combinations of vertexes and edges, as shown in
-Figure \ref{fig:tetrahedronFaces} and Figure \ref{fig:tetrahedronCombinations}.
-They have no parameter.
+A tetrahedron (Figure \ref{fig:tetrahedron}) has a polyhedral structure as shown in Figure \ref{fig:tetrahedronFaces}.  It is a sphairahedron with fewest faces.
+There are three types of combinations of dihedral angles of edges as shown in
+Figure \ref{fig:tetrahedronCombinations}.
+In each case, the parameter space consists on one point.  To show this fact, it is enough to suppose that one vertex is the infinite point and the sphairahedron is they have no parameter.
 The quasi-spheres are shown in Figure \ref{fig:tetrahedronFinite}
 , Figure \ref{fig:tetrahedronInf}, Figure \ref{fig:tetrahedronInf_b},
 and Figure \ref{fig:tetrahedronInf_c}.
@@ -983,7 +983,7 @@ Hence the four vertexes lie on one plane in $R^3$.
 \end{proof}
 
 
- Using this Lemma \ref{sum}, we obtain the following lemma in a combinatorial way.
+ Using this Lemma \ref{lemma:sum}, we obtain the following lemma in a combinatorial way.
 % 12-pre or twelve-pre
 \begin{lemma}\label{combination}
  12-ple($n_{ij}$) = ($n_{12}, n_{13}, n_{14}, n_{15}, n_{23}, n_{24},
@@ -1126,7 +1126,7 @@ $G'(x_G, y_G)$ be projection of these seven vertexes to the xy-plane.
 
 We get immediately that $\angle C'A'B' = \theta_{13}, \angle A'B'C' =
 \theta_{15}, \angle B'C'A'=\theta_{35}$. Remark that $\theta_{13} +
-\theta_{15} + \theta_{35} = \pi$ by Lemma\ref{sum}.
+\theta_{15} + \theta_{35} = \pi$ by Lemma\ref{lemma:sum}.
 
 Here we may assume that the radius of the circumcircle of $A'B'C'$ is 1,
 that the circumcenter of $A'B'C'$ is $(0, 0, 0,)$ and that $A'$ is on
@@ -1324,7 +1324,7 @@ Using (\ref{2B}) and $\overline{A'B'}^2 + (z_A-z_B)^2 = \overline{AB}^2$,
 \begin{eqnarray*}
  \cos(\theta_{12} + \theta_{14}) = \cos(\pi - \theta'_{24})
 \end{eqnarray*}
-From Lemma \ref{sum}, $\theta_{12} + \theta_{14} + \theta_{24} = \pi$. It
+From Lemma \ref{lemma:sum}, $\theta_{12} + \theta_{14} + \theta_{24} = \pi$. It
  follows that $\theta_{24} = \theta'_{24}$. In the same way $\theta_{46}$
  (resp.$\theta_{26}$) is equal to the face-angle of $O_4$ and $O_6$(resp
  $O_2$ and $O_6$.)
@@ -1878,7 +1878,7 @@ The pentahedron has two types. They are a pentahedral pyramid and pentahedral pr
    \centering
    \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/faces.jpg}
    \caption{Graph}
-   \label{fig:tetrahedronFaces}
+   \label{fig:pentahedralPyramidFaces}
   \end{minipage}
  \hspace*{\fill}
 \end{figure}
