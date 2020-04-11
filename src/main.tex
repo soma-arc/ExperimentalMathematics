@@ -677,7 +677,7 @@ $\left( \frac{\pi}{2}, \frac{\pi}{2}, \frac{\pi}{2}, \frac{\pi}{2}\right)$. The 
 
 Next, we prepare some lemmas to calculate the parameter space of sphairahedra. First, we recall simple conditions to be equivalent of two sphairahedra.  This lemma is clear because it is well known that these transformations are M\"obius transformations. 
 
-\begin{lemma}
+\begin{lemma} \label{lemma:equivalentOfSH}
 Suppose that two sphairahedra $T_1, T_2$ satisfy that $T_2=\varphi(T_1)$, where $\varphi$ is a parallel translation or a rotation or a dilation or a plane-symmetry or a composite of these transformations.  Then $T_1, T_2$ are equivalent. 
 \end{lemma}
 
@@ -688,14 +688,14 @@ Beacause of the ideality of a sphairahedron, all edges with the infinite vertex 
 Let $A$ be one of finite vertices next to the infinity vertex, that is, there exists an edge $e_{12}$ that connects $A$ and $\infty$.  After applying translations, we assume that the edge $e_{12}$ lies on the $z$-axis.  In fact we suppose the followings:
 \begin{align*}
 A &= (0,0,z_A),\\ 
-\overline{D_1}  &= \{ 0 \le y \} ,\\
-\overline{D_2}  &= \{ 0 \le x\sin\theta_{12} - y\cos\theta_{12} \} ,\\
+\overline{D_1}  &= \{ (x,y,z) \mid 0 \le y \} \cup \{\infty\} ,\\
+\overline{D_2}  &= \{ (x,y,z) \mid 0 \le x\sin\theta_{12} - y\cos\theta_{12} \}\cup \{\infty\} ,\\
 \overline{D_3}  &= \{ (x-x_3)^2+(y-y_3)^2+(z-z_3)^2 \le r_3^2 \}, \\
 S_i & = \partial(\overline{D_i}) \qquad(i=1,2,3,)
 \end{align*}
 where the vertex $A$ is on the $z$-axis, $\overline{D_i}$'s are closed balls, $\theta_{12}$ is the dihedral angle of $S_1$ and $S_2$,  $O_3(x_3, y_3, z_3)$ is the center of the face $S_3$, and $r_3$ is the radius of $S_3$.  We assume that $A$ is the intersection of $S_1, S_2, S_3$.  We have the following equation including dihedral angles and  $x_3, y_3, z_3, r_3$.
 
-\begin{lemma}
+\begin{lemma} \label{lemma:CenterOfSphere}
 Suppose $\theta_{13}$ is the dihedral angle of $S_1$ and $S_3$   We have the followings.\par
 (1) $z_3=z_A$,\par
 (2) $r_3^2 = x_3^2+y_3^2$, \par
@@ -733,7 +733,7 @@ If the vertex $A$ is of degree $3$, the same observation works on the dihedral a
   \begin{minipage}[t]{0.5\textwidth}
    \centering
    \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/faces.jpg}
-   \caption{Graph}
+   \caption{Polyhedral structure}
    \label{fig:tetrahedronFaces}
   \end{minipage}
  \hspace*{\fill}
@@ -762,7 +762,7 @@ If the vertex $A$ is of degree $3$, the same observation works on the dihedral a
    \label{fig:}
   \end{minipage}
  \hspace*{\fill}
- \caption{The graph of the tetrahedron type sphairahedron}
+ \caption{Types of combinations of dihedral angles}
  \label{fig:tetrahedronCombinations}
 \end{figure}
 
@@ -841,14 +841,42 @@ If the vertex $A$ is of degree $3$, the same observation works on the dihedral a
 A tetrahedron (Figure \ref{fig:tetrahedron}) has a polyhedral structure as shown in Figure \ref{fig:tetrahedronFaces}.  It is a sphairahedron with fewest faces.
 There are three types of combinations of dihedral angles of edges as shown in
 Figure \ref{fig:tetrahedronCombinations}.
-In each case, the parameter space consists on one point.  To show this fact, it is enough to suppose that one vertex is the infinite point and the sphairahedron is they have no parameter.
-The quasi-spheres are shown in Figure \ref{fig:tetrahedronFinite}
-, Figure \ref{fig:tetrahedronInf}, Figure \ref{fig:tetrahedronInf_b},
-and Figure \ref{fig:tetrahedronInf_c}.
-The tiling pattern of planes is different from the infinite sphairahedra.
-They are sphere and plane, so the group is a fuchsian group.
 
+\begin{proposition}\label{prop:paraSpace_Tetrahedon}
+In each type of the dihedral angles, the parameter space consists of one point.
+\end{proposition}
 
+\begin{proof}   Suppose that one of the vertices of the sphairahedron is the infinite point $\infty$.  In the type (a) case, the neighborhood of the infinity vertex is a regular triangle prism.  It is because all dihedral angles equal to $\frac{\pi}{3}$.  Without loss of generality, we may assume the followings.
+\begin{align*}
+\overline{D_1}&=\{(x,y,z) \mid 1 \le x \} \cup\{\infty\}\\
+\overline{D_2}&=\{(x,y,z) \mid 1 \le -\frac{1}{2}x+\frac{\sqrt{3}}{2}y \} \cup\{\infty\}\\
+\overline{D_3}&=\{(x,y,z) \mid 1 \le -\frac{1}{2}x-\frac{\sqrt{3}}{2}y \} \cup\{\infty\}\\
+\overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+(z-z_4)^2 \le r_4^2\}
+\end{align*}
+
+$S^3\setminus(\overline{D_1} \cup \overline{D_2} \cup \overline{D_3})$ is the infinite triangle prism.  Let a vertex $P_{ijk}$ be $\overline{D_i} \cap \overline{D_j} \cap \overline{D_k}$. (Generally, if the intersection of three spheres is not empty, then it consists of inifinity number of points or two points or one point.  In our case, the condition that the sphairahedron is ideal, the intersection is a point.) From Lemma \ref{lemma:equivalentOfSH}, we may assume that $P_{124}=(1,\sqrt{3}, 0)$.  Using Lemma \ref{lemma:CenterOfSphere}(1), we have $z_4=0$ and hence $P_{234}=(-2, 0, 0)$ and $P_{134}=(1, -\sqrt{3}, 0)$.  The equation $\sqrt{3}x_4 -y_4=0$ follows \ref{lemma:CenterOfSphere}(3) and $P_{124}=(1,\sqrt{3}, 0)$.  Thus we have that the center of $\overline{D_4}$ is the origin and 
+\[
+\overline{D_4}=\{(x,y,z) \mid x^2+y^2+z^2 \le 3 \}.
+\]   
+This means that the parameter space of $\overline{D_i}$'s consists of one point.  In case of another type, we show it in the same way.
+\end{proof}
+
+\begin{proposition}
+Assume that the sphairahedron $T$ has the infinite vertex.  In any case of dihedral angles, the limit set is the union of a plane and $\infty$.
+\end{proposition}
+
+\begin{proof}
+We show it in case of the type (a).  Let $\overline{D_i}$'s be as in the proof of Proposition \ref{prop:paraSpace_Tetrahedon}.  The tetrahedron $T$ is given by \[
+T = \{(x,y,z) \mid z>0\} \setminus(\overline{D_1} \cup \overline{D_2} \cup \overline{D_3} \cup \overline{D_4}).
+\]
+If we regard the upper half plane $\{(x,y,z) \mid z>0\}$ as the hyperbolic space $\mathbb{H}^3$, $T$ is a hyperbolic ideal tetrahedron.  If the tiling $L=(T,G)$, then the boundary of the total tiling space $\varlimsup_{k\to\infty} |L|_k$
+coincides to $\partial{\mathbb{H}^3}$ and the limit set is the $xy$-plane.
+\end{proof}
+
+Indeed, the quasi-spheres are shown in Figures \ref{fig:tetrahedronInf}, \ref{fig:tetrahedronInf_b},
+and \ref{fig:tetrahedronInf_c}.  They are $xy$-plane.  They have different colored patterns and it is because the combinations of the dihedral angles are different from each other.  The group $G$ of $T$ is 3-Kleinian.  If a tetrahedron is finite, the limit set is a sphere as seen in Figure \ref{fig:tetrahedronFinite}.
+
+%%%%% ここまで　20200411
 
 \subsection{Compute cube-type sphairahedra}
 In this paper, we deal with cube because it is simple, but it generates
