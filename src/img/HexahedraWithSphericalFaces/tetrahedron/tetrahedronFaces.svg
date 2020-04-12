@@ -14,11 +14,11 @@
    viewBox="0 0 1024 1024"
    id="svg5114"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="tetrahedronFaces.svg"
-   inkscape:export-filename="/home/soma/Documents/paper/ExperimentalMathematics/src/img/HexahedraWithSphericalFaces/tetrahedron/tetrahedronFaces.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   inkscape:export-filename="C:\msys64\home\soma\work\paper\ExperimentalMathematics\src\img\HexahedraWithSphericalFaces\tetrahedron\faces.jpg.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs5116" />
   <sodipodi:namedview
@@ -26,19 +26,19 @@
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="50.714289"
+     inkscape:cx="-809.28571"
      inkscape:cy="520"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="917"
-     inkscape:window-height="729"
-     inkscape:window-x="577"
-     inkscape:window-y="189"
+     inkscape:window-width="1512"
+     inkscape:window-height="924"
+     inkscape:window-x="580"
+     inkscape:window-y="256"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata5119">
@@ -93,7 +93,7 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot5760"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(33.77063,-53.773895)"><flowRegion
          id="flowRegion5762"><rect
            id="rect5764"
@@ -102,12 +102,12 @@
            x="71.428574"
            y="289.71429" /></flowRegion><flowPara
          id="flowPara5766"
-         style="font-size:125px">O<flowSpan
-   style="font-size:65%;baseline-shift:sub"
+         style="font-size:125px;line-height:1.25">O<flowSpan
+   style="font-size:64.99999762%;baseline-shift:sub"
    id="flowSpan3574">1</flowSpan></flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot5760-3"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(665.1992,-79.488181)"><flowRegion
          id="flowRegion5762-6"><rect
            id="rect5764-7"
@@ -116,12 +116,12 @@
            x="71.428574"
            y="289.71429" /></flowRegion><flowPara
          id="flowPara5766-5"
-         style="font-size:125px">O<flowSpan
+         style="font-size:125px;line-height:1.25">O<flowSpan
    style="font-size:65%;baseline-shift:sub"
-   id="flowSpan3576">2</flowSpan></flowPara></flowRoot>    <flowRoot
+   id="flowSpan3775">3</flowSpan></flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot5760-5"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(365.1992,554.79753)"><flowRegion
          id="flowRegion5762-62"><rect
            id="rect5764-9"
@@ -130,12 +130,12 @@
            x="71.428574"
            y="289.71429" /></flowRegion><flowPara
          id="flowPara5766-1"
-         style="font-size:125px">O<flowSpan
-   style="font-size:64.99999762%;baseline-shift:sub"
-   id="flowSpan3578">3</flowSpan></flowPara></flowRoot>    <flowRoot
+         style="font-size:125px;line-height:1.25">O<flowSpan
+   style="font-size:65%;baseline-shift:sub"
+   id="flowSpan3777">2</flowSpan></flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot5760-7"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(370.91349,200.51182)"><flowRegion
          id="flowRegion5762-0"><rect
            id="rect5764-93"
@@ -144,7 +144,7 @@
            x="71.428574"
            y="289.71429" /></flowRegion><flowPara
          id="flowPara5766-6"
-         style="font-size:125px">O<flowSpan
-   style="font-size:65%;baseline-shift:sub"
+         style="font-size:125px;line-height:1.25">O<flowSpan
+   style="font-size:64.99999762%;baseline-shift:sub"
    id="flowSpan3572">4</flowSpan></flowPara></flowRoot>  </g>
 </svg>
