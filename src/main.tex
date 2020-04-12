@@ -919,8 +919,8 @@ This means that the parameter space of $\overline{D_i}$'s consists of one point.
 Figures  \ref{fig:tetrahedronInf_a}(a), \ref{fig:tetrahedronInf_b}(a),
 and \ref{fig:tetrahedronInf_c}(a) show the rendered pictures of the sphairahedra of type 1, 2, and 3 respectively.
 
-\begin{proposition}
-Assume that the sphairahedron $T$ has the infinite vertex.  In any case of dihedral angles, the limit set is the union of a plane and $\infty$.
+\begin{proposition} \label{prop:tetrahedronLimitSet}
+Assume that the tetrahedron $T$ has the infinite vertex.  In any case of dihedral angles, the limit set is the union of a plane and $\infty$.
 \end{proposition}
 
 \begin{proof}
@@ -944,11 +944,13 @@ and \ref{fig:tetrahedronInf_c}(c) respectively.  The tiling group $G$ of $T$ is 
 
 There are two polyhedral structures of pentahedra. One is a quadrangular pyramid (Figure \ref{fig:quadrangularPyramid}) and the other is a triangular prism (Figure \ref{fig:triangularPrism}.)
 
+\subsubsection{Quadrangular pyramid}
+
 \begin{figure}[h!tbp]
    \centering
    \includegraphics[width=1.5in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/proofQuadrangularPyramid.jpg}
-   \caption{Quadrangular pyramid}
-   \label{fig:quadrangularPyramid}
+   \caption{Section at $z=0$}
+   \label{fig:quadrangularPyramidAtOrigin}
  \hspace*{\fill}
 \end{figure}
 
@@ -977,14 +979,14 @@ There are two polyhedral structures of pentahedra. One is a quadrangular pyramid
    \centering
    \includegraphics[width=1in,
    keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/a.jpg}
-   \subcaption{}
+   \subcaption{Type 1}
    \label{fig:}
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[t]{0.24\textwidth}
    \centering
    \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/b.jpg}
-   \subcaption{}
+   \subcaption{Type 2}
    \label{}
  \end{minipage}
  \hspace*{\fill}
@@ -992,7 +994,7 @@ There are two polyhedral structures of pentahedra. One is a quadrangular pyramid
   \label{fig:quadrangularPyramidCombinations}
 \end{figure}
 
-
+%%% quadrangular pyramid col.3
 \begin{figure}[h!tbp]
   \begin{minipage}[t]{0.23\textwidth}
    \centering \includegraphics[width=1.3in,
@@ -1021,10 +1023,11 @@ There are two polyhedral structures of pentahedra. One is a quadrangular pyramid
    \label{fig:}
   \end{minipage}
  \hspace*{\fill}
- \caption{Type (a) of the tetrahedron}
- \label{fig:quadrangularPyramidCombinations}
+ \caption{A quadrangular pyramid of type 1}
+ \label{fig:quadrangularPyramid_Inf_1}
 \end{figure}
 
+%%% quadrangular pyramid col.4
 \begin{figure}[h!tbp]
   \begin{minipage}[t]{0.23\textwidth}
    \centering \includegraphics[width=1.3in,
@@ -1054,11 +1057,11 @@ There are two polyhedral structures of pentahedra. One is a quadrangular pyramid
    \label{fig:}
   \end{minipage}
  \hspace*{\fill}
- \caption{Type (b) of the tetrahedron}
- \label{fig:quadrangularPyramidType1}
+ \caption{A quadrangular pyramid of type 2}
+ \label{fig:quadrangularPyramid_Inf_2}
 \end{figure}
 
-%%% quadrangular pyramid col.3
+%%% quadrangular pyramid col.5
 \begin{figure}[H]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
@@ -1073,7 +1076,7 @@ There are two polyhedral structures of pentahedra. One is a quadrangular pyramid
    \subcaption{Limit set}
   \end{minipage}
   \hspace*{\fill}
-  \caption{Finite tetrahedron type(a).}
+  \caption{Finite tetrahedron type 1.}
   \label{fig:pentahedralPyramidFinite}
  \end{minipage}
  \hspace*{\fill}
@@ -1090,12 +1093,10 @@ There are two polyhedral structures of pentahedra. One is a quadrangular pyramid
    \subcaption{Limit set}
   \end{minipage}
   \hspace*{\fill}
-  \caption{Finite tetrahedron type(b).}
+  \caption{Finite tetrahedron type 2.}
   \label{fig:pentahedralPyramidFinite2}
  \end{minipage}
 \end{figure}
-
-\subsubsection{Quadrangular pyramid}
 
 The quadrangular pyramid is a polyhedron with one basal plane and four conical faces (Figure \ref{fig:quadrangularPyramid}.)  
 This has a polyhedral structure as seen in Figure \ref{fig:quadrangularPyramidFaces}. 
@@ -1109,7 +1110,6 @@ The parameter space of each type of dihedral angles consists of one point.
 \begin{proof}
 We assume that the top-most vertex is the infinite point $\infty$.  Then neighborhood of $\infty$ is a rectangular column.  Without loss of generality, 
 we suppose the followings.
-
 \begin{align*}
 \overline{D_1}&=\{(x,y,z) \mid x_1 \le x \} \cup\{\infty\} \quad (0<x_1)\\
 \overline{D_2}&=\{(x,y,z) \mid y_3 \le y \} \cup\{\infty\}\quad (0<y_3)\\
@@ -1118,21 +1118,20 @@ we suppose the followings.
 \overline{D_5}&=\{(x,y,z) \mid (x-x_5)^2+(y-y_5)^2+(z-z_5)^2 \le r_5^2\} \\
 O_i &= \partial\overline{D_i}
 \end{align*}
+$S^3\setminus(\overline{D_1}\cup\overline{D_2}\cup\overline{D_3}\cup\overline{D_4})$ is a rectangular column. The vertex set is $\{ P_{125}, P_{235}, P_{345}, P_{145}, \infty\}$, where $P_{ijk}= O_i\cap O_j\cap O_k$.  Without loss of generality, we may suppose that $P_{125}$ is on the $xy$-plane, that is, $P_{125}=(x_1, y_3, 0)$.  $z_5=0$ follows from Lemma \ref{lemma:CenterOfSphere}(1).  Lemma \ref{lemma:CenterOfSphere}(3) indicates that the center $(x_5, y_5, 0)$ is on the plane $\sqrt{3}(x-x_1)-(y-y_3)=0$.  See Figure \ref{fig:quadrangularPyramidAtOrigin}.  Because the center $(x_5, y_5,0)$ is on the $xy$-plane, $P_{345}$ must be on the same plane, that is, $P_{345}=(-x_1, -y_3, 0)$.  This implies that $(x_5, y_5, 0)$ also on the plane $\sqrt{3}(x+x_1)-(y+y_3)=0$ and hence we have $\sqrt{3}x_1 = y_3$ and $x_5=y_5=0$.
 
-$S^3\setminus(\overline{D_1}\cup\overline{D_2}\cup\overline{D_3}\cup\overline{D_4})$ is a rectangular column. The vertex set is $P_{125}, P_{235}, P_{345}, P_{145}, \infty$, where $P_{ijk}= O_i\cap O_j\cap O_k$.  Suppose that $P_{125}$ is on the $xy$-plane, that is, $P_{125}=(x_1, y_3, 0)$.  $z_5=0$ follows from Lemma \ref{lemma:CenterOfSphere}(1).  Lemma \ref{lemma:CenterOfSphere}(3) indicates that the center $(x_5, y_5, 0)$ is on the plane $\sqrt{3}(x-x_1)-(y-y_3)=0$.  See Figure \ref{fig:proofQudrangularPyramid}.  Because the center $(x_5, y_5,0)$ is on the $xy$-plane, $P_{345}$ must be on the same plane, that is, $P_{345}=(-x_1, -y_3, 0)$.  This implies that $(x_5, y_5, 0)$ also on the plane $\sqrt{3}(x+x_1)-(y+y_3)=0$ and hence we have $\sqrt{3}x_1 = y_3$ and $x_5=y_5=0$.
-
-Thus the all coordinate are determined in one way except dilation and the parameter space consists of one point.  In case of the type (b) of dihedral angles, we can show it in the same way.  In this case, $x_1 = y_3$ and $(z_5, y_5, z_5)$ is the origin after all.
+Thus all of the coordinates are determined in one way except dilation and the parameter space consists of one point.  In case of the type 2 of dihedral angles, we can show it in the same way.  In case 2, $x_1 = y_3$ and $(z_5, y_5, z_5)$ is the origin after all.
 \end{proof}
 
 \begin{proposition}
-The limit set $\Lambda(G)$ of a sphairahedron of the type (a) and of the type (b) is  the union of a plane and $\infty$. 
+The limit set $\Lambda(G)$ of a sphairahedron of each type is  the union of a plane and $\infty$. 
 \end{proposition}
 
 \begin{proof}
-The 4 vertices $P_{125}, P_{235}, P_{345}, P_{145}$ are on the $xy$-plane and the limit set is the union of the $xy$-plane and $\infty$.
+The 4 vertices $P_{125}, P_{235}, P_{345}, P_{145}$ are on the $xy$-plane and all of the edges are perpendicular to the $xy$-plane.  Thus the limit set is the union of the $xy$-plane and $\infty$.  See Proposition \ref{prop:tetrahedronLimitSet} for detail.
 \end{proof}
 
-In this pyramid  case, the tiling group $G$ is $3$-Kleinian after all.  The coloring pattern of the limit set is generated by reflections on the plane.  See ****.  Here is four lines and one circle, ..... %あとで考えます。
+In this case, the tiling group $G$ is $3$-Kleinian after all.  Figures \ref{fig:quadrangularPyramid_Inf_1}(d) and \ref{fig:quadrangularPyramid_Inf_2}(d) show the coloring patterns on the limit set.  They are generated by the reflections of four lines and one circle as seen in Figures \ref{fig:quadrangularPyramid_Inf_1}(c) and \ref{fig:quadrangularPyramid_Inf_2}(c) respectively.
 
 %They are shown in 
 %Figure \ref{fig:pentahedralPyramidFinite}, Figure
