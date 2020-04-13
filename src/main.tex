@@ -713,12 +713,41 @@ If the vertex $A$ is of degree $3$, the same observation works on the dihedral a
 \end{remark}
 
 \begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.5\textwidth}
  \centering
  \includegraphics[width=1.5in, height=1.5in,
  keepaspectratio]{./img/HexahedraWithSphericalFaces/sectionAtVertex.jpg}
  \caption{section at $a=z_A$}
  \label{fig:sectionAtVertex}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.5\textwidth}
+ \input{ExpMathFigure3-1-2}
+ \caption{}
+ \label{fig:twoCirclesChain}
+ \end{minipage}
 \end{figure}
+
+The following lemma gives an equation to determine the position of spheres in the below section.
+
+\begin{lemma} \label{lemma:twoCirclesChain}
+See Figure \ref{fig:twoCirclesChain}.  Here two vertical lines are parallel.  The center of the right-side circle is $C$ and this circle is tangent to the right vertical line at $A$.  The center of the left-side circle is $D$ and this circle is tangent to the left vertical line at $B$.  Two circles are tangent to each other.  Let $Z$ be the intersection of $AC$ and the left vertical line.\par
+Let $r_1$, $r_2$ are the radius of the right circle (resp. the left circle.)  Let $w=AZ$ be the width of two vertical lines and let $z=DZ$ be the difference of height.\par
+The following equation hold.
+\[
+r_1+r_2=\dfrac{w^2+z^2}{2w}
+\]
+\end{lemma}
+
+\begin{proof}
+The proof is very elementary, and we show it by simplified description.  Let $\theta$ be $\angle CAB$.  We have
+\begin{align*}
+\dfrac{w}{\sin\theta} &= AB = \sqrt{w^2+z^2}\\
+(r_1+r_2)\cdot(2\sin\theta ) &= AB = \sqrt{w^2+z^2}
+\end{align*}
+The lemma follows immediately from these two equations.
+\end{proof}
+
 
 \subsection{Tetrahedron}
 
