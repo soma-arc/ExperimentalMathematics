@@ -1311,7 +1311,7 @@ In this case, the tiling group $G$ is $3$-Kleinian after all.  Figures \ref{fig:
 A triangular prism (Figure \ref{fig:triangularPrism}) is a sphairahedon with a polyhedral structure as seen in Figure \ref{fig:triangularPrismPolyhedralStructure}.  There six combinations of dihedral angles as in Figures \ref{fig:triangularPrismDihedralAngles}.
 
 \begin{proposition}\label{prop:paraSpace_TriangularPrism}
-The parameter space of triangular prism of type 1 is an empty set.  But that of semi-sphairahedra of triangular prism type 1 is an interval, one dimensional.
+The parameter space of triangular prism of type 1 is an empty set.  But that of semi-sphairahedra of triangular prism type 1 is the disjoint union of two open intervals, one dimensional.
 \end{proposition}
 
 \begin{proof}
@@ -1323,7 +1323,7 @@ The neighborhood of $\infty$ is a regular triangular column.  Thus we suppose th
 \overline{D_5}&=\{(x,y,z) \mid 1 \le -\frac{1}{2}x+\frac{\sqrt{3}}{2}y \} \cup\{\infty\}\\
 \overline{D_2}&=\{(x,y,z) \mid (x-x_2)^2+(y-y_2)^2+(z-z_2)^2<r_2^2 \} \\
 \overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+(z-z_4)^2<r_4^2 \} \\
-O_i &= \partial(\overline{D_4})
+O_i &= \partial(\overline{D_i})
 \end{align*}
 We first determine the coordinate of $\overline{D_4}$.  
 We may assume the height $z_4$ to be $0$.  
@@ -1331,23 +1331,27 @@ Let $P_{ijk}$ be $O_i\cap O_j\cap O_k$.
 We apply Lemma \ref{lemma:CenterOfSphere}(3) at $P_{145}$ and at $P_{345}$,  and we obtain that $(x_4,y_4,z_4)=(0,0,0)$ and $r_4 = 2$.  
 Next we consider the position of $\overline{D_2}$.  The condition at $P_{123}$ implies that $(x_2, y_2, z_2)$ satisfies $\sqrt{3}x_2+y_2=0$.\par
 We focus on the plane $O_1=\{ (x,y,z) \mid x=1\}$ and let $r'_2$, $r'_4$ be the radius of the intersection circles of $O_1$ and $O_2$(, repectively $O_1$ and $O_4$.) 
- (Here we know that $r'_4=\sqrt{3}$ is a constant, but ....
-
+Here we know that $r'_4=\sqrt{3}$ is a constant.  Applying Lemma \ref{lemma:twoCirclesChain},  $2r'_4=w=2\sqrt{3}$ and we have $r'_2=\dfrac{z_2^2}{2w}$ and we have
+\[
+0 < \dfrac{z_2^2}{2w} < \dfrac{w}{2},
+\] 
+This implies $-\sqrt{3}<z_2<0, 0<z_2<\sqrt{3}$. For any $z_2$ satisfying these inequalities, the coordinates of all $O_i$'s are determined.  See Figure ****, $S^3\setminus \bigcup \overline{D_i}$ has three connected components.  Thus, this $\overline{D_i}$'s do not give us a sphairahedron but a semi-sphairahedron. 
 \end{proof}
 
-(a), (d), and (f) in Figure \ref{fig:pentahedralPrismList} are
-semi-sphairahedra.
+%(a), (d), and (f) in Figure \ref{fig:pentahedralPrismList} are
+%semi-sphairahedra.
 
-When the parameter is positive, it seems like a plane, as shown in 
-Figure \ref{fig:pentahedralPrismInfPositive}\subref{fig:pentahedralPrismInfPositiveLimit}.
- However, when we decrease the height of the green ball, the
- semi-sphairahedron
- becomes to be composed of two components as shown in Figure \ref{fig:pentahedralPrismInfNeg}.
+%When the parameter is positive, it seems like a plane, as shown in 
+%Figure \ref{fig:pentahedralPrismInfPositive}
+%\subref{fig:pentahedralPrismInfPositiveLimit}.
+% However, when we decrease the height of the green ball, the
+% semi-sphairahedron
+% becomes to be composed of two components as shown in Figure \ref{fig:pentahedralPrismInfNeg}.
 
-The hollows rise, and they emerge on the plane as balls
-, as presented in Figure \ref{fig:pentahedralPrismInfNeg}\subref{fig:pentahedralPrismInfNegLimit}
-The limit set of semi-sphairahedron is many spheres touching each other, and
-it becomes not a fuchsian group or a quasi-fuchsian group.
+%The hollows rise, and they emerge on the plane as balls
+%, as presented in Figure \ref{fig:pentahedralPrismInfNeg}\subref{fig:pentahedralPrismInfNegLimit}
+%The limit set of semi-sphairahedron is many spheres touching each other, and
+%it becomes not a fuchsian group or a quasi-fuchsian group.
 
 \begin{align*} 
  In~case~(a),&~-1.5 < z_B < 0 \text{ or } 0 < z_B < 1.5.\\
