@@ -1512,165 +1512,37 @@ The parameter spaces of sphairahedra of from type 3 to of type 6 are empty sets.
 
 %%%%%
 
-\subsection{Hexahedon (1), cube-type sphairahedra}
+\subsection{Hexahedron (1), cube}
 
-\subsubsection{***}
-In this subsection, we deal with cube because it is simple, but it generates
-complicated quasi-sphere.
-Kageyama also calculates the parameter space of the cube-type
-sphairahedron\cite{kageyama}.
-We will formulate hexahedron of cube-type in $S^3 = R^2 \cup \{\infty\}$.
-First, let $E$ be a set of edges if hexahedron of cube-type. That is,
-$$
-E = \{(1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 6), (3, 5),
-(3, 6), (4, 5), (4, 6), (5, 6)\}.
-$$
-Next, let $V$ be a set of vertexes of a polyhedron. That is,
-$$
-V = \{(1, 2, 3), (1, 4, 5), (3, 5, 6), (1, 2, 4), (4, 5, 6), (2, 3, 6),
-(2, 4, 6), (1, 3, 5)\}.
-$$
-We fix a sequence $\{n_{ij}\}_{(i,j) \in E}$ of natural numbers to
-parametrize face-angles.
+\subsubsection{Classification of hexahedra}
 
-Under this preparation, we will consider a 6-ple($O_1$, ..., $O_6$)
-satisfying the following conditions.
+There are 7 polyhedral structures of hexahedra.  They are:\par
+(a) cube (Figure \ref{fig:cube}),\par
+(b) cake 1 (Figure \ref{fig:cake1}),\par
+(c) cake 2 (Figure \ref{fig:cake2}),\par
+(d) cake 3 (Figure \ref{fig:cake3}),\par
+(e) cake 4 (Figure \ref{fig:cake4}),\par
+(f) pentagonal pyramid (Figure \ref{fig:pentagonalPyramid}),\par
+(g) triangular dipyramid (Figure \ref{fig:triangularDipyramid}).\par
 
-\begin{description}
- \item[(P1):] $O_i(i = 1, 2, ..., 6)$ is a sphere or a plane in $R^3
-            \cup \{\infty\}$
- \item[(P2):] For each $(i, j) \in E,~O_i$ and $O_j$ intersect. Let
-            $e_{ik}$ be the intersection and we call it an
-            \textit{edge}. And the face-angle at $e_{ij}$ is
-            $\theta_{ij} = \pi/n_{ij}$ ($n_{ij}$ is a natural number.)
- \item[(P3):] For each $(i, j, k) \in V,~e_{ij},~e_{jk}$ and $e_{ik}$
-            are mutually tangent at one point. Let $v_{ijk}$ be 
-            the point, and we call it a vertex. For simplicity of
-            notation, we denote
-\end{description}
-\begin{eqnarray*}
-A = v_{123},~B=v_{145},~C = v_{356},~D = v_{124}\\
-E = v_{456},~F=v_{236},~G = v_{246},~H = v_{135}.
-\end{eqnarray*}
+In this list, the cube and the cake1 have lots of varieties.  In this subsection, we introduce the cube.  Ahara and Araki \cite{AharaAraki2} show the classification of the cubes preceisely.  This preprint is sometimes quoted but is not published, thus we check the proof of the theorem again and list the result up.
 
-Let $\tilde\varepsilon(n_{ij})$ be a set if all 6-ple $(O_1, ..., O_6)$
-satisfying the above conditions. We call such 6-pre a polyhedron of
-cube type. That is,
-$$
-\tilde\varepsilon(n_{ij}) = \{(O_1, ..., O_6)~|~(P1), (P2), (P3)\}
-$$
+\subsubsection{Combinations of dihedral angles}
 
-If we parameterize $\tilde\varepsilon$ by coordinates of the center of
-$O_i$, then it is naturally embedded in the Euclidean space. We consider
-a natural topology on $\tilde\varepsilon$. The group M\"ob$(S^3)$ of all
-M\"obius transformations in $S^3$ acts $\tilde\varepsilon$ in a natural way.
-Let $\varepsilon(n_{ij})$ be its quotient space. That is,
-
-$$
-\varepsilon (n_{ij}) = \tilde\varepsilon(n_{ij}) / \text{M\"ob}(S^3)
-$$
-
-\noindent We call $\varepsilon(n_{ij})$ moduli of polyhedra.
-
-\noindent(Figure \ref{fig:cubes} near here)\\
-(Figure \ref{fig:chainCircles} near here)
-(Figure \ref{fig:infTriangle} near here)
+\noindent(Figure \ref{fig:cube} near here)\\
 
 \begin{figure}[h!tbp]
  \centering
  \includegraphics[width=3.5in,
  keepaspectratio]{./img/HexahedraWithSphericalFaces/cubes.jpg}
  \caption{Faces and vertexes of cube.}
- \label{fig:cubes}
+ \label{fig:cube}
 \end{figure}
 
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.5\textwidth}
- \centering
- \includegraphics[width=1.5in, height=1.5in,
- keepaspectratio]{./img/HexahedraWithSphericalFaces/chain.jpg}
- \caption{Chain of circles.}
- \label{fig:chainCircles}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.5\textwidth}
-  \centering
-  \includegraphics[width=1.5in, height=1.5in,
-  keepaspectratio]{./img/HexahedraWithSphericalFaces/infTriangle.jpg}
-  \caption{Slice of triangular prism.}
-  \label{fig:infTriangle}
- \end{minipage}
- \hspace*{\fill}
-\end{figure}
+A cube (Figure \ref{fig:cube}) is a sphairahedron with a polyhedral structure as seen in Figure \ref{fig:cubePolyhedralStructure}.  There are 11 combinations of dihedral angles.
 
-\subsubsection{Preparations}
+The vertex set is $\{ P_{123}, P_{145}, P_{356}, P_{124}, P_{456}, P_{236}, P_{246}, P_{135}, \}$, where $P_{ijk} = O_i \cap O_j \cap O_k$.  Without loss of generality, we assume that $P_{135}$ is $\infty$. 
 
-We will show some lemmas in this subsection.
-
-First of all, we define a \textit{limit ball}.
-\begin{definition}
- The Limit ball is the shape whose limit set is its boundary surface,
- and we obtain it by tiling of the sphairahedron $P$.
-$$
- G = G_p := \left< \text{inversion of}~ S~|~S~\text{is surface of}~P
- \right>,
- \text{Limit ball of}~P : LimitBall(P) := G_p(P)
-$$
-\end{definition}
-
-\begin{lemma}\label{sameCircle}
-For each $O_i$, the four vertexes on $O_i$ lie on the same circle.
-Hence the four vertexes lie on one plane in $R^3$.
-\end{lemma}
-
-\begin{proof}
- We know the following famous lemma about four circles: If four circles 
- $C_1,~C_2,~C_3,~C_4$ on a plane, and they are mutually tangent like a
- chain as in Figure \ref{fig:chainCircles}, then the four tangent points lie on one circle.
- (See figure \ref{fig:chainCircles}) Using this lemma we will show lemma \ref{sameCircle} We fix $i$ and
- consider only on $O_i$. If $O_i$ is not a plane, we transform 
- ($O_1, ..., O_6$) by a M\"obius transformation such that $O_i$ is a
- plane. There are four edges on $O_i$, and they are circles and are
- mutually tangent like a chain. From the above well-known lemma. The
- four vertexes on $O_i$ lie on one circle on $O_i$. If we re-transform
- ($O_i, ..., O_6$) back, the four vertexes still lie on one circle,
- because any M\"obius transformation maps a planer circle to a planer circle.
-\end{proof}
-
-\begin{lemma}\label{eightVertexes}
- Eight vertexes of a polyhedron of cube-type lie in the same sphere.
-\end{lemma}
-
-\begin{proof}
- There is a M\"obius transformation $\phi$ such that it moves the vertex
- $H$ to the infinity point. (See Figure \ref{fig:infTriangle}.) From Lemma \ref{sameCircle}, the three
- vertexes $A, D,$ and $B$ lie on one straight line. In the same way,
- three vertexes $A, D, G,$ and $F$ lie on one planar circle, all vertexes
- except $H$ line on one plane. We transform them back by $\phi^{-1}$, and
- we get the conclusion of Lemma \ref{eightVertexes}.
-\end{proof}
-
-
- Using this Lemma \ref{lemma:sum}, we obtain the following lemma in a combinatorial way.
-% 12-pre or twelve-pre
-\begin{lemma}\label{combination}
- 12-ple($n_{ij}$) = ($n_{12}, n_{13}, n_{14}, n_{15}, n_{23}, n_{24},
- n_{26}, n_{35}, n_{36}, n_{45}, n_{46}, n_{56}$) of face-angle
- parameters is one of the following 11.(See Figire \ref{fig:cubeGraph}.)
-\end{lemma}
-
-\noindent
-(a) (3, 3, 3, 3, 3, 3, 3 ,3 ,3 ,3 ,3 ,3)\\
-(b) (2, 3, 3, 3, 6, 6, 2, 3, 3, 3, 3, 3)\\
-(c) (2, 3, 6, 3, 6, 3, 2, 3, 3, 2, 6, 3)\\
-(d) (6, 2, 3, 3, 3, 2, 3, 6, 3, 3, 6, 2)\\
-(e) (3, 2, 2, 3, 6, 6, 2, 6, 3, 6, 3, 2)\\
-(f) (3, 2, 2, 3, 6, 6, 3, 6, 2, 6, 2, 3)\\
-(g) (6, 2, 2, 3, 3, 3, 6, 6, 2, 6, 2, 3)\\
-(h) (3, 2, 6, 3, 6, 2, 3, 6, 2, 2, 6, 3)\\
-(i) (4, 2, 2, 4, 4, 4, 2, 4, 4, 4, 4, 2)\\
-(j) (4, 2, 2, 4, 4, 4, 4, 4, 2, 4, 2, 4)\\
-(k) (6, 2, 2, 4, 3, 3, 6, 4, 2, 4, 2, 4)\\
 
 \noindent(Figure \ref{fig:cubePolyhedralStructure} near here)\\
 (Figure \ref{fig:cubeGraph}\subref{fig:cube_a}
@@ -1773,23 +1645,39 @@ Hence the four vertexes lie on one plane in $R^3$.
  \end{minipage}
 \end{figure}
 
-We get this lemma only in a combinatorial way, so we omit the proof.
 
-In order to represent a sphairahedron, we use a polyhedral graph, as
-shown in Figure \ref{fig:cubeGraph}. The graph shows an infinite cube-type sphairahedron.
-The black lines represent edges, and the circles represent
-vertexes. The three radial edges connect the infinite vertex and finite
-vertexes. Each of the numbers beside 
-the edges means a natural number $n$ for the dihedral angle $\pi / n$
+%\begin{lemma}\label{sameCircle}
+%For each $O_i$, the four vertexes on $O_i$ lie on the same circle.
+%Hence the four vertexes lie on one plane in $R^3$.
+%\end{lemma}
+%
+%\begin{proof}
+% We know the following famous lemma about four circles: If four circles 
+% $C_1,~C_2,~C_3,~C_4$ on a plane, and they are mutually tangent like a
+% chain as in Figure \ref{fig:chainCircles}, then the four tangent points lie on one circle.
+% (See figure \ref{fig:chainCircles}) Using this lemma we will show lemma \ref{sameCircle} We fix $i$ and
+% consider only on $O_i$. If $O_i$ is not a plane, we transform 
+% ($O_1, ..., O_6$) by a M\"obius transformation such that $O_i$ is a
+% plane. There are four edges on $O_i$, and they are circles and are
+% mutually tangent like a chain. From the above well-known lemma. The
+% four vertexes on $O_i$ lie on one circle on $O_i$. If we re-transform
+% ($O_i, ..., O_6$) back, the four vertexes still lie on one circle,
+% because any M\"obius transformation maps a planer circle to a planer circle.
+%\end{proof}
 
-In this preview section, we introduce that there are seven types of
-combinations of face angles. But here are 11. In fact, in case (f), (g),
-(j), and (k), there is no polyhedron with these face-angles. See section \ref{paramSpace}.
+%\begin{lemma}\label{eightVertexes}
+% Eight vertexes of a polyhedron of cube-type lie in the same sphere.
+%\end{lemma}
 
-\subsubsection{Constructing hexahedron}
+%\begin{proof}
+% There is a M\"obius transformation $\phi$ such that it moves the vertex
+% $H$ to the infinity point. (See Figure \ref{fig:infTriangle}.) From Lemma %\ref{sameCircle}, the three%
+% vertexes $A, D,$ and $B$ lie on one straight line. In the same way,
+% three vertexes $A, D, G,$ and $F$ lie on one planar circle, all vertexes
+% except $H$ line on one plane. We transform them back by $\phi^{-1}$, and
+% we get the conclusion of Lemma \ref{eightVertexes}.
+%\end{proof}
 
-We fix a set ($n_{ij}$) of face-angles and consider conformal equivalent
-classes of polyhedra with (P1), (P2), (P3).
 
 In the sequel, we suppose that $H = \infty$. (See Figure
 \ref{fig:infTriangle}.) So the three
@@ -3895,9 +3783,7 @@ Figure captions
 \item Figure \ref{fig:prismInfType2_2}: Infinite triangular prism type 2 - 2.
 \item Figure \ref{fig:prismInfType2_2}\subref{fig:prismSphairaInfType2_2}: Sphairahedron.
 \item Figure \ref{fig:prismInfType2_2}\subref{fig:prismLimitInfType2_2}: Limit set.
-\item Figure \ref{fig:cubes}: Faces and vertexes of cube.
-\item Figure \ref{fig:chainCircles}: Chain of circles.
-\item Figure \ref{fig:infTriangle}: Slice of triangular prism.
+\item Figure \ref{fig:cube}: Cube
 
 \item Figure \ref{fig:cubePolyhedralStructure}: Polyhedral structure.
 \item Figure \ref{fig:cubeGraph}: Types of combinations of dihedral
