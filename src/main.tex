@@ -779,6 +779,16 @@ The proof is very elementary, and we show it by simplified description.  Let $\t
 The lemma follows immediately from these two equations.
 \end{proof}
 
+%Here we introduce another technical lemma.
+%
+%\begin{lemma}\label{tangencyOfThreeSphere}
+%Let each $O_1, O_2, O_3$ be a sphere or a closed plane in $\subset S^3$.  Assume that $O_1\cap O_2\cap O_3$ is not empty.  For $(i,j)=(1,2), (1,3), (2,3)$, $e_{ij}=Let O_i\cap O_j$ is a circle or a line with $\infty$, and let \theta_{ij}$ be the dihedral angle of $O_i$ and $O_j$, where $0<\theta_{ij} \le \frac{\pi}{2}$.
+%If $\theta_{12}+\theta_{13}+\theta_{23}=\pi$ then the intersection $O_1\cap O_2\cap O_3$ never consists of two points.
+%\end{lemma}
+
+%\begin{proof}
+%Applying a Mobius transformation, we may assume that one of points in $O_1\cap O_2\cap O_3$ is the infinity $\infty$. Then $O_i$ is a plane with $\infty$ and $e_{ij}$ is a line with $\infty$.  If $O_1\cap O_2\cap O_3$ consists of two points, then $e_{ij}$'s intersect at a finite point transversally.  That is, three planes $O_1, O_2, O_3$ intersect transversally at a point $P$.  Consider a sphere $S$ with the center $P$ with a certain radius.  Then $S\cap O_i$ are an orthodromes and they establish a spherial triangle with inner angles $\theta_{12}, \theta_{13}, theta_{23}$ on $S$.  This contradicts $\theta_{12}+\theta_{13}+\theta_{23}=\pi$.
+%\end{proof}
 
 \subsection{Tetrahedron}
 \noindent(Figure \ref{fig:tetrahedron} near here)
@@ -1489,16 +1499,17 @@ $r'_2=\frac{6+z_2^2}{4\sqrt{3}}$.  Thus an inequality
 \frac{6+z_2^2}{4\sqrt{3}}<\sqrt{3}(=\frac{w}{2})
 \]
 follows from the condition of $O_2$ and this implies $-\sqrt{6}<z_2<\sqrt{6}$.  For any $z_2$ contained in this interval determines a sphairahedron.  Thus the parameter space of sphairahedra of type 2 is an open interval.
-% we want to have a set of figures.
+See Figures \ref{fig:prismInfType2_1}, \ref{fig:prismInfType2_2}.  These are typical terrains of triangular prisms.  A positive $z_2$ gives us a shape as seen in Figure \ref{fig:prismInfType2_1}, and a negative $z_2$ for Figure \ref{fig:prismInfType2_2}.    
 \end{proof}
 
 In the similar way, we have the following proposition.
 
 \begin{proposition}\label{prop:paraSpace_TriangularPrism3to6}
-The parameter spaces of sphairahedra of from type 3 to of type 6 are empty sets.  But the of semi-sphairahedra of each type is an open interval, one dimensional.
+The parameter spaces of sphairahedra of from type 3 to type 6 are empty sets.  But the of semi-sphairahedra of each type is an open interval, one dimensional.
 \end{proposition}
 
-
+Among type 3 and type 5, we have another shape of the limit set.  For example, the limit set of a semi-sphairahedron of type 3 is a infinite number of disjoint spheres. Figure \ref{fig:} shows rendered images of a semi-sphairahedron and a section of the tiling configuration.  The white circles are cavities and the limit set, the boundary, is the infinite union of spheres.   
+ 
 %\begin{align*} 
 % In~case~(a),&~-1.5 < z_B < 0 \text{ or } 0 < z_B < 1.5.\\
 % In~case~(b),&~-\sqrt{3}/2 < z_B < \sqrt{3}/2.\\
@@ -1527,39 +1538,35 @@ There are 7 polyhedral structures of hexahedra.  They are:\par
 
 In this list, the cube and the cake1 have lots of varieties.  In this subsection, we introduce the cube.  Ahara and Araki \cite{AharaAraki2} show the classification of the cubes preceisely.  This preprint is sometimes quoted but is not published, thus we check the proof of the theorem again and list the result up.
 
-\subsubsection{Combinations of dihedral angles}
+\subsubsection{Parameter spaces of cubes}
 
 \noindent(Figure \ref{fig:cube} near here)\\
-
-\begin{figure}[h!tbp]
- \centering
- \includegraphics[width=3.5in,
- keepaspectratio]{./img/HexahedraWithSphericalFaces/cubes.jpg}
- \caption{Faces and vertexes of cube.}
- \label{fig:cube}
-\end{figure}
-
-A cube (Figure \ref{fig:cube}) is a sphairahedron with a polyhedral structure as seen in Figure \ref{fig:cubePolyhedralStructure}.  There are 11 combinations of dihedral angles.
-
-The vertex set is $\{ P_{123}, P_{145}, P_{356}, P_{124}, P_{456}, P_{236}, P_{246}, P_{135}, \}$, where $P_{ijk} = O_i \cap O_j \cap O_k$.  Without loss of generality, we assume that $P_{135}$ is $\infty$. 
-
-
-\noindent(Figure \ref{fig:cubePolyhedralStructure} near here)\\
-(Figure \ref{fig:cubeGraph}\subref{fig:cube_a}
+(Figure \ref{fig:cubePolyhedralStructure} near here)
+\noindent(Figure \ref{fig:cubeGraph}\subref{fig:cube_a}
 \subref{fig:cube_b}\subref{fig:cube_c}\subref{fig:cube_d}
 \subref{fig:cube_e}\subref{fig:cube_f}\subref{fig:cube_g}
 \subref{fig:cube_h}\subref{fig:cube_i}\subref{fig:cube_j}
 \subref{fig:cube_k} near here)
 
 \begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.15\textwidth}
+  \begin{minipage}[t]{0.66\textwidth}
+ \centering
+ \includegraphics[width=3.5in,
+ keepaspectratio]{./img/HexahedraWithSphericalFaces/cubes.jpg}
+ \caption{Faces and vertexes of cube.}
+ \label{fig:cube}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.33\textwidth}
    \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cubeFaces.jpg}
+   \includegraphics[width=1.4in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cubeFaces.jpg}
    \caption{Polyhedral structure.}
    \label{fig:cubePolyhedralStructure}
   \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.75\textwidth}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.99\textwidth}
   \begin{minipage}[t]{0.15\textwidth}
    \centering
    \includegraphics[width=0.8in,
@@ -1679,60 +1686,80 @@ The vertex set is $\{ P_{123}, P_{145}, P_{356}, P_{124}, P_{456}, P_{236}, P_{2
 %\end{proof}
 
 
-In the sequel, we suppose that $H = \infty$. (See Figure
-\ref{fig:infTriangle}.) So the three
-edges $HA, HB, HC$ are straight lines and are parallel to each other. We
-assume that they are perpendicular to xy-plane.
-Let ($x_A, y_B, z_z$), ..., ($x_G, y_G, z_G$) be coordinates of vertexes
-A, B, ..., G (except $H$), respectively. Let $A'(x_A, y_A)$, ...,
-$G'(x_G, y_G)$ be projection of these seven vertexes to the xy-plane.
+A cube (Figure \ref{fig:cube}) is a sphairahedron with a polyhedral structure as seen in Figure \ref{fig:cubePolyhedralStructure}.  There are 11 combinations of dihedral angles as seen in Figure \ref{fig:cubeGraph}.
 
-We get immediately that $\angle C'A'B' = \theta_{13}, \angle A'B'C' =
-\theta_{15}, \angle B'C'A'=\theta_{35}$. Remark that $\theta_{13} +
-\theta_{15} + \theta_{35} = \pi$ by Lemma\ref{lemma:sum}.
+The parameter space of each type of the cube is as followings.
 
-Here we may assume that the radius of the circumcircle of $A'B'C'$ is 1,
-that the circumcenter of $A'B'C'$ is $(0, 0, 0,)$ and that $A'$ is on
-the x-axis. If it is not, by a proper M\"obius transformation(such that
-it fixes the infinity point,) and it is easy to let the polyhedron
-satisfy these conditions. By parallel transformation along the z-axis, we
-may assume that $A$ is on xy-plane. (That is, $A = A'$ and $z_A = 0.$)
-
-See Figure \ref{fig:infTriangle} again. $O_2, O_4, O_6$ are spheres. Let $O_i(x_i, y_i, z_i)$
-and $r_i$ be the center and the radius of $O_i$ for $i = 2, 4, 6.$ About
-the radius, we have the following proposition.
-\\
-\noindent(Figure \ref{fig:sideFace} near here)
-(Figure \ref{fig:sphairahedronSlice} near here)
-
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.5\textwidth}
- \centering
- \includegraphics[width=3in, height=3in,
- keepaspectratio]{./img/HexahedraWithSphericalFaces/sideSlice.jpg}
- \caption{Side face of cube type sphairahedron.}
- \label{fig:sideFace}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.5\textwidth}
-  \centering
-  \includegraphics[width=3in, height=3in,
-  keepaspectratio]{./img/HexahedraWithSphericalFaces/abcTriangle.jpg}
-  \caption{Slice of the infinite sphairahedron.}
-  \label{fig:sphairahedronSlice}
- \end{minipage}
- \hspace*{\fill}
-\end{figure}
-
-\begin{proposition}\label{angles}
- \begin{align}
- r_2\sin\theta_{12} + r_4\sin\theta_{14} &= \overline{AB}^2 / (2\overline{A'B'})\notag\\
- r_4\sin\theta_{45} + r_6\sin\theta_{56} &= \overline{BC}^2 / (2\overline{B'C'})\tag{2.A}\label{2A}\\
- r_2\sin\theta_{23} + r_6\sin\theta_{36} &= \overline{CA}^2 / (2\overline{C'A'})\notag
- \end{align}
+\begin{proposition}\label{prop:paraSpace_cube}
+(1) For types 1, 2, 3, 4, 5, 8, and 9, the parameter spaces of cubes are two dimensional.  The boundary of each parameter space consists of straight lines or hyperbolas. \par  
+(2) For types 6, 7, 10, 11, the parameter space is empty.
 \end{proposition}
 
 \begin{proof}
+We refer the precise proof for type 1 from \cite{AharaAraki2}.
+
+The vertex set is $\{ P_{123}, P_{145}, P_{356}, P_{124}, P_{456}, P_{236}, P_{246}, P_{135} \}$, where $P_{ijk} = O_i \cap O_j \cap O_k$.  Without loss of generality, we assume that $P_{135}$ is $\infty$. 
+
+Suppose $\overline{D_i}$'s are as follows:
+
+\begin{align*}
+\overline{D_1}&= \{ (x,y,z) \mid 1 \le x \} \cup \{ \infty \}\\
+\overline{D_3}&=\{(x,y,z) \mid 1 \le -\frac{1}{2}x-\frac{\sqrt{3}}{2}y \} \cup\{\infty\}\\
+\overline{D_5}&=\{(x,y,z) \mid 1 \le -\frac{1}{2}x+\frac{\sqrt{3}}{2}y \} \cup\{\infty\}\\
+\overline{D_2}&=\{(x,y,z) \mid (x-x_2)^2+(y-y_2)^2+z^2<r_2^2 \} \\
+\overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+(z-z_4)^2<r_4^2 \} \\
+\overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_6)^2<r_6^2 \} \\
+O_i &= \partial(\overline{D_i})
+\end{align*}
+\end{proof}
+
+%\noindent(Figure \ref{fig:sideFace} near here)
+%(Figure \ref{fig:sphairahedronSlice} near here)
+
+%\begin{figure}[h!tbp]
+% \begin{minipage}[t]{0.5\textwidth}
+% \centering
+% \includegraphics[width=3in, height=3in,
+% keepaspectratio]{./img/HexahedraWithSphericalFaces/sideSlice.jpg}
+% \caption{Side face of cube type sphairahedron.}
+% \label{fig:sideFace}
+% \end{minipage}
+% \hspace*{\fill}
+% \begin{minipage}[t]{0.5\textwidth}
+%  \centering
+%  \includegraphics[width=3in, height=3in,
+%  keepaspectratio]{./img/HexahedraWithSphericalFaces/abcTriangle.jpg}
+%  \caption{Slice of the infinite sphairahedron.}
+%  \label{fig:sphairahedronSlice}
+% \end{minipage}
+% \hspace*{\fill}
+%\end{figure}
+
+\begin{proposition}\label{angles}
+Let $\theta_{ij}$ be the dihedral angle of $O_i$ and $O_j$, and let $w_i$ be the width of the face $O_i$ ($i=1,3,5$.)  In case of type 1, $\theta_{ij}=\frac{\pi}{3}$ for any existing $\theta_{ij}$, and $w_i=2\sqrt{3}$.  And the following equations hold. 
+ \begin{align*}
+ r_2\sin\theta_{12} + r_4\sin\theta_{14} &= \dfrac{w_1^2+z_4^2}{2w_1}\\
+ r_2\sin\theta_{23} + r_6\sin\theta_{36} &= \dfrac{w_3^2+z_6^2}{2w_3}\tag{*}\\
+ r_4\sin\theta_{45} + r_6\sin\theta_{56} &= \dfrac{w_5^2+(z_4 - z_6)^2}{2w_5}
+ \end{align*}
+\end{proposition}
+
+\begin{proof}
+About determining the values of $\theta_{ij}$'s and $w_i$'s is trivial because of the setting of type 1.  The latter three equations follow immediately from Lemma \ref{lemma:twoCirclesChain}.  Remark that the equations (*) holds for other types of the dihedral angles. 
+\end{proof}
+
+Solving the above system of equations, we have the following.
+
+\begin{corollary}
+\begin{align*}
+ r_2 &= \dfrac{z_4z_6 + 6}{3} \\
+ r_4 &= \dfrac{z_4(z_4-z_6) + 6}{3} \tag{**}\\
+ r_6 &= \dfrac{z_6(z_6-z_4) + 6}{3}.
+\end{align*}
+\end{corollary}
+
+
+
  In Figure \ref{fig:sideFace}, the edge $AD = e_{12}$ is a circle with radius
  $r_2\sin\theta_{12}$, and the edge $DB e_{14}$ is a circle with radius
  ($r_4\sin\theta_{14}$.)
@@ -1748,7 +1775,6 @@ Two vertical lines $HA$ and $HB$ are tangent to these circles as in
  show the first formula of Proposition \ref{angles}. Others are shown in the same
  way.
 
-\end{proof}
 
 \begin{remark}
  If we regard (\ref{2A}) as a linear equation on $r_2, r_4, r_6$, the
@@ -3800,9 +3826,8 @@ Figure captions
 \item Figure \ref{fig:cubeGraph}\subref{fig:cube_j}: Type 10.
 \item Figure \ref{fig:cubeGraph}\subref{fig:cube_k}: Type 11.
 
-\item Figure \ref{fig:sideFace}: Side face of cube type sphairahedron.
-\item Figure \ref{fig:sphairahedronSlice}: Slice of the infinite
-      sphairahedron.
+%\item Figure \ref{fig:sideFace}: Side face of cube type sphairahedron.
+%\item Figure \ref{fig:sphairahedronSlice}: Slice of the infinite sphairahedron.
 
 \item Figure \ref{fig:sideSliceDistance}: Side face with distance.
 \item Figure \ref{fig:adb}: Center of the circles.
