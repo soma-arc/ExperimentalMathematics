@@ -1709,9 +1709,9 @@ The vertex set is $\{ P_{123}, P_{145}, P_{356}, P_{124}, P_{456}, P_{236}, P_{2
 Suppose $\overline{D_i}$'s are as follows:
 
 \begin{align*}
-\overline{D_1}&= \{ (x,y,z) \mid 1 \le x \} \cup \{ \infty \}\\
-\overline{D_3}&=\{(x,y,z) \mid 1 \le -\frac{1}{2}x-\frac{\sqrt{3}}{2}y \} \cup\{\infty\}\\
-\overline{D_5}&=\{(x,y,z) \mid 1 \le -\frac{1}{2}x+\frac{\sqrt{3}}{2}y \} \cup\{\infty\}\\
+\overline{D_1}&= \{ (x,y,z) \mid \frac{1}{2} \le x \} \cup \{ \infty \}\\
+\overline{D_3}&=\{(x,y,z) \mid \frac{1}{2} \le -\frac{1}{2}x-\frac{\sqrt{3}}{2}y \} \cup\{\infty\}\\
+\overline{D_5}&=\{(x,y,z) \mid \frac{1}{2} \le -\frac{1}{2}x+\frac{\sqrt{3}}{2}y \} \cup\{\infty\}\\
 \overline{D_2}&=\{(x,y,z) \mid (x-x_2)^2+(y-y_2)^2+z^2<r_2^2 \} \\
 \overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+(z-z_4)^2<r_4^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_6)^2<r_6^2 \} \\
@@ -1742,7 +1742,7 @@ O_i &= \partial(\overline{D_i})
 %\end{figure}
 
 \begin{proposition}\label{angles}
-Let $\theta_{ij}$ be the dihedral angle of $O_i$ and $O_j$, and let $w_i$ be the width of the face $O_i$ ($i=1,3,5$.)  In case of type 1, $\theta_{ij}=\frac{\pi}{3}$ for any existing $\theta_{ij}$, and $w_i=2\sqrt{3}$.  And the following equations hold. 
+Let $\theta_{ij}$ be the dihedral angle of $O_i$ and $O_j$, and let $w_i$ be the width of the face $O_i$ ($i=1, 3, 5$.)  In case of type 1, $\theta_{ij}=\frac{\pi}{3}$ for any existing $\theta_{ij}$, and $w_i=2\sqrt{3}$.  And the following equations hold. 
  \begin{align*}
  r_2\sin\theta_{12} + r_4\sin\theta_{14} &= \dfrac{w_1^2+z_4^2}{2w_1}\\
  r_2\sin\theta_{23} + r_6\sin\theta_{36} &= \dfrac{w_3^2+z_6^2}{2w_3}\tag{*}\\
@@ -1758,16 +1758,22 @@ Solving the above system of equations, we have the following.
 
 \begin{corollary}
 \begin{align*}
- r_2 &= \dfrac{z_4z_6 + 6}{6} \\
- r_4 &= \dfrac{z_4(z_4-z_6) + 6}{6} \tag{**}\\
- r_6 &= \dfrac{z_6(z_6-z_4) + 6}{6}.
+ r_2 &= \dfrac{2z_4z_6 + 3}{6} \\
+ r_4 &= \dfrac{2z_4(z_4-z_6) + 3}{6} \tag{**}\\
+ r_6 &= \dfrac{2z_6(z_6-z_4) + 3}{6}.
 \end{align*}
 \end{corollary}
 
 We know that if $z_4$ and $z_6$ are given, we get the value of $r_2$, $r_4$, and $r_6$.  Here we have some conditions to establish a cube.  One is $r_2$, $r_4$, and $r_6$ are positive.  Secondly, $O_2\cap O_5=\O$, $O_4\cap O_3=\O$, and $O_6\cap O_1=\O$.  Thus, we obtain:
 \[
-0<r_2<\frac{3}{2},\ 0<r_6<\frac{3}{2},\ 0<r_6<\frac{3}{2}
+0<r_2<\frac{3}{4},\ 0<r_6<\frac{3}{4},\ 0<r_6<\frac{3}{4},
 \]
+and hence
+\[
+-\frac{3}{2}<z_4z_6<\frac{3}{4},\ -\frac{3}{2}<z_4(z_4-z_6)<\frac{3}{4}, \ -\frac{3}{2}<z_6(z_6-z_4)<\frac{3}{4}.
+\]
+
+
 
  In Figure \ref{fig:sideFace}, the edge $AD = e_{12}$ is a circle with radius
  $r_2\sin\theta_{12}$, and the edge $DB e_{14}$ is a circle with radius
