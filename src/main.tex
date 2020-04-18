@@ -682,6 +682,7 @@ In this paper, we introduce all of the parameter spaces of sphairahedra with 5 o
 % above theorem. In the section 4 we consider other type
 % of polyhedra and show a similar theorems.
 
+\subsubsection{General lemmas}
 We prepare some lemmas to execute classifications.
 
 \begin{lemma}\label{lemma:sum}
@@ -707,11 +708,12 @@ Next, we prepare some lemmas to calculate the parameter space of sphairahedra. F
 Suppose that two sphairahedra $T_1, T_2$ satisfy that $T_2=\varphi(T_1)$, where $\varphi$ is a parallel translation or a rotation or a dilation or a plane-symmetry or a composite of these transformations.  Then $T_1, T_2$ are equivalent. 
 \end{lemma}
 
+\subsubsection{Situation 1}
 Next, we consider a sphairahedron of infinite type without loss of generality.  In fact, $T$ is a spahairahedron, and  let $P$ be one of vertices and let $\varphi$ be a M\"obius transformation satisfying $\varphi(P)=\infty$.  Thus, $T'=\varphi(T)$ has the infinite vertex, and we may assume that one of the vertices is the infinite point.
 
 Beacause of the ideality of a sphairahedron, all edges with the infinite vertex are parallel straight lines.  Using rotations, we assume that these edges are parallel to the $z$-axis.  It follows that the faces with the finite vertex are perpendicular with $xy$-plane.
 
-Let $A$ be one of finite vertices next to the infinity vertex, that is, there exists an edge $e_{12}$ that connects $A$ and $\infty$.  After applying translations, we assume that the edge $e_{12}$ lies on the $z$-axis.  In fact we suppose the followings:
+Let $A$ be one of finite vertices next to the infinity vertex, that is, there exists an edge $e_{12}$ that connects $A$ and $\infty$.  After applying translations, we assume that the edge $e_{12}$ lies on the $z$-axis.  In fact we suppose the followings as Situation 1:
 \begin{align*}
 A &= (0,0,z_A),\\ 
 \overline{D_1}  &= \{ (x,y,z) \mid 0 \le y \} \cup \{\infty\} ,\\
@@ -722,11 +724,22 @@ O_i & = \partial(\overline{D_i}) \qquad(i=1,2,3,)
 where the vertex $A$ is on the $z$-axis, $\overline{D_i}$'s are closed balls, $\theta_{12}$ is the dihedral angle of $S_1$ and $S_2$,  $(x_3, y_3, z_3)$ is the center of the face $O_3$, and $r_3$ is the radius of $O_3$.  We assume that $A$ is the intersection of $O_1, O_2, O_3$.  We have the following equation including dihedral angles and  $x_3, y_3, z_3, r_3$.
 
 \begin{lemma} \label{lemma:CenterOfSphere}
-Suppose $\theta_{13}$ is the dihedral angle of $S_1$ and $S_3$   We have the followings.\par
+In Situation (1), suppose $\theta_{13}$ is the dihedral angle of $S_1$ and $S_3$   We have the followings.\par
 (1) $z_3=z_A$,\par
 (2) $r_3^2 = x_3^2+y_3^2$, \par
 (3) $x_3\cos\theta_{13} - y_3\sin\theta_{13}=0$.\par
+Conversely, if $\overline{D_3}$ satisfies (1), (2) then the edges $O_1 \cap O_2$, $O_1 \cap O_3$, $O_2 \cap O_2$ are tangent to each other at $A$.  If $\overline{D_3}$ satisfies (1), (2), and (3) then the dihedral angle of $S_1$ and $S_3$ is $\theta_{13}$.
 \end{lemma}
+
+\noindent(Figure \ref{fig:sectionAtVertex} near here)
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=1.5in, height=1.5in,
+ keepaspectratio]{./img/HexahedraWithSphericalFaces/sectionAtVertex.jpg}
+ \caption{Section at $a=z_A$.}
+ \label{fig:sectionAtVertex}
+   \hspace*{\fill}
+\end{figure}
 
 \begin{proof}
 Figure \ref{fig:sectionAtVertex} shows the section at $z=z_A$.  Let points $B, C$ be as seen in Figure \ref{fig:sectionAtVertex}.  By definition, $\angle BAC=\theta_{12}$.  Let $e_{13}$ be the intersection of the plane $S_1$ and the sphere $S_3$.  Then $e_{13}$ is a circle on the $xz$ plane and it is tangent to the $z$-axis at $A$ because of the ideality.  Therefore the height $z_3$ of the center $O_3$ must be the same as that $A$, and we have $z_3 = z_A$.\par
@@ -740,23 +753,44 @@ If the vertex $A$ is of degree $3$, the same observation works on the dihedral a
 
 After considering more general situations, we obtain the following corollary.
 
-\begin{corollary}
-Let each $O_1, O_2, O_3$ be a sphere or a plane with $\infty$.  Let $e_{ij}=O_i\cap O_j$ be a non-empty edge and let $\theta_{ij}$ be the dihedral angle of $O_i$ and $O_j$. Suppose that $\theta_{12}+\theta_{23}+\theta_{13}=\pi$ and that $e_{12}$ and $e_{13}$ are  tangent to each other at a point $P$.  Then $e_{12}$, $e_{13}$ and $e_{23}$ are tangent at $P$ and $O_1\cap O_2\cap O_3=\{ P \}$.   
+\begin{corollary}\label{cor:tangencyOfEdge}
+Let each $O_1, O_2, O_3$ be a sphere or a plane.  Let $e_{ij}=O_i\cap O_j$ be a non-empty edge and let $\theta_{ij}$ be the dihedral angle of $O_i$ and $O_j$. Suppose that $\theta_{12}+\theta_{23}+\theta_{13}=\pi$ and that $e_{12}$ and $e_{13}$ are  tangent to each other at a point $P$.  Then $e_{12}$, $e_{13}$ and $e_{23}$ are tangent at $P$ and $O_1\cap O_2\cap O_3=\{ P \}$.   
 \end{corollary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\noindent(Figure \ref{fig:sectionAtVertex} near here)
-(Figure \ref{fig:twoCirclesChain} near here)
+\subsubsection{Situation 2}
+We need another situation as Situation 2:
+\begin{align*}
+\overline{D_1}  &= \{ (x,y,z) \mid y \le 0 \} \cup \{\infty\} ,\\
+A &= (0,0,0)\\
+\overline{D_2}  &= \{ (x,y,z) \mid (x-x_2)^2+(y-y_2)^2+(z-z_2)^2<r_2^2\}\\
+B &= (w,0,z_B)\\
+\overline{D_3}  &= \{ (x,y,z) \mid (x-x_3)^2+(y-y_3)^2+(z-z_3)^2<r_3^2\}\\
+O_i & = \partial(\overline{D_i}) \qquad(i=1,2,3,)
+\end{align*}
+where 
+\begin{align*}
+z_2&=0,\  r_2^2=x_2^2+y_2^2,\  x_2\cos\theta_{12}-y_2\sin\theta_{12}=0,\ 0 < y_2\\
+z_3&=z_B,\  r_3^2=(x_3-w)^2+y_3^2,\  (x_3-w)\cos\theta_{13}+y_2\sin\theta_{13}=0,\ 0<y_3,
+\end{align*} 
+and $w (0<w), \theta_{12} (0<\theta_{12}\le \frac{\pi}{2}), \theta_{13}  (0<\theta_{13}\le \frac{\pi}{2})$ are constants.  From Lemma \ref{lemma:CenterOfSphere}, the dihedral angle of $O_1$ and $O_2$ (resp. $O_1$ and $O_3$) is $\theta_{12}$ (resp. $\theta_{13}$.)
+
+
+The following lemma gives a condition that two edges $O_1\cap O_2$ and $O_1\cap O_3$ are tangent to each other. 
+
+\begin{lemma} \label{lemma:twoCirclesChain}
+We consider a section by $y=0$ in Situation 2 as seen in Figure \ref{fig:twoCirclesChain}.  The left side circle is $O_1\cap O_2$ and the right side circle is $O_1\cap O_3$.  The left circle is tangent to $x=0$ at $A$ and it has the center $C$.  The right circle is tangent to $x=w$ at $B$ and it has the center $D$. \par
+If and only if two circles are tangent to each other, the following equation holds.
+\[
+r_2\sin\theta_{12}+r_3\sin\theta_{13}=\dfrac{w^2+z^2}{2w}
+\]
+\end{lemma}
+
+\noindent(Figure \ref{fig:twoCirclesChain} near here)
 
 \begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.5\textwidth}
- \centering
- \includegraphics[width=1.5in, height=1.5in,
- keepaspectratio]{./img/HexahedraWithSphericalFaces/sectionAtVertex.jpg}
- \caption{Section at $a=z_A$.}
- \label{fig:sectionAtVertex}
-   \hspace*{\fill}
- \end{minipage}
  \begin{minipage}[t]{0.5\textwidth}
+\centering
   \includegraphics[width=1.5in, height=1.5in,
   keepaspectratio]{./img/HexahedraWithSphericalFaces/twoCirclesSlice.jpg}
   %\input{ExpMathFigure3-1-2}
@@ -765,36 +799,37 @@ Let each $O_1, O_2, O_3$ be a sphere or a plane with $\infty$.  Let $e_{ij}=O_i\
  \end{minipage}
 \end{figure}
 
-The following lemma gives an equation to determine the position of spheres in the below section.
-
-\begin{lemma} \label{lemma:twoCirclesChain}
-See Figure \ref{fig:twoCirclesChain}.  Here two vertical lines are parallel.  The center of the right-side circle is $C$ and this circle is tangent to the right vertical line at $A$.  The center of the left-side circle is $D$ and this circle is tangent to the left vertical line at $B$.  Two circles are tangent to each other.  Let $Z$ be the intersection of $AC$ and the left vertical line.\par
-Let $r_1$, $r_2$ are the radius of the right circle (resp. the left circle.)  Let $w=AZ$ be the width of two vertical lines and let $z=DZ$ be the difference of height.\par
-The following equation hold.
+\begin{proof}
+The proof is very elementary, and we show it by simplified description.  Let $\theta$ be $\angle CAB$.  We have
 \[
-r_1+r_2=\dfrac{w^2+z^2}{2w}
+\dfrac{w}{\sin\theta}  = \sqrt{w^2+z^2}
+ = (r_2\sin\theta_{12}+r_3\sin\theta_{13})\cdot(2\sin\theta ).
 \]
+The equation $r_2\sin\theta_{12}+r_3\sin\theta_{13}=\dfrac{w^2+z^2}{2w}$ follows immediately from these two equations.  It is easy to show the converse proposition.
+\end{proof}
+
+\begin{lemma} \label{lemma:twoCirclesChainAngle}
+Suppose that the condition of the above lemma is satisfies.\par
+(1)\ The dihedral angle $\theta_{23}$ of $O_2$ and $O_3$ is equal to $\pi - \theta_{12} - \theta_{13}$ \par
+(2)\ The intersection edge $e_{23}$ of $O_2$ and $O_3$ is tangent to the two circle in Figure \ref{fig:twoCirclesChain} at the tangent point in the same figure.
 \end{lemma}
 
 \begin{proof}
-The proof is very elementary, and we show it by simplified description.  Let $\theta$ be $\angle CAB$.  We have
-\begin{align*}
-\dfrac{w}{\sin\theta} &= AB = \sqrt{w^2+z^2}\\
-(r_1+r_2)\cdot(2\sin\theta ) &= AB = \sqrt{w^2+z^2}
-\end{align*}
-The lemma follows immediately from these two equations.
+From the cosine law, we have 
+\[
+\cos (\pi - \theta_{23}) = \dfrac{r_2^2+r_3^2 - \{(x_2-x_3)^2+(y_2-y_3)^2+(z_2-z_3)^2\}}{2 r_2r_3}.
+\]
+The coordinates of the centers of $O_2$ and $O_3$ are given by
+$(x_2,y_2,z_2)=(r_2\sin\theta_{12},  r_2\cos\theta_{12}, 0)$, and
+$(x_3,y_3,z_3)=(w - r_3\sin\theta_{13},  r_3\cos\theta_{13}, z_B)$.
+Using $z_B^2+w^2 = 2w(r_2\sin\theta_{12}+r_3\sin\theta_{13})$, we have 
+\[
+(x_2-x_3)^2+(y_2-y_3)^2+(z_2-z_3)^2=r_2^2+r_3^2-2r_2r_3\cos(\theta_{12}+\theta_{13}).
+\]
+Thus $\cos (\pi - \theta_{23})=\cos(\theta_{12}+\theta_{13})$ and $\theta_{23} = \pi - \theta_{12} - \theta_{13}$.\par
+(2)\ Let $P$ be the tangent point in Figure \ref{fig:twoCirclesChain}.  Applying the result of (1) to Corollary \ref{cor:tangencyOfEdge}, we show that $e_{23}$ is tangent to $O_1\cap O_2=e_{12}$ and $O_1\cap O_3=e_{13}$ at $P$.  The proof completes. 
+
 \end{proof}
-
-%Here we introduce another technical lemma.
-%
-%\begin{lemma}\label{tangencyOfThreeSphere}
-%Let each $O_1, O_2, O_3$ be a sphere or a closed plane in $\subset S^3$.  Assume that $O_1\cap O_2\cap O_3$ is not empty.  For $(i,j)=(1,2), (1,3), (2,3)$, $e_{ij}=Let O_i\cap O_j$ is a circle or a line with $\infty$, and let \theta_{ij}$ be the dihedral angle of $O_i$ and $O_j$, where $0<\theta_{ij} \le \frac{\pi}{2}$.
-%If $\theta_{12}+\theta_{13}+\theta_{23}=\pi$ then the intersection $O_1\cap O_2\cap O_3$ never consists of two points.
-%\end{lemma}
-
-%\begin{proof}
-%Applying a Mobius transformation, we may assume that one of points in $O_1\cap O_2\cap O_3$ is the infinity $\infty$. Then $O_i$ is a plane with $\infty$ and $e_{ij}$ is a line with $\infty$.  If $O_1\cap O_2\cap O_3$ consists of two points, then $e_{ij}$'s intersect at a finite point transversally.  That is, three planes $O_1, O_2, O_3$ intersect transversally at a point $P$.  Consider a sphere $S$ with the center $P$ with a certain radius.  Then $S\cap O_i$ are an orthodromes and they establish a spherial triangle with inner angles $\theta_{12}, \theta_{13}, theta_{23}$ on $S$.  This contradicts $\theta_{12}+\theta_{13}+\theta_{23}=\pi$.
-%\end{proof}
 
 \subsection{Tetrahedron}
 \noindent(Figure \ref{fig:tetrahedron} near here)
@@ -1048,12 +1083,12 @@ There are two polyhedral structures of pentahedra. One is a quadrangular pyramid
 
 \subsubsection{Quadrangular pyramid}
 
-\noindent(Figure \ref{fig:quadrangularPyramidAtOrigin} near here)\\
-(Figure \ref{fig:quadrangularPyramid} near here)
+\noindent(Figure \ref{fig:quadrangularPyramid} near here)
 (Figure \ref{fig:quadrangularPyramidFaces} near here)\\
 (Figure \ref{fig:quadrangularPyramidCombinations}
 \subref{fig:quadrangularPyramid1}
 \subref{fig:quadrangularPyramid2} near here)\\
+(Figure \ref{fig:quadrangularPyramidAtOrigin} near here)\\
 (Figure \ref{fig:quadrangularPyramid_Inf_1}
 \subref{fig:pentahedralPyramidInf}
 \subref{fig:pentahedralPyramidLimitset}
@@ -1071,13 +1106,6 @@ There are two polyhedral structures of pentahedra. One is a quadrangular pyramid
 \subref{fig:pentahedralPyramidSphairahedronFinite2}
 \subref{fig:pentahedralPyramidLimitsetFinite2} near here)
 
-\begin{figure}[h!tbp]
-   \centering
-   \includegraphics[width=1.5in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/proofQuadrangularPyramid.jpg}
-   \caption{Section at $z=0$}
-   \label{fig:quadrangularPyramidAtOrigin}
- \hspace*{\fill}
-\end{figure}
 
 %%% quadrangular pyramid col.1
 \begin{figure}[h!tbp]
@@ -1117,6 +1145,14 @@ There are two polyhedral structures of pentahedra. One is a quadrangular pyramid
  \hspace*{\fill}
  \caption{Types of combinations of dihedral angles}
   \label{fig:quadrangularPyramidCombinations}
+\end{figure}
+%%%quadrangular pyramid col. 2.5
+\begin{figure}[h!tbp]
+   \centering
+   \includegraphics[width=1.5in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/proofQuadrangularPyramid.jpg}
+   \caption{Section at $z=0$}
+   \label{fig:quadrangularPyramidAtOrigin}
+ \hspace*{\fill}
 \end{figure}
 
 %%% quadrangular pyramid col.3
@@ -1701,13 +1737,11 @@ The parameter space of each type of the cube is as followings.
 (2) For types 6, 7, 10, 11, the parameter space is empty.
 \end{proposition}
 
-\begin{proof}
 We refer the precise proof for type 1 from \cite{AharaAraki2}.
 
 The vertex set is $\{ P_{123}, P_{145}, P_{356}, P_{124}, P_{456}, P_{236}, P_{246}, P_{135} \}$, where $P_{ijk} = O_i \cap O_j \cap O_k$.  Without loss of generality, we assume that $P_{135}$ is $\infty$. 
 
 Suppose $\overline{D_i}$'s are as follows:
-
 \begin{align*}
 \overline{D_1}&= \{ (x,y,z) \mid \frac{1}{2} \le x \} \cup \{ \infty \}\\
 \overline{D_3}&=\{(x,y,z) \mid \frac{1}{2} \le -\frac{1}{2}x-\frac{\sqrt{3}}{2}y \} \cup\{\infty\}\\
@@ -1717,11 +1751,10 @@ Suppose $\overline{D_i}$'s are as follows:
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_6)^2<r_6^2 \} \\
 O_i &= \partial(\overline{D_i})
 \end{align*}
-\end{proof}
-
+%
 %\noindent(Figure \ref{fig:sideFace} near here)
 %(Figure \ref{fig:sphairahedronSlice} near here)
-
+%
 %\begin{figure}[h!tbp]
 % \begin{minipage}[t]{0.5\textwidth}
 % \centering
@@ -1740,174 +1773,176 @@ O_i &= \partial(\overline{D_i})
 % \end{minipage}
 % \hspace*{\fill}
 %\end{figure}
-
-\begin{proposition}\label{angles}
-Let $\theta_{ij}$ be the dihedral angle of $O_i$ and $O_j$, and let $w_i$ be the width of the face $O_i$ ($i=1, 3, 5$.)  In case of type 1, $\theta_{ij}=\frac{\pi}{3}$ for any existing $\theta_{ij}$, and $w_i=2\sqrt{3}$.  And the following equations hold. 
+{\bfseries Step 1:}
+In this step, we get conditions for these $\overline{D_i}$'s to establish a cube of type 1. Let $\theta_{ij}$ be the dihedral angle of $O_i$ and $O_j$, and let $w_i$ be the width of the face $O_i$ ($i=1, 3, 5$.)  In case of type 1, $\theta_{ij}=\frac{\pi}{3}$ for any existing $\theta_{ij}$, and $w_i=2\sqrt{3}$. The three equations bellow follow immediately from Lemma \ref{lemma:twoCirclesChain}.
  \begin{align*}
  r_2\sin\theta_{12} + r_4\sin\theta_{14} &= \dfrac{w_1^2+z_4^2}{2w_1}\\
  r_2\sin\theta_{23} + r_6\sin\theta_{36} &= \dfrac{w_3^2+z_6^2}{2w_3}\tag{*}\\
  r_4\sin\theta_{45} + r_6\sin\theta_{56} &= \dfrac{w_5^2+(z_4 - z_6)^2}{2w_5}
  \end{align*}
-\end{proposition}
-
-\begin{proof}
-About determining the values of $\theta_{ij}$'s and $w_i$'s is trivial because of the setting of type 1.  The latter three equations follow immediately from Lemma \ref{lemma:twoCirclesChain}.  Remark that the equations (*) holds for other types of the dihedral angles. 
-\end{proof}
-
-Solving the above system of equations, we have the following.
-
-\begin{corollary}
+  Remark that these equations (*) hold for other types of the dihedral angles. 
+Solving the above system of equations, we have:
 \begin{align*}
  r_2 &= \dfrac{2z_4z_6 + 3}{6} \\
  r_4 &= \dfrac{2z_4(z_4-z_6) + 3}{6} \tag{**}\\
  r_6 &= \dfrac{2z_6(z_6-z_4) + 3}{6}.
 \end{align*}
-\end{corollary}
 
-We know that if $z_4$ and $z_6$ are given, we get the value of $r_2$, $r_4$, and $r_6$.  Here we have some conditions to establish a cube.  One is $r_2$, $r_4$, and $r_6$ are positive.  Secondly, $O_2\cap O_5=\O$, $O_4\cap O_3=\O$, and $O_6\cap O_1=\O$.  Thus, we obtain:
+Here, notice that if $z_4$ and $z_6$ are given, we get the value of $r_2$, $r_4$, and $r_6$.  Here we have some conditions to establish a cube.  One is $r_2$, $r_4$, and $r_6$ are positive.  Secondly, $O_2\cap O_5=\O$, $O_4\cap O_3=\O$, and $O_6\cap O_1=\O$.  Thus, we obtain:
 \[
 0<r_2<\frac{3}{4},\ 0<r_6<\frac{3}{4},\ 0<r_6<\frac{3}{4},
 \]
 and hence
-\[
--\frac{3}{2}<z_4z_6<\frac{3}{4},\ -\frac{3}{2}<z_4(z_4-z_6)<\frac{3}{4}, \ -\frac{3}{2}<z_6(z_6-z_4)<\frac{3}{4}.
-\]
+\begin{gather*}
+-\frac{3}{2}<z_4z_6<\frac{3}{4},\ -\frac{3}{2}<z_4(z_4-z_6)<\frac{3}{4}, \ -\frac{3}{2}<z_6(z_6-z_4)<\frac{3}{4} \\
+\Leftrightarrow\ z_4z_6<\frac{3}{4},\ z_4(z_4-z_6)<\frac{3}{4}, \ z_6(z_6-z_4)<\frac{3}{4} \tag{$\star$}
+\end{gather*}
+
+See Figure \ref{fig:graphCubeA}. This is the area representing ($\star$).
+
+% In Figure \ref{fig:sideFace}, the edge $AD = e_{12}$ is a circle with radius
+% $r_2\sin\theta_{12}$, and the edge $DB e_{14}$ is a circle with radius
+% ($r_4\sin\theta_{14}$.)
+%Two vertical lines $HA$ and $HB$ are tangent to these circles as in
+% Figure \ref{fig:sideFace},
+% and we have 
+% \begin{eqnarray*}
+%  \overline{AD} = 2 r_2 \sin\theta_{12} \cdot \overline{A'B'}/\overline{AB}\\
+%  \overline{DB} = 2 r_4 \sin\theta_{14} \cdot \overline{A'B'}/\overline{AB}
+% \end{eqnarray*}
+% Remark that $\cos(\angle BAB') =\overline{A'B'}/\overline{AB}.$ Clearly,
+% $\overline{AD} + \overline{DB} = \overline{AB}$ holds, so it is easy to
+% show the first formula of Proposition \ref{angles}. Others are shown in the same
+% way.
 
 
+%\begin{remark}
+% If we regard (\ref{2A}) as a linear equation on $r_2, r_4, r_6$, the
+% coordinate matrix of (\ref{2A}) is not singular. In fact,
+% \begin{eqnarray*}
+%  \left| 
+%   \begin{array}{ccc}
+%    \sin\theta_{12} & \sin\theta_{14} & 0\\
+%    0               & \sin\theta_{45} & \sin\theta_{56}\\
+%    \sin\theta_{32} & 0               & \sin\theta_{36}
+%   \end{array}
+%  \right|
+% \end{eqnarray*}
+% is positive.
+% If we fix three vertexes $A, B, C$, then always there are solutions of
+% (\ref{2A}), but they may be non-positive. And, if $r_2$ or $r_4$ or $r_6$
+% are too large, ($O_i$) doesn't form a hexahedron. For example, see
+% subsection \ref{extend}. In this section, we know that $r_2, r_4, r_6$ are all
+% 'valid' if and only if parameters ($z_B, z_C$) are in the restricted area．
 
- In Figure \ref{fig:sideFace}, the edge $AD = e_{12}$ is a circle with radius
- $r_2\sin\theta_{12}$, and the edge $DB e_{14}$ is a circle with radius
- ($r_4\sin\theta_{14}$.)
-Two vertical lines $HA$ and $HB$ are tangent to these circles as in
- Figure \ref{fig:sideFace},
- and we have 
- \begin{eqnarray*}
-  \overline{AD} = 2 r_2 \sin\theta_{12} \cdot \overline{A'B'}/\overline{AB}\\
-  \overline{DB} = 2 r_4 \sin\theta_{14} \cdot \overline{A'B'}/\overline{AB}
- \end{eqnarray*}
- Remark that $\cos(\angle BAB') =\overline{A'B'}/\overline{AB}.$ Clearly,
- $\overline{AD} + \overline{DB} = \overline{AB}$ holds, so it is easy to
- show the first formula of Proposition \ref{angles}. Others are shown in the same
- way.
+%Next, we will obtain the coordinate of the centers of $O_2, O_4, O_6$.
+%Let $O_i'(x_i, y_i)$ be a projection of the center of the sphere $O_i$
+% to xy-plane (for $i = 2, 4, 6$.)
+%\end{remark}
+%
+%\begin{proposition}\label{angles}
+% (1)$\angle O_2'A'B' = \pi/2 - \theta_{12}, \angle
+% O'_2A'C'=\pi/2-\theta_{23}$.
+%
+%  $\angle O_4'B'A' = \pi/2 - \theta_{14}, \angle O_4'B'C' = \pi/2 -
+% \theta_{45}$.
+%
+% $\angle O_6'C'A' = \pi/2 - \theta_{36}, \angle O_6'C'A' = \pi/2 - \theta_{56}$.
 
+% (2)$z_A = z_2 = 0$ and $\overline{A'O'_2} = \overline{AO_2} = r_2$
 
-\begin{remark}
- If we regard (\ref{2A}) as a linear equation on $r_2, r_4, r_6$, the
- coordinate matrix of (\ref{2A}) is not singular. In fact,
- \begin{eqnarray*}
-  \left| 
-   \begin{array}{ccc}
-    \sin\theta_{12} & \sin\theta_{14} & 0\\
-    0               & \sin\theta_{45} & \sin\theta_{56}\\
-    \sin\theta_{32} & 0               & \sin\theta_{36}
-   \end{array}
-  \right|
- \end{eqnarray*}
- is positive.
- If we fix three vertexes $A, B, C$, then always there are solutions of
- (\ref{2A}), but they may be non-positive. And, if $r_2$ or $r_4$ or $r_6$
- are too large, ($O_i$) doesn't form a hexahedron. For example, see
- subsection \ref{extend}. In this section, we know that $r_2, r_4, r_6$ are all
- 'valid' if and only if parameters ($z_B, z_C$) are in the restricted area．
+% $z_B = z_4$ and $\overline{B'O'_4} = \overline{BO_4} = r_4$
 
-Next, we will obtain the coordinate of the centers of $O_2, O_4, O_6$.
-Let $O_i'(x_i, y_i)$ be a projection of the center of the sphere $O_i$
- to xy-plane (for $i = 2, 4, 6$.)
-\end{remark}
+% $z_C = z_6$ and $\overline{C'O'_6} = \overline{CO_6} = r_6$
+%\end{proposition}
 
-\begin{proposition}\label{angles}
- (1)$\angle O_2'A'B' = \pi/2 - \theta_{12}, \angle
- O'_2A'C'=\pi/2-\theta_{23}$.
+%\begin{proof}%
+% (1) Since the face-angle of the plane $O_1$ and the sphere $O_2$ is
+% $\theta_{12}$, the angle of a straight line $A'B'$ and a circle with
+% center $O'_2$ and with radius $r_2$ is also $\theta_{12}$. It follows
+% that $\angle O_2'A'B' = \pi/2 - \theta_{12}$(See Figure \ref{fig:sphairahedronSlice}.)
+% 
+% (2) The edge $AD = e_{12}$ is the intersection of a plane $O_1$ and a
+% sphere $O_2$. This edge(= plane circle) is tangent to $AH$ (which is
+% parallel to z-axis) at $A$, so a radius $AO_2$ of the sphere $O_2$ is
+% perpendicular to $AH$. It follows that $z_A=z_2$ and that
+% $\overline{A'O'_2} = \overline{AO_2}$ immediately.
 
-  $\angle O_4'B'A' = \pi/2 - \theta_{14}, \angle O_4'B'C' = \pi/2 -
- \theta_{45}$.
+% Using Lemma \ref{angles}(1), we can obtain all coordinates of $O_i$ from
+% $\theta_{ij}$ and $r_i$ and $z_A, z_B, z_C$. In fact, the formula
+% $\angle O'_2, A'B' = \pi/2 - \theta_{12}, \angle O'_{2}A'C' = \pi/2 -
+% \theta_{23}$ means that the center $O_2'$ is a half-line with one
+% end $A'$ as in Figure \ref{fig:sphairahedronSlice}.
+% And $\overline{A'O'_2} = \overline{AO_2} = r_2$ determines $A'$.
+% So $O'_2$ is uniquely determined. From Lemma \ref{angles}(2), we get the
+% z-coordinates $z_2$ of the center $O_2$ from $z_A(=0.)$ Hence a sphere
+% $O_2$ is uniquely determined from $\theta_{ij}$'s and positive $r_2$
+% and $z_A(= 0.)$
+%\end{proof}
 
- $\angle O_6'C'A' = \pi/2 - \theta_{36}, \angle O_6'C'A' = \pi/2 - \theta_{56}$.
+%\subsubsection{Compatibility}
 
- (2)$z_A = z_2 = 0$ and $\overline{A'O'_2} = \overline{AO_2} = r_2$
+{\bfseries Step 2:}
+In this step, we first determine the values $(z_4, z_6)$ satisfying ($\star$) and show that this gives a cube (= cubic sphairahedron).  Indeed, suppose that the centers and radii of $O_2, O_4, O_6$ are given by followings.\par
+The center and the radius of $O_2$:
+\begin{align*}
+(x_2, y_2, z_2) &= \left(\frac{1}{2}(1-r_2), -\frac{\sqrt{3}}{2}(1-r_2), 0\right),\\
+ r_2 &= \dfrac{2z_4z_6 + 3}{6}.
+\end{align*} 
+The center and the radius of $O_4$:
+\begin{align*}
+(x_4, y_4, z_4) &= \left(\frac{1}{2}(1-r_4), \frac{\sqrt{3}}{2}(1-r_4), z_4\right),\\
+ r_4 &= \dfrac{2z_4(z_4-z_6) + 3}{6}.
+\end{align*} 
+The center and the radius of $O_6$:
+\begin{align*}
+(x_6, y_6, z_6) &= \left(r_6-1, 0, z_6\right),\\
+ r_6 &= \dfrac{2z_6(z_6-z_4) + 3}{6}.
+\end{align*} 
 
- $z_B = z_4$ and $\overline{B'O'_4} = \overline{BO_4} = r_4$
+It is enough for us to check the following lemma.
 
- $z_C = z_6$ and $\overline{C'O'_6} = \overline{CO_6} = r_6$
-\end{proposition}
+\begin{lemma}\label{lemma:compatibility}
+Let the edge $e_{ij}$ be $O_i\cap O_j$.\par 
+(1)\  The edges $e_{12},e_{13},e_{23}$ are tangent to each other at a point.
+The edges $e_{14},e_{15},e_{45}$ are tangent to each other at a point.
+The edges $e_{35},e_{36},e_{56}$ are tangent to each other at a point.\par
+The dihedral angle at $e_{12}$ is $\theta_{12}=\frac{\pi}{3}$.  
+The dihedral angle at $e_{14}$ is $\theta_{14}=\frac{\pi}{3}$.
+The dihedral angle at $e_{23}$ is $\theta_{23}=\frac{\pi}{3}$.
+The dihedral angle at $e_{36}$ is $\theta_{36}=\frac{\pi}{3}$.
+The dihedral angle at $e_{45}$ is $\theta_{45}=\frac{\pi}{3}$.
+The dihedral angle at $e_{56}$ is $\theta_{56}=\frac{\pi}{3}$.\par
+(2)\ The dihedral angle at $e_{24}$ is $\theta_{24}=\frac{\pi}{3}$.  
+The dihedral angle at $e_{26}$ is $\theta_{26}=\frac{\pi}{3}$.
+The dihedral angle at $e_{46}$ is $\theta_{46}=\frac{\pi}{3}$.
+(2)\ The edges $e_{12},e_{14},e_{24}$ are tangent to each other at a point.
+The edges $e_{23},e_{26},e_{36}$ are tangent to each other at a point.
+The edges $e_{45},e_{46},e_{56}$ are tangent to each other at a point.\par
+(5)\ The edges $e_{24},e_{26},e_{46}$ are tangent to each other at a point.
+\end{lemma}
 
-\begin{proof}
- (1) Since the face-angle of the plane $O_1$ and the sphere $O_2$ is
- $\theta_{12}$, the angle of a straight line $A'B'$ and a circle with
- center $O'_2$ and with radius $r_2$ is also $\theta_{12}$. It follows
- that $\angle O_2'A'B' = \pi/2 - \theta_{12}$(See Figure \ref{fig:sphairahedronSlice}.)
+%\noindent(Figure \ref{fig:sideSliceDistance} near here)
+%(Figure \ref{fig:adb} near here)
+
+%\begin{figure}[h!tbp]
+% \begin{minipage}[t]{0.5\textwidth}
+%  \centering
+%  \includegraphics[width=3in, height=3in,
+%  keepaspectratio]{./img/HexahedraWithSphericalFaces/sideSliceDistance.jpg}
+%  \caption{Side face with distance.}
+%  \label{fig:sideSliceDistance}
+% \end{minipage}
+% \hspace*{\fill}
+%\end{figure}
+
  
- (2) The edge $AD = e_{12}$ is the intersection of a plane $O_1$ and a
- sphere $O_2$. This edge(= plane circle) is tangent to $AH$ (which is
- parallel to z-axis) at $A$, so a radius $AO_2$ of the sphere $O_2$ is
- perpendicular to $AH$. It follows that $z_A=z_2$ and that
- $\overline{A'O'_2} = \overline{AO_2}$ immediately.
-
- Using Lemma \ref{angles}(1), we can obtain all coordinates of $O_i$ from
- $\theta_{ij}$ and $r_i$ and $z_A, z_B, z_C$. In fact, the formula
- $\angle O'_2, A'B' = \pi/2 - \theta_{12}, \angle O'_{2}A'C' = \pi/2 -
- \theta_{23}$ means that the center $O_2'$ is a half-line with one
- end $A'$ as in Figure \ref{fig:sphairahedronSlice}.
- And $\overline{A'O'_2} = \overline{AO_2} = r_2$ determines $A'$.
- So $O'_2$ is uniquely determined. From Lemma \ref{angles}(2), we get the
- z-coordinates $z_2$ of the center $O_2$ from $z_A(=0.)$ Hence a sphere
- $O_2$ is uniquely determined from $\theta_{ij}$'s and positive $r_2$
- and $z_A(= 0.)$
-\end{proof}
-
-\subsubsection{Compatibility}
-In this way, for given parameters ($z_B,~z_C$) such that $r_2,~r_4,~r_6$
-are all positive, we get the coordinates of three spheres 
-$O_2, O_4, O_6$. But it is not trivial whether the 6-ple($O_1,~...,~O_6$) is
-in $\tilde\varepsilon(n_{ij})$. (That is, we have to show that 
-($O_1,..., O_6$) satisfies (P1), (P2), (P3).)
-
-\begin{theorem}\label{compat}
- Fix $(n_{ij})_{(i, j)\in E}$(which is one of combination in Lemma
- \ref{combination})
- Fix three vertexes $A,~B,~C$. Assume that linear equations (\ref{2A}) have
- positive solutions. Then $O_1,~O_3,~O_5$ as in Figure \ref{fig:infTriangle} and
- $O_2,~O_4,~O_6$ as in Proposition \ref{angles} satisfy followings.
- \begin{description}
-  \item[(1)] The face-angle of $O_2$ and $O_4$ (resp. $O_4$ and $O_6$,
-             $O_2$ and $O_6$) is equal to $\theta_{24}$
-             (resp. $\theta_{46}$, $\theta_{26}$.)
-  \item[(2)] The intersecrion set of two spheres $O_2$, $O_4$ and a plane
-             $O_1$ consists of only one point. The point is 
-             $D = v_{124}$. Similarly other two vertexes $E = v_{245}$
-             and $F = v_{236}$ are uniquely determined.
-  \item[(3)] The intersection set of the three spheres $O_2, O_4, O_6$
-             consists of only one point. The point is $G = v_{246}$.
-             
-  \item[(4)] $(O_1, ..., O_6) \in \tilde\varepsilon(n_{ij})$.
-\end{description}
-\end{theorem}
-
-\noindent(Figure \ref{fig:sideSliceDistance} near here)
-(Figure \ref{fig:adb} near here)
-
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.5\textwidth}
-  \centering
-  \includegraphics[width=3in, height=3in,
-  keepaspectratio]{./img/HexahedraWithSphericalFaces/sideSliceDistance.jpg}
-  \caption{Side face with distance.}
-  \label{fig:sideSliceDistance}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.5\textwidth}
-  \centering
-  \includegraphics[width=3in, height=3in,
-  keepaspectratio]{./img/HexahedraWithSphericalFaces/adb.jpg}
-  \caption{Center of the circles}
-  \label{fig:adb}
- \end{minipage}
- \hspace*{\fill}
-\end{figure}
-
- 
 \begin{proof}
- (1) Let $\theta'_{24}$ be the face-angle of $O_2$ and $O_4$. From the
+(1) Using Lemma \ref{lemma:CenterOfSphere}, we show these straightforward.\par
+(2) Applying Lemma \ref{lemma:twoCirclesChain} and the equations (*), we show The edges $e_{12},e_{14}$ are tangent to each other.  
+
+
+have  Let $\theta'_{24}$ be the face-angle of $O_2$ and $O_4$. From the
  law of cosine, we have
  \begin{align}
   \overline{O_2O_4}^2 = r_2^2 + r_4^2 - 2r_2r_4\cos(\pi-\theta'_{24}) \tag{2.B}\label{2B}
@@ -3709,7 +3744,6 @@ Figure captions
       \ref{fig:tetrahedronFinite}\subref{fig:tetrahedronFiniteLimitset}:
       Limit set. 
 
-\item Figure \ref{fig:quadrangularPyramidAtOrigin}: Section at $z=0$.
 \item Figure \ref{fig:quadrangularPyramid}: Quadrangular pyramid.
 \item Figure \ref{fig:quadrangularPyramidFaces}: Polyhedral structures.
 
@@ -3721,6 +3755,7 @@ Figure captions
 \item Figure
       \ref{fig:quadrangularPyramidCombinations}\subref{fig:quadrangularPyramid2}:
       Type2.
+\item Figure \ref{fig:quadrangularPyramidAtOrigin}: Section at $z=0$.
 \item Figure \ref{fig:quadrangularPyramid_Inf_1}: A quadrangular pyramid
       of type1
 \item Figure
@@ -3844,8 +3879,8 @@ Figure captions
 %\item Figure \ref{fig:sideFace}: Side face of cube type sphairahedron.
 %\item Figure \ref{fig:sphairahedronSlice}: Slice of the infinite sphairahedron.
 
-\item Figure \ref{fig:sideSliceDistance}: Side face with distance.
-\item Figure \ref{fig:adb}: Center of the circles.
+%\item Figure \ref{fig:sideSliceDistance}: Side face with distance.
+%\item Figure \ref{fig:adb}: Center of the circles.
 
 \item Figure \ref{fig:threeCircles}: Condition of circles.
 \item Figure \ref{fig:threeCircles}:\subref{fig:condition1}:
