@@ -1580,7 +1580,7 @@ There are 7 polyhedral structures of hexahedra.  They are:\par
 
 In this list, the cube and the cake1 have lots of varieties.  In this subsection, we introduce the cube.  Ahara and Araki \cite{AharaAraki2} show the classification of the cubes preceisely.  This preprint is sometimes quoted but is not published, thus we check the proof of the theorem again and list the result up.
 
-\subsubsection{Parameter spaces of cubes}
+\subsubsection{Classification of cubes}
 
 \noindent(Figure \ref{fig:cube} near here)\\
 (Figure \ref{fig:cubePolyhedralStructure} near here)
@@ -1730,12 +1730,16 @@ In this list, the cube and the cake1 have lots of varieties.  In this subsection
 
 A cube (Figure \ref{fig:cube}) is a sphairahedron with a polyhedral structure as seen in Figure \ref{fig:cubePolyhedralStructure}.  There are 11 combinations of dihedral angles as seen in Figure \ref{fig:cubeGraph}.
 
+\subsubsection{Parameter spaces of cubes}
+
 The parameter space of each type of the cube is as followings.
 
 \begin{proposition}\label{prop:paraSpace_cube}
 (1) For types 1, 2, 3, 4, 5, 8, and 9, the parameter spaces of cubes are two dimensional.  The boundary of each parameter space consists of straight lines or hyperbolas. \par  
 (2) For types 6, 7, 10, 11, the parameter space is empty.
 \end{proposition}
+
+\subsubsection{Parameter spaces of cubes of type 1}
 
 We refer the precise proof for type 1 from \cite{AharaAraki2}.
 
@@ -2004,26 +2008,21 @@ This is a contradiction. Thus this case cannot occur. In the same way,
  $R$ is the unique intersection of 3 spheres $O_2, O_4, O_6$ and $R=P_{246}$
 \end{proof} 
 
-\subsubsection{Parameter space}\label{paramSpace}
-In this subsection, we first consider in the case that $n_{ij} = 3$ for all
-$(i, j) \in E$. (That is, in case (a) in Lemma \ref{combination}.) There
+Replacing $(z_4, z_6)$ with $(z_A, z_B)$, we show the deciding parameter space of cubes of type 1 as seen in Figure \ref{fig:graphCubeALimit}.  Here, because of symmetry of combinations of dihedral angles, we may assume that $z_B\ge 2z_A$
 
-$O_2$ doesn't interest to $O_5$ if and only if the distance from the center
-of the sphere $O_2$ to the plane $O_5$ is more than $r_2$. In this case,
-the distance is $3 / 2 - r_2$ and hence $O_2$ doesn't intersect to $O_5$
-if and only if $r_2 < 3/4$. In the same way $r_4 < 3/4$ and $r_6 <
-3/4$. These three inequalities are equivalent to
-\begin{align*}
-\begin{cases}
- -z_Bz_C + z^2_C < 3 / 4\\
- z_Bz_C < 3 / 4 \tag{2.E}\label{2E}\\
- z^2_B - z_B z_C < 3/ 4
-\end{cases}
-\end{align*}
+There are 6 cases of the order of $0, z_A, z_B$ and for each case, we can replace $(z_A, z_B)$ with another parameters.  In fact\par
+ $z_A < z_B < 0 \Rightarrow (z_A, z_B) \mapsto (z_B-z_A, -z_A)$.\par
+ $z_A < 0 < a_B \Rightarrow (z_A, z_B) \mapsto (-z_A, z_B-z_A)$.\par
+ $z_B < z_A < 0 \Rightarrow (z_A, z_B) \mapsto (z_A-z_B, -z_B)$.\par
+ $z_B < 0 < z_A \Rightarrow (z_A, z_B) \mapsto (-z_B, z_A-z_B)$.\par
+ $0 < z_B < z_A \Rightarrow (z_A, z_B) \mapsto (z_B, z_A)$.\par
+$0 < z_A \leq z_B < 2z_A \Rightarrow (z_A, z_B) \mapsto (z_B-z_A,z_B)$.\par
+In this way, the correct parameter space is as seen in Figure \ref{fig:graphCubeALimit}. 
+
+Here if $(z_A, z_B)$ is on the Hyperbola $z_B^2 - z_A z_B = 3/4$, then the face $O_2$ touches $O_5$.  Moreover if $(z_A, z_B)$ is on the point $A(\sqrt{6}/4, \sqrt{6}/2)$ then $O_2$ touches $O_5$ and $O_3$ touches $O_4$.  These case a  singular shape of a cube of type 1
 
 \noindent(Figure \ref{fig:graphCubeA} near here)
 (Figure \ref{fig:graphCubeALimit} near here)
-
 \begin{figure}[h!tbp]
  \begin{minipage}[t]{0.5\textwidth}
  \centering
@@ -2042,51 +2041,32 @@ if and only if $r_2 < 3/4$. In the same way $r_4 < 3/4$ and $r_6 <
  \end{minipage}
  \hspace*{\fill}
 \end{figure}
-
 \begin{align*}
-(1)& z_Bz_C = 3/4\\
-(2)& z_C^2 - z_B z_C = 3/4\\
-(3)& z_B^2 - z_B z_C = 3/4
+(1)& z_Az_B = 3/4\\
+(2)& z_B^2 - z_A z_B = 3/4\\
+(3)& z_A^2 - z_A z_B = 3/4
 \end{align*}
 
-See Figure \ref{fig:graphCubeA} ($z_B, z_C$) in the shaded area of this figure satisfies
-all of(\ref{2D}) and (\ref{2E}) and $z_B \geq 0$.
+\subsubsection{Parameter space of cubes of other types}
 
-In case (a), the original three parameters $z_A, z_B, z_C$ have symmetry,
-because $O_1, O_3, O_5$ form a \textit{regular} triangle prism.
-If $z_C < 0$, then we exchange the roles of $z_A$ and $z_C$ and we can reduce
-($z_B, z_C$) to ($z_B - z_C, -z_C$) in the case of $z_C > 0$.
-If $0 \leq z_C < z_B$, then we exchange the roles of $z_B$ and $z_C$, 
-and we can reduce $(z_B, z_C)$ to $(z_C, z_B)$ in case of 
-$z_B < z_C$. If $z_B \leq z_C < 2z_B$ then we exchange the roles of
-$z_A$ and $z_C$ and we can reduce($z_B, z_C$) to ($z_C-z_B,z_C$) in case
-of $z_C \geq 2z_B$. In this way, the correct parameter space is as in
-Figure \ref{fig:graphCubeALimit}.
-
-Here two hyperbola $z^2_C - z_Bz_C = 3/4$ and $z_B z_C = 3/4$ intersects
-at ($\sqrt{6} / 4, \sqrt{6}/2$) and this point is on the straight line
-$z_C=2z_B$. In Figure \ref{fig:graphCubeALimit}, points on $z^2_C - z_Bz_C = 3/4$ aren't
-contained in the area. When ($z_B, z_C$) is on this parabola, the face
-$O_2$ is tangent to $O_5$. Moreover when
-$(z_B, z_C) = (\sqrt{6} / 4, \sqrt{6}/2)$, the face $O_3$ is also tangent
-to $O_4$.
+In the same way of calculations, we have similar results in case of types 2, 3, 4, 5, 8, and 9.  We show the parameter spaces in each case.
 
 \begin{figure}[h!tbp]
  \begin{minipage}[]{0.5\textwidth}
  \centering
  \includegraphics[width=2in,
  keepaspectratio]{./img/graph/cubeB.jpg}
- \caption{Parameter space of case $B$}
+ \caption{Parameter space of type 2}
  \label{fig:graphCubeB}
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[]{0.5\textwidth}
-  case(b)
+  type 2
   \centering
   \begin{align*}
-   (1)& -2\sqrt{3} z_B z_C + 54 - 30\sqrt{3} = 0\\
-   (2)& -3z_B^2 + 4 z_B z_C + 15/4 = 0\\
-   (3)& +2z_B z_C - 3z_C^2 + 3/4 = 0
+   (1)& -2\sqrt{3} z_A z_B + 54 - 30\sqrt{3} = 0\\
+   (2)& -3z_A^2 + 4 z_A z_B + 15/4 = 0\\
+   (3)& +2z_A z_B - 3z_B^2 + 3/4 = 0
   \end{align*}
  \end{minipage}
 \end{figure}
@@ -2098,17 +2078,17 @@ to $O_4$.
  \centering
  \includegraphics[width=2in,
  keepaspectratio]{./img/graph/cubeC.jpg}
- \caption{Parameter space of case $C$}
+ \caption{Parameter space of type 3}
  \label{fig:graphCubeC}
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[]{0.5\textwidth}
   \centering
-  case(c)
+  type 3
   \begin{align*}
-   (1)& -\sqrt{3}z_B^2 - 2\sqrt{3}z_Bz_C + 90 - 51\sqrt{3} = 0\\
-   (2)& -3\sqrt{3}z_B^2 + 4\sqrt{3}z_B z_C + 90 - 48\sqrt{3} = 0\\
-   (3)& z_B^2 + 2 z_B z_C - 5z_C^2 + 9/4 = 0
+   (1)& -\sqrt{3}z_A^2 - 2\sqrt{3}z_Az_B + 90 - 51\sqrt{3} = 0\\
+   (2)& -3\sqrt{3}z_A^2 + 4\sqrt{3}z_A z_B + 90 - 48\sqrt{3} = 0\\
+   (3)& z_A^2 + 2 z_A z_B - 5z_B^2 + 9/4 = 0
   \end{align*}
  \end{minipage}
  \hspace*{\fill}
@@ -2121,17 +2101,17 @@ to $O_4$.
  \centering
  \includegraphics[width=2in,
  keepaspectratio]{./img/graph/cubeD.jpg}
- \caption{Parameter space of case $D$}
+ \caption{Parameter space of type 4}
  \label{fig:graphCubeD}
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[]{0.5\textwidth}
   \centering
-  case(d)
+  type 4
   \begin{align*}
-   (1)& -3z_B^2 - 6z_B z_C - z_C^2 -60 +36\sqrt{3} = 0\\
-   (2)& -15 z_B^2 + 6z_Bz_C + z_C^2 - 120 + 72\sqrt{3} = 0\\
-   (3)& 3z_B^2 + 6z_Bz_C - 5z_C^2 - 120 + 72 \sqrt{3} = 0
+   (1)& -3z_A^2 - 6z_A z_B - z_B^2 -60 +36\sqrt{3} = 0\\
+   (2)& -15 z_A^2 + 6z_Az_B + z_B^2 - 120 + 72\sqrt{3} = 0\\
+   (3)& 3z_A^2 + 6z_Az_B - 5z_B^2 - 120 + 72 \sqrt{3} = 0
   \end{align*}
  \end{minipage}
  \hspace*{\fill}
@@ -2144,17 +2124,17 @@ to $O_4$.
  \centering
  \includegraphics[width=2in,
  keepaspectratio]{./img/graph/cubeE.jpg}
- \caption{Parameter space of case $E$}
+ \caption{Parameter space of type 5}
  \label{fig:graphCubeE}
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[]{0.5\textwidth}
   \centering
-  case(e)
+  type 5
   \begin{align*}
-   (1)& -6z_Bz_C - z_C^2 + 9/4 = 0\\
-   (2)& 7z_B^2 - 6z_Bz_C - z_C^2 - 3 = 0\\
-   (3)& z_Bz_C - z_C^2 - 24 + 14\sqrt{3} = 0
+   (1)& -6z_Az_B - z_B^2 + 9/4 = 0\\
+   (2)& 7z_A^2 - 6z_Az_B - z_B^2 - 3 = 0\\
+   (3)& z_Az_B - z_B^2 - 24 + 14\sqrt{3} = 0
   \end{align*}
  \end{minipage}
  \hspace*{\fill}
@@ -2167,17 +2147,17 @@ to $O_4$.
  \centering
  \includegraphics[width=2in,
  keepaspectratio]{./img/graph/cubeH.jpg}
- \caption{Parameter space of case $H$}
+ \caption{Parameter space of type 8}
  \label{fig:graphCubeH}
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[]{0.5\textwidth}
   \centering
-  case(h)
+  type 8
   \begin{align*}
-   (1)& -3z_B^2 - 2z_Bz_C + 3/4 = 0\\
-   (2)& -3z_B^2 + 3 z_Bz_C + 2 = 0\\
-   (3)&  3z_B^2 + 2z_Bz_C -5z_C^2 + 3 = 0
+   (1)& -3z_A^2 - 2z_Az_B + 3/4 = 0\\
+   (2)& -3z_A^2 + 3 z_Az_B + 2 = 0\\
+   (3)&  3z_A^2 + 2z_Az_B -5z_B^2 + 3 = 0
   \end{align*}
  \end{minipage}
  \hspace*{\fill}
@@ -2190,17 +2170,17 @@ to $O_4$.
  \centering
  \includegraphics[width=2in,
  keepaspectratio]{./img/graph/cubeI.jpg}
- \caption{Parameter space of case $I$}
+ \caption{Parameter space of type 9}
  \label{fig:graphCubeI}
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[]{0.5\textwidth}
   \centering
-  case(i)
+  type 9
   \begin{align*}
-   (1)& -2z_Bz_C - z_C^2 + 1 = 0\\
-   (2)& -3z_B^2 + 2 z_B z_C + z_C^2 + 2 = 0\\
-   (3)& z_Bz_C - z_C^2 - 8 + 6\sqrt{2} = 0
+   (1)& -2z_Az_B - z_B^2 + 1 = 0\\
+   (2)& -3z_A^2 + 2 z_A z_B + z_B^2 + 2 = 0\\
+   (3)& z_Az_B - z_B^2 - 8 + 6\sqrt{2} = 0
   \end{align*}
  \end{minipage}
  \hspace*{\fill}
@@ -2208,57 +2188,50 @@ to $O_4$.
 
 \noindent(Figure \ref{fig:graphCubeI} near here)
 
-In the same way, we have a similar result in case 
-$(b), (c), (d), (e), (h), (i)$. 
-The figures above are parameter space in each case.
-We show parameter spaces not considering symmetry.
 
-In case $(f), (g), (j), and (k)$, there is no solution of $(z_B, z_C)$
-to be a hexahedron. In fact, in case (f),
+In case of type 6, 7, 10, and 11, there is no solution of parameters to be a cube.  We can obtain systems of inequalities but there are no intersection of these systems.  In fact, in case of type 6,
 \begin{align*}
 \begin{cases}
- 0 &< \dfrac{z_Bz_C}{\sqrt{3}} < \dfrac{\sqrt{3}}{4} \\
- 0 &< \dfrac{1 + z^2_B - z_Bz_C}{2} < \dfrac{1}{2} \\
- 0 &< \dfrac{3 + z^2_C - z_Bz_C}{2\sqrt{3}} < \dfrac{\sqrt{3}}{2}.
+ 0 &< \dfrac{z_Az_B}{\sqrt{3}} < \dfrac{\sqrt{3}}{4} \\
+ 0 &< \dfrac{1 + z^2_B - z_Az_B}{2} < \dfrac{1}{2} \\
+ 0 &< \dfrac{3 + z^2_C - z_Az_B}{2\sqrt{3}} < \dfrac{\sqrt{3}}{2}.
+\end{cases}
+\end{align*}
+In case of type 7,
+\begin{align*}
+\begin{cases}
+0 &< \dfrac{z_Az_B}{2} < \dfrac{\sqrt{3}}{2 + \sqrt{3}} \\
+0 &< \dfrac{2 + 2z^2_B - z_Az_B}{4} < \dfrac{1}{2} \\
+0 &< \dfrac{\sqrt{3}(6 + 2z^2_C - 3z_Az_B)}{12} < \dfrac{\sqrt{3}}{2}
 \end{cases}
 \end{align*}
 
-In case (g),
-
-\begin{align*}
-\begin{cases}
-0 &< \dfrac{z_Bz_C}{2} < \dfrac{\sqrt{3}}{2 + \sqrt{3}} \\
-0 &< \dfrac{2 + 2z^2_B - z_Bz_C}{4} < \dfrac{1}{2} \\
-0 &< \dfrac{\sqrt{3}(6 + 2z^2_C - 3z_Bz_C)}{12} < \dfrac{\sqrt{3}}{2}
-\end{cases}
-\end{align*}
-
-In case (j),
+In case of type 10,
 
 \begin{align*}
  \begin{cases}
-  0 &< \dfrac{z_Bz_C}{2} < \dfrac{1}{2}\\
-  0 &< \dfrac{\sqrt{2}(2 + z^2_B - z_B z_C)}{4} < \dfrac{\sqrt{2}}{2}\\
-  0 &< \dfrac{\sqrt{2}(2 + z^2_C - z_B z_C)}{4} < \dfrac{\sqrt{2}}{2}
+  0 &< \dfrac{z_Az_B}{2} < \dfrac{1}{2}\\
+  0 &< \dfrac{\sqrt{2}(2 + z^2_B - z_A z_B)}{4} < \dfrac{\sqrt{2}}{2}\\
+  0 &< \dfrac{\sqrt{2}(2 + z^2_C - z_A z_B)}{4} < \dfrac{\sqrt{2}}{2}
  \end{cases}
 \end{align*}
 
-In case (k),
+In case of type 11,
 
 \begin{align*}
  \begin{cases}
-  0 &< \dfrac{2z_Bz_C}{\sqrt{6} + \sqrt{2}} < \dfrac{1}{\cos(\pi/12+1)}\\
-  0 &< \dfrac{\sqrt{2}(2 (1 + \sqrt{3}) + (1 + \sqrt{3})z^2_B -2z_Bz_C)}
+  0 &< \dfrac{2z_Az_B}{\sqrt{6} + \sqrt{2}} < \dfrac{1}{\cos(\pi/12+1)}\\
+  0 &< \dfrac{\sqrt{2}(2 (1 + \sqrt{3}) + (1 + \sqrt{3})z^2_B -2z_Az_B)}
   {2(\sqrt{6} + \sqrt{2})} < \dfrac{\sqrt{2}}{2}\\
   0 &< \dfrac{\sqrt{2}(2 (1 + \sqrt{3}) + (1 + \sqrt{3})z^2_C
-  -2\sqrt{3}z_Bz_C)}
+  -2\sqrt{3}z_Az_B)}
   {2(\sqrt{6} + \sqrt{2})} < \dfrac{\sqrt{2}}{2}
  \end{cases}
 \end{align*}
-In these cases, there is no answer for ($z_B, z_C$).
+In these cases, there is no answer for ($z_A, z_B$).
 
 % We complete the proof of the main Theorem \ref{main}. % main theorem
-
+% pending this one and the next one.
 \subsubsection{Group $G$ and the limit set $\Delta(G)$}
 Let $\gamma_i \in \text{M\"ob}(S^3)$ be the inversion of $O_i$ for $i =
 1,...,6$.
@@ -2288,9 +2261,9 @@ previous section, the limit set contains an infinity point $\infty$. So
 we transform $O_1, ..., O_6$ by an inversion of a proper sphere in
 order to make $\Lambda(G)$ doesn't contain the infinity point.
 
-Only when $(z_B, z_C) =(0, 0), \Lambda(G)$ is a round sphere, and hence
+Only when $(z_A, z_B) =(0, 0), \Lambda(G)$ is a round sphere, and hence
 $G$ is fuchsian. In other cases, we get a homotopy to the case 
-$(z_B, z_C) = (0, 0)$, we know that $G$ is quasi-fuchsian.
+$(z_A, z_B) = (0, 0)$, we know that $G$ is quasi-fuchsian.
 
 \subsubsection{Extended Schottky group for a cube with spherical faces}\label{extend}
 
@@ -2327,7 +2300,7 @@ of $G$.
 \begin{proof}
 See Figure \ref{fig:infTriangle}. Since we assume that $n_{ij} = \pi/3$, we have
 \begin{align*}
- A(1, 0, 0), B(-\frac{1}{2}, \dfrac{\sqrt{3}}{2}, z_B), C(-\frac{1}{2}, -\frac{\sqrt{3}}{2}, z_C).
+ A(1, 0, 0), B(-\frac{1}{2}, \dfrac{\sqrt{3}}{2}, z_A), C(-\frac{1}{2}, -\frac{\sqrt{3}}{2}, z_B).
 \end{align*}
 \end{proof}
 
@@ -2348,7 +2321,7 @@ See Figure \ref{fig:sideFace}. In the same way, we have
 Using these, we have coordinates of $E$. In fact,
 \begin{align*}
  E(-\dfrac{1}{2},\dfrac{\sqrt{3}}{2}\dfrac{r_6-r_4}{r_6 + r_4},
- \dfrac{z_Br_6 + z_C r_4}{r_6 + r_4}).
+ \dfrac{z_Ar_6 + z_B r_4}{r_6 + r_4}).
 \end{align*}
 And we have
 \begin{align*}
@@ -2359,18 +2332,18 @@ point. Let $G'$ be the intersection. Using Menelaus's theorem, we have
 $AG':G'E = r_2r_4 + r_2r_6:r_4r_6$ and
 \begin{align*}
  G' = \dfrac{1}{R}(r_4r_6 - \dfrac{1}{2}(r_2r_4 + r_2r_6), 
- \dfrac{\sqrt{3}}{2}r_2(r_6 - r_4), r_2(z_Br_6 + z_Cr_4)),
+ \dfrac{\sqrt{3}}{2}r_2(r_6 - r_4), r_2(z_Ar_6 + z_Br_4)),
 \end{align*}
 where $R = r_2r_4 + r_4r_6 + r_6r_2.$ It follows that
 \begin{align*}
  \overline{O_2G'}^2 = (1 - r_2 - \dfrac{1}{2R}(2r_4r_6 - (r_2r_4 +
  r_2r_6)))^2 + \dfrac{3r^2_2}{4R^2}(r_6 - r_4)^2 +
- \dfrac{r_2^2}{R^2}(z_Br_6 + z_Cr_4)^2
+ \dfrac{r_2^2}{R^2}(z_Ar_6 + z_Br_4)^2
 \end{align*}
 Using Proposition \ref{angles}, we have $\overline{O_2G'} = r_2$.
 Remark that we
-use equations $z_B^2 = 3(r_2 + r_4 - 1), z_C^2 = 3(r_2 + r_6 - 1)$, and
-$2z_Bz_C = 6r_2 - 3$.
+use equations $z_A^2 = 3(r_2 + r_4 - 1), z_B^2 = 3(r_2 + r_6 - 1)$, and
+$2z_Az_B = 6r_2 - 3$.
 
 In the similar way, we get $\overline{O_4G'} = r_4$ and 
 $\overline{O_6G'} = r_6$. These mean that $G' = G$.
@@ -2806,9 +2779,9 @@ They have an organic shape.
 The sphairahedron has three types of combinations of face angles.
 It has one parameter.
 \begin{align*}
- In~case~(a),&~- \sqrt{\dfrac{10 - 4 \sqrt{3}}{3 + 2 \sqrt{3}}} < z_B <\sqrt{\dfrac{10 - 4 \sqrt{3}}{3 + 2 \sqrt{3}}}.\\ 
- In~case~(b),&~-\sqrt{8\sqrt{2}-10} < z_B < \sqrt{8\sqrt{2} - 10}.\\
- In~case~(c),&~-\sqrt{2(8\sqrt{3} - 13)} < z_B < \sqrt{2(8\sqrt{3} - 13)}.
+ In~case~(a),&~- \sqrt{\dfrac{10 - 4 \sqrt{3}}{3 + 2 \sqrt{3}}} < z_A <\sqrt{\dfrac{10 - 4 \sqrt{3}}{3 + 2 \sqrt{3}}}.\\ 
+ In~case~(b),&~-\sqrt{8\sqrt{2}-10} < z_A < \sqrt{8\sqrt{2} - 10}.\\
+ In~case~(c),&~-\sqrt{2(8\sqrt{3} - 13)} < z_A < \sqrt{2(8\sqrt{3} - 13)}.
 \end{align*}
 
 \subsubsection{Cake-type 3}
@@ -2957,8 +2930,8 @@ The sphairahedron has two types of combinations of dihedral angles.
 There is one parameter, and they are shown below.
 
 \begin{align*}
-   In~case~(a),&~-\sqrt{\frac{-12 + 8 \sqrt{3}}{3}} < z_B < \sqrt{\frac{-12 + 8 \sqrt{3}}{3}}.\\
-   In~case~(b),&~-2\sqrt{\sqrt{2} - 1} < z_B < 2\sqrt{\sqrt{2} -1}.
+   In~case~(a),&~-\sqrt{\frac{-12 + 8 \sqrt{3}}{3}} < z_A < \sqrt{\frac{-12 + 8 \sqrt{3}}{3}}.\\
+   In~case~(b),&~-2\sqrt{\sqrt{2} - 1} < z_A < 2\sqrt{\sqrt{2} -1}.
 \end{align*}
 
 
@@ -3327,13 +3300,13 @@ We feel fractal structures and its symmetry by hand.
  \hspace*{\fill}
 \end{figure}
 
-Cube type sphairahedron type (a) is controlled by two parameters $z_b$
-and $z_c$.
+Cube type sphairahedron type (a) is controlled by two parameters $z_A$
+and $z_B$.
 When both parameters are zero, the limit set becomes plane (or
 sphere), and as Figure \ref{fig:planes}\subref{fig:planeCube} there are
 regular patterns. We will analyze the patterns.
 
-When $z_b = z_c = 0$, every center of the three spheres $C_A, C_B, C_C$
+When $z_A = z_B = 0$, every center of the three spheres $C_A, C_B, C_C$
 are on the xy-plane. So about the face of the triangle prism and all of the
 $C_A, C_B, C_C$, we consider crossing with xy-plane, we obtain Figure
 \ref{fig:obsTriangle}.
@@ -3348,7 +3321,7 @@ the triangles and inversion transformation related to three circles
 are represented by
 $f(z) = \dfrac{a\overline{z} + b}{c\overline{z}+ d} (a, b, c, d \in O_3)$
 
-From this, we can find the pattern emerge in cube type (a) $z_b = z_c$
+From this, we can find the pattern emerge in cube type (a) $z_A = z_B$
 are originated to broad M\"obius transformation $O_3$
 
 A similar phenomenon happens in the hexahedral cake type sphairahedron.
