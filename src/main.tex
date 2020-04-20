@@ -3381,7 +3381,7 @@ sphairahedra of cake type one.
 \section{Appendix - data}
 
 \subsection{Cube}
-Type 1:\par
+Type 1:
 \begin{align*}
 \overline{D_1}&= \{ (x,y,z) \mid \frac{1}{2} \le x \} \cup \{ \infty \}\\
 \overline{D_3}&=\{(x,y,z) \mid \frac{1}{2} \le -\frac{1}{2}x-\frac{\sqrt{3}}{2}y \} \cup\{\infty\}\\
@@ -3389,17 +3389,32 @@ Type 1:\par
 \overline{D_2}&=\{(x,y,z) \mid (x-x_2)^2+(y-y_2)^2+z^2<r_2^2 \} \\
 \overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+(z-z_A)^2<r_4^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_B)^2<r_6^2 \} \\
- r_2 &= \dfrac{2z_Az_B + 3}{6}.\\
-(x_2, y_2) &= \left(\frac{1}{2}(1-r_2), -\frac{\sqrt{3}}{2}(1-r_2)\right),\\
- r_4 &= \dfrac{2z_A(z_A-z_B) + 3}{6}.\\
-(x_4, y_4) &= \left(\frac{1}{2}(1-r_4), \frac{\sqrt{3}}{2}(1-r_4)\right),\\
- r_6 &= \dfrac{2z_B(z_B-z_A) + 3}{6}.
-(x_6, y_6) &= \left(r_6-1, 0\right),\\
+ r_2 &= \dfrac{2z_Az_B + 3}{6}, \qquad
+(x_2, y_2) = \left(\frac{1}{2}(1-r_2), -\frac{\sqrt{3}}{2}(1-r_2)\right),\\
+ r_4 &= \dfrac{2z_A(z_A-z_B) + 3}{6}, \qquad
+(x_4, y_4) = \left(\frac{1}{2}(1-r_4), \frac{\sqrt{3}}{2}(1-r_4)\right),\\
+ r_6 &= \dfrac{2z_B(z_B-z_A) + 3}{6}, \qquad
+(x_6, y_6) = \left(r_6-1, 0\right),
 \end{align*} 
-The parameter space is as seen in Figure \ref{fig:graphCubeALimit}.
-\[
-0 \le z_A,\ z_B \ge 2 z_A, \ z_B(z_B-z_A)<\frac{3}{4}
-\]
+The parameter space is as follows.
+\begin{figure}[h]
+ \begin{minipage}[]{0.5\textwidth}
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeALimit.jpg}
+ \caption{Parameter space of type 1}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[]{0.5\textwidth}
+  \centering
+\begin{align*}
+(1)& z_Az_B = 3/4\\
+(2)& z_B^2 - z_A z_B = 3/4\\
+(3)& z_A^2 - z_A z_B = 3/4
+\end{align*}
+ \end{minipage}
+\end{figure}
+
 \bigskip\par
 Type 2:%図はこちらに移す。
 \bigskip\par
@@ -3415,7 +3430,7 @@ Type 9:
 
 
 \subsection{Cake \#2}
-Type 1:\par
+Type 1:
 \begin{align*}
 \overline{D_1}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_2}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
@@ -3423,14 +3438,14 @@ Type 1:\par
 \overline{D_4}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_5}&=\{(x,y,z) \mid (x-x_5)^2+(y-y_5)^2+z^5<r_5^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_A)^2<r_6^2 \} \\
-r_5 &= *** \\
-(x_5, y_5) &= *** \\
-r_6 &= *** \\
-(x_6, y_6) &= *** \\
+r_5 &= ***, \qquad
+(x_5, y_5) = ***, \\
+r_6 &= ***, \qquad
+(x_6, y_6) = ***, \\
 \end{align*}
 The parameter space is $- \sqrt{\dfrac{10 - 4 \sqrt{3}}{3 + 2 \sqrt{3}}} < z_A <\sqrt{\dfrac{10 - 4 \sqrt{3}}{3 + 2 \sqrt{3}}}$.
 \bigskip\par
-Type 2:\par
+Type 2:
 \begin{align*}
 \overline{D_1}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_2}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
@@ -3438,14 +3453,14 @@ Type 2:\par
 \overline{D_4}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_5}&=\{(x,y,z) \mid (x-x_5)^2+(y-y_5)^2+z^5<r_5^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_A)^2<r_6^2 \} \\
-r_5 &= *** \\
-(x_5, y_5) &= *** \\
-r_6 &= *** \\
-(x_6, y_6) &= *** \\
+r_5 &= ***, \qquad
+(x_5, y_5) = ***, \\
+r_6 &= ***, \qquad
+(x_6, y_6) = ***, \\
 \end{align*}
 The parameter space is $-\sqrt{8\sqrt{2}-10} < z_A < \sqrt{8\sqrt{2} - 10}$.
 \bigskip\par
-Type 3:\par
+Type 3:
 \begin{align*}
 \overline{D_1}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_2}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
@@ -3453,17 +3468,17 @@ Type 3:\par
 \overline{D_4}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_5}&=\{(x,y,z) \mid (x-x_5)^2+(y-y_5)^2+z^5<r_5^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_A)^2<r_6^2 \} \\
-r_5 &= *** \\
-(x_5, y_5) &= *** \\
-r_6 &= *** \\
-(x_6, y_6) &= *** \\
+r_5 &= ***, \qquad
+(x_5, y_5) = ***, \\
+r_6 &= ***, \qquad
+(x_6, y_6) = ***, \\
 \end{align*}
 The parameter space is $-\sqrt{2(8\sqrt{3} - 13)} < z_A < \sqrt{2(8\sqrt{3} - 13)}$.
 
 
 
 \subsection{Cake \#3}
-Type 1:\par
+Type 1:
 \begin{align*}
 \overline{D_1}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_2}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
@@ -3471,14 +3486,14 @@ Type 1:\par
 \overline{D_4}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_5}&=\{(x,y,z) \mid (x-x_5)^2+(y-y_5)^2+z^5<r_5^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_A)^2<r_6^2 \} \\
-r_5 &= *** \\
-(x_5, y_5) &= *** \\
-r_6 &= *** \\
-(x_6, y_6) &= *** \\
+r_5 &= ***, \qquad
+(x_5, y_5) = ***, \\
+r_6 &= ***, \qquad
+(x_6, y_6) = ***, \\
 \end{align*}
 The parameter space is $-\sqrt{\frac{-12 + 8 \sqrt{3}}{3}} < z_A < \sqrt{\frac{-12 + 8 \sqrt{3}}{3}}$.
 \bigskip\par
-Type 2:\par
+Type 2:
 \begin{align*}
 \overline{D_1}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_2}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
@@ -3486,10 +3501,10 @@ Type 2:\par
 \overline{D_4}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_5}&=\{(x,y,z) \mid (x-x_5)^2+(y-y_5)^2+z^5<r_5^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_A)^2<r_6^2 \} \\
-r_5 &= *** \\
-(x_5, y_5) &= *** \\
-r_6 &= *** \\
-(x_6, y_6) &= *** \\
+r_5 &= ***, \qquad
+(x_5, y_5) = ***, \\
+r_6 &= ***, \qquad
+(x_6, y_6) = ***, \\
 \end{align*}
 The parameter space is $-2\sqrt{\sqrt{2} - 1} < z_A < 2\sqrt{\sqrt{2} -1}$.
 
