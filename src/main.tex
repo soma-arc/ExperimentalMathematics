@@ -9,8 +9,8 @@
 \usepackage[format=hang]{caption}
 \usepackage[format=hang, subrefformat=parens]{subcaption}
 \captionsetup{compatibility=false}
-\usepackage{algorithm}
-\usepackage{algorithmic}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
 \usepackage{hyperref}
 \usepackage{amsmath,amssymb}
 
@@ -372,7 +372,7 @@ interesting geometry problems from here.
 \subref{fig:sphaira-step10}
 \subref{fig:sphaira-final} near here)
 
-\begin{figure}[H]
+\begin{figure}[h!tbp]
  \begin{minipage}[t]{0.18\textwidth}
   \centering
   \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/step1.jpg}
@@ -1009,7 +1009,7 @@ Thus $\cos (\pi - \theta_{23})=\cos(\theta_{12}+\theta_{13})$ and $\theta_{23} =
 \end{figure}
 
 %tetrahedron col.6
-\begin{figure}[H]
+\begin{figure}[h!tbp]
   \begin{minipage}[t]{0.49\textwidth}
    \centering
    \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/tetrahedron/sphairahedronFinite.jpg}
@@ -1224,7 +1224,7 @@ There are two polyhedral structures of pentahedra. One is a quadrangular pyramid
 \end{figure}
 
 %%% quadrangular pyramid col.5
-\begin{figure}[H]
+\begin{figure}[h!tbp]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
    \centering
@@ -2149,7 +2149,7 @@ Figures \ref{fig:cubeFinite}, \ref{fig:cubeInf} give rendered images of cubes an
 \subref{fig:cubeInfiniteSphairahedron}
 \subref{fig:cubeInfiniteLimitset} near here)
 
-\begin{figure}[H]
+\begin{figure}[h!tbp]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
    \centering
@@ -2399,7 +2399,7 @@ We may assume that the three half-spaces $\overline{D_1}, \overline{D_3}, \overl
   \label{fig:cake2List}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h!tbp]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
    \centering
@@ -2443,7 +2443,7 @@ We may assume that the three half-spaces $\overline{D_1}, \overline{D_3}, \overl
  \end{minipage}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h!tbp]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
    \centering \includegraphics[width=1.35in, height=1.35in,
@@ -2486,7 +2486,7 @@ We may assume that the three half-spaces $\overline{D_1}, \overline{D_3}, \overl
  \end{minipage}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h!tbp]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
    \centering \includegraphics[width=1.35in, height=1.35in,
@@ -2589,7 +2589,7 @@ The parameter space of each type is one dimensional.  The precise data are as fo
   \label{fig:cake3list}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h!tbp]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
    \centering \includegraphics[width=1.35in, height=1.35in,
@@ -2632,7 +2632,7 @@ The parameter space of each type is one dimensional.  The precise data are as fo
  \end{minipage}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h!tbp]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
    \centering \includegraphics[width=1.35in, height=1.35in,
@@ -2692,7 +2692,7 @@ There is one parameter, and they are shown below.
 (Figure \ref{fig:pentagonalPyramid} near here)
 (Figure \ref{fig:triangularDipyramid} near here)
 
-\begin{figure}[H]
+\begin{figure}[h!tbp]
   \begin{minipage}[t]{0.3\textwidth}
    \centering 
    \includegraphics[width=1in, height=1in,
@@ -2778,7 +2778,7 @@ Because of the reasons, we stop the visualization experiment at the hexahedra.
 \subref{fig:visualizeSpheresStep10}
 \subref{fig:visualizeSpheresFinal} near here)
 
-\begin{figure}[H]
+\begin{figure}[h!tbp]
  \begin{minipage}[t]{0.18\textwidth}
   \centering
   \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep1.jpg}
@@ -3174,7 +3174,7 @@ For example, there are other patterns in Figure
 \subref{fig:upperPrismSmallHole}
 \subref{fig:upperPrismBigHole} near here)
 
-\begin{figure}[H]
+\begin{figure}[h!tbp]
  \begin{minipage}[t]{0.3\textwidth}
   \centering
   \includegraphics[width=1.3in, keepaspectratio]{./img/visualization/cubeArms.jpg}
@@ -3200,7 +3200,7 @@ For example, there are other patterns in Figure
  \hspace*{\fill}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h!tbp]
  \begin{minipage}[t]{0.3\textwidth}
   \centering
   \includegraphics[width=1.5in, keepaspectratio]{./img/visualization/cubePrism.jpg}
@@ -3327,18 +3327,18 @@ The parameter space is as follows.
 \bigskip\par
 Type 2:%図はこちらに移す。
 \begin{align*}
-\overline{D_1}&=\{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
-\overline{D_3}&=\{(x,y,z) \mid *** \} \cup\{\infty\}\\
-\overline{D_5}&=\{(x,y,z) \mid *** \} \cup\{\infty\}\\
+\overline{D_1}&=\{(x,y,z) \mid y >= -\frac{\sqrt{3}}{3}x + \frac{\sqrt{3}}{3}\} \cup \{ \infty \}\\
+\overline{D_3}&=\{(x,y,z) \mid y <= \frac{\sqrt{3}}{3}x - \frac{\sqrt{3}}{3} \} \cup\{\infty\}\\
+\overline{D_5}&=\{(x,y,z) \mid x <= -0.5 \} \cup\{\infty\}\\
 \overline{D_2}&=\{(x,y,z) \mid (x-x_2)^2+(y-y_2)^2+z^2<r_2^2 \} \\
 \overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+(z-z_A)^2<r_4^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_B)^2<r_6^2 \} \\
- r_2 &= ***, \qquad
-(x_2, y_2) = \left(***, ***\right),\\
- r_4 &= ***, \qquad
-(x_4, y_4) = \left(***, ***\right),\\
- r_6 &= ***, \qquad
-(x_6, y_6) = \left(***, ***\right),
+ r_2 &= \frac{2\sqrt{3}z_Bz_C 3\sqrt{3}}{9},  \qquad
+(x_2, y_2) = \left(1-r_2\frac{\sqrt{3}}{2}, \frac{r_2}{2}\right),\\
+ r_4 &= \frac{3z_B^2 - 4z_Bz_C + 3}{9}, \qquad
+ (x_4, y_4) = \left(-\frac{1 - r_4}{2}, \frac{(1 - r_4)\sqrt{3}}{2}\right),\\
+ r_6 &= \frac{3z_C^2 -2z_Bz_C + 6}{9}, \qquad
+(x_6, y_6) = \left(-\frac{1 - r_6}{2}, -\frac{(1 - r_4)\sqrt{3}}{2}\right),
 \end{align*} 
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
@@ -3365,18 +3365,18 @@ Type 2:%図はこちらに移す。
 \bigskip\par
 Type 3:
 \begin{align*}
-\overline{D_1}&=\{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
-\overline{D_3}&=\{(x,y,z) \mid *** \} \cup\{\infty\}\\
-\overline{D_5}&=\{(x,y,z) \mid *** \} \cup\{\infty\}\\
+\overline{D_1}&=\{(x,y,z) \mid y >= -\frac{\sqrt{3}}{3}x + \frac{\sqrt{3}}{3}\} \cup \{ \infty \}\\
+\overline{D_3}&=\{(x,y,z) \mid y <= \frac{\sqrt{3}}{3}x - \frac{\sqrt{3}}{3} \} \cup\{\infty\}\\
+\overline{D_5}&=\{(x,y,z) \mid x <= -0.5 \} \cup\{\infty\}\\
 \overline{D_2}&=\{(x,y,z) \mid (x-x_2)^2+(y-y_2)^2+z^2<r_2^2 \} \\
 \overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+(z-z_A)^2<r_4^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_B)^2<r_6^2 \} \\
- r_2 &= ***, \qquad
-(x_2, y_2) = \left(***, ***\right),\\
- r_4 &= ***, \qquad
-(x_4, y_4) = \left(***, ***\right),\\
- r_6 &= ***, \qquad
-(x_6, y_6) = \left(***, ***\right),
+ r_2 &= \frac{z_B^2 + 2z_Bz_C + 6}{5\sqrt{3}}, \qquad
+(x_2, y_2) = \left(1-\frac{r_2\sqrt{3}}{2}, \frac{r_2}{2}\right),\\
+ r_4 &= \frac{3z_B^2 - 4z_Bz_C + 3}{5\sqrt{3}}, \qquad
+(x_4, y_4) = \left(-0.5, \frac{\sqrt{3}}{2} - r_4\right),\\
+ r_6 &= \frac{-z_B^2 - 2z_Bz_C + 5z_C^2+ 9}{15}, \qquad
+(x_6, y_6) = \left(-\frac{1 - r_6}{2}, - \frac{\sqrt{3}(1 - r_4)}{2}\right),
 \end{align*} 
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
@@ -3403,18 +3403,18 @@ Type 3:
 \bigskip\par
 Type 4:
 \begin{align*}
-\overline{D_1}&=\{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
-\overline{D_3}&=\{(x,y,z) \mid *** \} \cup\{\infty\}\\
-\overline{D_5}&=\{(x,y,z) \mid *** \} \cup\{\infty\}\\
+\overline{D_1}&=\{ (x,y,z) \mid y >= \sqrt{3}x \} \cup \{ \infty \}\\
+\overline{D_3}&=\{(x,y,z) \mid y >= -\sqrt{3}x + \sqrt{3} \} \cup\{\infty\}\\
+\overline{D_5}&=\{(x,y,z) \mid y <= \frac{\sqrt{3}}{3}x - \frac{\sqrt{3}}{3} \} \cup\{\infty\}\\
 \overline{D_2}&=\{(x,y,z) \mid (x-x_2)^2+(y-y_2)^2+z^2<r_2^2 \} \\
 \overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+(z-z_A)^2<r_4^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_B)^2<r_6^2 \} \\
- r_2 &= ***, \qquad
-(x_2, y_2) = \left(***, ***\right),\\
- r_4 &= ***, \qquad
-(x_4, y_4) = \left(***, ***\right),\\
- r_6 &= ***, \qquad
-(x_6, y_6) = \left(***, ***\right),
+ r_2 &= \frac{3z_B^2 + z_C^2 + 6z_Bz_C + 6}{18}, \qquad
+(x_2, y_2) = \left(1 - r_2, 0\right),\\
+ r_4 &= \frac{15z_B^2 - z_C^2 - 6z_Bz_C + 12}{18\sqrt{3}}, \qquad
+(x_4, y_4) = \left(0.5, \frac{\sqrt{3}}{2} - r_4\right),\\
+ r_6 &= \frac{-3z_B^2 + 5z_C^2 - 6z_Bz_C + 12}{18}, \qquad
+(x_6, y_6) = \left(-\frac{1 - r_6}{2}, -\frac{\sqrt{3}(1 - r_6)}{2}\right),
 \end{align*} 
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
@@ -3441,18 +3441,18 @@ Type 4:
 \bigskip\par
 Type 5:
 \begin{align*}
-\overline{D_1}&=\{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
-\overline{D_3}&=\{(x,y,z) \mid *** \} \cup\{\infty\}\\
-\overline{D_5}&=\{(x,y,z) \mid *** \} \cup\{\infty\}\\
+\overline{D_1}&=\{ (x,y,z) \mid y >= \sqrt{3}x \} \cup \{ \infty \}\\
+\overline{D_3}&=\{(x,y,z) \mid y >= -\sqrt{3}x + \sqrt{3} \} \cup\{\infty\}\\
+\overline{D_5}&=\{(x,y,z) \mid y <= \frac{\sqrt{3}}{3}x - \frac{\sqrt{3}}{3} \} \cup\{\infty\}\\
 \overline{D_2}&=\{(x,y,z) \mid (x-x_2)^2+(y-y_2)^2+z^2<r_2^2 \} \\
 \overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+(z-z_A)^2<r_4^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_B)^2<r_6^2 \} \\
- r_2 &= ***, \qquad
-(x_2, y_2) = \left(***, ***\right),\\
- r_4 &= ***, \qquad
-(x_4, y_4) = \left(***, ***\right),\\
- r_6 &= ***, \qquad
-(x_6, y_6) = \left(***, ***\right),
+ r_2 &= \frac{z_C^2 + 6z_Bz_C + 3}{7\sqrt{3}}, \qquad
+(x_2, y_2) = \left(1 - \frac{\sqrt{3}}{2}r_2, \frac{r_2}{2}\right),\\
+ r_4 &= \frac{7z_B^2 - z_C^2 -6z_Bz_C + 4}{14}, \qquad
+(x_4, y_4) = \left(\frac{1 + r_4}{2}, (1 - r_4)\frac{\sqrt{3}}{2}\right),\\
+ r_6 &= \frac{2z_C^2 - 2z_Bz_C + 6}{7}, \qquad
+(x_6, y_6) = \left(-\frac{1 - r_6}{2}, -\frac{\sqrt{3}}{2}(1 - r_6)\right),
 \end{align*} 
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
@@ -3479,18 +3479,18 @@ Type 5:
 \bigskip\par
 Type 8:
 \begin{align*}
-\overline{D_1}&=\{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
-\overline{D_3}&=\{(x,y,z) \mid *** \} \cup\{\infty\}\\
-\overline{D_5}&=\{(x,y,z) \mid *** \} \cup\{\infty\}\\
+\overline{D_1}&=\{ (x,y,z) \mid x <= 0 \} \cup \{ \infty \}\\
+\overline{D_3}&=\{(x,y,z) \mid y >= -x + 1 \} \cup\{\infty\}\\
+\overline{D_5}&=\{(x,y,z) \mid y <= x - 1 \} \cup\{\infty\}\\
 \overline{D_2}&=\{(x,y,z) \mid (x-x_2)^2+(y-y_2)^2+z^2<r_2^2 \} \\
 \overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+(z-z_A)^2<r_4^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_B)^2<r_6^2 \} \\
- r_2 &= ***, \qquad
-(x_2, y_2) = \left(***, ***\right),\\
- r_4 &= ***, \qquad
-(x_4, y_4) = \left(***, ***\right),\\
- r_6 &= ***, \qquad
-(x_6, y_6) = \left(***, ***\right),
+ r_2 &= \frac{z_C^2 + 2z_Bz_C + 2}{6}, \qquad
+(x_2, y_2) = \left(1 - r_2, 0\right),\\
+ r_4 &= \frac{-z_C^2 + 3z_B^2 - 2z_Bz_C + 4}{6\sqrt{2}}, \qquad
+(x_4, y_4) = \left(\frac{r_4}{\sqrt{2}}, 1 - \frac{r_4}{\sqrt{2}}\right),\\
+ r_6 &= \frac{z_C^2 - z_Bz_C + 2}{3}, \qquad
+(x_6, y_6) = \left(0, -1 + r_6\right),
 \end{align*} 
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
@@ -3517,18 +3517,18 @@ Type 8:
 \bigskip\par
 Type 9:
 \begin{align*}
-\overline{D_1}&=\{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
-\overline{D_3}&=\{(x,y,z) \mid *** \} \cup\{\infty\}\\
-\overline{D_5}&=\{(x,y,z) \mid *** \} \cup\{\infty\}\\
+\overline{D_1}&=\{ (x,y,z) \mid x <= 0 \} \cup \{ \infty \}\\
+\overline{D_3}&=\{(x,y,z) \mid y >= -x + 1 \} \cup\{\infty\}\\
+\overline{D_5}&=\{(x,y,z) \mid y <= x - 1 \} \cup\{\infty\}\\
 \overline{D_2}&=\{(x,y,z) \mid (x-x_2)^2+(y-y_2)^2+z^2<r_2^2 \} \\
 \overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+(z-z_A)^2<r_4^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_B)^2<r_6^2 \} \\
- r_2 &= ***, \qquad
-(x_2, y_2) = \left(***, ***\right),\\
- r_4 &= ***, \qquad
-(x_4, y_4) = \left(***, ***\right),\\
- r_6 &= ***, \qquad
-(x_6, y_6) = \left(***, ***\right),
+ r_2 &= \frac{z_Bz_C}{2}, \qquad
+(x_2, y_2) = \left(1-r_2, 0\right),\\
+ r_4 &= \frac{\sqrt{2}(z_B^2 - z_Bz_C + 2)}{4}, \qquad
+(x_4, y_4) = \left(\frac{r_4}{\sqrt{2}}, 1 - \frac{r_4}{\sqrt{2}}\right),\\
+ r_6 &= \frac{\sqrt{2}(z_C^2 - z_Bz_C + 2)}{4}, \qquad
+(x_6, y_6) = \left(\frac{r_6}{\sqrt{2}}, \frac{r_6}{\sqrt{2}} - 1\right),
 \end{align*} 
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
@@ -3557,7 +3557,7 @@ Type 9:
 \subsection{Cake \#2}
 Type 1:
 \begin{align*}
-\overline{D_1}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
+\overline{D_1}&= \{ (x,y,z) \mid y >= -x + 1 \} \cup \{ \infty \}\\
 \overline{D_2}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_3}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_4}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
@@ -3572,7 +3572,7 @@ The parameter space is $- \sqrt{\dfrac{10 - 4 \sqrt{3}}{3 + 2 \sqrt{3}}} < z_A <
 \bigskip\par
 Type 2:
 \begin{align*}
-\overline{D_1}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
+\overline{D_1}&= \{ (x,y,z) \mid y >= -x + 1 \} \cup \{ \infty \}\\
 \overline{D_2}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_3}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_4}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
@@ -3587,7 +3587,7 @@ The parameter space is $-\sqrt{8\sqrt{2}-10} < z_A < \sqrt{8\sqrt{2} - 10}$.
 \bigskip\par
 Type 3:
 \begin{align*}
-\overline{D_1}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
+\overline{D_1}&= \{ (x,y,z) \mid y >= -x + 1 \} \cup \{ \infty \}\\
 \overline{D_2}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_3}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
 \overline{D_4}&= \{ (x,y,z) \mid *** \} \cup \{ \infty \}\\
