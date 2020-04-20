@@ -2828,6 +2828,168 @@ Because of the reasons, we stop the visualization experiment at the hexahedra.
 
 \section{Observation}
 
+\subsection{Visualization}
+
+
+\noindent(Figure \ref{fig:visualizeSpheres}
+\subref{fig:visualizeSpheresStep1}
+\subref{fig:visualizeSpheresStep2}
+\subref{fig:visualizeSpheresStep5}
+\subref{fig:visualizeSpheresStep10}
+\subref{fig:visualizeSpheresFinal} near here)
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep1.jpg}
+  \subcaption{Step 1}
+  \label{fig:visualizeSpheresStep1}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep2.jpg}
+  \subcaption{Step 2}
+  \label{fig:visualizeSpheresStep2}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep5.jpg}
+  \subcaption{Step 5}
+  \label{fig:visualizeSpheresStep5}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep10.jpg}
+  \subcaption{Step 10}
+  \label{fig:visualizeSpheresStep10}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereFinal.jpg}
+  \subcaption{Final image}
+  \label{fig:visualizeSpheresFinal}
+ \end{minipage}
+ \hspace*{\fill}
+ \caption{Tiling of a finite cube-type sphairahedron.}
+ \label{fig:visualizeSpheres}
+\end{figure}
+
+In section \ref{constructFractal}, we show how to construct the tiling
+patterns of sphairahedra and their coloring.
+After we compute sphairahedra, we have to draw an infinite number of
+sphairahedra, and it takes much time.
+So, we use an algorithm to render fractals based on
+inversions. It is called Iterated Inversion System (IIS.)
+We successfully implement a fast rendering algorithm
+combining IIS and sphere tracing, that is, a kind of ray tracing technique.
+For more details, see also \cite{bridges2017} and \cite{bridges2018}.
+
+There are two approaches of visualization.
+First, tile sphairahedra directory using elements of the group.
+Secondly, we prepare the sum of spheres includes a sphairahedron, and we
+transform the spheres.
+See Figure \ref{fig:visualizeSpheres}.
+Four spheres transformed by elements of the group, and finally, we get
+quasi-sphere the same to the tiling pattern of the sphairahedron.
+
+We can obtain a quasi-sphere from applying group to the sum of the spheres,
+including sphairahedra. The proof is as below.
+
+For each vertex of the sphairahedron, we consider \textit{maximum vertex
+sphere} defined below.
+
+\begin{definition}
+ Let $P$ be an ideal sphairahedron and let $X$ be one of the vertexes on $P$.
+ Remark that, The edges are mutually tangent at the vertex $X$.
+ Open sphere $B_x$ is \textit{maximum vertex sphere} about vertex $X$ when the sphere
+ meets the conditions written below.
+
+ \begin{description}
+  \item[1)] The boundary surface $\partial B_x$ of sphere $B_x$ passes through
+             the vertex $X$, and $\partial B_x$ is orthogonal to all of the
+             edges gathered at vertex $X$.
+  \item[2)] $B_x \cap P \neq \phi$ and $B_x$ don't contains a vertex of
+             $P$
+  \item[3)] $B_x$ is a sphere that satisfies 1) and 2), and it is
+             maximal to inclusive relation.
+ \end{description}
+\end{definition}
+
+Remark: \\
+1) The maximum vertex sphere is well-defined to each vertex of sphairahedron
+$P$.\\
+2) When the vertex $X$ of the sphairahedron $P$ is infinity point,
+ maximum half-space crossing with $P$ and not containing the vertex of
+ $P$ (not infinity point)
+ is the maximum vertex sphere of $X$.
+
+\begin{proposition}\label{prop:limitBall}
+ For sphairahedron $P$ and its vertex $X$, limit ball defined by
+ sphairahedron $P$ includes maximum vertex sphere $B_x$ in $x$.
+\end{proposition}
+
+\begin{proof}
+ Maximum vertex sphere is equivariant for M\"obius transformations in
+ $S^3$. That is to say, for any M\"obius transformation $F$,
+ considering maximum vertex sphere $B_x$ of the vertex $X$ of
+ sphairahedron $P$,
+ the vertex $F(x)$ of $F(P)$ maximum vertex sphere is $F(B_x)$.
+ This case realization requirements 1) 2) 3) are kept by M\"obius
+ transformation. 
+
+ For any sphairahedron $P$ and vertex $X$, we choose proper M\"obius
+ transformation $F$. We can do the following operations.
+ \begin{description}
+  \item[a)] Transform $X$ to the infinity point.
+  \item[b)] For $F(P)=P'$, a neighborhood of $F(x)$ is infinitely elongated
+             to the z-axis negative direction right prism.
+ \end{description}
+ At this time, due to the above remark, in vertex $X' = F(X)$,
+ $F(Bx) = B'x'$ is maximum open half-space doesn't include all of the
+ vertexes of $F(P)$ other than $x'$.
+ 
+ It is given by $B'x' = \{(x, y, z)~|~z < z_0\}$ when
+\begin{align*}
+z_0 := \min\{ z~|~(x, y, z) \text{ is a vertex of } F(P) \}.
+\end{align*}
+
+ $B'_{x'} \cap P'$ is right prism infinitely elongated for the negative
+ z-axis direction, and its dihedral angle is $\pi/n$ where $n \geq 2$
+ for $n$ is an integer.
+
+ From this, Let $G'$ be $G'=F \circ G$, then
+ $G'(B'_{x'} \cap P') = B'_{x'}$, and
+ we obtain $B'x' \subset G'(P') : Limit Ball$
+\end{proof}
+
+\begin{theorem}
+ When $\displaystyle\bigcup_{x \text{ is vertex of } P} B_x \supset P$ is
+ $\displaystyle\bigcup_{x \text{ is vertex of } P} G_P{B_x} = G_{P}(P)$.
+\end{theorem}
+
+\begin{proof}
+ From the assumption 
+ \begin{align*}
+  \bigcup G_p(B_x) = G_p (\bigcup B_x) \supset G_p(p).
+ \end{align*}
+ Conversely, from proposition \ref{prop:limitBall},
+ \begin{align*}
+  B_x \subset G_p(P) \text{ and } \displaystyle\bigcup_{x} B_x \subset G_p(P)\text{.}
+ \end{align*}
+ From the above,
+\begin{align*}
+ \displaystyle\bigcup_x G_p(B_x) = G_p(P).
+\end{align*}
+\end{proof}
+\noindent Remark: \\
+From above, in order to render limit ball,
+in many cases, for each vertex $X$, we compute $B_x$ and render
+$G_p(\displaystyle\bigcup_x B_x)$.
+
 \subsection{Extended Schottky group for a cubical sphairahedron}\label{extend}
 
 Let $\varphi_i \in \text{M\"ob}(S^3)$ be the inversion of the face $O_i$.
