@@ -465,7 +465,7 @@ Here we see the limit set of the group $G$.  In fact it is well-known that the l
 \begin{lemma}
 If the tiling $L=(T,G)$ is embedded in $S^3$, then we have
 \[
-\Lambda(G) =\partial(\varlimsup_{k\to\infty} |L|_k)
+\Lambda(G) =\partial(\bigcup_k |L|_k)
 \]
 \end{lemma}
 
@@ -1065,7 +1065,7 @@ We show it in case of the type (a).  Let $\overline{D_i}$'s be as in the proof o
 \[
 T = \{(x,y,z) \mid z<0\} \setminus(\overline{D_1} \cup \overline{D_2} \cup \overline{D_3} \cup \overline{D_4}).
 \]
-See Figure \ref{fig:tetrahedronInf_a}(a).  If we regard the lower half plane $\{(x,y,z) \mid z<0\}$ as the hyperbolic space $\mathbb{H}^3$, $T$ is a hyperbolic ideal tetrahedron, because all edges are perpendicular to the $xy$-plane.  For the tiling $L=(T,G)$, the boundary of the total tiling space $\varlimsup_{k\to\infty} |L|_k$
+See Figure \ref{fig:tetrahedronInf_a}(a).  If we regard the lower half plane $\{(x,y,z) \mid z<0\}$ as the hyperbolic space $\mathbb{H}^3$, $T$ is a hyperbolic ideal tetrahedron, because all edges are perpendicular to the $xy$-plane.  For the tiling $L=(T,G)$, the boundary of the total tiling space $\cup_k |L|_k$
 coincides to $\partial{\mathbb{H}^3}$ and the limit set is the $xy$-plane.
 \end{proof}
 
@@ -2924,7 +2924,7 @@ The conditions b) and c) are the same as above.\par
 
 \begin{proposition}\label{prop:limitBall}
 Let $T$ be a rational ideal sphairahedron and let $L=(T,G)$ be its tiling.  
-The total tiling space $\displaystyle \overline\lim_{k\to\infty} |L|}k$ includes the maximum vertex ball $B_X$ for any vertex $X$.
+The total tiling space $\cup_k |L|_k$ includes the maximum vertex ball $B_X$ for any vertex $X$.
 \end{proposition}
 
 \begin{proof}
@@ -2937,42 +2937,39 @@ Thus we may assume the following conditions for $T$ and $X$.
   \item[(i)] The vertex $X$ is the infinity point $\infty$.
   \item[(ii)] A neighborhood of $X=\infty$ is an infinite prism, parallel and elongated to the negative direction of the $z$-axis.
  \end{description}
- At this time, due to the above remark, in vertex $X' = F(X)$,
- $F(Bx) = B'x'$ is maximum open half-space doesn't include all of the
- vertexes of $F(P)$ other than $x'$.
- 
- It is given by $B'x' = \{(x, y, z)~|~z < z_0\}$ when
+ We can give $B_X = \{(x, y, z) \mid z < z_\text{min}\}$ when
 \begin{align*}
-z_0 := \min\{ z~|~(x, y, z) \text{ is a vertex of } F(P) \}.
+z_{\text{min}} := \min\{ z \mid (x, y, z) \text{ is a vertex of } T \}.
 \end{align*}
 
- $B'_{x'} \cap P'$ is right prism infinitely elongated for the negative
- z-axis direction, and its dihedral angle is $\pi/n$ where $n \geq 2$
- for $n$ is an integer.
-
- From this, Let $G'$ be $G'=F \circ G$, then
- $G'(B'_{x'} \cap P') = B'_{x'}$, and
- we obtain $B'x' \subset G'(P') : Limit Ball$
+ $B_X \cap T$ is a right prism infinitely parallel and elongated to the negative direction of the z-axis.  The rationality condition of $T$ guarantees that the tiling space of $B_X \cap T$ by face symmetry is $B_X$ itself.  Thus 
+\[
+B_X = \text{The tiling space of }B_X \cap T \subset \bigcup_k |L|_k
+\]
+This completes the proof.
 \end{proof}
 
 \begin{theorem}
- When $\displaystyle\bigcup_{x \text{ is vertex of } P} B_x \supset P$ is
- $\displaystyle\bigcup_{x \text{ is vertex of } P} G_P{B_x} = G_{P}(P)$.
+If $\bigcup_{X} B_X \supset T$, then
+\[
+\text{Cl}\left(\bigcup_{g\in G}g(\bigcup_X {B_X})\right) = \text{Cl}\left(\bigcup_k |L|_k\right).
+\]
+Here $\bigcup_X$ means the union for some vertices $X$ of $T$.
 \end{theorem}
 
 \begin{proof}
- From the assumption 
- \begin{align*}
-  \bigcup G_p(B_x) = G_p (\bigcup B_x) \supset G_p(p).
- \end{align*}
+  From the assumption $\bigcup_{X} B_X \supset T$, 
+\[
+\text{Cl}\left(\bigcup_{g\in G} g(\bigcup_X B_X)\right) 
+\supset \text{Cl}(\bigcup_{k} |L|_k). \tag{4.A}
+\]
  Conversely, from proposition \ref{prop:limitBall},
- \begin{align*}
-  B_x \subset G_p(P) \text{ and } \displaystyle\bigcup_{x} B_x \subset G_p(P)\text{.}
- \end{align*}
- From the above,
-\begin{align*}
- \displaystyle\bigcup_x G_p(B_x) = G_p(P).
-\end{align*}
+$\bigcup_X B_X \subset \bigcup_{k} |L|_k$ and we have
+\[
+\bigcup_{g\in G} g(\bigcup_X B_X)
+\subset \bigcup_{k} |L|_k. \tag{4.B}
+\]
+From (4.A) and (4.B) we have the conclusion.
 \end{proof}
 \noindent Remark: \\
 From above, in order to render limit ball,
