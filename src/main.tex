@@ -2880,73 +2880,62 @@ Because of the reasons, we stop the visualization experiment at the hexahedra.
 
 In section \ref{constructFractal}, we show how to construct the tiling
 patterns of sphairahedra and their coloring.
-After we compute sphairahedra, we have to draw an infinite number of
+After we compute the coordinates of a sphairahedron, we have to render an infinite number of
 sphairahedra, and it takes much time.
 So, we use an algorithm to render fractals based on
 inversions. It is called Iterated Inversion System (IIS.)
 We successfully implement a fast rendering algorithm
-combining IIS and sphere tracing, that is, a kind of ray tracing technique.
+combining IIS and sphere tracing, a kind of ray-tracing technique.
 For more details, see also \cite{bridges2017} and \cite{bridges2018}.
 
-There are two approaches of visualization.
-First, tile sphairahedra directory using elements of the group.
-Secondly, we prepare the sum of spheres includes a sphairahedron, and we
-transform the spheres.
+There are two approaches to visualization.
+First, we tile the sphairahedra directory in the space using elements of the tiling group $G$.
+Secondly, we prepare some balls that include a sphairahedron, and we transform the spheres by $G$. 
+We call the boundary of each ball {\it a ghost sphere}.
 See Figure \ref{fig:visualizeSpheres}.
-Four spheres transformed by elements of the group, and finally, we get
-quasi-sphere the same to the tiling pattern of the sphairahedron.
-
-We can obtain a quasi-sphere from applying group to the sum of the spheres,
-including sphairahedra. The proof is as below.
+Four balls are preset, and we transform them by elements of $G$, and finally, we get
+the same quasi-sphere as the one in an original way.
+We can obtain a quasi-sphere from applying $G$ to the union of the balls. 
+We show the proof below.
 
 For each vertex of the sphairahedron, we consider \textit{maximum vertex
-sphere} defined below.
+ball} defined as followings.
 
 \begin{definition}
- Let $P$ be an ideal sphairahedron and let $X$ be one of the vertexes on $P$.
- Remark that, The edges are mutually tangent at the vertex $X$.
- Open sphere $B_x$ is \textit{maximum vertex sphere} about vertex $X$ when the sphere
- meets the conditions written below.
-
+ Let $T$ be an ideal sphairahedron and let $X$ be one of the vertexes on $T$.
+ An open ball $B_X$ is \textit{a maximum vertex ball} of $X$ when the following conditions are satisfied.
  \begin{description}
-  \item[1)] The boundary surface $\partial B_x$ of sphere $B_x$ passes through
-             the vertex $X$, and $\partial B_x$ is orthogonal to all of the
-             edges gathered at vertex $X$.
-  \item[2)] $B_x \cap P \neq \phi$ and $B_x$ don't contains a vertex of
-             $P$
-  \item[3)] $B_x$ is a sphere that satisfies 1) and 2), and it is
-             maximal to inclusive relation.
+  \item[a)] The boundary sphere $\partial B_X$ of $B_X$ passes through
+             the vertex $X$, and $\partial B_X$ is perpendicular to all of the
+             edges gathering at $X$. (Remark that the edges are mutually tangent at $X$.)
+  \item[b)] $B_X \cap T \neq \phi$ and $B_X$ doesn't contain any vertex of
+             $T$
+  \item[c)] $B_X$ is a maximal open ball satisfying a) and b) with respect to inclusions.
  \end{description}
 \end{definition}
 
-Remark: \\
-1) The maximum vertex sphere is well-defined to each vertex of sphairahedron
-$P$.\\
-2) When the vertex $X$ of the sphairahedron $P$ is infinity point,
- maximum half-space crossing with $P$ and not containing the vertex of
- $P$ (not infinity point)
- is the maximum vertex sphere of $X$.
+\begin{remark}
+(1) The maximum vertex ball is well-defined for each vertex of a sphairahedron $T$.\par
+(2) When the vertex $X$ is the infinity point,
+the maximum vertex ball is a half-space $B_X$ satisfying followings:\par
+a)\ The boundary plane $\partial B_X$ is perpendicular to the prism(, neighborhood of $\infty$.)\par
+The conditions b) and c) are the same as above.\par
+\end{remark}
 
 \begin{proposition}\label{prop:limitBall}
- For sphairahedron $P$ and its vertex $X$, limit ball defined by
- sphairahedron $P$ includes maximum vertex sphere $B_x$ in $x$.
+Let $T$ be a rational ideal sphairahedron and let $L=(T,G)$ be its tiling.  
+The total tiling space $\displaystyle \overline\lim_{k\to\infty} |L|}k$ includes the maximum vertex ball $B_X$ for any vertex $X$.
 \end{proposition}
 
 \begin{proof}
- Maximum vertex sphere is equivariant for M\"obius transformations in
- $S^3$. That is to say, for any M\"obius transformation $F$,
- considering maximum vertex sphere $B_x$ of the vertex $X$ of
- sphairahedron $P$,
- the vertex $F(x)$ of $F(P)$ maximum vertex sphere is $F(B_x)$.
- This case realization requirements 1) 2) 3) are kept by M\"obius
- transformation. 
+ Maximum vertex ball is {\it equivariant} for any M\"obius transformations $\varphi$ in $S^3$. 
+That is, if $B_X$ is the maximum vertex ball of $T$ at $X$, then $\varphi(B_X)$ is the maximum vertex ball of $\varphi(T)$ at $\varphi(X)$.
+Because the conditions a), b), and c) are preserved under the transformation $\varphi$.
 
- For any sphairahedron $P$ and vertex $X$, we choose proper M\"obius
- transformation $F$. We can do the following operations.
+Thus we may assume the following conditions for $T$ and $X$.
  \begin{description}
-  \item[a)] Transform $X$ to the infinity point.
-  \item[b)] For $F(P)=P'$, a neighborhood of $F(x)$ is infinitely elongated
-             to the z-axis negative direction right prism.
+  \item[(i)] The vertex $X$ is the infinity point $\infty$.
+  \item[(ii)] A neighborhood of $X=\infty$ is an infinite prism, parallel and elongated to the negative direction of the $z$-axis.
  \end{description}
  At this time, due to the above remark, in vertex $X' = F(X)$,
  $F(Bx) = B'x'$ is maximum open half-space doesn't include all of the
