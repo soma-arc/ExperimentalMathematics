@@ -2727,46 +2727,18 @@ Figure \ref{fig:cake4}, \ref{fig:pentagonalPyramid}, and
 
 \subsection{Polyhedra whose number of the faces is seven and more}
 
-It is difficult to compute rational ideal sphairahedra based on
+It seems challenging to compute rational ideal sphairahedra based on
 heptahedron or polyhedra with more faces.
-There are two reasons.
-Firstly, the sphairahedra have many combinations of an arrangement of
-vertexes and edges. 
-Heptahedron has thirty-four types of arrangement, and
-the number of polyhedra with eight or more faces explosively
-increases. See also \cite{countingPolyhedra}.
-Secondly, to satisfy the rationality of the sphairahedra, they should not
-have vertexes connecting five or more edges.
-The proof is as follows.
+Indeed, counting up the combinations of dihedral angles is an open problem.  In this subsection, we show the condition to be a rational ideal sphairahedron and find some examples. 
 
-\begin{proposition}
- The vertex of the rational ideal sphairahedron, should not
- have vertexes connecting five or more edges.
-\end{proposition}
+From Lemma \ref{lemma:sum},  we know that the degree of each vertex must be equal to or less than $4$.  Moreover, if a polyhedron satisfies this condition, we have to consider a combination of dihedral angles. 
 
-\begin{proof}
- TODO: proof\\
-% k = 5
-% (5 - 2)pi > 5/2 pi
- In order to satisfy ideality, a sum of the dihedral angles of each vertex
- should be $(k - 2) \pi$ where $k$ is the number of the edges connecting
- the vertex and $k \geq 3$ for natural number $k$.
+We can find three simple examples.  One is a regular dodecahedron.  All of the faces are pentagons, and this is trivalent, that is, the degree of each vertex is $3$.  Thus if we assign $3$ for each edge,  we can determine a sphairahedron.  Other than that, after considering a Hamilton loop on the edge-graph of a regular dodecahedron,  how about we assign $4,4,4,4$ or $3,6,3,6$ on the Hamilton loop and assign $3$ on other edges.  This way determines other sphairahedra.  
 
- For rationality, 
- the largest dihedral angle is $\pi / 2$, and 
- $(k-2)\pi$ is sum of the interior angle.
- So, largest sum of the angle is $k\pi / 2$.
- That is,  $(k -  2)\pi > k\pi / 2$
+Next is a regular octahedron.  The degree of each vertex is $4$; thus, we can assign $2$ for every edge.
+The last example is a trivalent Archmedian solid.   If we assign $3$ for each edge,  we can determine a sphairahedron.  The simplest one is a truncated tetrahedron with $8$ faces.
 
- To satisfy ideality, the sum of the dihedral angles should be $(k - 2)
- \pi$. 
- We transform the vertex into infinity.
- the largest dihedral angle is $\pi / n (n > 1)$
- $(k - 2)\pi$
-\end{proof}
-
-So, the condition of vertexes is greatly restricted.
-Because of the reasons, we stop the visualization experiment at the hexahedra.
+In general, it seems difficult for us to list up all sphairahedron with seven or more faces.  About heptahedron, there are 34 kinds of polyhedral structures of convex heptahedra.  Furthermore, most of them are candidates to generate a sphairahedron.  The number of polyhedra with eight or more faces explosively increases. See also \cite{countingPolyhedra}.
 
 
 
