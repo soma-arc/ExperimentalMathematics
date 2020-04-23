@@ -201,13 +201,16 @@ Note that there are many pictures of three-dimensional in this paper,
 but it is hard to gaze their whole appearances only on paper. We can see a fractal renderer, more pictures, and more movies based on sphairahedra in
 the web site\footnote{\url{https://sphairahedron.net}} of the first author.
 
-In this paper, we aim for giving some viewpoints.
-First, we survey the history of these quasi-spheres.
-Second, we rearrange a unpublished paper about the parameter space of sphairahedra and add some more comprehensive results.
-Third, we properly introduce and prove theorems implicitly
-used for CG.
-Fourth, we introduce the software to render sphairahedron developed by
-Nakamura and show many rendered images. 
+This paper is organaized as follows.  
+In Section 1, we survey the history of sphariahedra and quasi-spheres.
+In Section 2, we prepare the definitions of a sphairahedron and its tiling group.
+In Section 3, we show some propositions about the parameter spaces of various kinds of sphairahedra.
+In Section 4, we introduce some observations. 
+
+The authors thank their colleague Shoichi Fujita in their laboratory.
+He provides valuable comments for them  to complete the calculations of 
+the parameter spaces of cake sphairahedra.
+
 
 \section{Preparation}
 
@@ -222,7 +225,7 @@ Nakamura and show many rendered images.
    \centering
    \includegraphics[width=1.2in, height=1.2in, keepaspectratio]
    {./img/sphairahedralPrism/sphairaAll.jpg}
-   \subcaption{$A$}
+   \subcaption{Complement $A$}
    \label{fig:sphairaPrismAll}
   \end{minipage}
   \hspace*{\fill}
@@ -252,7 +255,7 @@ Nakamura and show many rendered images.
    \centering
    \includegraphics[width=1.2in, height=1.2in,
    keepaspectratio]{./img/sphairahedralPrism/semiSphairaAll.jpg}
-   \subcaption{$A$}
+   \subcaption{Complement  $A$}
    \label{fig:semi-sphairaAll}
   \end{minipage}
   \hspace*{\fill}
@@ -276,35 +279,35 @@ Nakamura and show many rendered images.
  \end{minipage}
 \end{figure}
 
-We will describe the simple definition of a sphairahedron used in \cite{bridges2018}.
+We describe the definition of a sphairahedron used in \cite{bridges2018}.
 \begin{definition}
-Let $S^3 = R^3 \cup \{\infty\}$ be a three-dimensional sphere and let
+Let $S^3 = R^3 \cup \{\infty\}$ be the three-dimensional sphere and let
 $\overline{D_1},~\overline{D_2},\ldots,~\overline{D_p}$ be
 three-dimensional closed balls or closed half-spaces in $S^3$.
 We consider the complement $A$ of the union of these balls, that is,
 $A = S^3 \setminus (\overline{D_1} \cup \overline{D_2} \cup ... \cup \overline{D_p})$.
-If the following three conditions are satisfies, we call the component $T$ of $A$ a {\it sphairahedron.} \par
-(a) \ $A$ consists of two components and all components are simply-connected.\par
+If the following two conditions are satisfies, we call the component $T$ of $A$ a {\it sphairahedron.} \par
+(a) \ $A$ consists of two connected components and all components are simply-connected.\par
 (b) \ $T$ is a component of $A$, and for any $i$, a part of $O_i=\partial\overline{D_i}$ is a face of $T$.
 \end{definition}
-The image in Figure \ref{fig:sphairahedron}\subref{fig:sphairaPrismAll}
+The image in Figure \ref{fig:sphairahedron}\subref{fig:sphairaPrismHalf}\subref{fig:sphairahedronFinite}
 is an example of a sphairahedron. 
 
-Because of that definition, a sphairahedron has faces, edges, and
+By definition, a sphairahedron has faces, edges, and
 vertexes. We define \emph{ideality} and \emph{rationality} of a spairahedron.
 
 \begin{definition}
-(1)\ Let $S$ be a sphairahedron.  For each vertex, if all edges passing through the vertex are tangential to each other, we all it an \emph{ideal} sphairahedron.\par 
-(2)\ Let $S$ be a sphairahedron.  For each edge, if the dihedral angle at the edge is rational (that is, the angle equals to $\pi/n$, where $n$ is a natural number,) we call it an \emph{rational} sphairahedron.
+(1)\ Let $T$ be a sphairahedron.  For each vertex, if all edges passing through the vertex are tangential to each other, we call it an \emph{ideal} sphairahedron.\par 
+(2)\ Let $T$ be a sphairahedron.  For each edge, if the dihedral angle at the edge is rational (that is, the angle equals to $\pi/n$, where $n$ is a natural number,) we call it an \emph{rational} sphairahedron.
 \end{definition}
 
-In the sequel, we mainly consider a ideal rational spairahedron.  
-When one of the vertexes is the infinity-point $\infty$ of $S^3$,
+In the sequel, we mainly consider an ideal rational spairahedron.  
+When one of the vertices is the infinite-point $\infty$ of $S^3$,
 we call the sphairahedron \textit{infinite sphairahedron}.
 One example is shown in Figure
 \ref{fig:sphairahedron}\subref{fig:sphairaPrismHalf}.
 Here, we consider a triangular prism with infinitely length and we hollow
-out it by three balls, and select one of the connected components as a  sphairahedron.  At infinite, a face adjacent to the infinite vertex is a plane, the boundary of the half space.  Thus the neighborhood of the infinite vertex is a prism.
+out it by three balls, and select one of the connected components as a  sphairahedron.  A face adjacent to the infinite vertex is a plane, the boundary of the half space.  Thus the neighborhood of the infinite vertex is a prism.
 
 When the closure of a sphairahedron does not contain the infinite point,
 we call it \textit{finite sphairahedron}.
@@ -334,7 +337,7 @@ that is, we allow the case $A$ has simply connected three or more components.
 \begin{definition}
 Let $\overline{D_1}, \overline{D_2},\ldots, \overline{D_p}$ be ball or
 half-space in $S^3$.  Let $A$ be the complement of the unions of
-$\overline{D_i}$'s.  If the following 4 conditions are satisfies, we call the subset $T$ {\it a semi-sphairahedron.}\par
+$\overline{D_i}$'s.  If the following three conditions are satisfies, we call the subset $T$ {\it a semi-sphairahedron.}\par
 (a) \ $A$ has more than two connected components and all
 components are simply connected. \par 
 (b) \ $T$ is a component or the union of two (or more) components, and the closure $\text{Cl}(T)$ is connected. \par
@@ -427,7 +430,7 @@ elements $g\in G$
 \]
 The complement $\Lambda(G) := S^3 \backslash \Omega(G)$ is called the
 {\it limit set} of the group $G$. $G$ is a (4 dimensional) {\it Kleinian group} if $\Omega(G)$ is
-not empty\footnote{Usually we consider a Kleinian group as a properly discontinuous subset of the orientation preserving M\"obius transformation group $\text{Mob}_+(S^3)$, however we relax the condition of orientation preserving.}. The limit set $\Lambda(G)$ consists either of 0 or 1 or 2 or
+not empty\footnote{Usually we consider a Kleinian group as a properly discontinuous subset of the {\it orientation preserving} M\"obius transformation group $\text{Mob}_+(S^3)$, however we weaken the condition of orientation preserving.}. The limit set $\Lambda(G)$ consists either of 0 or 1 or 2 or
 infinitely many points. Here we consider only the case that $\Lambda(G)$
 is infinite and two-dimensional. 
 A Kleinian group $G$ is called a
@@ -696,7 +699,7 @@ $\left( \frac{\pi}{2}, \frac{\pi}{2}, \frac{\pi}{2}, \frac{\pi}{2}\right)$. The 
 
 \begin{proof}
  Let $\phi$ be a M\"obius transformation such that it maps the vertex to
- the infinity point. Then all of edges with the vertex are mapped to
+ the infinite-point. Then all of edges with the vertex are mapped to
  parallel lines, and they form a prism. If we consider a
  regular section of a prism, then the internal angles of the section 
  are equal to dihedral angles, and the sum of them is $(k-1)\pi$.  This
@@ -714,7 +717,7 @@ Next, we consider a sphairahedron of infinite type without loss of generality.  
 
 Beacause of the ideality of a sphairahedron, all edges with the infinite vertex are parallel straight lines.  Using rotations, we assume that these edges are parallel to the $z$-axis.  It follows that the faces with the finite vertex are perpendicular with $xy$-plane.
 
-Let $A$ be one of finite vertices next to the infinity vertex, that is, there exists an edge $e_{12}$ that connects $A$ and $\infty$.  After applying translations, we assume that the edge $e_{12}$ lies on the $z$-axis.  In fact we suppose the followings as Situation 1:
+Let $A$ be one of finite vertices next to the infinite vertex, that is, there exists an edge $e_{12}$ that connects $A$ and $\infty$.  After applying translations, we assume that the edge $e_{12}$ lies on the $z$-axis.  In fact we suppose the followings as Situation 1:
 \begin{align*}
 A &= (0,0,z_A),\\ 
 \overline{D_1}  &= \{ (x,y,z) \mid 0 \le y \} \cup \{\infty\} ,\\
@@ -1038,7 +1041,7 @@ Figure \ref{fig:tetrahedronCombinations}.
 In each type of the dihedral angles, the parameter space consists of one point.
 \end{proposition}
 
-\begin{proof}   Suppose that one of the vertices of the sphairahedron is the infinite point $\infty$.  In the type (a) case, the neighborhood of the infinity vertex is a regular triangle prism.  It is because all dihedral angles equal to $\frac{\pi}{3}$.  Without loss of generality, we may assume the followings.
+\begin{proof}   Suppose that one of the vertices of the sphairahedron is the infinite-point $\infty$.  In the type (a) case, the neighborhood of the infinite vertex is a regular triangle prism.  It is because all dihedral angles equal to $\frac{\pi}{3}$.  Without loss of generality, we may assume the followings.
 \begin{align*}
 \overline{D_1}&=\{(x,y,z) \mid 1 \le x \} \cup\{\infty\}\\
 \overline{D_2}&=\{(x,y,z) \mid 1 \le -\frac{1}{2}x+\frac{\sqrt{3}}{2}y \} \cup\{\infty\}\\
@@ -1722,7 +1725,7 @@ In this list, the cube and the cake1 have lots of varieties.  In this subsection
 
 %\begin{proof}
 % There is a M\"obius transformation $\phi$ such that it moves the vertex
-% $H$ to the infinity point. (See Figure \ref{fig:infTriangle}.) From Lemma %\ref{sameCircle}, the three%
+% $H$ to the infinite-point. (See Figure \ref{fig:infTriangle}.) From Lemma %\ref{sameCircle}, the three%
 % vertexes $A, D,$ and $B$ lie on one straight line. In the same way,
 % three vertexes $A, D, G,$ and $F$ lie on one planar circle, all vertexes
 % except $H$ line on one plane. We transform them back by $\phi^{-1}$, and
@@ -2890,7 +2893,7 @@ ball} defined as followings.
 
 \begin{remark}
 (1) The maximum vertex ball is well-defined for each vertex of a sphairahedron $T$.\par
-(2) When the vertex $X$ is the infinity point,
+(2) When the vertex $X$ is the infinite-point,
 the maximum vertex ball is a half-space $B_X$ satisfying followings:\par
 a)\ The boundary plane $\partial B_X$ is perpendicular to the prism(, neighborhood of $\infty$.)\par
 The conditions b) and c) are the same as above.\par
@@ -2908,7 +2911,7 @@ Because the conditions a), b), and c) are preserved under the transformation $\v
 
 Thus we may assume the following conditions for $T$ and $X$.
  \begin{description}
-  \item[(i)] The vertex $X$ is the infinity point $\infty$.
+  \item[(i)] The vertex $X$ is the infinite-point $\infty$.
   \item[(ii)] A neighborhood of $X=\infty$ is an infinite prism, parallel and elongated to the negative direction of the $z$-axis.
  \end{description}
  We can give $B_X = \{(x, y, z) \mid z < z_\text{min}\}$ when
@@ -3242,10 +3245,7 @@ The parameter space is connected.
 % The limit set of the semi-sphairahedron is not known.
 % However, we visualize semi-sphairahedron and its tessellation.
 
-\section{Acknowledgments}
-We thank our colleagues Shoichi Fujita.
-He provides valuable comment to compute parameter space of the
-sphairahedra of cake type one.
+
 
 \section{Appendix - data}
 
@@ -3664,12 +3664,14 @@ Figure captions
  \item Figure \ref{fig:quasi-sphere}\subref{fig:quasi-sphereZoom}:
  \item Figure \ref{fig:sphairahedron}: sphairahedron.
  \item Figure \ref{fig:sphairahedron}\subref{fig:sphairaPrismAll}:
-       $A$.
+       Complement $A$.
  \item Figure \ref{fig:sphairahedron}\subref{fig:sphairaPrismHalf}
-       $A$: Infinite type.
+       Infinite type.
+ \item Figure \ref{fig:sphairahedron}\subref{fig:sphairahedronFinite}
+       Finite type.
  \item Figure \ref{fig:semi-sphairahedron}: Semi-sphairahedron.
  \item Figure \ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaAll}:
-       $A$.
+       Complement $A$.
  \item Figure \ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaHalf}:
        Infinite type.
  \item Figure \ref{fig:brokenHole}: Sphairahedron with hole.
