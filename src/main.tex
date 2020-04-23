@@ -3439,18 +3439,18 @@ Type 5:
 \bigskip\par
 Type 8:
 \begin{align*}
-\overline{D_1}&=\{ (x,y,z) \mid x <= 0 \} \cup \{ \infty \}\\
-\overline{D_3}&=\{(x,y,z) \mid y >= -x + 1 \} \cup\{\infty\}\\
-\overline{D_5}&=\{(x,y,z) \mid y <= x - 1 \} \cup\{\infty\}\\
+\overline{D_1}&=\{ (x,y,z) \mid y >= \sqrt{3}x  \} \cup \{ \infty \}\\
+\overline{D_3}&=\{(x,y,z) \mid y >= -\sqrt{3}x + \sqrt{3} \} \cup\{\infty\}\\
+\overline{D_5}&=\{(x,y,z) \mid y <= \frac{\sqrt{3}}{3}x - \frac{\sqrt{3}}{3} \} \cup\{\infty\}\\
 \overline{D_2}&=\{(x,y,z) \mid (x-x_2)^2+(y-y_2)^2+z^2<r_2^2 \} \\
 \overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+(z-z_A)^2<r_4^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_B)^2<r_6^2 \} \\
- r_2 &= \frac{z_C^2 + 2z_Bz_C + 2}{6}, \qquad
-(x_2, y_2) = \left(1 - r_2, 0\right),\\
- r_4 &= \frac{-z_C^2 + 3z_B^2 - 2z_Bz_C + 4}{6\sqrt{2}}, \qquad
-(x_4, y_4) = \left(\frac{r_4}{\sqrt{2}}, 1 - \frac{r_4}{\sqrt{2}}\right),\\
- r_6 &= \frac{z_C^2 - z_Bz_C + 2}{3}, \qquad
-(x_6, y_6) = \left(0, -1 + r_6\right),
+ r_2 &= \frac{3z_B^2 + 2z_Bz_C + 3}{5\sqrt{3}}, \qquad
+(x_2, y_2) = \left(1 - \frac{\sqrt{3}}{2}r_2, \frac{r_2}{2}\right),\\
+ r_4 &= \frac{2(z_B^2 - z_Bz_C + 1}{5}, \qquad
+(x_4, y_4) = \left(\frac{1 - r_4}{2}, \frac{\sqrt{3}(1 - r_4)}{2}\right),\\
+ r_6 &= \frac{-3 z_B^2 -2z_Bz_C + 5z_C^2 + 12}{10\sqrt{3}}, \qquad
+(x_6, y_6) = \left(\frac{\sqrt{3}r_6 - 1}{2}, \frac{-\sqrt{3} + r_6}{2}\right),
 \end{align*} 
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
@@ -3483,12 +3483,12 @@ Type 9:
 \overline{D_2}&=\{(x,y,z) \mid (x-x_2)^2+(y-y_2)^2+z^2<r_2^2 \} \\
 \overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+(z-z_A)^2<r_4^2 \} \\
 \overline{D_6}&=\{(x,y,z) \mid (x-x_6)^2+(y-y_6)^2+(z-z_B)^2<r_6^2 \} \\
- r_2 &= \frac{z_Bz_C}{2}, \qquad
+ r_2 &= \frac{z_C^2 + 2z_Bz_C + 2}{6}, \qquad
 (x_2, y_2) = \left(1-r_2, 0\right),\\
- r_4 &= \frac{\sqrt{2}(z_B^2 - z_Bz_C + 2)}{4}, \qquad
+ r_4 &= \frac{\sqrt{2}(3z_B^2 - 2z_Bz_C - z_C^2 + 4)}{12}, \qquad
 (x_4, y_4) = \left(\frac{r_4}{\sqrt{2}}, 1 - \frac{r_4}{\sqrt{2}}\right),\\
- r_6 &= \frac{\sqrt{2}(z_C^2 - z_Bz_C + 2)}{4}, \qquad
-(x_6, y_6) = \left(\frac{r_6}{\sqrt{2}}, \frac{r_6}{\sqrt{2}} - 1\right),
+ r_6 &= \frac{z_C^2 - z_Bz_C + 2}{3}, \qquad
+(x_6, y_6) = \left(0, r_6 - 1\right),
 \end{align*} 
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
