@@ -832,7 +832,7 @@ Thus $\cos (\pi - \theta_{23})=\cos(\theta_{12}+\theta_{13})$ and $\theta_{23} =
 
 \end{proof}
 
-\subsection{Tetrahedron}\label{section:tetrahedon}
+\subsection{Tetrahedron}\label{section:tetrahedron}
 \noindent(Figure \ref{fig:tetrahedron} near here)
 (Figure \ref{fig:tetrahedronFaces} near here)\\
 (Figure \ref{fig:tetrahedronCombinations}
@@ -1732,7 +1732,7 @@ In this list, the cube and the cake1 have lots of varieties.  In this subsection
 
 A cube (Figure \ref{fig:cube}) is a sphairahedron with a polyhedral structure as seen in Figure \ref{fig:cubePolyhedralStructure}.  There are 11 combinations of dihedral angles as seen in Figure \ref{fig:cubeGraph}.
 
-\subsubsection{Parameter spaces of cubes}
+\subsubsection{Parameter spaces of cubes} \label{section:cubeType1}
 
 The parameter space of each type of the cube is as followings.
 
@@ -3049,11 +3049,9 @@ and the composite $\varphi_{356}\circ\varphi_1$ satisfies the conditions of $f_1
    \centering
    \includegraphics[width=1in,
    keepaspectratio]{./img/plane/pentahedralPrismType2.jpg}
-   \subcaption{Pentahedral prism.}
+   \subcaption{Triangular prism.}
    \label{fig:planePentaPrism}
   \end{minipage}
- \caption{Planes.}
- \label{fig:planes}
  \hspace*{\fill}
   \begin{minipage}[t]{0.23\textwidth}
    \centering
@@ -3065,10 +3063,12 @@ and the composite $\varphi_{356}\circ\varphi_1$ satisfies the conditions of $f_1
   \begin{minipage}[t]{0.23\textwidth}
    \centering
    \includegraphics[width=1in, keepaspectratio]{./img/plane/hexahedralCake2Type0.jpg}
-   \subcaption{Hexahedral cake2.}
+   \subcaption{Cake \#2.}
    \label{fig:planeCake}
   \end{minipage}
  \hspace*{\fill}
+ \caption{Planes.}
+ \label{fig:planes}
 \end{figure}
 
 \begin{figure}[h!tbp]
@@ -3077,21 +3077,21 @@ and the composite $\varphi_{356}\circ\varphi_1$ satisfies the conditions of $f_1
  \includegraphics[width=3in,
  keepaspectratio]{./img/Observation/triangle.jpg}
  \caption{}
- \label{fig:obsTriangle}
+ \label{fig:patternTetrahedron}
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[t]{0.5\textwidth}
   \centering
   \includegraphics[width=3in,
-  keepaspectratio]{./img/Observation/rect.jpg}
+  keepaspectratio]{./img/Observation/triangle.jpg}
   \caption{}
-  \label{fig:obsRect}
+  \label{fig:obsTriangle}
  \end{minipage}
  \hspace*{\fill}
 \end{figure}
 
 A cubic sphairahedron of type 1 is controlled by two parameters $z_A$ and $z_B$.
-When bothe of the parameters are zero, 
+When both of the parameters equal to zero, 
 the limit set is a plane (or a round sphere,) with a regular pattern as seen in Figure \ref{fig:planes}\subref{fig:planeCube}.
 Simillar patterns appear in other sphairahedra.  
 See Figures \ref{fig:planes}
@@ -3117,16 +3117,35 @@ P_{134}(0),\quad P_{123}(3),\quad P_{234}(3\omega),
 \]
 where $\omega = \dfrac{1+\sqrt{-3}}{2}$.  The center of $C_4$ is $1+\omega$.
 
-If we let $\varphi_i$ be the inversion of $C_i$, we can represent them as
-$f(z)=\dfrac{\alpha\bar z+\beta}{\gamma\bar z+\delta}$.  Indeed,
+If we let $\varphi_i$ be the inversion of $C_i$, we can represent them by
+%$f(z)=\dfrac{\alpha\bar z+\beta}{\gamma\bar z+\delta}$.  Indeed,
 \begin{align*}
-\varphi_1 &= \begin{pmatrix}  1&0 \\ 0&1\end{pmatrix}\\
-\varphi_2 &= \begin{pmatrix}  -1+\omega& \\ 0&1\end{pmatrix}\\
-\varphi_3 &= \begin{pmatrix}  -\omega&3+3\omega \\ 0&1\end{pmatrix}\\
-\varphi_4 &= \begin{pmatrix}  1+\omega &0 \\ 1&-2+\omega\end{pmatrix},
+\varphi_1 (z) &= \bar z \\
+\varphi_2 (z) &= (-1+\omega)\bar z \\
+\varphi_3 (z) &= -\omega\bar z+3+3\omega \\
+\varphi_4 (z) &= \dfrac{(1+\omega)\bar z}{\bar z-2+\omega}.
 \end{align*}
-where $\begin{pmatrix} \alpha&\beta \\ \gamma&\delta\end{pmatrix}$ denotes the map $\dfrac{\alpha\bar z+\beta}{\gamma\bar z+\delta}$.
-Thus every element of these matrices is contained in the Eisenstein ring $\mathbb{Z}[\omega]$.
+Thus every coefficient is contained in the Eisenstein ring $\mathbb{Z}[\omega]$.  
+
+In case of cube of type1, we may have similar observations. In Figure \ref{fig:obsTriangle} is the section of $O_i$'s in Section \ref{section:cubeType1}.
+Let $D_i=O_i\cap(xy\text{-plane})$ and $\psi_i$ is the inversion of $D_i$.  We embed $D_i$'s into $\mathbb{C}$ by 
+\[
+P_{123}(0),\quad P_{145}(6),\quad P_{356}(6\omega).
+\]
+Thus we have the following formulas:
+\begin{align*}
+\psi_1 (z) &= \bar z  = \varphi_1(z)\\
+\psi_2 (z) &= \dfrac{(1+\omega)\bar z}{\bar z-2+\omega} = \varphi_4(z) \\
+\psi_3 (z) &= (-1+\omega)\bar z = \varphi_2(z)\\
+\psi_4 (z) &= \dfrac{(1+4\omega)\bar z - 18}{\bar z-5+4\omega} = \varphi_1(z)
+=\varphi_2\circ\varphi_1\circ\varphi_4\circ\varphi_1\circ\varphi_2(z).\\
+\psi_5 (z) &= -\omega\bar z+6+6\omega 
+=\varphi_2\circ\varphi_1\circ\varphi_3\circ\varphi_1\circ\varphi_2(z)\\
+\psi_6 (z) &= \dfrac{(4+\omega)\bar z - 18}{\bar z-5+\omega} 
+=\varphi_2\circ\varphi_3\circ\varphi_4\circ\varphi_3\circ\varphi_2(z).
+\end{align*}
+
+These data inspire us a certain relationship between sphairahedra and bianchi tessellations of the Eisenstein ring, but this problem is fully open.
 
 %When $z_A = z_B = 0$, every center of the three spheres $C_A, C_B, C_C$
 %are on the xy-plane. So about the face of the triangle prism and all of the
@@ -4079,10 +4098,9 @@ Figure captions
 %Patterns of Planes
 \item Figure \ref{fig:planes}: Planes.
 \item Figure \ref{fig:planes}\subref{fig:planeCube}: Cube.
-\item Figure \ref{fig:planes}\subref{fig:planeCake}: Hexahedral cake2.
+\item Figure \ref{fig:planes}\subref{fig:planeCake}: Hexahedral cake \#2.
 \item Figure \ref{fig:planes}\subref{fig:planeTetra}: Tetrahedron.
-\item Figure \ref{fig:planes}\subref{fig:planePentaPrism}: Pentahedral
-      prism.
+\item Figure \ref{fig:planes}\subref{fig:planePentaPrism}: Triangular prism.
 
 \item Figure \ref{fig:obsTriangle}:
 \item Figure \ref{fig:obsRect}:
