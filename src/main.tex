@@ -1450,24 +1450,26 @@ In this case, the tiling group $G$ is $3$-Kleinian after all.  Figures \ref{fig:
 \end{figure}
 
 \begin{figure}[h!tbp]
- \begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
    \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/sphairaInfType2_1.jpg}
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/cube/sphairahedronInf.jpg}
    \subcaption{Sphairahedron}
    \label{fig:prismSphairaInfType2_1}
   \end{minipage}
   \hspace*{\fill}
   \begin{minipage}[t]{0.24\textwidth}
    \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/limitsetInfType2_1.jpg}
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/cube/limitsetInf.jpg} 
    \subcaption{Limit set}
    \label{fig:prismLimitInfType2_1}
   \end{minipage}
   \hspace*{\fill}
   \caption{Infinite triangular prism type 2 - 1.}
-  \label{fig:prismInfType2_1}
- \end{minipage}
+ \label{fig:prismInfType2_1}
+\end{minipage}
  \hspace*{\fill}
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
@@ -2150,14 +2152,14 @@ In case of type 11,
 \end{align*}
 In these cases, there is no answer for ($z_A, z_B$).
 
-Figures \ref{fig:cubeFinite}, \ref{fig:cubeInf} give rendered images of cubes and their limit set.  To render these images, the first author uses IIS algorithm \cite{bridges2018}.
-
 \noindent(Figure \ref{fig:cubeFinite}
 \subref{fig:cubeFiniteSphairahedron}
 \subref{fig:cubeFiniteLimitset} near here)
 (Figure \ref{fig:cubeInf}
 \subref{fig:cubeInfiniteSphairahedron}
 \subref{fig:cubeInfiniteLimitset} near here)
+
+Figures \ref{fig:cubeFinite}, \ref{fig:cubeInf} give rendered images of cubes and their limit set.  To render these images, the first author uses IIS algorithm \cite{bridges2018}.
 
 \begin{figure}[h!tbp]
  \begin{minipage}{0.5\textwidth}
@@ -3200,11 +3202,11 @@ These data inspire us a certain relationship between sphairahedra and bianchi te
 \subsection{Outside of the parameter space}
 
 \noindent(Figure \ref{fig:cubeArms} near here)
-(Figure \ref{fig:lowerPrism} near here)
-(Figure \ref{fig:lowerLimit} near here)\\
 (Figure \ref{fig:cubeHole}\subref{fig:upperPrism}
 \subref{fig:upperPrismSmallHole}
-\subref{fig:upperPrismBigHole} near here)
+\subref{fig:upperPrismBigHole} near here)\\
+(Figure \ref{fig:lowerPrism} near here)
+(Figure \ref{fig:lowerLimit} near here)
 
 \begin{figure}[h!tbp]
  \begin{minipage}[t]{0.3\textwidth}
@@ -3214,7 +3216,36 @@ These data inspire us a certain relationship between sphairahedra and bianchi te
  \label{fig:cubeArms}
  \end{minipage}
  \hspace*{\fill}
- \begin{minipage}[t]{0.3\textwidth}
+ \begin{minipage}[t]{0.75\textwidth}
+ \begin{minipage}[t]{0.25\textwidth}
+  \centering
+  \includegraphics[width=1.3in, keepaspectratio]{./img/visualization/cubePrism.jpg}
+  \subcaption{}
+  \label{fig:upperPrism}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.25\textwidth}
+  \centering
+  \includegraphics[width=1.3in, keepaspectratio]{./img/visualization/cubeSmallHole.jpg}
+  \subcaption{}
+  \label{fig:upperPrismSmallHole}
+  \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.25\textwidth}
+  \centering
+  \includegraphics[width=1.3in, keepaspectratio]{./img/visualization/cubeHole.jpg}
+  \subcaption{}
+  \label{fig:upperPrismBigHole}
+ \end{minipage}
+ \hspace*{\fill}
+ \caption{Cube limit set and upper part of sphairahedral prism.}
+ \label{fig:cubeHole}
+ \end{minipage}
+ \hspace*{\fill}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.5\textwidth}
   \centering
   \includegraphics[width=1.3in,
   keepaspectratio]{./img/visualization/lowerHalfSphairahedron.jpg}
@@ -3222,7 +3253,7 @@ These data inspire us a certain relationship between sphairahedra and bianchi te
  \label{fig:lowerPrism}
  \end{minipage}
  \hspace*{\fill}
- \begin{minipage}[t]{0.3\textwidth}
+ \begin{minipage}[t]{0.5\textwidth}
   \centering
   \includegraphics[width=1.3in,
   keepaspectratio]{./img/visualization/lowerHalfLimit.jpg}
@@ -3230,32 +3261,6 @@ These data inspire us a certain relationship between sphairahedra and bianchi te
  \label{fig:lowerLimit}
  \end{minipage}
  \hspace*{\fill}
-\end{figure}
-
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.3\textwidth}
-  \centering
-  \includegraphics[width=1.5in, keepaspectratio]{./img/visualization/cubePrism.jpg}
-  \subcaption{}
-  \label{fig:upperPrism}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.3\textwidth}
-  \centering
-  \includegraphics[width=1.5in, keepaspectratio]{./img/visualization/cubeSmallHole.jpg}
-  \subcaption{}
-  \label{fig:upperPrismSmallHole}
-  \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.3\textwidth}
-  \centering
-  \includegraphics[width=1.5in, keepaspectratio]{./img/visualization/cubeHole.jpg}
-  \subcaption{}
-  \label{fig:upperPrismBigHole}
- \end{minipage}
- \hspace*{\fill}
- \caption{Cube limit set and upper part of sphairahedral prism.}
- \label{fig:cubeHole}
 \end{figure}
 
 In this subsection we observe cubic infinite sphairahedron whose
@@ -3349,6 +3354,7 @@ The parameter space is as follows.
  \includegraphics[width=2in,
  keepaspectratio]{./img/graph/cubeALimit.jpg}
  \caption{Parameter space of type 1.}
+  \label{fig:cubeALimit2}
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[]{0.5\textwidth}
@@ -4136,16 +4142,19 @@ Figure captions
 
 % Outside of the parameter space
 \item Figure \ref{fig:cubeArms}: Cube limit set with arms.
-\item Figure \ref{fig:lowerPrism}: Sphairahedron with hole.
-\item Figure \ref{fig:lowerLimit}: Limit set with hole.
-
 \item Figure \ref{fig:cubeHole}: Cube limit set and upper part of
       sphairahedral prism.
 \item Figure \ref{fig:cubeHole}\subref{fig:upperPrism}:
 \item Figure \ref{fig:cubeHole}\subref{fig:upperPrismSmallHole}:
 \item Figure \ref{fig:cubeHole}\subref{fig:upperPrismBigHole}:
 
+\item Figure \ref{fig:lowerPrism}: Sphairahedron with hole.
+\item Figure \ref{fig:lowerLimit}: Limit set with hole.
+
+
 %Appendix
+
+\item Figure \ref{fig:cubeALimit2}: Parameter space of type 1.
 \item Figure \ref{fig:graphCubeB}: Parameter space of type 2. 
 \item Figure \ref{fig:graphCubeC}: Parameter space of type 3.
 \item Figure \ref{fig:graphCubeD}: Parameter space of type 4.
