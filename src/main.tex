@@ -234,7 +234,7 @@ the parameter spaces of cake sphairahedra.
    \centering
    \includegraphics[width=1.2in, height=1.2in, keepaspectratio]
    {./img/sphairahedralPrism/sphairaHalf.jpg}
-   \subcaption{Infinite type}
+   \subcaption{Infinite}
    \label{fig:sphairaPrismHalf}
   \end{minipage}
   \hspace*{\fill}
@@ -242,7 +242,7 @@ the parameter spaces of cake sphairahedra.
    \centering
    \includegraphics[width=1.2in, height=1.2in,
    keepaspectratio]{./img/sphairahedralPrism/sphairahedron.jpg} 
-   \subcaption{Finite type}
+   \subcaption{Finite}
    \label{fig:sphairahedronFinite}
   \end{minipage}
   \hspace*{\fill}
@@ -264,7 +264,7 @@ the parameter spaces of cake sphairahedra.
    \centering
    \includegraphics[width=1.2in, height=1.2in,
    keepaspectratio]{./img/sphairahedralPrism/semiSphairaHalf.jpg}
-   \subcaption{Infinite type}
+   \subcaption{Infinite}
    \label{fig:semi-sphairaHalf}
   \end{minipage}
   \hspace*{\fill}
@@ -459,7 +459,9 @@ Using sphairahedron.net\cite{sphairahedron_net}, we can observe rendered images 
 
 We show another example of $|L|_k$ in Figure \ref{fig:sphairahedralPrismTile}.  In this example the fundamental tile is an infinite sphairahedron.  The resulting shape in Figure \ref{fig:sphairahedralPrismTile}\subref{fig:sphairaPrismFinal} looks like a terrain of scenic beauty.
 
-Here we present a conjecture after observation of the simulations by sphairahedron.net\cite{sphairahedron_net}.
+Observation using simulator repeatedly is beneficial to find conjecture.
+Here we present a conjecture after observation of the simulations by
+sphairahedron.net\cite{sphairahedron_net}.
 
 \begin{conjecture}
 If $T$ is an ideal rational sphairahedron, and $G$ is the tiling group of $T$, then the tiling $L=(T,G)$ is embedded in $S^3$.
@@ -3273,9 +3275,19 @@ Observing the shape of the limit set, we can find a cone-shaped arm (an elongate
 In the center of Figure \ref{fig:cubeArms}, there is a hexagonal table-like shape, and there is an arm at each vertex.
 On the other hand, we can find another arm from another hexagonal table-like shape, and two arms construct an unfinished arch bridge.
 We scrutinize this part.  See Figures \ref{fig:cubeHole} (a)(b)(c).  The pink block in each figure is \lq another connected component\rq of the compliment $A=S^3-\cup_i\overline{D_i}$.  Theoretically saying, the pink block does not have an intersection with the limit set.  
-Figure (a) shows an image where the parameter is very near the boundary of the parameter space.  A tip of the arm is near the pink block, and at the same time, the block is skinny (like a tissue) around here.
-Figure (b) shows an image where the parameter is a bit outside the parameter space.  There occurs a small hole on the thin wall, and two arms are connecting (complete an arch bridge.)  Here, the compliment $A=S^3-\cup_i\overline{D_i}$ has two connected components, and one of them is simply connected, but upper one is not, and this is not a sphairahedron.
-Figure (c) shows an image where the parameter is entirely outside the parameter space.  The hole on the wall gets broader than that of (b), and the arch bridge gets stout.)   
+Figure (a) shows an image where the parameter is very near the boundary
+of the parameter space.  A tip of the arm is near the pink block, and at
+the same time, the block is skinny (like a tissue) around here..
+Figure (b) shows an image where the parameter is a bit outside the
+parameter space.  There occurs a small hole on the thin wall, and two
+arms are connecting (complete an arch bridge.) we call
+the arms \textit{pinched arms}. 
+Here, the compliment $A=S^3-\cup_i\overline{D_i}$ has two connected
+components, and one of them is simply connected, but upper one is not,
+and this is not a sphairahedron.
+Figure (c) shows an image where the parameter is entirely outside the
+parameter space.  The hole on the wall gets broader than that of (b),
+and the arch bridge gets stout. We call the arms \textit{Bridged arms}.
 
 From the series of phenomena on arms, we may have a conjecture the existence of some particular elements in the tiling group $G$.  
 One is the existence of an accidental parabolic element in $G$ when the parameter lies on the boundary of the parameter space.  
@@ -3755,14 +3767,14 @@ Figure captions
  \item Figure \ref{fig:sphairahedron}\subref{fig:sphairaPrismAll}:
        Complement $A$
  \item Figure \ref{fig:sphairahedron}\subref{fig:sphairaPrismHalf}
-       Infinite type
+       Infinite
  \item Figure \ref{fig:sphairahedron}\subref{fig:sphairahedronFinite}
-       Finite type
+       Finite
  \item Figure \ref{fig:semi-sphairahedron}: Semi-sphairahedron.
  \item Figure \ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaAll}:
        Complement $A$
  \item Figure \ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaHalf}:
-       Infinite type
+       Infinite
  \item Figure \ref{fig:brokenHole}: Sphairahedron with hole.
  \item Figure \ref{fig:sphairahedronTile}: Tiling of a finite cubic
        sphairahedron.
