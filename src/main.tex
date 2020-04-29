@@ -47,6 +47,8 @@
 
 \newtheorem{problem}{Problem}[section] % Comment out [section] to remove section number dependence
 
+\maxdeadcycles=200
+
 \date{\empty}
 
 \begin{document}
@@ -59,7 +61,7 @@
 \name{Kento Nakamura\textsuperscript{a}, Yoshiaki Araki\textsuperscript{b}
  and Kazushi Ahara\textsuperscript{c}}
 \affil{\textsuperscript{a}Graduate School of Advanced Mathematical
-Sciences, Meiji University, Tokyo, Japan; 
+Sciences, Meiji University, Tokyo, Japan;
 \textsuperscript{b}Japan Tessellation Design Association;\\
 \textsuperscript{c}School of Interdisciplinary Mathematical Sciences
 , Meiji University, Tokyo, Japan.}
@@ -75,7 +77,7 @@ preserving/reversing Moebius transformations on the 3-sphere.
 In this article, first, we show an overview of such groups arising from
 sphairahedra, which is announced by Ahara and Araki in 2003.
 Next, we introduce a rendering system of sphairahedra and their limit
-sets and observe some mathematical problems. 
+sets and observe some mathematical problems.
 Usually, rendering an image of this kind of fractal takes much time.
 However, using an algorithm called Iterated Inversion System (IIS),
 introduced by Nakamura and Ahara in 2016 and 2017,
@@ -97,44 +99,6 @@ mathematics; visualization; fractals; Kleinian groups; circle inversion;
 (Figure \ref{fig:cubeSphaira} near here)(Figure
 \ref{fig:quasi-sphere}\subref{fig:quasi-sphere1}\subref{fig:quasi-sphere2}\subref{fig:quasi-sphereZoom}
 near here)
-
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.25\textwidth}
-   \centering
-   \includegraphics[height=1.2in, keepaspectratio]{./img/introduction/cube.jpg}
-   \caption{Cubic sphairahedron.}
-   \label{fig:cubeSphaira}
-  \end{minipage}
-  \hspace*{\fill}
- \begin{minipage}[t]{0.75\textwidth}
-  \begin{minipage}[t]{0.25\textwidth}
-   \centering
-   \includegraphics[height=1.2in,
-   keepaspectratio]{./img/introduction/quasiSphere1.jpg}
-   \subcaption{}
-   \label{fig:quasi-sphere1}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.25\textwidth}
-   \centering
-   \includegraphics[height=1.2in,
-   keepaspectratio]{./img/introduction/quasiSphere2.jpg}
-   \subcaption{}
-   \label{fig:quasi-sphere2}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.25\textwidth}
-   \centering
-   \includegraphics[height=1.2in,
-   keepaspectratio]{./img/introduction/quasiSphere3.jpg}
-   \subcaption{}
-   \label{fig:quasi-sphereZoom}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Images of a quasi-sphere rendered in different viewpoints.}
-  \label{fig:quasi-sphere}
- \end{minipage}
-\end{figure}
 
 \subsection{Background}
 
@@ -168,11 +132,11 @@ an example of a quasi-sphere in Figure \ref{fig:quasi-sphere}.
 
 Ahara and Araki studied graphics and mathematics about a sphairahedron
 and a quasi-sphere in ICG 2002, that is, an international conference about
-computer graphics. 
+computer graphics.
 The paper introduces mathematical background than the way of the rendering
 graphics and it shows the simplest parameter space of cubic sphairahedra
 and some rendered images of the limit set by POV-Ray.
-After that, Ahara presented a paper written in Japanese\cite{AharaJa}, 
+After that, Ahara presented a paper written in Japanese\cite{AharaJa},
 showing the varieties of sphairahedra and dimensions of parameter space.
 In 2016, Ryo Kageyama\cite{kageyama} introduced the parameter space of the cubic sphairahedron, and moreover, he introduced varieties of deformations of
 quasi-spheres.
@@ -184,32 +148,32 @@ In 2014, J\'er\'emie Brunet published a book of
 fractal paintings named ``L'art fractal''. One of his works in the book called
 ``Quasi-Quasi-Grail'' is based on Ahara and Araki fractal.
 
-In 2017, a breakthrough came out. 
+In 2017, a breakthrough came out.
 Nakamura and Ahara developed an algorithm called
 \textit{Iterated Inversion System (IIS)}\cite{bridges2016}\cite{bridges2017}.
 They combine IIS and Sphere tracing\cite{sphereTracing},
- which is a kind of ray tracing, 
+ which is a kind of ray tracing,
 and their technique allows us to render quasi-spheres dramatically fast.
 IIS is a way to render CG related to a finitely generated group, whose
 generators are symmetry transformations or inversions.
-It determines a color on the screen pixel by pixel, thus, it get easy to parallelize and render an image fast. 
+It determines a color on the screen pixel by pixel, thus, it get easy to parallelize and render an image fast.
 Rendering quasi-sphere using IIS and sphere tracing is published in
 Bridges\cite{bridges2018}, an international conference about mathematics
 and arts.
 This shows not only the way for CG but also an algorithm for mathematical art.
 
-Note that there are many pictures of three-dimensional in this paper, 
+Note that there are many pictures of three-dimensional in this paper,
 but it is hard to gaze their whole appearances only on paper. We can see a fractal renderer, more pictures, and more movies based on sphairahedra in
 the web site\footnote{\url{https://sphairahedron.net}} of the first author.
 
-This paper is organaized as follows.  
+This paper is organaized as follows.
 In Section 1, we survey the history of sphairahedra and quasi-spheres.
 In Section 2, we prepare the definitions of a sphairahedron and its tiling group.
 In Section 3, we show some propositions about the parameter spaces of various kinds of sphairahedra.
-In Section 4, we introduce some observations. 
+In Section 4, we introduce some observations.
 
 The authors thank their colleague Shoichi Fujita in their laboratory.
-He provides valuable comments for them  to complete the calculations of 
+He provides valuable comments for them  to complete the calculations of
 the parameter spaces of cake sphairahedra.
 
 
@@ -220,65 +184,6 @@ the parameter spaces of cake sphairahedra.
 \noindent(Figure \ref{fig:sphairahedron}\subref{fig:sphairaPrismAll}\subref{fig:sphairaPrismHalf}\subref{fig:sphairahedronFinite}
  near here)\\
 \noindent(Figure \ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaAll}\subref{fig:semi-sphairaHalf})(Figure \ref{fig:brokenHole} near here)
-
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.3\textwidth}
-   \centering
-   \includegraphics[width=1.2in, height=1.2in, keepaspectratio]
-   {./img/sphairahedralPrism/sphairaAll.jpg}
-   \subcaption{Complement $A$}
-   \label{fig:sphairaPrismAll}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.3\textwidth}
-   \centering
-   \includegraphics[width=1.2in, height=1.2in, keepaspectratio]
-   {./img/sphairahedralPrism/sphairaHalf.jpg}
-   \subcaption{Infinite}
-   \label{fig:sphairaPrismHalf}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.3\textwidth}
-   \centering
-   \includegraphics[width=1.2in, height=1.2in,
-   keepaspectratio]{./img/sphairahedralPrism/sphairahedron.jpg} 
-   \subcaption{Finite}
-   \label{fig:sphairahedronFinite}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Sphairahedron.}
-  \label{fig:sphairahedron}
- \end{figure}
-
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.6\textwidth}
-  \begin{minipage}[t]{0.3\textwidth}
-   \centering
-   \includegraphics[width=1.2in, height=1.2in,
-   keepaspectratio]{./img/sphairahedralPrism/semiSphairaAll.jpg}
-   \subcaption{Complement  $A$}
-   \label{fig:semi-sphairaAll}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.3\textwidth}
-   \centering
-   \includegraphics[width=1.2in, height=1.2in,
-   keepaspectratio]{./img/sphairahedralPrism/semiSphairaHalf.jpg}
-   \subcaption{Infinite}
-   \label{fig:semi-sphairaHalf}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Semi-sphairahedron.}
-  \label{fig:semi-sphairahedron}
- \end{minipage}
- \begin{minipage}[t]{0.3\textwidth}
-  \centering
- \includegraphics[width=1.2in, height=1.2in,
- keepaspectratio]{./img/sphairahedralPrism/hole.jpg}
- \caption{sphairahedron with hole.}
-  \label{fig:brokenHole}
- \end{minipage}
-\end{figure}
 
 We describe the definition of a sphairahedron used in \cite{bridges2018}.
 \begin{definition}
@@ -292,13 +197,13 @@ If the following two conditions are satisfies, we call the component $T$ of $A$ 
 (b) \ $T$ is a component of $A$, and for any $i$, a part of $O_i=\partial\overline{D_i}$ is a face of $T$.
 \end{definition}
 The image in Figure \ref{fig:sphairahedron}\subref{fig:sphairaPrismHalf}\subref{fig:sphairahedronFinite}
-is an example of a sphairahedron. 
+is an example of a sphairahedron.
 
 By definition, a sphairahedron has faces, edges, and
 vertexes. We define \emph{ideality} and \emph{rationality} of a sphairahedron.
 
 \begin{definition}
-(1)\ Let $T$ be a sphairahedron.  For each vertex, if all edges passing through the vertex are tangential to each other, we call it an \emph{ideal} sphairahedron.\par 
+(1)\ Let $T$ be a sphairahedron.  For each vertex, if all edges passing through the vertex are tangential to each other, we call it an \emph{ideal} sphairahedron.\par
 (2)\ Let $T$ be a sphairahedron.  For each edge, if the dihedral angle at the edge is rational (that is, the angle equals to $\pi/n$, where $n$ is a natural number,) we call it an \emph{rational} sphairahedron.
 \end{definition}
 
@@ -323,16 +228,16 @@ See Figure\ref{fig:sphairahedron}\subref{fig:sphairahedronFinite}.
 % $A$ is composed of two parts, and each of the components is simply connected.
 % Since it has six faces, and these faces are arranged as those of faces of
 % a cube, it is called a cubic sphairahedron.
-% Especially, the sphairahedron showned in Figure 
+% Especially, the sphairahedron showned in Figure
 % \ref{fig:sphairahedron}\subref{fig:sphairaPrismHalf}
 % is also called an \textit{infinite type sphairahedron},
 % because one of the vertexes of the sphairahedron is at the infinity.
 % Similarly, the shape hollowed out by six finite balls in Figure
 % \ref{fig:sphairahedron}\subref{fig:sphairahedronFinite} is called a
 % \textit{finite type sphairahedron}.
-%---------- 
+%----------
 
-Moreover, we can loosen the definition of an ideal rational sphairahedron, 
+Moreover, we can loosen the definition of an ideal rational sphairahedron,
 that is, we allow the case $A$ has simply connected three or more components.
 
 \begin{definition}
@@ -340,15 +245,15 @@ Let $\overline{D_1}, \overline{D_2},\ldots, \overline{D_p}$ be ball or
 half-space in $S^3$.  Let $A$ be the complement of the unions of
 $\overline{D_i}$'s.  If the following three conditions are satisfies, we call the subset $T$ {\it a semi-sphairahedron.}\par
 (a) \ $A$ has more than two connected components and all
-components are simply connected. \par 
+components are simply connected. \par
 (b) \ $T$ is a component or the union of two (or more) components, and the closure $\text{Cl}(T)$ is connected. \par
 (c) \ For any $i$, a subset of $O_i=\partial \overline{D_i}$ is a face of $T$.
 \end{definition}
 Figure \ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaAll} shows an
 example of a ideal rational semi-sphairahedron.  We can get this shape by scooping a
 triangle prism out by two balls.  Complement $A$ consists of three
-connected components. Lower two of them are tetrahedra, and the upper 
-one is a pentahedron.  If we set $T$ to be the unions of lower two components,  
+connected components. Lower two of them are tetrahedra, and the upper
+one is a pentahedron.  If we set $T$ to be the unions of lower two components,
 then $T$ is a semi-sphairahedron and we can regard it as a sphairahedron with a singular point.  See Figure \ref{fig:semi-sphairahedron}\subref{fig:semi-sphairaHalf}.
 
 
@@ -358,7 +263,7 @@ and Kageyama \cite{kageyama} did not deal with semi-sphairahedra and their rende
 Other than semi-sphairahedra, we have much more 'sphairahedron-like
 shapes' in the ideal and rational situation.  See Figure \ref{fig:brokenHole}. In this
 figure, we see a hole indicated by an arrow at one of the faces.  This shape does not generate a
-sphairahedron, but we can apply the tiling method in the below section, 
+sphairahedron, but we can apply the tiling method in the below section,
 and we have a (non-simply-connected) limit set.  We have not classified
 these figures mathematically yet, but possibly it occurs some
 interesting geometry problems from here.
@@ -373,46 +278,6 @@ interesting geometry problems from here.
 \subref{fig:sphaira-step10}
 \subref{fig:sphaira-final} near here)
 
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/step1.jpg}
-  \subcaption{Step 1}
-  \label{fig:sphaira-step1}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/step2.jpg}
-  \subcaption{Step 2}
-  \label{fig:sphaira-step2}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/step5.jpg}
-  \subcaption{Step 5}
-  \label{fig:sphaira-step5}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/step10.jpg}
-  \subcaption{Step 10}
-  \label{fig:sphaira-step10}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/final.jpg}
-  \subcaption{Final image}
-  \label{fig:sphaira-final}
- \end{minipage}
- \hspace*{\fill}
- \caption{Tiling of a finite cubic sphairahedron.}
- \label{fig:sphairahedronTile}
-\end{figure}
-
 Let $T$ be a sphairahedron.  Let $\overline{D_i}$ ($i = 1,2,\ldots, p$) be the closed ball of $T$ and $O_i$ be the boundary sphere of $\overline{D_i}$.  Suppose that a map $\varphi_i:S^3 \to S^3$ is the inversion map of $O_i$.  $\varphi_i$ is an orientation-reversing M\"obius map on $S^3$ and let the {\it tiling group} $G=G(T)$ be a group generated by all $\varphi_i$'s.  That is,
 \[
  G = G(T) := \langle\varphi_1, \varphi_2, \ldots , \varphi_p  \rangle < \text{Mob}(S^3)
@@ -421,7 +286,7 @@ Let $T$ be a sphairahedron.  Let $\overline{D_i}$ ($i = 1,2,\ldots, p$) be the c
 For a subgroup $G$ of
 $\text{Mob}(S^3)$, let the {\it discontinuity set} $\Omega(G)$ be
 \[
-\Omega(G) = \left\{ x \in S^3 \left| \hspace{1mm} 
+\Omega(G) = \left\{ x \in S^3 \left| \hspace{1mm}
 \begin{minipage}{8cm}
 the point $x$ possesses a neighborhood $U(x)$
 such that the intersection $U(x) \cap gU(x)$ is empty for all but finite
@@ -433,18 +298,18 @@ The complement $\Lambda(G) := S^3 \backslash \Omega(G)$ is called the
 {\it limit set} of the group $G$. $G$ is a (4 dimensional) {\it Kleinian group} if $\Omega(G)$ is
 not empty\footnote{Usually we consider a Kleinian group as a properly discontinuous subset of the {\it orientation preserving} M\"obius transformation group $\text{Mob}_+(S^3)$, however we weaken the condition of orientation preserving.}. The limit set $\Lambda(G)$ consists either of 0 or 1 or 2 or
 infinitely many points. Here we consider only the case that $\Lambda(G)$
-is infinite and two-dimensional. 
+is infinite and two-dimensional.
 A Kleinian group $G$ is called a
-{\it 3-Kleinian group} if $\Lambda(G)$ is a round sphere. This means that $G$ can be reduced into the Kleinian group $\text{Mob}(S^2)$ in the usual sense.  
+{\it 3-Kleinian group} if $\Lambda(G)$ is a round sphere. This means that $G$ can be reduced into the Kleinian group $\text{Mob}(S^2)$ in the usual sense.
 A Kleinian group $G$ is called a
-{\it quasi-fuchsian group} if $\Lambda(G)$ is homeomorphic to a closed sphere, 
+{\it quasi-fuchsian group} if $\Lambda(G)$ is homeomorphic to a closed sphere,
 and there exists a homeomorphism $f:S^3 \rightarrow S^3$ which conjugates
 $G$ to a 3-Kleinian group. If $G$ is a quasi-fuchsian group, the limit set
 $\Lambda(G)$ may be a fractal sphere, that is, a sphere embedded in $S^3$ with
  fractal structure.
 
 %球面体をタイリングすることができる。（ポアンカレの多面体定理）
-Let $L$ be the tiling generated by a tile $T$ and a transform group $G$, that is, the piece set of $L$ consists of $g(T)$ for all $g\in G$.  We represent $L$ by the pair $(T,G)$.  The rationality condition guarantees the local consistency of tiling satisfies because of Poincare's polyhedron theorem.  
+Let $L$ be the tiling generated by a tile $T$ and a transform group $G$, that is, the piece set of $L$ consists of $g(T)$ for all $g\in G$.  We represent $L$ by the pair $(T,G)$.  The rationality condition guarantees the local consistency of tiling satisfies because of Poincare's polyhedron theorem.
 
 %実際に、群$G$の長さが短い要素から考えていくと、その和集合はローカルには球体と同相な図形の$S^3$へのはめ込み（局所的な埋め込み）になる。
 Let $|L|_k$ be the interior of the union of tiles $g(\text{Cl}(T))$ such that the word length of $g\in G$ is less than $k+1$.  That is,
@@ -455,7 +320,7 @@ At least for a small $k$, $|L|_k$ is homeomorphic to a open 3-ball $B^3$.  For a
 
 Using sphairahedron.net\cite{sphairahedron_net}, we can observe rendered images of $|L|_k$.  See Figure \ref{fig:sphairahedronTile}.   In Figure
 \ref{fig:sphairahedronTile}\subref{fig:sphaira-step1} we see the fundamental sphairahedron with six faces.  $|L|_1, |L|_5, |L|_{10}$ is shown in Figure
-\ref{fig:sphairahedronTile}\subref{fig:sphaira-step2}\subref{fig:sphaira-step5}\subref{fig:sphaira-step10}.  In these figure, adjacent tiles have different colors.  In Figure \ref{fig:sphairahedronTile}\subref{fig:sphaira-step10}, outside tiles are so small and we see the union in gray color.  These figures suggest us that $|L|_k$'s are embedded in $S^3$.  Figure \ref{fig:sphairahedronTile}\subref{fig:sphaira-final} shows a rendering image for a large enough $k$.  In this figure we use another algorithm(, detemining a color by $k$ on the hue circle) to render the image and we success to color the shape properly. 
+\ref{fig:sphairahedronTile}\subref{fig:sphaira-step2}\subref{fig:sphaira-step5}\subref{fig:sphaira-step10}.  In these figure, adjacent tiles have different colors.  In Figure \ref{fig:sphairahedronTile}\subref{fig:sphaira-step10}, outside tiles are so small and we see the union in gray color.  These figures suggest us that $|L|_k$'s are embedded in $S^3$.  Figure \ref{fig:sphairahedronTile}\subref{fig:sphaira-final} shows a rendering image for a large enough $k$.  In this figure we use another algorithm(, detemining a color by $k$ on the hue circle) to render the image and we success to color the shape properly.
 
 We show another example of $|L|_k$ in Figure \ref{fig:sphairahedralPrismTile}.  In this example the fundamental tile is an infinite sphairahedron.  The resulting shape in Figure \ref{fig:sphairahedralPrismTile}\subref{fig:sphairaPrismFinal} looks like a terrain of scenic beauty.
 
@@ -480,65 +345,20 @@ If the tiling $L=(T,G)$ is embedded in $S^3$, then we have
 \subref{fig:terrainStep1}\subref{fig:terrainStep2}\subref{fig:terrainStep5}
 \subref{fig:terrainStep20}\subref{fig:sphairaPrismFinal} near here)
 
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/step1.jpg}
-  \subcaption{Step 1}
-  \label{fig:terrainStep1}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/step2.jpg}
-  \subcaption{Step 2}
-  \label{fig:terrainStep2}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/step5.jpg}
-  \subcaption{Step 5}
-  \label{fig:terrainStep5}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/step20.jpg}
-  \subcaption{Step 20}
-  \label{fig:terrainStep20}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/final.jpg}
-  \subcaption{Final image}
-  \label{fig:sphairaPrismFinal}
- \end{minipage}
- \caption{Tiling of a cubic infinite sphairahedron.}
- \label{fig:sphairahedralPrismTile}
-\end{figure}
-
 (Figure \ref{fig:semiSphairaSpheres} near here)
-\begin{figure}[h!tbp]
-  \centering
- \includegraphics[width=3in,
- keepaspectratio]{./img/constructFractal/semi-terrain.jpg}
- \caption{Sphairahedron with hole.}
-  \label{fig:semiSphairaSpheres}
-\end{figure}
+
 
 %semi-sphairahedronについてはここで書く。
 In the same way as above, a semi-sphairahedron
 can be tiled by the inversions of its faces.
-Though the fundamental tile may be not connected and each $|L|_k$ is not connected nor the group is not quasi-fuchsian, the closure $\text{Closure}(|L|_k)$ is connected.  
+Though the fundamental tile may be not connected and each $|L|_k$ is not connected nor the group is not quasi-fuchsian, the closure $\text{Closure}(|L|_k)$ is connected.
 See an example in Figure \ref{fig:semiSphairaSpheres}.  Here we see an plane and infinite number of balls touching to the ground and to each other.  We call this shape {\it snowball fractal.}  Such shape can occur lower side of the plane, that is, we see only one plane but there are infinite number of spherical pitfalls underground.
 
 %%対称性については、「数学的知見」のところで扱う。
 %Also, an infinite sphairahedron can be tiled, as presented in Figure
 %\ref{fig:sphairahedralPrismTile}.
 %The pattern converges to fractal terrain owing to reflections over side
-%faces of the sphairahedron, as shown in Figure 
+%faces of the sphairahedron, as shown in Figure
 %\ref{fig:sphairahedralPrismTile}\subref{fig:terrainStep1}.
 %In the fractal terrain, we can find symmetry easily.
 %For example, we can see hexagram-like terrain patterns in Figure
@@ -574,11 +394,11 @@ See an example in Figure \ref{fig:semiSphairaSpheres}.  Here we see an plane and
 
 %We are interested in finding examples of quasi-fuchsian sub-group of
 %M\"ob$_{+}(S^3)$, the group of orientation preserving M\"obius
-%transformation on $S^3 = R^3 \bigcup \{\infty\}$. 
+%transformation on $S^3 = R^3 \bigcup \{\infty\}$.
 %For a subgroup $G$ of
 %Mob$_+(S^3)$, let the discontinuity set $\Omega(G)$ be
 %$$
-%\Omega(G) = \left\{ x \in S^3 \left| \hspace{1mm} 
+%\Omega(G) = \left\{ x \in S^3 \left| \hspace{1mm}
 %\begin{minipage}{8cm}
 %the point x possesses a neighborhood $(x)$
 %such that the intersection $U(x) \cap gU(x)$ is empty for all but finite
@@ -592,7 +412,7 @@ See an example in Figure \ref{fig:semiSphairaSpheres}.  Here we see an plane and
 %infinitely many points. Here we consider only the case that $\Lambda(G)$
 %is infinite and two-dimensional. A Kleinian group $G$ is a fuchsian
 %group if $\Lambda(G)$ is a closed round sphere. $G$ is called a
-%quasi-fuchsian group is $\Lambda(G)$ is homeomorphic to a closed sphere, 
+%quasi-fuchsian group is $\Lambda(G)$ is homeomorphic to a closed sphere,
 %and there exists a homeomorphism $f:S^3 \rightarrow S^3$ which conjugates
 %$G$ to a fuchsian group. If $G$ is a quasi-fuchsian group, the limit set
 %$\Lambda(G)$ may be a fractal sphere, that is, a sphere in $S^3$ with
@@ -642,18 +462,18 @@ See an example in Figure \ref{fig:semiSphairaSpheres}.  Here we see an plane and
 
 %In the following sections, we derive rational ideal sphairahedron.
 
-In this section we consider ideal rational sphairahedra of various types. 
-In order to classify such sphairahedra, we need three steps.  In the first step, we classify the polyhedral structure of a sphairahedron.  See Figure \ref{fig:tetrahedronFinite} for a tetraheron.  This example is a sphairahedron of tetrahedron type, this means that the polyhedral structure is same as that of a tetrahedron as in Figure \ref{fig:tetrahedronFaces}.  
-In the second step, we classify combinations of dihedral angles of edges.  In tetrahedron case, there are three combinations as seen in Figure \ref{fig:tetrahedronCombinations}.  Here a number $n$ at each edge means that the dihedral angle at the edge is $\pi / n$. 
-In the third step, we calculate the parameter space of the shape of sphairahedra.  Here we assume that two sphairahedra $T_1, T_2$ are equivalent if there exists a (orientation preserving/reversing) M\"obius transformation $f$ on $S^3$ such that $f(T_1) = T_2$.  In the tetrahedron case, the parameter space consists of only one point.  
+In this section we consider ideal rational sphairahedra of various types.
+In order to classify such sphairahedra, we need three steps.  In the first step, we classify the polyhedral structure of a sphairahedron.  See Figure \ref{fig:tetrahedronFinite} for a tetraheron.  This example is a sphairahedron of tetrahedron type, this means that the polyhedral structure is same as that of a tetrahedron as in Figure \ref{fig:tetrahedronFaces}.
+In the second step, we classify combinations of dihedral angles of edges.  In tetrahedron case, there are three combinations as seen in Figure \ref{fig:tetrahedronCombinations}.  Here a number $n$ at each edge means that the dihedral angle at the edge is $\pi / n$.
+In the third step, we calculate the parameter space of the shape of sphairahedra.  Here we assume that two sphairahedra $T_1, T_2$ are equivalent if there exists a (orientation preserving/reversing) M\"obius transformation $f$ on $S^3$ such that $f(T_1) = T_2$.  In the tetrahedron case, the parameter space consists of only one point.
 
 %阿原荒木の仕事
-Ahara and Araki \cite{AharaAraki} determine all of combinations of dihedral angles of the cubic sphairahedra and they show one of the parameter space without a proof.  
+Ahara and Araki \cite{AharaAraki} determine all of combinations of dihedral angles of the cubic sphairahedra and they show one of the parameter space without a proof.
 %阿原の仕事
-Ahara \cite{AharaJa} determines all of polyhedral structures of sphairahedra with 5 or 6 faces.  He also shows the number of combinations of dihedral angles for each structure without a proof.  
+Ahara \cite{AharaJa} determines all of polyhedral structures of sphairahedra with 5 or 6 faces.  He also shows the number of combinations of dihedral angles for each structure without a proof.
 Ahara and Araki \cite{AharaAraki2} determines all of the parameter spaces for the cube case with a proof.  This paper was quoted in other papers, however it is an unpublished preprint.
 %影山さんの仕事（の関連部分）の紹介
-Kageyama \cite{kageyama} introduces the result of \cite{AharaAraki2} without a proof. 
+Kageyama \cite{kageyama} introduces the result of \cite{AharaAraki2} without a proof.
 %この論文での守備範囲の紹介
 In this paper, we introduce all of the parameter spaces of sphairahedra with 5 or 6 faces, including current results. The proof is so similar to that of \cite{AharaAraki2}, and we introduce it in the appendix.
 
@@ -694,9 +514,9 @@ We prepare some lemmas to execute classifications.
 
 \begin{lemma}\label{lemma:sum}
 Suppose that there are $k$ edges with a vertex. Then the sum of
- dihedral angles of these three edges is $(k-2)\pi$.  If $k=3$ then the combination of dihedral angles is 
+ dihedral angles of these three edges is $(k-2)\pi$.  If $k=3$ then the combination of dihedral angles is
 one of $\left( \frac{\pi}{3}, \frac{\pi}{3}, \frac{\pi}{3}\right)$, $\left( \frac{\pi}{2}, \frac{\pi}{4}, \frac{\pi}{4}\right)$, and $\left( \frac{\pi}{2}, \frac{\pi}{3}, \frac{\pi}{6}\right)$.
-If $k=4$ then the combination of dihedral angles is 
+If $k=4$ then the combination of dihedral angles is
 $\left( \frac{\pi}{2}, \frac{\pi}{2}, \frac{\pi}{2}, \frac{\pi}{2}\right)$. The case $k>4$ cannot happen.
 \end{lemma}
 
@@ -704,15 +524,15 @@ $\left( \frac{\pi}{2}, \frac{\pi}{2}, \frac{\pi}{2}, \frac{\pi}{2}\right)$. The 
  Let $\phi$ be a M\"obius transformation such that it maps the vertex to
  the infinite-point. Then all of edges with the vertex are mapped to
  parallel lines, and they form a prism. If we consider a
- regular section of a prism, then the internal angles of the section 
+ regular section of a prism, then the internal angles of the section
  are equal to dihedral angles, and the sum of them is $(k-1)\pi$.  This
  completes the proof.  We easily have all combinations of dihedral angles.
 \end{proof}
 
-Next, we prepare some lemmas to calculate the parameter space of sphairahedra. First, we recall simple conditions to be equivalent of two sphairahedra.  This lemma is clear because it is well known that these transformations are M\"obius transformations. 
+Next, we prepare some lemmas to calculate the parameter space of sphairahedra. First, we recall simple conditions to be equivalent of two sphairahedra.  This lemma is clear because it is well known that these transformations are M\"obius transformations.
 
 \begin{lemma} \label{lemma:equivalentOfSH}
-Suppose that two sphairahedra $T_1, T_2$ satisfy that $T_2=\varphi(T_1)$, where $\varphi$ is a parallel translation or a rotation or a dilation or a plane-symmetry or a composite of these transformations.  Then $T_1, T_2$ are equivalent. 
+Suppose that two sphairahedra $T_1, T_2$ satisfy that $T_2=\varphi(T_1)$, where $\varphi$ is a parallel translation or a rotation or a dilation or a plane-symmetry or a composite of these transformations.  Then $T_1, T_2$ are equivalent.
 \end{lemma}
 
 \subsubsection{Situatio 1}
@@ -722,7 +542,7 @@ Beacause of the ideality of a sphairahedron, all edges with the infinite vertex 
 
 Let $A$ be one of finite vertices next to the infinite vertex, that is, there exists an edge $e_{12}$ that connects $A$ and $\infty$.  After applying translations, we assume that the edge $e_{12}$ lies on the $z$-axis.  In fact we suppose the followings as Situation 1:
 \begin{align*}
-A &= (0,0,z_A),\\ 
+A &= (0,0,z_A),\\
 \overline{D_1}  &= \{ (x,y,z) \mid 0 \le y \} \cup \{\infty\} ,\\
 \overline{D_2}  &= \{ (x,y,z) \mid 0 \le x\sin\theta_{12} - y\cos\theta_{12} \}\cup \{\infty\} ,\\
 \overline{D_3}  &= \{ (x-x_3)^2+(y-y_3)^2+(z-z_3)^2 \le r_3^2 \}, \\
@@ -739,19 +559,11 @@ Conversely, if $\overline{D_3}$ satisfies (1), (2) then the edges $O_1 \cap O_2$
 \end{lemma}
 
 \noindent(Figure \ref{fig:sectionAtVertex} near here)
-\begin{figure}[h!tbp]
- \centering
- \includegraphics[width=1.5in, height=1.5in,
- keepaspectratio]{./img/HexahedraWithSphericalFaces/sectionAtVertex.jpg}
- \caption{Section at $a=z_A$.}
- \label{fig:sectionAtVertex}
-   \hspace*{\fill}
-\end{figure}
 
 \begin{proof}
 Figure \ref{fig:sectionAtVertex} shows the section at $z=z_A$.  Let points $B, C$ be as seen in Figure \ref{fig:sectionAtVertex}.  By definition, $\angle BAC=\theta_{12}$.  Let $e_{13}$ be the intersection of the plane $S_1$ and the sphere $S_3$.  Then $e_{13}$ is a circle on the $xz$ plane and it is tangent to the $z$-axis at $A$ because of the ideality.  Therefore the height $z_3$ of the center $O_3$ must be the same as that $A$, and we have $z_3 = z_A$.\par
-The center $O_3$ of $S_3$ lies on the section $z=z_A$ and the sphere $S_3$ includes the point $A$, hence $r_3^2 = x_3^2+y_3^2$.  
-Because the dihedral angle of the plane $S_1$ and the sphere $S_3$ is $\theta_{13}$,  the angle $\angle BAO_3$ is $\frac{\pi}{2}-\theta_{13}$.  $x_3\cos\theta_{13} - y_3\sin\theta_{13}=0$ follows immediately. 
+The center $O_3$ of $S_3$ lies on the section $z=z_A$ and the sphere $S_3$ includes the point $A$, hence $r_3^2 = x_3^2+y_3^2$.
+Because the dihedral angle of the plane $S_1$ and the sphere $S_3$ is $\theta_{13}$,  the angle $\angle BAO_3$ is $\frac{\pi}{2}-\theta_{13}$.  $x_3\cos\theta_{13} - y_3\sin\theta_{13}=0$ follows immediately.
 \end{proof}
 
 \begin{remark}
@@ -761,7 +573,7 @@ If the vertex $A$ is of degree $3$, the same observation works on the dihedral a
 After considering more general situations, we obtain the following corollary.
 
 \begin{corollary}\label{cor:tangencyOfEdge}
-Let each $O_1, O_2, O_3$ be a sphere or a plane.  Let $e_{ij}=O_i\cap O_j$ be a non-empty edge and let $\theta_{ij}$ be the dihedral angle of $O_i$ and $O_j$. Suppose that $\theta_{12}+\theta_{23}+\theta_{13}=\pi$ and that $e_{12}$ and $e_{13}$ are  tangent to each other at a point $P$.  Then $e_{12}$, $e_{13}$ and $e_{23}$ are tangent at $P$ and $O_1\cap O_2\cap O_3=\{ P \}$.   
+Let each $O_1, O_2, O_3$ be a sphere or a plane.  Let $e_{ij}=O_i\cap O_j$ be a non-empty edge and let $\theta_{ij}$ be the dihedral angle of $O_i$ and $O_j$. Suppose that $\theta_{12}+\theta_{23}+\theta_{13}=\pi$ and that $e_{12}$ and $e_{13}$ are  tangent to each other at a point $P$.  Then $e_{12}$, $e_{13}$ and $e_{23}$ are tangent at $P$ and $O_1\cap O_2\cap O_3=\{ P \}$.
 \end{corollary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -775,15 +587,15 @@ B &= (w,0,z_B)\\
 \overline{D_3}  &= \{ (x,y,z) \mid (x-x_3)^2+(y-y_3)^2+(z-z_3)^2<r_3^2\}\\
 O_i & = \partial(\overline{D_i}) \qquad(i=1,2,3,)
 \end{align*}
-where 
+where
 \begin{align*}
 z_2&=0,\  r_2^2=x_2^2+y_2^2,\  x_2\cos\theta_{12}-y_2\sin\theta_{12}=0,\ 0 < y_2\\
 z_3&=z_B,\  r_3^2=(x_3-w)^2+y_3^2,\  (x_3-w)\cos\theta_{13}+y_2\sin\theta_{13}=0,\ 0<y_3,
-\end{align*} 
+\end{align*}
 and $w (0<w), \theta_{12} (0<\theta_{12}\le \frac{\pi}{2}), \theta_{13}  (0<\theta_{13}\le \frac{\pi}{2})$ are constants.  From Lemma \ref{lemma:CenterOfSphere}, the dihedral angle of $O_1$ and $O_2$ (resp. $O_1$ and $O_3$) is $\theta_{12}$ (resp. $\theta_{13}$.)
 
 
-The following lemma gives a condition that two edges $O_1\cap O_2$ and $O_1\cap O_3$ are tangent to each other. 
+The following lemma gives a condition that two edges $O_1\cap O_2$ and $O_1\cap O_3$ are tangent to each other.
 
 \begin{lemma} \label{lemma:twoCirclesChain}
 We consider a section by $y=0$ in Situation 2 as seen in Figure \ref{fig:twoCirclesChain}.  The left side circle is $O_1\cap O_2$ and the right side circle is $O_1\cap O_3$.  The left circle is tangent to $x=0$ at $A$ and it has the center $C$.  The right circle is tangent to $x=w$ at $B$ and it has the center $D$. \par
@@ -794,14 +606,6 @@ r_2\sin\theta_{12}+r_3\sin\theta_{13}=\dfrac{w^2+z^2}{2w}
 \end{lemma}
 
 \noindent(Figure \ref{fig:twoCirclesChain} near here)
-
-\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[width=1.5in, height=1.5in,
-  keepaspectratio]{./img/HexahedraWithSphericalFaces/twoCirclesSlice.jpg}
- \caption{Two tangent circles.}
- \label{fig:twoCirclesChain}
-\end{figure}
 
 \begin{proof}
 The proof is very elementary, and we show it by simplified description.  Let $\theta$ be $\angle CAB$.  We have
@@ -819,19 +623,19 @@ Suppose that the condition of the above lemma is satisfies.\par
 \end{lemma}
 
 \begin{proof}
-From the cosine law, we have 
+From the cosine law, we have
 \[
 \cos (\pi - \theta_{23}) = \dfrac{r_2^2+r_3^2 - \{(x_2-x_3)^2+(y_2-y_3)^2+(z_2-z_3)^2\}}{2 r_2r_3}.
 \]
 The coordinates of the centers of $O_2$ and $O_3$ are given by
 $(x_2,y_2,z_2)=(r_2\sin\theta_{12},  r_2\cos\theta_{12}, 0)$, and
 $(x_3,y_3,z_3)=(w - r_3\sin\theta_{13},  r_3\cos\theta_{13}, z_B)$.
-Using $z_B^2+w^2 = 2w(r_2\sin\theta_{12}+r_3\sin\theta_{13})$, we have 
+Using $z_B^2+w^2 = 2w(r_2\sin\theta_{12}+r_3\sin\theta_{13})$, we have
 \[
 (x_2-x_3)^2+(y_2-y_3)^2+(z_2-z_3)^2=r_2^2+r_3^2-2r_2r_3\cos(\theta_{12}+\theta_{13}).
 \]
 Thus $\cos (\pi - \theta_{23})=\cos(\theta_{12}+\theta_{13})$ and $\theta_{23} = \pi - \theta_{12} - \theta_{13}$.\par
-(2)\ Let $P$ be the tangent point in Figure \ref{fig:twoCirclesChain}.  Applying the result of (1) to Corollary \ref{cor:tangencyOfEdge}, we show that $e_{23}$ is tangent to $O_1\cap O_2=e_{12}$ and $O_1\cap O_3=e_{13}$ at $P$.  The proof completes. 
+(2)\ Let $P$ be the tangent point in Figure \ref{fig:twoCirclesChain}.  Applying the result of (1) to Corollary \ref{cor:tangencyOfEdge}, we show that $e_{23}$ is tangent to $O_1\cap O_2=e_{12}$ and $O_1\cap O_3=e_{13}$ at $P$.  The proof completes.
 
 \end{proof}
 
@@ -861,176 +665,6 @@ Thus $\cos (\pi - \theta_{23})=\cos(\theta_{12}+\theta_{13})$ and $\theta_{23} =
 \subref{fig:tetrahedronFiniteSphairahedron}
 \subref{fig:tetrahedronFiniteLimitset} near here)
 
-%tetrahedron col.1
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.5\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/tetrahedron.jpg}
-   \caption{Tetrahedron.}
-   \label{fig:tetrahedron}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.5\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/faces.jpg}
-   \caption{Polyhedral structure.}
-   \label{fig:tetrahedronFaces}
-  \end{minipage}
- \hspace*{\fill}
-\end{figure}
-
-%tetrahedron col.2
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in,
-   keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/a.jpg}
-   \subcaption{Type 1}
-   \label{fig:tetrahedronType1}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/b.jpg}
-   \subcaption{Type 2}
-   \label{fig:tetrahedronType2}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/c.jpg}
-   \subcaption{Type 3}
-   \label{fig:tetrahedronType3}
-  \end{minipage}
- \hspace*{\fill}
- \caption{Types of combinations of dihedral angles.}
- \label{fig:tetrahedronCombinations}
-\end{figure}
-
-%tetrahedron col.3
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in,
-   keepaspectratio]{./img/sphairahedron/tetrahedron/sphairahedronInf.jpg}
-   \subcaption{}
-   \label{fig:tetrahedronInf}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitsetInf.jpg}
-   \subcaption{}
-   \label{fig:tetrahedronLimitInf}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/slice_a.jpg}
-   \subcaption{}
-   \label{fig:tetrahedronSliceA}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitsetAbove_a.jpg}
-   \subcaption{}
-   \label{fig:tetrahedronLimitsetAboveA}
-  \end{minipage}
- \hspace*{\fill}
- \caption{A tetrahedron of type 1.}
- \label{fig:tetrahedronInf_a}
-\end{figure}
-
-%tetrahedron col.4
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in,
-   keepaspectratio]{./img/sphairahedron/tetrahedron/sphairahedralPrism_b.jpg}
-   \subcaption{}
-   \label{fig:tetrahedronPrismInf_b}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitset_b.jpg}
-   \subcaption{}
-   \label{fig:tetrahedronLimitsetInf_b}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/slice_b.jpg}
-   \subcaption{}
-   \label{fig:tetrahedronSlice_b}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitsetAbove_b.jpg}
-   \subcaption{}
-   \label{fig:tetrahedronAbove_b}
-  \end{minipage}
- \hspace*{\fill}
- \caption{A tetrahedron of type 2.}
- \label{fig:tetrahedronInf_b}
-\end{figure}
-
-%tetrahedron col.5
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in,
-   keepaspectratio]{./img/sphairahedron/tetrahedron/sphairahedralPrism_c.jpg}
-   \subcaption{}
-   \label{fig:tetrahedralPrism_c}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitset_c.jpg}
-   \subcaption{}
-   \label{fig:tetrahedronLimitset_c}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/slice_c.jpg}
-   \subcaption{}
-   \label{fig:tetrahedronSlice_c}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitsetAbove_c.jpg}
-   \subcaption{}
-   \label{fig:tetrahedronAbove_c}
-  \end{minipage}
- \hspace*{\fill}
- \caption{A tetrahedron of type 3.}
- \label{fig:tetrahedronInf_c}
-\end{figure}
-
-%tetrahedron col.6
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.49\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/tetrahedron/sphairahedronFinite.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:tetrahedronFiniteSphairahedron}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.49\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitsetFinite.jpg}
-   \subcaption{Limit set}
-   \label{fig:tetrahedronFiniteLimitset}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{A finite tetrahedron of type 1.}
-  \label{fig:tetrahedronFinite}
-\end{figure}
 % end of figs of tetrahedron
 
 A tetrahedron (Figure \ref{fig:tetrahedron}) has a polyhedral structure as shown in Figure \ref{fig:tetrahedronFaces}.  It is a sphairahedron with fewest faces.
@@ -1050,10 +684,10 @@ In each type of the dihedral angles, the parameter space consists of one point.
 O_i & = \partial(\overline{D_i}) \qquad(i=1, 2, 3, 4.)
 \end{align*}
 
-$S^3\setminus(\overline{D_1} \cup \overline{D_2} \cup \overline{D_3})$ is the infinite triangle prism.  Let a vertex $P_{ijk}$ be $O_i \cap O_j \cap O_k$. (Generally, if the intersection of three spheres is not empty, then it consists of inifinity number of points or two points or one point.  In our case, the condition that the sphairahedron is ideal, the intersection is a point.) From Lemma \ref{lemma:equivalentOfSH}, we may assume that $P_{124}=(1,\sqrt{3}, 0)$.  Using Lemma \ref{lemma:CenterOfSphere}(1), we have $z_4=0$ and hence $P_{234}=(-2, 0, 0)$ and $P_{134}=(1, -\sqrt{3}, 0)$.  The equation $\sqrt{3}x_4 -y_4=0$ follows \ref{lemma:CenterOfSphere}(3) and $P_{124}=(1,\sqrt{3}, 0)$.  Thus we have that the center of $O_4$ is the origin and 
+$S^3\setminus(\overline{D_1} \cup \overline{D_2} \cup \overline{D_3})$ is the infinite triangle prism.  Let a vertex $P_{ijk}$ be $O_i \cap O_j \cap O_k$. (Generally, if the intersection of three spheres is not empty, then it consists of inifinity number of points or two points or one point.  In our case, the condition that the sphairahedron is ideal, the intersection is a point.) From Lemma \ref{lemma:equivalentOfSH}, we may assume that $P_{124}=(1,\sqrt{3}, 0)$.  Using Lemma \ref{lemma:CenterOfSphere}(1), we have $z_4=0$ and hence $P_{234}=(-2, 0, 0)$ and $P_{134}=(1, -\sqrt{3}, 0)$.  The equation $\sqrt{3}x_4 -y_4=0$ follows \ref{lemma:CenterOfSphere}(3) and $P_{124}=(1,\sqrt{3}, 0)$.  Thus we have that the center of $O_4$ is the origin and
 \[
 \overline{D_4}=\{(x,y,z) \mid x^2+y^2+z^2 \le 3 \}.
-\]   
+\]
 This means that the parameter space of $\overline{D_i}$'s consists of one point.  In case of another type, we show it in the same way.
 \end{proof}
 
@@ -1065,7 +699,7 @@ Assume that the tetrahedron $T$ has the infinite vertex.  In any case of dihedra
 \end{proposition}
 
 \begin{proof}
-We show it in case of the type (a).  Let $\overline{D_i}$'s be as in the proof of Proposition \ref{prop:paraSpace_Tetrahedron}.  The tetrahedron $T$ is given by 
+We show it in case of the type (a).  Let $\overline{D_i}$'s be as in the proof of Proposition \ref{prop:paraSpace_Tetrahedron}.  The tetrahedron $T$ is given by
 \[
 T = \{(x,y,z) \mid z<0\} \setminus(\overline{D_1} \cup \overline{D_2} \cup \overline{D_3} \cup \overline{D_4}).
 \]
@@ -1112,165 +746,24 @@ There are two polyhedral structures of pentahedra. One is a quadrangular pyramid
 
 
 %%% quadrangular pyramid col.1
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.5\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/pyramid.jpg}
-   \caption{Quadrangular pyramid.}
-   \label{fig:quadrangularPyramid}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.5\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/faces.jpg}
-   \caption{Polyhedral structure.}
-   \label{fig:quadrangularPyramidFaces}
-  \end{minipage}
- \hspace*{\fill}
-\end{figure}
 
 %%% quadrangular pyramid col.2
-\begin{figure}[h!tbp]
- \hspace*{\fill}
- \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1in,
-   keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/a.jpg}
-   \subcaption{Type 1}
-   \label{fig:quadrangularPyramid1}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/b.jpg}
-   \subcaption{Type 2}
-   \label{fig:quadrangularPyramid2}
- \end{minipage}
- \hspace*{\fill}
- \caption{Types of combinations of dihedral angles.}
-  \label{fig:quadrangularPyramidCombinations}
-\end{figure}
+
 %%%quadrangular pyramid col. 2.5
-\begin{figure}[h!tbp]
-   \centering
-   \includegraphics[width=1.5in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/proofQuadrangularPyramid.jpg}
-   \caption{Section at $z=0$.}
-   \label{fig:quadrangularPyramidAtOrigin}
- \hspace*{\fill}
-\end{figure}
+
 
 %%% quadrangular pyramid col.3
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering \includegraphics[width=1.3in,
-   keepaspectratio]{./img/sphairahedron/pentahedralPyramid/sphairahedronInf.jpg}
-   \subcaption{} 
-   \label{fig:pentahedralPyramidInf}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/limitsetInf.jpg}
-   \subcaption{}
-   \label{fig:pentahedralPyramidLimitset}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/slice_a.jpg}
-   \subcaption{}
-   \label{fig:pentahedralPyramidSlice}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/limitsetAbove_a.jpg}
-   \subcaption{}
-   \label{fig:pentahedralPyramidAbove}
-  \end{minipage}
- \hspace*{\fill}
- \caption{A quadrangular pyramid of type 1.}
- \label{fig:quadrangularPyramid_Inf_1}
-\end{figure}
+
 
 %%% quadrangular pyramid col.4
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering \includegraphics[width=1.3in,
-   keepaspectratio]{./img/sphairahedron/pentahedralPyramid/sphairahedronInfType1.jpg}
-   \subcaption{}
-   \label{fig:pentahedralPyramidInf_b}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/limitsetInfType1.jpg}
-   \subcaption{}
-   \label{fig:pentahedralPyramidLimitset_b}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/slice_b.jpg}
-   \subcaption{}
-   \label{fig:pentahedralPyramidSlice_b}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/limitsetAbove_b.jpg}
-   \subcaption{}
-   \label{fig:pentahedralPyramidAbove_b}
-  \end{minipage}
- \hspace*{\fill}
- \caption{A quadrangular pyramid of type 2.}
- \label{fig:quadrangularPyramid_Inf_2}
-\end{figure}
+
 
 %%% quadrangular pyramid col.5
-\begin{figure}[h!tbp]
- \begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/sphairahedronFinite.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:pentahedralPyramidSphairahedronFinite1}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/limitsetFinite.jpg}
-   \subcaption{Limit set}
-   \label{fig:pentahedralPyramidLimitsetFinite1}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Finite quadrangular pyramid type 1.}
-  \label{fig:pentahedralPyramidFinite}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}{0.5\textwidth}
-\begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/sphairahedronFiniteType1.jpg}
-   \subcaption{Sphairahedron}
- \label{fig:pentahedralPyramidSphairahedronFinite2}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/limitsetFiniteType1.jpg}
-   \subcaption{Limit set}
-   \label{fig:pentahedralPyramidLimitsetFinite2}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Finite quadrangular pyramid type 2.}
-  \label{fig:pentahedralPyramidFinite2}
- \end{minipage}
-\end{figure}
 
-The quadrangular pyramid is a polyhedron with one basal plane and four conical faces (Figure \ref{fig:quadrangularPyramid}.)  
-This has a polyhedral structure as seen in Figure \ref{fig:quadrangularPyramidFaces}. 
-There are two types of combinations of dihedral angle. See Figure \ref{fig:quadrangularPyramidCombinations}.  
+
+The quadrangular pyramid is a polyhedron with one basal plane and four conical faces (Figure \ref{fig:quadrangularPyramid}.)
+This has a polyhedral structure as seen in Figure \ref{fig:quadrangularPyramidFaces}.
+There are two types of combinations of dihedral angle. See Figure \ref{fig:quadrangularPyramidCombinations}.
 We show the parameter space as follows.
 
 \begin{proposition}
@@ -1278,7 +771,7 @@ The parameter space of each type of dihedral angles consists of one point.
 \end{proposition}
 
 \begin{proof}
-We assume that the top-most vertex is the infinite point $\infty$.  Then neighborhood of $\infty$ is a rectangular column.  Without loss of generality, 
+We assume that the top-most vertex is the infinite point $\infty$.  Then neighborhood of $\infty$ is a rectangular column.  Without loss of generality,
 we suppose the followings.
 \begin{align*}
 \overline{D_1}&=\{(x,y,z) \mid x_1 \le x \} \cup\{\infty\} \quad (0<x_1)\\
@@ -1294,7 +787,7 @@ Thus all of the coordinates are determined in one way except dilation and the pa
 \end{proof}
 
 \begin{proposition}
-The limit set $\Lambda(G)$ of a sphairahedron of each type is  the union of a plane and $\infty$. 
+The limit set $\Lambda(G)$ of a sphairahedron of each type is  the union of a plane and $\infty$.
 \end{proposition}
 
 \begin{proof}
@@ -1303,7 +796,7 @@ The 4 vertices $P_{125}, P_{235}, P_{345}, P_{145}$ are on the $xy$-plane and al
 
 In this case, the tiling group $G$ is $3$-Kleinian after all.  Figures \ref{fig:quadrangularPyramid_Inf_1}(d) and \ref{fig:quadrangularPyramid_Inf_2}(d) show the coloring patterns on the limit set.  They are generated by the reflections of four lines and the inversion of one circle as seen in Figures \ref{fig:quadrangularPyramid_Inf_1}(c) and \ref{fig:quadrangularPyramid_Inf_2}(c) respectively.
 
-%They are shown in 
+%They are shown in
 %Figure \ref{fig:pentahedralPyramidFinite}, Figure
 %\ref{fig:pentahedralPyramidInf},
 %Figure \ref{fig:pentahedralPyramidFinite2}, and
@@ -1341,158 +834,7 @@ In this case, the tiling group $G$ is $3$-Kleinian after all.  Figures \ref{fig:
 \subref{fig:prismSphairaInfType2_2}
 \subref{fig:prismLimitInfType2_2} near here)\\
 
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.5\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/pentahedralPrism.jpg}
-   \caption{Triangular prism.}
-   \label{fig:triangularPrism}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.5\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/faces.jpg}
-   \caption{Polyhedral structure.}
-   \label{fig:triangularPrismPolyhedralStructure}
-  \end{minipage}
-\end{figure}
 
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in,
-   keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/a.jpg}
-   \subcaption{Type 1}
-   \label{fig:pentahedralPrismType1}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/b.jpg}
-   \subcaption{Type 2}
-   \label{fig:pentahedralPrismType2}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/c.jpg}
-   \subcaption{Type 3}
-   \label{fig:pentahedralPrismType3}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/d.jpg}
-   \subcaption{Type 4}
-   \label{fig:pentahedralPrismType4}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/e.jpg}
-   \subcaption{Type 5}
-   \label{fig:pentahedralPrismType5}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/f.jpg}
-   \subcaption{Type 6}
-   \label{fig:pentahedralPrismType6}
-  \end{minipage}
- \hspace*{\fill}
-  \caption{Types of combinations of dihedral angles.}
-  \label{fig:triangularPrismDihedralAngles}
-\end{figure}
-
-\begin{figure}[h!tbp]
-   \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/prismAll.jpg}
-  \caption{Three components.}
-  \label{fig:triangularPrismThreeComponents}
-\end{figure}
-
-\begin{figure}[h!tbp]
- \begin{minipage}{0.48\textwidth}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/sphairahedronInf.jpg}
-   \subcaption{Semi-sphairahedron}
-   \label{fig:pentahedralPrismInfPositiveSphairahedron}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/limitsetInf.jpg}
-   \subcaption{Limit set}
-   \label{fig:pentahedralPrismInfPositiveLimit}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Semi-sphairahedron and its limit set (1).}
-  \label{fig:pentahedralPrismInfPositive}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}{0.48\textwidth}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/sphairahedronInf2.jpg}
-   \subcaption{Semi-sphairahedron}
-   \label{fig:pentahedralPrismInfSphairahedron4}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/limitsetInf2.jpg}
-   \subcaption{Limit set}
-   \label{fig:pentahedralPrismInfLimit4}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Semi-sphairahedron and its limit set (2).}
-  \label{fig:pentahedralPrismInfNeg}
- \end{minipage}
-\end{figure}
-
-\begin{figure}[h!tbp]
-\begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/pentahedralPrism/sphairaInfType2_1.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:prismSphairaInfType2_1}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/pentahedralPrism/limitsetInfType2_1.jpg} 
-   \subcaption{Limit set}
-   \label{fig:prismLimitInfType2_1}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Infinite triangular prism type 2 - 1.}
- \label{fig:prismInfType2_1}
-\end{minipage}
- \hspace*{\fill}
- \begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/sphairaInfType2_2.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:prismSphairaInfType2_2}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/limitsetInfType2_2.jpg}
-   \subcaption{Limit set}
-   \label{fig:prismLimitInfType2_2}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Infinite triangular prism type 2 - 2.}
-  \label{fig:prismInfType2_2}
- \end{minipage}
-\end{figure}
 
 A triangular prism (Figure \ref{fig:triangularPrism}) is a sphairahedron with a polyhedral structure as seen in Figure \ref{fig:triangularPrismPolyhedralStructure}.  There six combinations of dihedral angles as in Figures \ref{fig:triangularPrismDihedralAngles}.
 
@@ -1503,7 +845,7 @@ The parameter space of triangular prism of type 1 is an empty set.  But that of 
 
 \begin{proof}
 Following Figure \ref{fig:triangularPrismPolyhedralStructure}, we assume that one of the vertex is $\infty$.
-The neighborhood of $\infty$ is a regular triangular column.  Thus we suppose that 
+The neighborhood of $\infty$ is a regular triangular column.  Thus we suppose that
 \begin{align*}
 \overline{D_1}&= \{ (x,y,z) \mid 1 \le x \} \cup \{ \infty \}\\
 \overline{D_3}&=\{(x,y,z) \mid 1 \le -\frac{1}{2}x-\frac{\sqrt{3}}{2}y \} \cup\{\infty\}\\
@@ -1512,23 +854,23 @@ The neighborhood of $\infty$ is a regular triangular column.  Thus we suppose th
 \overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+(z-z_4)^2<r_4^2 \} \\
 O_i &= \partial(\overline{D_i})
 \end{align*}
-We first determine the coordinate of $\overline{D_4}$.  
-We may assume the height $z_4$ to be $0$.  
-Let $P_{ijk}$ be $O_i\cap O_j\cap O_k$.  
-We apply Lemma \ref{lemma:CenterOfSphere}(3) at $P_{145}$ and at $P_{345}$,  and we obtain that $(x_4,y_4,z_4)=(0,0,0)$ and $r_4 = 2$.  
+We first determine the coordinate of $\overline{D_4}$.
+We may assume the height $z_4$ to be $0$.
+Let $P_{ijk}$ be $O_i\cap O_j\cap O_k$.
+We apply Lemma \ref{lemma:CenterOfSphere}(3) at $P_{145}$ and at $P_{345}$,  and we obtain that $(x_4,y_4,z_4)=(0,0,0)$ and $r_4 = 2$.
 Next we consider the position of $\overline{D_2}$.  The condition at $P_{123}$ implies that $(x_2, y_2, z_2)$ satisfies $\sqrt{3}x_2+y_2=0$.\par
-We focus on the plane $O_1=\{ (x,y,z) \mid x=1\}$ and let $r'_2$, $r'_4$ be the radius of the intersection circles of $O_1$ and $O_2$(, respectively $O_1$ and $O_4$.) 
-Here we know that $r'_4=\sqrt{3}$ is a constant.  Applying Lemma \ref{lemma:twoCirclesChain} to $2r'_4=w=2\sqrt{3}$, we have $r'_2=\dfrac{z_2^2}{2w}$, and 
+We focus on the plane $O_1=\{ (x,y,z) \mid x=1\}$ and let $r'_2$, $r'_4$ be the radius of the intersection circles of $O_1$ and $O_2$(, respectively $O_1$ and $O_4$.)
+Here we know that $r'_4=\sqrt{3}$ is a constant.  Applying Lemma \ref{lemma:twoCirclesChain} to $2r'_4=w=2\sqrt{3}$, we have $r'_2=\dfrac{z_2^2}{2w}$, and
 \[
 0 < \dfrac{z_2^2}{2w} < \dfrac{w}{2}.
-\] 
-This implies $-\sqrt{3}<z_2<0, 0<z_2<\sqrt{3}$. For any $z_2$ satisfying these inequalities, the coordinates of all $O_i$'s are determined.  If we consider the plane-symmetry on the $xy$-plane, a semi-sphairahedron of a negative $z_2$ is equivalent to that of a positive $z_2$.  
+\]
+This implies $-\sqrt{3}<z_2<0, 0<z_2<\sqrt{3}$. For any $z_2$ satisfying these inequalities, the coordinates of all $O_i$'s are determined.  If we consider the plane-symmetry on the $xy$-plane, a semi-sphairahedron of a negative $z_2$ is equivalent to that of a positive $z_2$.
 
-See Figure \ref{fig:triangularPrismThreeComponents}.  $S^3\setminus \bigcup \overline{D_i}$ has three connected components.  Thus, this $\overline{D_i}$'s do not give us a sphairahedron but a semi-sphairahedron.  Here there are two choices of semi-sphairahedron.  One is a pentahedron (Figure \ref{fig:pentahedralPrismInfPositive},) and the other is the union of two tetrahedra (Figure \ref{fig:pentahedralPrismInfNeg}.)  In both cases, the tiling group $G$ is the same group and we have one limit set of snowball fractal. 
+See Figure \ref{fig:triangularPrismThreeComponents}.  $S^3\setminus \bigcup \overline{D_i}$ has three connected components.  Thus, this $\overline{D_i}$'s do not give us a sphairahedron but a semi-sphairahedron.  Here there are two choices of semi-sphairahedron.  One is a pentahedron (Figure \ref{fig:pentahedralPrismInfPositive},) and the other is the union of two tetrahedra (Figure \ref{fig:pentahedralPrismInfNeg}.)  In both cases, the tiling group $G$ is the same group and we have one limit set of snowball fractal.
 \end{proof}
 
 \begin{proposition}\label{prop:paraSpace_TriangularPrismType2}
-The parameter space of triangular prism of type 2 is an interval.  
+The parameter space of triangular prism of type 2 is an interval.
 \end{proposition}
 
 \begin{proof}
@@ -1541,13 +883,13 @@ In the similar way as above, we assume that one of the vertex is $\infty$ and th
 \overline{D_4}&=\{(x,y,z) \mid (x-x_4)^2+(y-y_4)^2+z^2<r_4^2 \} \\
 O_i &= \partial(\overline{D_i})
 \end{align*}
-Immediately we have $(x_4, y_4)=(-\frac{1}{2},\frac{\sqrt{3}}{2})$ and $r_4=\sqrt{3}$.  We consider the face $O_1$ and let $r'_2$, $r'_4$ be the radius of the intersection circles of $O_1$ and $O_2$(, respectively $O_1$ and $O_4$.)  Here $r'_4=\frac{\sqrt{3}}{2}$.  Using Lemma \ref{lemma:twoCirclesChain}, we have 
+Immediately we have $(x_4, y_4)=(-\frac{1}{2},\frac{\sqrt{3}}{2})$ and $r_4=\sqrt{3}$.  We consider the face $O_1$ and let $r'_2$, $r'_4$ be the radius of the intersection circles of $O_1$ and $O_2$(, respectively $O_1$ and $O_4$.)  Here $r'_4=\frac{\sqrt{3}}{2}$.  Using Lemma \ref{lemma:twoCirclesChain}, we have
 $r'_2=\frac{6+z_2^2}{4\sqrt{3}}$.  Thus an inequality
 \[
 \frac{6+z_2^2}{4\sqrt{3}}<\sqrt{3}(=\frac{w}{2})
 \]
 follows from the condition of $O_2$ and this implies $-\sqrt{6}<z_2<\sqrt{6}$.  For any $z_2$ contained in this interval determines a sphairahedron.  Thus the parameter space of sphairahedra of type 2 is an open interval.
-See Figures \ref{fig:prismInfType2_1}, \ref{fig:prismInfType2_2}.  These are typical terrains of triangular prisms.  A positive $z_2$ gives us a shape as seen in Figure \ref{fig:prismInfType2_1}, and a negative $z_2$ for Figure \ref{fig:prismInfType2_2}.    
+See Figures \ref{fig:prismInfType2_1}, \ref{fig:prismInfType2_2}.  These are typical terrains of triangular prisms.  A positive $z_2$ gives us a shape as seen in Figure \ref{fig:prismInfType2_1}, and a negative $z_2$ for Figure \ref{fig:prismInfType2_2}.
 \end{proof}
 
 In the similar way, we have the following proposition.
@@ -1556,18 +898,11 @@ In the similar way, we have the following proposition.
 The parameter spaces of sphairahedra of from type 3 to type 6 are empty sets.  But that of semi-sphairahedra of each type is an open interval, one dimensional.
 \end{proposition}
 
-\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[width=2.5in,
-  keepaspectratio]{./img/sphairahedron/pentahedralPrism/holes.jpg}
- \caption{Slice image of the limit set of a semi-sphairahedron of type 3.}
- \label{fig:prismHoles}
-\end{figure}
 \noindent(Figure \ref{fig:prismHoles} near here)
 
-Among type 3 and type 5, we have another shape of the limit set.  For example, the limit set of a semi-sphairahedron of type 3 is a infinite number of disjoint spheres. Figure \ref{fig:prismHoles} shows rendered images of a semi-sphairahedron and a section of the tiling configuration.  The white circles are cavities and the limit set, the boundary, is the infinite union of spheres.   
- 
-%\begin{align*} 
+Among type 3 and type 5, we have another shape of the limit set.  For example, the limit set of a semi-sphairahedron of type 3 is a infinite number of disjoint spheres. Figure \ref{fig:prismHoles} shows rendered images of a semi-sphairahedron and a section of the tiling configuration.  The white circles are cavities and the limit set, the boundary, is the infinite union of spheres.
+
+%\begin{align*}
 % In~case~(a),&~-1.5 < z_B < 0 \text{ or } 0 < z_B < 1.5.\\
 % In~case~(b),&~-\sqrt{3}/2 < z_B < \sqrt{3}/2.\\
 % In~case~(c),&~-\sqrt{21}/2 < z_B < -\sqrt{3} \text{ or } \sqrt{3} < z_B < \sqrt{21}/2.\\
@@ -1606,122 +941,17 @@ In this list, the cube and the cake1 have lots of varieties.  In this subsection
 \subref{fig:cube_h}\subref{fig:cube_i}\subref{fig:cube_j}
 \subref{fig:cube_k} near here)
 
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.66\textwidth}
- \centering
- \includegraphics[width=1.5in,
- keepaspectratio]{./img/HexahedraWithSphericalFaces/cube.jpg}
- \caption{Cube.}
- \label{fig:cube}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.33\textwidth}
-   \centering
-   \includegraphics[width=1.4in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cubeFaces.jpg}
-   \caption{Polyhedral structure.}
-   \label{fig:cubePolyhedralStructure}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.99\textwidth}
-  \begin{minipage}[t]{0.15\textwidth}
-   \centering
-   \includegraphics[width=0.8in,
-   keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_a.jpg}
-   \subcaption{Type 1}
-   \label{fig:cube_a}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.15\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_b.jpg}
-   \subcaption{Type 2}
-   \label{fig:cube_b}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.15\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_c.jpg}
-   \subcaption{Type 3}
-   \label{fig:cube_c}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.15\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_d.jpg}
-   \subcaption{Type 4}
-   \label{fig:cube_d}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.15\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_e.jpg}
-   \subcaption{Type 5}
-   \label{fig:cube_e}
-  \end{minipage}
- \hspace*{\fill}
-\begin{minipage}[t]{0.15\textwidth}
-   \centering
-   \includegraphics[width=0.8in,
- keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_f.jpg}
-   \subcaption{Type 6}
-   \label{fig:cube_f}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.15\textwidth}
-   \centering
-   \includegraphics[width=0.8in,
-   keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_g.jpg}
-   \subcaption{Type 7}
-   \label{fig:cube_g}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.15\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_h.jpg}
-   \subcaption{Type 8}
-   \label{fig:cube_h}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.15\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_i.jpg}
-   \subcaption{Type 9}
-   \label{fig:cube_i}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.15\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_j.jpg}
-   \subcaption{Type 10}
-   \label{fig:cube_j}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.15\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_k.jpg}
-   \subcaption{Type 11}
-   \label{fig:cube_k}
-  \end{minipage}
- \hspace*{\fill}
-  \caption{Types of combinations of dihedral angles.}
-  \label{fig:cubeGraph}
- \end{minipage}
-\end{figure}
-
-
 %\begin{lemma}\label{sameCircle}
 %For each $O_i$, the four vertexes on $O_i$ lie on the same circle.
 %Hence the four vertexes lie on one plane in $R^3$.
 %\end{lemma}
 %
 %\begin{proof}
-% We know the following famous lemma about four circles: If four circles 
+% We know the following famous lemma about four circles: If four circles
 % $C_1,~C_2,~C_3,~C_4$ on a plane, and they are mutually tangent like a
 % chain as in Figure \ref{fig:chainCircles}, then the four tangent points lie on one circle.
 % (See figure \ref{fig:chainCircles}) Using this lemma we will show lemma \ref{sameCircle} We fix $i$ and
-% consider only on $O_i$. If $O_i$ is not a plane, we transform 
+% consider only on $O_i$. If $O_i$ is not a plane, we transform
 % ($O_1, ..., O_6$) by a M\"obius transformation such that $O_i$ is a
 % plane. There are four edges on $O_i$, and they are circles and are
 % mutually tangent like a chain. From the above well-known lemma. The
@@ -1751,7 +981,7 @@ A cube (Figure \ref{fig:cube}) is a sphairahedron with a polyhedral structure as
 The parameter space of each type of the cube is as followings.
 
 \begin{proposition}\label{prop:paraSpace_cube}
-(1) For types 1, 2, 3, 4, 5, 8, and 9, the parameter spaces of cubes are two dimensional.  The boundary of each parameter space consists of straight lines or hyperbolas. \par  
+(1) For types 1, 2, 3, 4, 5, 8, and 9, the parameter spaces of cubes are two dimensional.  The boundary of each parameter space consists of straight lines or hyperbolas. \par
 (2) For types 6, 7, 10, 11, the parameter space is empty.
 \end{proposition}
 
@@ -1759,7 +989,7 @@ The parameter space of each type of the cube is as followings.
 
 We refer the precise proof for type 1 from \cite{AharaAraki2}.
 
-The vertex set is $\{ P_{123}, P_{145}, P_{356}, P_{124}, P_{456}, P_{236}, P_{246}, P_{135} \}$, where $P_{ijk} = O_i \cap O_j \cap O_k$.  Without loss of generality, we assume that $P_{135}$ is $\infty$. 
+The vertex set is $\{ P_{123}, P_{145}, P_{356}, P_{124}, P_{456}, P_{236}, P_{246}, P_{135} \}$, where $P_{ijk} = O_i \cap O_j \cap O_k$.  Without loss of generality, we assume that $P_{135}$ is $\infty$.
 
 Suppose $\overline{D_i}$'s are as follows:
 \begin{align*}
@@ -1800,7 +1030,7 @@ In this step, we get conditions for these $\overline{D_i}$'s to establish a cube
  r_2\sin\theta_{23} + r_6\sin\theta_{36} &= \dfrac{w_3^2+z_6^2}{2w_3}\tag{*}\\
  r_4\sin\theta_{45} + r_6\sin\theta_{56} &= \dfrac{w_5^2+(z_4 - z_6)^2}{2w_5}
  \end{align*}
-  Remark that these equations (*) hold for other types of the dihedral angles. 
+  Remark that these equations (*) hold for other types of the dihedral angles.
 Solving the above system of equations, we have:
 \begin{align*}
  r_2 &= \dfrac{2z_4z_6 + 3}{6} \\
@@ -1825,7 +1055,7 @@ See Figure \ref{fig:graphCubeA}. This is the area representing ($\star$).
 % ($r_4\sin\theta_{14}$.)
 %Two vertical lines $HA$ and $HB$ are tangent to these circles as in
 % Figure \ref{fig:sideFace},
-% and we have 
+% and we have
 % \begin{eqnarray*}
 %  \overline{AD} = 2 r_2 \sin\theta_{12} \cdot \overline{A'B'}/\overline{AB}\\
 %  \overline{DB} = 2 r_4 \sin\theta_{14} \cdot \overline{A'B'}/\overline{AB}
@@ -1840,7 +1070,7 @@ See Figure \ref{fig:graphCubeA}. This is the area representing ($\star$).
 % If we regard (\ref{2A}) as a linear equation on $r_2, r_4, r_6$, the
 % coordinate matrix of (\ref{2A}) is not singular. In fact,
 % \begin{eqnarray*}
-%  \left| 
+%  \left|
 %   \begin{array}{ccc}
 %    \sin\theta_{12} & \sin\theta_{14} & 0\\
 %    0               & \sin\theta_{45} & \sin\theta_{56}\\
@@ -1881,7 +1111,7 @@ See Figure \ref{fig:graphCubeA}. This is the area representing ($\star$).
 % $\theta_{12}$, the angle of a straight line $A'B'$ and a circle with
 % center $O'_2$ and with radius $r_2$ is also $\theta_{12}$. It follows
 % that $\angle O_2'A'B' = \pi/2 - \theta_{12}$(See Figure \ref{fig:sphairahedronSlice}.)
-% 
+%
 % (2) The edge $AD = e_{12}$ is the intersection of a plane $O_1$ and a
 % sphere $O_2$. This edge(= plane circle) is tangent to $AH$ (which is
 % parallel to z-axis) at $A$, so a radius $AO_2$ of the sphere $O_2$ is
@@ -1908,32 +1138,32 @@ The center and the radius of $O_2$:
 \begin{align*}
 (x_2, y_2, z_2) &= \left(\frac{1}{2}(1-r_2), -\frac{\sqrt{3}}{2}(1-r_2), 0\right),\\
  r_2 &= \dfrac{2z_4z_6 + 3}{6}.
-\end{align*} 
+\end{align*}
 The center and the radius of $O_4$:
 \begin{align*}
 (x_4, y_4, z_4) &= \left(\frac{1}{2}(1-r_4), \frac{\sqrt{3}}{2}(1-r_4), z_4\right),\\
  r_4 &= \dfrac{2z_4(z_4-z_6) + 3}{6}.
-\end{align*} 
+\end{align*}
 The center and the radius of $O_6$:
 \begin{align*}
 (x_6, y_6, z_6) &= \left(r_6-1, 0, z_6\right),\\
  r_6 &= \dfrac{2z_6(z_6-z_4) + 3}{6}.
-\end{align*} 
+\end{align*}
 
 It is enough for us to check the following lemma.
 
 \begin{lemma}\label{lemma:compatibility}
-Let the edge $e_{ij}$ be $O_i\cap O_j$.\par 
+Let the edge $e_{ij}$ be $O_i\cap O_j$.\par
 (1)\  The edges $e_{12},e_{13},e_{23}$ are tangent to each other at a point.
 The edges $e_{14},e_{15},e_{45}$ are tangent to each other at a point.
 The edges $e_{35},e_{36},e_{56}$ are tangent to each other at a point.\par
-The dihedral angle at $e_{12}$ is $\theta_{12}=\frac{\pi}{3}$.  
+The dihedral angle at $e_{12}$ is $\theta_{12}=\frac{\pi}{3}$.
 The dihedral angle at $e_{14}$ is $\theta_{14}=\frac{\pi}{3}$.
 The dihedral angle at $e_{23}$ is $\theta_{23}=\frac{\pi}{3}$.
 The dihedral angle at $e_{36}$ is $\theta_{36}=\frac{\pi}{3}$.
 The dihedral angle at $e_{45}$ is $\theta_{45}=\frac{\pi}{3}$.
 The dihedral angle at $e_{56}$ is $\theta_{56}=\frac{\pi}{3}$.\par
-(2)\ The dihedral angle at $e_{24}$ is $\theta_{24}=\frac{\pi}{3}$.  
+(2)\ The dihedral angle at $e_{24}$ is $\theta_{24}=\frac{\pi}{3}$.
 The edges $e_{12},e_{14},e_{24}$ are tangent to each other at a point.
 The dihedral angle at $e_{26}$ is $\theta_{26}=\frac{\pi}{3}$.
 The edges $e_{23},e_{26},e_{36}$ are tangent to each other at a point.
@@ -1956,11 +1186,11 @@ The edges $e_{45},e_{46},e_{56}$ are tangent to each other at a point.\par
 % \hspace*{\fill}
 %\end{figure}
 
- 
+
 \begin{proof}
 (1) Using Lemma \ref{lemma:CenterOfSphere}, we show these straightforward.\par
 (2) Applying Lemma \ref{lemma:twoCirclesChainAngle} to the equations (*), we show these straight forward.  \par
-(3) This is non-trivial. 
+(3) This is non-trivial.
 Let $\alpha$ be a plane containing three centers of the spheres $O_2, O_4, O_6$.  (Here $O_2, O_4, O_6$ denote their center.)  Let
  $C_2, C_4, C_6$ be three circles on $\alpha$ such that $C_i$ is the
  intersection of the sphere $O_i$ and the plane $\alpha$. ($i=2, 4, 6$.)
@@ -1972,31 +1202,6 @@ Let $R$ be the radical point of $C_2, C_4, C_6$. There are three cases
 \noindent(Figure \ref{fig:threeCircles}
 \subref{fig:condition1}\subref{fig:condition2}\subref{fig:condition3}
  near here)
-
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.3\textwidth}
-   \centering
-   \includegraphics[width=2in, keepaspectratio]{./img/HexahedraWithSphericalFaces/threeCircles1.jpg}
-   \subcaption{}
-   \label{fig:condition1}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.3\textwidth}
-   \centering
-   \includegraphics[width=2in, keepaspectratio]{./img/HexahedraWithSphericalFaces/threeCircles2.jpg}
-   \subcaption{}
-   \label{fig:condition2}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.3\textwidth}
-   \centering
-   \includegraphics[width=2in, keepaspectratio]{./img/HexahedraWithSphericalFaces/threeCircles3.jpg}
-   \subcaption{}
-   \label{fig:condition3}
-  \end{minipage}
-  \caption{Condition of circles.}
-  \label{fig:threeCircles}
-\end{figure}
 
 In the case (i), let three points $S_{24}, S_{46}, S_{26}$ be as in Figure
 \ref{fig:threeCircles} (a). Here we have
@@ -2010,7 +1215,7 @@ $\angle O_2S_{26}O_6 = \pi-\theta_{26}$ hold. Hence
 \end{align*}
 On the other hand, from Figure \ref{fig:threeCircles} (a)
 \begin{align*}
- \angle O_2 S_{24} O_4 &< \angle O_2 R O_4,\quad 
+ \angle O_2 S_{24} O_4 &< \angle O_2 R O_4,\quad
  \angle O_2 S_{26} O_6 < \angle O_2 R O_6,\quad
  \angle O_4 S_{46} O_6 < \angle O_4 R O_6
 \end{align*}
@@ -2022,7 +1227,7 @@ This is a contradiction. Thus this case cannot occur. In the same way,
  the case (ii) cannot happen. It follows that the radical point $R$
  is on the intersection of three circles $C_2, C_4, C_6$.  This means that
  $R$ is the unique intersection of 3 spheres $O_2, O_4, O_6$ and $R=P_{246}$.
-\end{proof} 
+\end{proof}
 
 Replacing $(z_4, z_6)$ with $(z_A, z_B)$, we show the deciding parameter space of cubes of type 1 as seen in Figure \ref{fig:graphCubeALimit}.  Here, because of symmetry of combinations of dihedral angles, we may assume that $z_B\ge 2z_A$.
 
@@ -2033,30 +1238,13 @@ There are 6 cases of the order of $0, z_A, z_B$ and for each case, we can replac
  $z_B < 0 < z_A \Rightarrow (z_A, z_B) \mapsto (-z_B, z_A-z_B)$.\par
  $0 < z_B < z_A \Rightarrow (z_A, z_B) \mapsto (z_B, z_A)$.\par
 $0 < z_A \leq z_B < 2z_A \Rightarrow (z_A, z_B) \mapsto (z_B-z_A,z_B)$.\par
-In this way, the correct parameter space is as seen in Figure \ref{fig:graphCubeALimit}. 
+In this way, the correct parameter space is as seen in Figure \ref{fig:graphCubeALimit}.
 
 Here if $(z_A, z_B)$ is on the Hyperbola $z_B^2 - z_A z_B = 3/4$, then the face $O_2$ touches $O_5$.  Moreover if $(z_A, z_B)$ is on the point $A(\sqrt{6}/4, \sqrt{6}/2)$ then $O_2$ touches $O_5$ and $O_3$ touches $O_4$.  These case a  singular shape of a cube of type 1
 
 \noindent(Figure \ref{fig:graphCubeA} near here)
 (Figure \ref{fig:graphCubeALimit} near here)
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.5\textwidth}
- \centering
- \includegraphics[width=2in,
- keepaspectratio]{./img/graph/cubeA.jpg}
- \caption{Parameter space without limitation.}
- \label{fig:graphCubeA}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.5\textwidth}
-  \centering
-  \includegraphics[width=2in,
-  keepaspectratio]{./img/graph/cubeALimit.jpg}
-  \caption{Parameter space limited by symmetry.}
-  \label{fig:graphCubeALimit}
- \end{minipage}
- \hspace*{\fill}
-\end{figure}
+
 \begin{align*}
 (1)& z_Az_B = 3/4\\
 (2)& z_B^2 - z_A z_B = 3/4\\
@@ -2072,7 +1260,7 @@ In the same way of calculations, we have similar results in case of types 2, 3, 
  \begin{cases}
    0 < -2\sqrt{3} z_A z_B + 54 - 30\sqrt{3} \\
    0 <-3z_A^2 + 4 z_A z_B + 15/4 \\
-   0 < 2z_A z_B - 3z_B^2 + 3/4 
+   0 < 2z_A z_B - 3z_B^2 + 3/4
   \end{cases}
 \]
 Type 3: (Figure \ref{fig:graphCubeC} )
@@ -2080,7 +1268,7 @@ Type 3: (Figure \ref{fig:graphCubeC} )
  \begin{cases}
    0 < -\sqrt{3}z_A^2 - 2\sqrt{3}z_Az_B + 90 - 51\sqrt{3} \\
    0 < -3\sqrt{3}z_A^2 + 4\sqrt{3}z_A z_B + 90 - 48\sqrt{3} \\
-   0 < z_A^2 + 2 z_A z_B - 5z_B^2 + 9/4 
+   0 < z_A^2 + 2 z_A z_B - 5z_B^2 + 9/4
   \end{cases}
 \]
   Type 4: (Figure \ref{fig:graphCubeD} )
@@ -2088,7 +1276,7 @@ Type 3: (Figure \ref{fig:graphCubeC} )
  \begin{cases}
    0 < -3z_A^2 - 6z_A z_B - z_B^2 -60 +36\sqrt{3} \\
    0 < -15 z_A^2 + 6z_Az_B + z_B^2 - 120 + 72\sqrt{3} \\
-   0<  3z_A^2 + 6z_Az_B - 5z_B^2 - 120 + 72 \sqrt{3} 
+   0<  3z_A^2 + 6z_Az_B - 5z_B^2 - 120 + 72 \sqrt{3}
   \end{cases}
 \]
   Type 5: (Figure \ref{fig:graphCubeE} )
@@ -2096,7 +1284,7 @@ Type 3: (Figure \ref{fig:graphCubeC} )
  \begin{cases}
    0 <  -6z_Az_B - z_B^2 + 9/4 \\
    0 > 7z_A^2 - 6z_Az_B - z_B^2 - 3 \\
-   0 < z_Az_B - z_B^2 - 24 + 14\sqrt{3} 
+   0 < z_Az_B - z_B^2 - 24 + 14\sqrt{3}
   \end{cases}
 \]
  Type 8: (Figure \ref{fig:graphCubeH} )
@@ -2104,7 +1292,7 @@ Type 3: (Figure \ref{fig:graphCubeC} )
  \begin{cases}
     0 <-3z_A^2 - 2z_Az_B + 3/4 \\
     0 <-3z_A^2 + 3 z_Az_B + 2 \\
-    0 < 3z_A^2 + 2z_Az_B -5z_B^2 + 3 
+    0 < 3z_A^2 + 2z_Az_B -5z_B^2 + 3
   \end{cases}
 \]
  Type 9: (Figure \ref{fig:graphCubeI} )
@@ -2112,7 +1300,7 @@ Type 3: (Figure \ref{fig:graphCubeC} )
  \begin{cases}
    0 < -2z_Az_B - z_B^2 + 1 \\
    0 < -3z_A^2 + 2 z_A z_B + z_B^2 + 2 \\
-   0 < z_Az_B - z_B^2 - 8 + 6\sqrt{2} 
+   0 < z_Az_B - z_B^2 - 8 + 6\sqrt{2}
   \end{cases}
 \]
 
@@ -2164,50 +1352,6 @@ In these cases, there is no answer for ($z_A, z_B$).
 
 Figures \ref{fig:cubeFinite}, \ref{fig:cubeInf} give rendered images of cubes and their limit set.  To render these images, the first author uses IIS algorithm \cite{bridges2018}.
 
-\begin{figure}[h!tbp]
- \begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/cube/sphairahedronFinite.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:cubeFiniteSphairahedron}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/cube/limitsetFinite.jpg}
-   \subcaption{Limit set}
-   \label{fig:cubeFiniteLimitset}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Finite cubic sphairahedron and limit set.}
-  \label{fig:cubeFinite}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/cube/sphairahedronInf.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:cubeInfiniteSphairahedron}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/cube/limitsetInf.jpg} 
-   \subcaption{Limit set}
-   \label{fig:cubeInfiniteLimitset}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Infinite cubic sphairahedron and limit set.}
-  \label{fig:cubeInf}
-  \end{minipage}
-\end{figure}
-
 
 \subsection{Hexahedron (2), others}
 %\subsubsection{Cube}
@@ -2222,130 +1366,16 @@ Figures \ref{fig:cubeFinite}, \ref{fig:cubeInf} give rendered images of cubes an
 \subref{fig:cake1d}\subref{fig:cake1f}\subref{fig:cake1h}
 \subref{fig:cake1j}\subref{fig:cake1k}\subref{fig:cake1m} near here)
 
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.5\textwidth}
-   \centering
-   \includegraphics[width=1in,
-   keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/cake1.jpg}
-   \caption{Cake \#1.}
-   \label{fig:cake1}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.5\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/faces.jpg}
-   \caption{Polyhedral structure.}
-   \label{fig:hexahedralCake1Graph}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.195\textwidth}
-   \centering
-   \includegraphics[width=0.8in,
-   keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/a.jpg}
-   \subcaption{Type 1}
-   \label{fig:cake1a}
-  \end{minipage}
-  %\hspace*{\fill}
-  \begin{minipage}[t]{0.195\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/b.jpg}
-   \subcaption{Type 2}
-   \label{fig:cake1b}
-  \end{minipage}
- %\hspace*{\fill}
-  \begin{minipage}[t]{0.195\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/c.jpg}
-   \subcaption{Type 3}
-   \label{fig:cake1c}
-  \end{minipage}
- %\hspace*{\fill}
-  \begin{minipage}[t]{0.195\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/d.jpg}
-   \subcaption{Type 4}
-   \label{fig:cake1d}
-  \end{minipage}
- %\hspace*{\fill}
- %  \begin{minipage}[t]{0.23\textwidth}
- %   \centering
- %   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/e.jpg}
- %   \subcaption{}
- %   \label{fig:cake1e}
- %  \end{minipage}
- % \hspace*{\fill}
-  \begin{minipage}[t]{0.195\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/f.jpg}
-   \subcaption{Type 5}
-   \label{fig:cake1f}
-  \end{minipage}
- \\%\hspace*{\fill}
- %  \begin{minipage}[t]{0.23\textwidth}
- %   \centering
- %   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/g.jpg}
- %   \subcaption{}
- %   \label{fig:cake1g}
- %  \end{minipage}
- % \hspace*{\fill}
-  \begin{minipage}[t]{0.195\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/h.jpg}
-   \subcaption{Type 6}
-   \label{fig:cake1h}
-  \end{minipage}
- \hspace*{\fill}
- %  \begin{minipage}[t]{0.23\textwidth}
- %   \centering
- %   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/i.jpg}
- %   \subcaption{}
- %   \label{fig:cake1i}
- %  \end{minipage}
- % \hspace*{\fill}
-  \begin{minipage}[t]{0.195\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/j.jpg}
-   \subcaption{Type 7}
-   \label{fig:cake1j}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.195\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/k.jpg}
-   \subcaption{Type 8}
-   \label{fig:cake1k}
-  \end{minipage}
- \hspace*{\fill}
- %  \begin{minipage}[t]{0.23\textwidth}
- %   \centering
- %   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/l.jpg}
- %   \subcaption{}
- %   \label{fig:cake1l}
- %  \end{minipage}
- % \hspace*{\fill}
-  \begin{minipage}[t]{0.195\textwidth}
-   \centering
-   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/m.jpg}
-   \subcaption{Type 9}
-   \label{fig:cake1m}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Combinations of dihedral angles of cake \#1.}
-  \label{fig:hexahedralCake1List}
-\end{figure}
-
-Some of hexaheda do not have their unique name, and we give names to them.  
-We name Figures \ref{fig:cake1}, \ref{fig:cakeType2}, \ref{fig:cake3}, and \ref{fig:cake4} {\it cakes} with a serial number from 1 to 4.   
-In this subsection we introduce a cake \#1.  
-Its polyhedral structure is as seen in  
-Figure \ref{fig:hexahedralCake1Graph}. 
-(It looks like a sponge cake.)  
+Some of hexaheda do not have their unique name, and we give names to them.
+We name Figures \ref{fig:cake1}, \ref{fig:cakeType2}, \ref{fig:cake3}, and \ref{fig:cake4} {\it cakes} with a serial number from 1 to 4.
+In this subsection we introduce a cake \#1.
+Its polyhedral structure is as seen in
+Figure \ref{fig:hexahedralCake1Graph}.
+(It looks like a sponge cake.)
 There are 9 types of combinations of dihedral angles.  See Figures from
 \ref{fig:hexahedralCake1List}(a) to \ref{fig:hexahedralCake1List}(i).
 
-Investigation of the parameter space of cakes \#1 has not completed.  
+Investigation of the parameter space of cakes \#1 has not completed.
 For long time the authors studied this object, but it is still open.
 We may assume that the three half-spaces $\overline{D_1}, \overline{D_3}, \overline{D_5}$ form a (vertical) triangular prism. and we may fix the height of $\overline{D_6}$.  If we choose heights of $\overline{D_2}$ and $\overline{D_4}$, we may determine a cake \#1 sphairahderon.  Thus the parameter space might be two dimensional if it exists.
 
@@ -2372,182 +1402,9 @@ We may assume that the three half-spaces $\overline{D_1}, \overline{D_3}, \overl
 \subref{fig:cake2type3infiniteSphairahedron}
 \subref{fig:cake2type3infiniteLimitset} near here)
 
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.49\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake2/cake2.jpg}
-   \caption{Cake \#2.}
-   \label{fig:cakeType2}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.49\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake2/faces.jpg}
-   \caption{Polyhedral structure.}
-   \label{fig:polyhedralStructureCake2}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in,
-   keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake2/a.jpg}
-   \subcaption{Type 1}
-   \label{fig:cake2a}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake2/b.jpg}
-   \subcaption{Type 2}
-   \label{fig:cake2b}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake2/c.jpg}
-   \subcaption{Type 3}
-   \label{fig:cake2c}
-  \end{minipage}
- \hspace*{\fill}
-  \caption{Combinations of dihedral angles of cake \#2.}
-  \label{fig:cake2List}
-\end{figure}
-
-\begin{figure}[h!tbp]
- \begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake2/sphairahedronFinite.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:cake2FiniteSphairahedron}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake2/limitsetFinite.jpg}
-   \subcaption{Limit set}
-   \label{fig:cake2FiniteLimitset}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Finite cake \#2 type 1.}
-  \label{fig:cakeFinite}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake2/sphairahedronInf.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:cake2InfSphairahedron}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake2/limitsetInf.jpg} 
-   \subcaption{Limit set}
-   \label{fig:cake2InfLimitset}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Infinite cake \#2 type 1.}
-  \label{fig:cakeInf}
- \end{minipage}
-\end{figure}
-
-\begin{figure}[h!tbp]
- \begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake2/sphairahedronFinite_b.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:cake2Type2FiniteSphairahedron}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake2/limitsetFinite_b.jpg}
-   \subcaption{Limit set}
-   \label{fig:cake2Type2FiniteLimitset}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Finite cake \#2 type 2.}
-  \label{fig:cake2Type2finite}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake2/sphairahedronInf_b.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:cake2Type2InfSphairahedron}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake2/limitsetInf_b.jpg} 
-   \subcaption{Limit set}
-   \label{fig:cake2Type2InfLimitset}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Finite cake \#2 type 2.}
-  \label{fig:cake2Type2infinite}
- \end{minipage}
-\end{figure}
-
-\begin{figure}[h!tbp]
- \begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake2/sphairahedronFinite_c.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:cake2type3finiteSphairahedron}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake2/limitsetFinite_c.jpg}
-   \subcaption{Limit set}
-   \label{fig:cake2type3finiteLimitset}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Finite cake \#2 type 3.}
-  \label{fig:cake2Type3finite}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake2/sphairahedronInf_c.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:cake2type3infiniteSphairahedron}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake2/limitsetInf_c.jpg} 
-   \subcaption{Limit set}
-   \label{fig:cake2type3infiniteLimitset}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Infinite cake \#2 type 3.}
-  \label{fig:cake2Type3infinite}
- \end{minipage}
-\end{figure}
-
-The hexahedral cake \#2 is as seen in Figure \ref{fig:cakeType2}.  
+The hexahedral cake \#2 is as seen in Figure \ref{fig:cakeType2}.
 (It looks like a short bread.)
-Figure \ref{fig:polyhedralStructureCake2} shows its polyhedral structure.  
+Figure \ref{fig:polyhedralStructureCake2} shows its polyhedral structure.
 There are three combinations of dihedral angles.  See Figure \ref{fig:cake2List}.
 The parameter space of each type is one dimensional.  We show their precise data in Appendix.
 \bigskip\par
@@ -2570,131 +1427,9 @@ The parameter space of each type is one dimensional.  We show their precise data
 \subref{fig:cake3infiniteSphairahedronType2}
 \subref{fig:cake3infiniteLimitsetType2} near here)
 
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.5\textwidth}
-   \centering
-   \includegraphics[width=1in,
-   keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake3/cake3.jpg}
-   \caption{Cake \#3.}
-   \label{fig:cake3}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.5\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake3/faces.jpg}
-   \caption{Polyhedral structure.}
-   \label{fig:cake3polyhedralStructure}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.5\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake3/a.jpg}
-   \subcaption{}
-   \label{fig:cake3a}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.5\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake3/b.jpg}
-   \subcaption{}
-   \label{fig:cake3b}
-  \end{minipage}
- \hspace*{\fill}
-  \caption{Combinations of dihedral angles of cake \#3.}
-  \label{fig:cake3list}
-\end{figure}
-
-\begin{figure}[h!tbp]
- \begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake3/sphairahedronFinite_a.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:cake3finiteSphairahedronType1}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake3/limitsetFinite_a.jpg}
-   \subcaption{Limit set}
-   \label{fig:cake3finiteLimitsetType1}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Finite hexahedral cake \#3 type 1.}
-  \label{fig:cake3finiteType1}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake3/sphairahedralPrismInf_a.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:cake3infiniteSphairahedronType1}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake3/limitsetInf_a.jpg} 
-   \subcaption{Limit set}
-   \label{fig:cake3infiniteLimitsetType1}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Infinite hexahedral cake \#3 type 1.}
-  \label{fig:cake3infiniteType1}
- \end{minipage}
-\end{figure}
-
-\begin{figure}[h!tbp]
- \begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake3/sphairahedronFinite_b.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:cake3finiteSphairahedronType2}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake3/limitsetFinite_b.jpg}
-   \subcaption{Limit set}
-   \label{fig:cake3finiteLimitsetType2}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Finite hexahedral cake \#3 type 2.}
-  \label{fig:cake3finiteType2}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}{0.5\textwidth}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake3/sphairahedralPrismInf_b.jpg}
-   \subcaption{Sphairahedron}
-   \label{fig:cake3infiniteSphairahedronType2}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.24\textwidth}
-   \centering
-   \includegraphics[width=1.35in, height=1.35in,
-   keepaspectratio]{./img/sphairahedron/hexahedralCake3/limitsetInf_b.jpg} 
-   \subcaption{Limit set}
-   \label{fig:cake3infiniteLimitsetType2}
-  \end{minipage}
-  \hspace*{\fill}
-  \caption{Infinite hexahedral cake \#3 type 2.}
-  \label{fig:cake3infiniteType2}
- \end{minipage}
-\end{figure}
-
-The hexahedral cake \#3 is as seen in Figure \ref{fig:cake3}.  
+The hexahedral cake \#3 is as seen in Figure \ref{fig:cake3}.
 (It looks like a chiffon cake.)
-Figure \ref{fig:cake3polyhedralStructure} shows its polyhedral structure.  
+Figure \ref{fig:cake3polyhedralStructure} shows its polyhedral structure.
 There are three combinations of dihedral angles.  See Figure \ref{fig:cake3list}.
 There is no cake \#3 sphairahedron.  The reason is very similar as that of a triangular prism.  The parameter space of semi-sphairahedra are one dimensional for each.  We show their precise data in Appendix.
 
@@ -2710,33 +1445,6 @@ There is no cake \#3 sphairahedron.  The reason is very similar as that of a tri
 (Figure \ref{fig:pentagonalPyramid} near here)
 (Figure \ref{fig:triangularDipyramid} near here)
 
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.3\textwidth}
-   \centering 
-   \includegraphics[width=1in, height=1in,
-   keepaspectratio]{./img/HexahedraWithSphericalFaces/otherPolyhedra/hexahedralCake4.jpg}
-   \caption{hexahedral cake \#4.}
-   \label{fig:cake4}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.3\textwidth}
-   \centering
-   \includegraphics[width=1in, height=1in,
-   keepaspectratio]{./img/HexahedraWithSphericalFaces/otherPolyhedra/pentagonalPyramid.jpg}
-   \caption{Pentagonal pyramid.}
-   \label{fig:pentagonalPyramid}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.3\textwidth}
-   \centering
-   \includegraphics[width=1in, height=1in,
-   keepaspectratio]{./img/HexahedraWithSphericalFaces/otherPolyhedra/triangularDipyramid.jpg} 
-   \caption{Triangular dipyramid.}
-   \label{fig:triangularDipyramid}
-  \end{minipage}
-  \hspace*{\fill}
-\end{figure}
-
 The remaining hexahedra are a cake \#4 (Figure \ref{fig:cake4},) a pentagonal pyramid (Figure \ref{fig:pentagonalPyramid},) and a triangular dipyramid (\ref{fig:triangularDipyramid}.)  They has
 no combination of dihedra angles.
 
@@ -2744,11 +1452,11 @@ no combination of dihedra angles.
 
 It seems challenging to compute rational ideal sphairahedra based on
 heptahedron or polyhedra with more faces.
-Indeed, counting up the combinations of dihedral angles is an open problem.  In this subsection, we show the condition to be a rational ideal sphairahedron and find some examples. 
+Indeed, counting up the combinations of dihedral angles is an open problem.  In this subsection, we show the condition to be a rational ideal sphairahedron and find some examples.
 
-From Lemma \ref{lemma:sum},  we know that the degree of each vertex must be equal to or less than $4$.  Moreover, if a polyhedron satisfies this condition, we have to consider a combination of dihedral angles. 
+From Lemma \ref{lemma:sum},  we know that the degree of each vertex must be equal to or less than $4$.  Moreover, if a polyhedron satisfies this condition, we have to consider a combination of dihedral angles.
 
-We can find three simple examples soon.  One is a regular dodecahedron.  All of the faces are pentagons, and this is trivalent, that is, the degree of each vertex is $3$.  Thus if we assign $3$ for each edge,  we can determine a sphairahedron.  Other than that, after considering a Hamilton loop on the edge-graph of a regular dodecahedron, how about we assign $4,4,4,4$ or $3,6,3,6$ on the Hamilton loop and assign $2$ on other edges.  This way determines other sphairahedra.  
+We can find three simple examples soon.  One is a regular dodecahedron.  All of the faces are pentagons, and this is trivalent, that is, the degree of each vertex is $3$.  Thus if we assign $3$ for each edge,  we can determine a sphairahedron.  Other than that, after considering a Hamilton loop on the edge-graph of a regular dodecahedron, how about we assign $4,4,4,4$ or $3,6,3,6$ on the Hamilton loop and assign $2$ on other edges.  This way determines other sphairahedra.
 
 Next is a regular octahedron.  The degree of each vertex is $4$; thus, we can assign $2$ for every edge.
 The last example is a trivalent polyhedron.   If we assign $3$ for each edge,  we can determine a sphairahedron.  The simplest one is a truncated tetrahedron with $8$ faces.
@@ -2826,46 +1534,6 @@ In general, it seems difficult for us to list up all sphairahedron with seven or
 \subref{fig:visualizeSpheresStep10}
 \subref{fig:visualizeSpheresFinal} near here)
 
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep1.jpg}
-  \subcaption{Step 1}
-  \label{fig:visualizeSpheresStep1}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep2.jpg}
-  \subcaption{Step 2}
-  \label{fig:visualizeSpheresStep2}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep5.jpg}
-  \subcaption{Step 5}
-  \label{fig:visualizeSpheresStep5}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep10.jpg}
-  \subcaption{Step 10}
-  \label{fig:visualizeSpheresStep10}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.18\textwidth}
-  \centering
-  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereFinal.jpg}
-  \subcaption{Final image}
-  \label{fig:visualizeSpheresFinal}
- \end{minipage}
- \hspace*{\fill}
- \caption{Tiling of a finite cubic sphairahedron.}
- \label{fig:visualizeSpheres}
-\end{figure}
-
 In section \ref{constructFractal}, we show how to construct the tiling
 patterns of sphairahedra and their coloring.
 After we compute the coordinates of a sphairahedron, we have to render an infinite number of
@@ -2878,12 +1546,12 @@ For more details, see also \cite{bridges2017} and \cite{bridges2018}.
 
 There are two approaches to visualization.
 First, we tile the sphairahedra directory in the space using elements of the tiling group $G$.
-Secondly, we prepare some balls that include a sphairahedron, and we transform the spheres by $G$. 
+Secondly, we prepare some balls that include a sphairahedron, and we transform the spheres by $G$.
 We call the boundary of each ball {\it a ghost sphere}.
 See Figure \ref{fig:visualizeSpheres}.
 Four balls are preset, and we transform them by elements of $G$, and finally, we get
 the same quasi-sphere as the one in an original way.
-We can obtain a quasi-sphere from applying $G$ to the union of the balls. 
+We can obtain a quasi-sphere from applying $G$ to the union of the balls.
 We show the proof below.
 
 For each vertex of the sphairahedron, we consider \textit{maximum vertex
@@ -2911,12 +1579,12 @@ The conditions b) and c) are the same as above.\par
 \end{remark}
 
 \begin{proposition}\label{prop:limitBall}
-Let $T$ be a rational ideal sphairahedron and let $L=(T,G)$ be its tiling.  
+Let $T$ be a rational ideal sphairahedron and let $L=(T,G)$ be its tiling.
 The total tiling space $\cup_k |L|_k$ includes the maximum vertex ball $B_X$ for any vertex $X$.
 \end{proposition}
 
 \begin{proof}
- Maximum vertex ball is {\it equivariant} for any M\"obius transformations $\varphi$ in $S^3$. 
+ Maximum vertex ball is {\it equivariant} for any M\"obius transformations $\varphi$ in $S^3$.
 That is, if $B_X$ is the maximum vertex ball of $T$ at $X$, then $\varphi(B_X)$ is the maximum vertex ball of $\varphi(T)$ at $\varphi(X)$.
 Because the conditions a), b), and c) are preserved under the transformation $\varphi$.
 
@@ -2930,7 +1598,7 @@ Thus we may assume the following conditions for $T$ and $X$.
 z_{\text{min}} := \min\{ z \mid (x, y, z) \text{ is a vertex of } T \}.
 \end{align*}
 
- $B_X \cap T$ is a right prism infinitely parallel and elongated to the negative direction of the z-axis.  The rationality condition of $T$ guarantees that the tiling space of $B_X \cap T$ by face symmetry is $B_X$ itself.  Thus 
+ $B_X \cap T$ is a right prism infinitely parallel and elongated to the negative direction of the z-axis.  The rationality condition of $T$ guarantees that the tiling space of $B_X \cap T$ by face symmetry is $B_X$ itself.  Thus
 \[
 B_X = \text{The tiling space of }B_X \cap T \subset \bigcup_k |L|_k
 \]
@@ -2946,9 +1614,9 @@ Here $\bigcup_X$ means the union for some vertices $X$ of $T$.
 \end{theorem}
 
 \begin{proof}
-  From the assumption $\bigcup_{X} B_X \supset T$, 
+  From the assumption $\bigcup_{X} B_X \supset T$,
 \[
-\text{Cl}\left(\bigcup_{g\in G} g(\bigcup_X B_X)\right) 
+\text{Cl}\left(\bigcup_{g\in G} g(\bigcup_X B_X)\right)
 \supset \text{Cl}(\bigcup_{k} |L|_k). \tag{4.A}
 \]
  Conversely, from proposition \ref{prop:limitBall},
@@ -2987,30 +1655,23 @@ When a sphairahedron $T$ is a cube of type 1, we can consider another transforma
 \begin{proposition}
 Let $T$ be a cube of type 1 in Figure \ref{fig:cubeGraph}. Then there exist three (orientation preserving) M\"obius transformations $f_1, f_2, f_3$ such that \par
 (1)\ $f_1$ maps the inside of $O_1$ onto the outside of
-     $O_6$, $f_1(P_{135}) = P_{356}$, $f_1(P_{123}) = P_{236}F$,  
+     $O_6$, $f_1(P_{135}) = P_{356}$, $f_1(P_{123}) = P_{236}F$,
 $f_1(P_{124}) = P_{246}$, and $f_1(P_{145}) = P_{456}$.\par
-(2)\ $f_2$ maps the inside of $O_3$ onto the outside of $O_4$, 
-$f_2(P_{135}) = P_{145}$, $f_2(P_{356}) = P_{456}$,  
-$f_2(P_{236}) = P_{246}$, and $f_2(P_{123}) = P_{124}$.      \par       
-(3)\ $f_2$ maps the inside of $O_2$ onto the outside of $O_5$, 
-$f_2(P_{123}) = P_{135}$, $f_2(P_{236}) = P_{356}$,  
-$f_2(P_{246}) = P_{456}$, and $f_2(P_{124}) = P_{145}$.             
+(2)\ $f_2$ maps the inside of $O_3$ onto the outside of $O_4$,
+$f_2(P_{135}) = P_{145}$, $f_2(P_{356}) = P_{456}$,
+$f_2(P_{236}) = P_{246}$, and $f_2(P_{123}) = P_{124}$.      \par
+(3)\ $f_2$ maps the inside of $O_2$ onto the outside of $O_5$,
+$f_2(P_{123}) = P_{135}$, $f_2(P_{236}) = P_{356}$,
+$f_2(P_{246}) = P_{456}$, and $f_2(P_{124}) = P_{145}$.
 \end{proposition}
 
-Let $H$ be a subgroup of the orientation preserving M\"obius transformation group M\"ob$_+(S^3)$, 
+Let $H$ be a subgroup of the orientation preserving M\"obius transformation group M\"ob$_+(S^3)$,
 generated by $f_1, f_2, f_3$. It follows that
 \begin{align*}
  H = \langle f_1, f_2, f_3~|~(f_1f_2)^3 = (f_2f_3)^3 = (f_1f_3)^3 = \text{id} \rangle
 \end{align*}
 from this Proposition.  It is easy to show that the fundamental domain of $H$ is $T$ and $H$ generate the same tiling as that of $G$.  Therefore $\Lambda(G)=\Lambda(H)$.
 
-\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[width=2.5in,
-  keepaspectratio]{./img/sphairahedron/cube/extendedSchottky.jpg}
- \caption{All of the vertices of a cube lie on a plane.}
- \label{fig:extendedSchottky}
-\end{figure}
 \noindent(Figure \ref{fig:extendedSchottky} near here)
 
 \begin{proof}
@@ -3023,35 +1684,35 @@ P_{145}&\left( \dfrac{1}{2}, \dfrac{\sqrt{3}}{2}, z_4 , \right) \\
 P_{356}&\left( -1,  0, z_6\right) \\
 P_{124}&\left( \dfrac{1}{2} , \dfrac{\sqrt{3}(r_2-r_4)}{2(r_2+r_4)}, \dfrac{r_2z_4}{r_2+r_4}\right) \\
 P_{456}&\left(\dfrac{r_6-2r_4}{2(r_4+r_6)} , \dfrac{\sqrt{3}r_6}{2(r_4+r_6)} , \dfrac{z_4r_6+z_6r_4}{r_4+r_6}\right) \\
-P_{236}&\left(\dfrac{r_6-2r_2}{2(r_2+r_6)} ,\dfrac{-\sqrt{3}r_6}{2(r_2+r_6)}  ,\dfrac{r_2z_6}{r_2+r_6} \right) 
+P_{236}&\left(\dfrac{r_6-2r_2}{2(r_2+r_6)} ,\dfrac{-\sqrt{3}r_6}{2(r_2+r_6)}  ,\dfrac{r_2z_6}{r_2+r_6} \right)
 \end{align*}
 
 Let $R$ be the intersection of the segment $P_{123}P_{456}$ and $P_{145}P_{236}$.  (Indeed, three segments $P_{123}P_{456}$, $P_{145}P_{236}$, and $P_{356}P_{124}$ are concurrent.)  The cooridnate of $R$ is
 \[
 R\left(  \dfrac{-2r_2r_4+r_2r_6+r_4r_6}{2R}, \dfrac{\sqrt{3}(r_2r_6-r_4r_6)}{2R}, \dfrac{r_2(r_6z_4+r_4z_6)}{R}\right),
 \]
-where $R = r_2r_4 + r_4r_6 + r_6r_2.$  The coordinate of the center $C_2$ of $O_2$ is given by $C_2\left(\dfrac{1-r_2}{2}, \dfrac{-\sqrt{3}(1-r_2)}{2}, 0\right)$, then we have 
+where $R = r_2r_4 + r_4r_6 + r_6r_2.$  The coordinate of the center $C_2$ of $O_2$ is given by $C_2\left(\dfrac{1-r_2}{2}, \dfrac{-\sqrt{3}(1-r_2)}{2}, 0\right)$, then we have
 \begin{align*}
  {C_2R}^2 &= \left(\dfrac{1-r_2}{2} -  \dfrac{-2r_2r_4+r_2r_6+r_4r_6}{2R}\right ) ^2 \\
 & \qquad + \left( \dfrac{-\sqrt{3}(1-r_2)}{2} - \dfrac{\sqrt{3}(r_2r_6-r_4r_6)}{2R} \right )^2 \\
 & \qquad +\left( \dfrac{r_2(r_6z_4+r_4z_6)}{R} \right)^2 \\
 &=r_2^2
 \end{align*}
-Remark that in this calculation we use relations $z_4^2 = 3(r_2 + r_4 - 1), 
+Remark that in this calculation we use relations $z_4^2 = 3(r_2 + r_4 - 1),
 z_6^2 = 3(r_2 + r_6 - 1)$, and $2z_4z_6 = 6r_2 - 3$.  It follows that $R$ is on the sphere $O_2$.  In the same way, we show that $R$ is on $O_4$ and on $O_6$.  Therefore we obtain the result $R=P_{246}$
 
 On the other hand, the three power of a point $P_{356}$ are identified.  That is,
 \[
 P_{356}P_{236}\cdot P_{356}P_{123} = P_{356}P_{246}\cdot P_{356}P_{124} = P_{356}P_{456}\cdot P_{356}P_{145}
 \]
-holds.  Thus, let $O_{356}$ a sphere with the center $P_{356}$ and with radius $\sqrt{P_{356}P_{236}\cdot P_{356}P_{123}}$, and let $\varphi_{356}$ be the inversion of $O_{356}$.  Then   
+holds.  Thus, let $O_{356}$ a sphere with the center $P_{356}$ and with radius $\sqrt{P_{356}P_{236}\cdot P_{356}P_{123}}$, and let $\varphi_{356}$ be the inversion of $O_{356}$.  Then
 \[
 \varphi_{356}(P_{123})=P_{236}, \varphi_{356}(P_{124})=P_{246}, \varphi_{356}(P_{145})=P_{456}, \varphi_{356}(\infty)=P_{356}
 \]
 and the composite $\varphi_{356}\circ\varphi_1$ satisfies the conditions of $f_1$.  For $f_2$ and $f_3$, we can find them in the similar way.
 \end{proof}
 
- 
+
 
 \subsection{Patterns of Planes}\label{section:patternsOfPlanes}
 
@@ -3062,78 +1723,25 @@ and the composite $\varphi_{356}\circ\varphi_1$ satisfies the conditions of $f_1
 (Figure \ref{fig:obsTriangle} near here)
 (Figure \ref{fig:patternTetrahedron} near here)
 
-\begin{figure}[h!tbp]
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/plane/tetrahedronType0.jpg}
-   \subcaption{Tetrahedron.}
-   \label{fig:planeTetra}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in,
-   keepaspectratio]{./img/plane/pentahedralPrismType2.jpg}
-   \subcaption{Triangular prism.}
-   \label{fig:planePentaPrism}
-  \end{minipage}
- \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/plane/cubeType0.jpg}
-   \subcaption{Cube.}
-   \label{fig:planeCube}
-  \end{minipage}
-  \hspace*{\fill}
-  \begin{minipage}[t]{0.23\textwidth}
-   \centering
-   \includegraphics[width=1in, keepaspectratio]{./img/plane/hexahedralCake2Type0.jpg}
-   \subcaption{Cake \#2.}
-   \label{fig:planeCake}
-  \end{minipage}
- \hspace*{\fill}
- \caption{Planes.}
- \label{fig:planes}
-\end{figure}
-
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.5\textwidth}
-  \centering
-  \includegraphics[width=2.5in,
-  keepaspectratio]{./img/Observation/triangle2.jpg}
-  \caption{$C_i$'s of tetrahedron.}
-  \label{fig:obsTriangle}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.5\textwidth}
- \centering
- \includegraphics[width=2.5in,
- keepaspectratio]{./img/Observation/triangle.jpg}
- \caption{$C'_i$'s of cube.}
- \label{fig:patternTetrahedron}
- \hspace*{\fill}
- \end{minipage}
-\end{figure}
-
 A cubic sphairahedron of type 1 is controlled by two parameters $z_A$ and $z_B$.
-When both of the parameters equal to zero, 
+When both of the parameters equal to zero,
 the limit set is a plane (or a round sphere,) with a regular pattern as seen in Figure \ref{fig:planes}\subref{fig:planeCube}.
-Simillar patterns appear in other sphairahedra.  
+Simillar patterns appear in other sphairahedra.
 See Figures \ref{fig:planes}
 \subref{fig:planeTetra}\subref{fig:planePentaPrism}
 \subref{fig:planeCube}\subref{fig:planeCake}.
-The patterns in 
+The patterns in
 \subref{fig:planeCube}
 \subref{fig:planeTetra}\subref{fig:planePentaPrism}
-seems same as the cubes' pattern at all.  
+seems same as the cubes' pattern at all.
 We analyze these patterns.
 
-First we consider the pattern in a tetrahedron. (See Section \ref{section:tetrahedron}) 
+First we consider the pattern in a tetrahedron. (See Section \ref{section:tetrahedron})
 The parameter space of a tetrahedron consists on one point.
-We use notations as in Section \ref{section:tetrahedron}.  
-Let $O_i = \partial \overline{D_i}$ be the boundary of balls and $C_i= O_i\cap(xy\text{-plane})$ be the section by the $xy$-plane.  
-Three lines $C_1$, $C_2$, and $C_3$ establish a regular triangle. 
-A circle $C_4$ is the circumscribed circle of the triangle.  
+We use notations as in Section \ref{section:tetrahedron}.
+Let $O_i = \partial \overline{D_i}$ be the boundary of balls and $C_i= O_i\cap(xy\text{-plane})$ be the section by the $xy$-plane.
+Three lines $C_1$, $C_2$, and $C_3$ establish a regular triangle.
+A circle $C_4$ is the circumscribed circle of the triangle.
 See Figure \ref{fig:obsTriangle}.
 
 We embed $C_i$'s into the complex plane $\mathbb{C}$ as follows.
@@ -3150,10 +1758,10 @@ If we let $\varphi_i$ be the inversion of $C_i$, we can represent them by
 \varphi_3 (z) &= -\omega\bar z+3+3\omega \\
 \varphi_4 (z) &= \dfrac{(1+\omega)\bar z}{\bar z-2+\omega}.
 \end{align*}
-Thus every coefficient is contained in the Eisenstein ring $\mathbb{Z}[\omega]$.  
+Thus every coefficient is contained in the Eisenstein ring $\mathbb{Z}[\omega]$.
 
 In case of cube of type1, we may have similar observations. In Figure \ref{fig:patternTetrahedron} is the section of $O_i$'s in Section \ref{section:cubeType1}.
-Let $D_i=O_i\cap(xy\text{-plane})$ and $\psi_i$ is the inversion of $D_i$.  We embed $D_i$'s into $\mathbb{C}$ by 
+Let $D_i=O_i\cap(xy\text{-plane})$ and $\psi_i$ is the inversion of $D_i$.  We embed $D_i$'s into $\mathbb{C}$ by
 \[
 P_{123}(0),\quad P_{145}(6),\quad P_{356}(6\omega).
 \]
@@ -3164,9 +1772,9 @@ Thus we have the following formulas:
 \psi_3 (z) &= (-1+\omega)\bar z = \varphi_2(z)\\
 \psi_4 (z) &= \dfrac{(1+4\omega)\bar z - 18}{\bar z-5+4\omega} = \varphi_1(z)
 =\varphi_2\circ\varphi_1\circ\varphi_4\circ\varphi_1\circ\varphi_2(z).\\
-\psi_5 (z) &= -\omega\bar z+6+6\omega 
+\psi_5 (z) &= -\omega\bar z+6+6\omega
 =\varphi_2\circ\varphi_1\circ\varphi_3\circ\varphi_1\circ\varphi_2(z)\\
-\psi_6 (z) &= \dfrac{(4+\omega)\bar z - 18}{\bar z-5+\omega} 
+\psi_6 (z) &= \dfrac{(4+\omega)\bar z - 18}{\bar z-5+\omega}
 =\varphi_2\circ\varphi_3\circ\varphi_4\circ\varphi_3\circ\varphi_2(z).
 \end{align*}
 
@@ -3183,7 +1791,7 @@ These data inspire us a certain relationship between sphairahedra and bianchi te
 %(Eisenstein ring)
 %
 %At this time about the line symmetry transformation related to edges of
-%the triangles and inversion transformation related to three circles 
+%the triangles and inversion transformation related to three circles
 %are represented by
 %$f(z) = \dfrac{a\overline{z} + b}{c\overline{z}+ d} (a, b, c, d \in O_3)$
 %
@@ -3211,65 +1819,10 @@ These data inspire us a certain relationship between sphairahedra and bianchi te
 (Figure \ref{fig:lowerPrism} near here)
 (Figure \ref{fig:lowerLimit} near here)
 
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.3\textwidth}
-  \centering
-  \includegraphics[width=1.3in, keepaspectratio]{./img/visualization/cubeArms.jpg}
- \caption{Cube limit set with arms.}
- \label{fig:cubeArms}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.75\textwidth}
- \begin{minipage}[t]{0.25\textwidth}
-  \centering
-  \includegraphics[width=1.3in, keepaspectratio]{./img/visualization/cubePrism.jpg}
-  \subcaption{}
-  \label{fig:upperPrism}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.25\textwidth}
-  \centering
-  \includegraphics[width=1.3in, keepaspectratio]{./img/visualization/cubeSmallHole.jpg}
-  \subcaption{}
-  \label{fig:upperPrismSmallHole}
-  \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.25\textwidth}
-  \centering
-  \includegraphics[width=1.3in, keepaspectratio]{./img/visualization/cubeHole.jpg}
-  \subcaption{}
-  \label{fig:upperPrismBigHole}
- \end{minipage}
- \hspace*{\fill}
- \caption{Cube limit set and upper part of sphairahedral prism.}
- \label{fig:cubeHole}
- \end{minipage}
- \hspace*{\fill}
-\end{figure}
-
-\begin{figure}[h!tbp]
- \begin{minipage}[t]{0.5\textwidth}
-  \centering
-  \includegraphics[width=1.3in,
-  keepaspectratio]{./img/visualization/lowerHalfSphairahedron.jpg}
- \caption{Sphairahedron with hole.}
- \label{fig:lowerPrism}
- \end{minipage}
- \hspace*{\fill}
- \begin{minipage}[t]{0.5\textwidth}
-  \centering
-  \includegraphics[width=1.3in,
-  keepaspectratio]{./img/visualization/lowerHalfLimit.jpg}
- \caption{Limit set with hole.}
- \label{fig:lowerLimit}
- \end{minipage}
- \hspace*{\fill}
-\end{figure}
-
 In this subsection we observe cubic infinite sphairahedron whose
 dihedral angles are $\pi / 3$ and its parameter space.
 The parameter space is shown in Figure \ref{fig:graphCubeALimit}.
-The gray region of this figure shows the parameter space for ideal rational cubes. 
+The gray region of this figure shows the parameter space for ideal rational cubes.
 Figure \ref{fig:cubeArms} shows the limit set for the parameter pair $(z_A, z_B)$ is very near $\left( \dfrac{\sqrt{6}}{4}, \dfrac{\sqrt{6}}{2} \right)$.
 Observing the shape of the limit set, we can find a cone-shaped arm (an elongated part, or a half of an arch bridge.)
 In the center of Figure \ref{fig:cubeArms}, there is a hexagonal table-like shape, and there is an arm at each vertex.
@@ -3284,7 +1837,7 @@ the same time, the block is skinny (like a tissue) around here..
 Figure (b) shows an image where the parameter is a bit outside the
 parameter space.  There occurs a small hole on the thin wall, and two
 arms are connecting (complete an arch bridge.) we call
-the arms \textit{pinched arms}. 
+the arms \textit{pinched arms}.
 Here, the compliment $A=S^3-\cup_i\overline{D_i}$ has two connected
 components, and one of them is simply connected, but upper one is not,
 and this is not a sphairahedron.
@@ -3292,9 +1845,9 @@ Figure (c) shows an image where the parameter is entirely outside the
 parameter space.  The hole on the wall gets broader than that of (b),
 and the arch bridge gets stout. We call the arms \textit{Bridged arms}.
 
-From the series of phenomena on arms, we may have a conjecture the existence of some particular elements in the tiling group $G$.  
-One is the existence of an accidental parabolic element in $G$ when the parameter lies on the boundary of the parameter space.  
-The other is the existence of an elliptic element in $G$ when the parameter lies outside the parameter space.  Here we say that an element is parabolic (resp. elliptic) as a M\"obius transformation. 
+From the series of phenomena on arms, we may have a conjecture the existence of some particular elements in the tiling group $G$.
+One is the existence of an accidental parabolic element in $G$ when the parameter lies on the boundary of the parameter space.
+The other is the existence of an elliptic element in $G$ when the parameter lies outside the parameter space.  Here we say that an element is parabolic (resp. elliptic) as a M\"obius transformation.
 
 
 %The arms get longer as the parameter approaches to the edge of the
@@ -3307,7 +1860,7 @@ The other is the existence of an elliptic element in $G$ when the parameter lies
 %In Figure \ref{fig:cubeHole}\subref{fig:upperPrismSmallHole},
 %when the parameter is outside of the parameter space,
 %small hole appears. When the parameter is far away,
-%the arms get fat and the hole is bigger as shown in 
+%the arms get fat and the hole is bigger as shown in
 %Figure \ref{fig:cubeHole}\subref{fig:upperPrismBigHole}.
 %
 %The arms also get longer as the parameter approaches
@@ -3333,7 +1886,7 @@ Figure \ref{fig:lowerPrism} shows another example of a `sphairahedron with a hol
 
 %\subsection{Shape of the parameter space}
 %The shape of the parameter space is not fractal structures like
-%Mandelbrot set and Julia set or Maskit slice. 
+%Mandelbrot set and Julia set or Maskit slice.
 %The parameter space is connected.
 
 % \subsection{Height of the limit set}
@@ -3362,15 +1915,11 @@ Type 1:
 (x_4, y_4) = \left(\frac{1}{2}(1-r_4), \frac{\sqrt{3}}{2}(1-r_4)\right),\\
  r_6 &= \dfrac{2z_B(z_B-z_A) + 3}{6}, \qquad
 (x_6, y_6) = \left(r_6-1, 0\right),
-\end{align*} 
+\end{align*}
 The parameter space is as follows.
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
- \centering
- \includegraphics[width=2in,
- keepaspectratio]{./img/graph/cubeALimit.jpg}
- \caption{Parameter space of type 1.}
-  \label{fig:cubeALimit2}
+
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[]{0.5\textwidth}
@@ -3398,14 +1947,10 @@ Type 2:%図はこちらに移す。
  (x_4, y_4) = \left(-\frac{1 - r_4}{2}, \frac{(1 - r_4)\sqrt{3}}{2}\right),\\
  r_6 &= \frac{3z_B^2 -2z_Az_B + 6}{9}, \qquad
 (x_6, y_6) = \left(-\frac{1 - r_6}{2}, -\frac{(1 - r_4)\sqrt{3}}{2}\right),
-\end{align*} 
+\end{align*}
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
- \centering
- \includegraphics[width=2in,
- keepaspectratio]{./img/graph/cubeB.jpg}
- \caption{Parameter space of type 2.}
- \label{fig:graphCubeB}
+
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[]{0.5\textwidth}
@@ -3436,14 +1981,10 @@ Type 3:
 (x_4, y_4) = \left(-0.5, \frac{\sqrt{3}}{2} - r_4\right),\\
  r_6 &= \frac{-z_A^2 - 2z_Az_B + 5z_B^2+ 9}{15}, \qquad
 (x_6, y_6) = \left(-\frac{1 - r_6}{2}, - \frac{\sqrt{3}(1 - r_4)}{2}\right),
-\end{align*} 
+\end{align*}
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
- \centering
- \includegraphics[width=2in,
- keepaspectratio]{./img/graph/cubeC.jpg}
- \caption{Parameter space of type 3.}
- \label{fig:graphCubeC}
+
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[]{0.5\textwidth}
@@ -3474,14 +2015,10 @@ Type 4:
 (x_4, y_4) = \left(0.5, \frac{\sqrt{3}}{2} - r_4\right),\\
  r_6 &= \frac{-3z_A^2 + 5z_B^2 - 6z_Az_B + 12}{18}, \qquad
 (x_6, y_6) = \left(-\frac{1 - r_6}{2}, -\frac{\sqrt{3}(1 - r_6)}{2}\right),
-\end{align*} 
+\end{align*}
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
- \centering
- \includegraphics[width=2in,
- keepaspectratio]{./img/graph/cubeD.jpg}
- \caption{Parameter space of type 4.}
- \label{fig:graphCubeD}
+
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[]{0.5\textwidth}
@@ -3512,14 +2049,10 @@ Type 5:
 (x_4, y_4) = \left(\frac{1 + r_4}{2}, (1 - r_4)\frac{\sqrt{3}}{2}\right),\\
  r_6 &= \frac{2z_B^2 - 2z_Az_B + 6}{7}, \qquad
 (x_6, y_6) = \left(-\frac{1 - r_6}{2}, -\frac{\sqrt{3}}{2}(1 - r_6)\right),
-\end{align*} 
+\end{align*}
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
- \centering
- \includegraphics[width=2in,
- keepaspectratio]{./img/graph/cubeE.jpg}
- \caption{Parameter space of type 5.}
- \label{fig:graphCubeE}
+
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[]{0.5\textwidth}
@@ -3550,14 +2083,10 @@ Type 8:
 (x_4, y_4) = \left(\frac{1 - r_4}{2}, \frac{\sqrt{3}(1 - r_4)}{2}\right),\\
  r_6 &= \frac{-3 z_A^2 -2z_Az_B + 5z_B^2 + 12}{10\sqrt{3}}, \qquad
 (x_6, y_6) = \left(\frac{\sqrt{3}r_6 - 1}{2}, \frac{-\sqrt{3} + r_6}{2}\right),
-\end{align*} 
+\end{align*}
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
- \centering
- \includegraphics[width=2in,
- keepaspectratio]{./img/graph/cubeH.jpg}
- \caption{Parameter space of type 8.}
- \label{fig:graphCubeH}
+
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[]{0.5\textwidth}
@@ -3588,14 +2117,10 @@ Type 9:
 (x_4, y_4) = \left(\frac{r_4}{\sqrt{2}}, 1 - \frac{r_4}{\sqrt{2}}\right),\\
  r_6 &= \frac{z_B^2 - z_Az_B + 2}{3}, \qquad
 (x_6, y_6) = \left(0, r_6 - 1\right),
-\end{align*} 
+\end{align*}
 \begin{figure}[h]
  \begin{minipage}[]{0.5\textwidth}
- \centering
- \includegraphics[width=2in,
- keepaspectratio]{./img/graph/cubeI.jpg}
- \caption{Parameter space of type 9.}
- \label{fig:graphCubeI}
+
  \end{minipage}
  \hspace*{\fill}
  \begin{minipage}[]{0.5\textwidth}
@@ -3717,19 +2242,19 @@ The parameter space is $-2\sqrt{\sqrt{2} - 1} < z_A < 2\sqrt{\sqrt{2} -1}$.
         (in Japanese), RIMS Kokyuroku (Kyoto University), {\bfseries 1329}, (2003), pp.109-114
 \bibitem[Nakamura et al. 2016]{bridges2016}
         Nakamura, K. and Kazushi Ahara,
-        \emph{A New Algorithm for Rendering Kissing Schottky Groups}, 
+        \emph{A New Algorithm for Rendering Kissing Schottky Groups},
         Proceedings of Bridges 2016: Mathematics, Music, Art, Architecture,
         Education, Culture, Tessellations Publishing,
         Phoenix, Arizona, (2016), pp. 367--370.
 \bibitem[Nakamura et al. 2017]{bridges2017}
         Kento Nakamura and Kazushi Ahara,
-        \emph{A Geometrical Representation and Visualization of M\"{o}bius Transformation Groups}, 
+        \emph{A Geometrical Representation and Visualization of M\"{o}bius Transformation Groups},
         Proceedings of Bridges 2017: Mathematics, Music, Art, Architecture,
         Education, Culture, Tessellations Publishing,
         Phoenix, Arizona, 2017, pp. 159--166.
 \bibitem[Nakamura et al. 2018]{bridges2018}
         Kento Nakamura and Kazushi Ahara,
-        \emph{Sphairahedra and Three-Dimensional Fractals}, 
+        \emph{Sphairahedra and Three-Dimensional Fractals},
         Proceedings of Bridges 2018: Mathematics, Music, Art, Architecture,
         Education, Culture, Tessellations Publishing,
         Phoenix, Arizona, 2018, pp. 171--178.
@@ -3746,23 +2271,1547 @@ The parameter space is $-2\sqrt{\sqrt{2} - 1} < z_A < 2\sqrt{\sqrt{2} -1}$.
         \emph{Indra’s Pearls: The Vision of Felix Klein},
         1st ed. Apr. 2002.
 \bibitem[Michon 2020]{countingPolyhedra}
-        G\'erard P. Michon, 
+        G\'erard P. Michon,
         \emph{Counting Polyhedra},\\
         http://www.numericana.com/data/polyhedra.htm
         (as of February 23 2020)
 \bibitem[Nakamura 2020]{sphairahedron_net}
-        Kento Nakamura, 
+        Kento Nakamura,
         \emph{sphairahedron.net},
         https://sphairahedron.net
         (as of February 23 2020)
 
 \end{thebibliography}
 
+
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.25\textwidth}
+   \centering
+   \includegraphics[height=1.2in, keepaspectratio]{./img/introduction/cube.jpg}
+   \caption{}
+   \label{fig:cubeSphaira}
+  \end{minipage}
+  \hspace*{\fill}
+ \begin{minipage}[t]{0.75\textwidth}
+  \begin{minipage}[t]{0.25\textwidth}
+   \centering
+   \includegraphics[height=1.2in,
+   keepaspectratio]{./img/introduction/quasiSphere1.jpg}
+   \subcaption{}
+   \label{fig:quasi-sphere1}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.25\textwidth}
+   \centering
+   \includegraphics[height=1.2in,
+   keepaspectratio]{./img/introduction/quasiSphere2.jpg}
+   \subcaption{}
+   \label{fig:quasi-sphere2}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.25\textwidth}
+   \centering
+   \includegraphics[height=1.2in,
+   keepaspectratio]{./img/introduction/quasiSphere3.jpg}
+   \subcaption{}
+   \label{fig:quasi-sphereZoom}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:quasi-sphere}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=1.2in, height=1.2in, keepaspectratio]
+   {./img/sphairahedralPrism/sphairaAll.jpg}
+   \subcaption{}
+   \label{fig:sphairaPrismAll}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=1.2in, height=1.2in, keepaspectratio]
+   {./img/sphairahedralPrism/sphairaHalf.jpg}
+   \subcaption{}
+   \label{fig:sphairaPrismHalf}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=1.2in, height=1.2in,
+   keepaspectratio]{./img/sphairahedralPrism/sphairahedron.jpg}
+   \subcaption{}
+   \label{fig:sphairahedronFinite}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:sphairahedron}
+ \end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.6\textwidth}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=1.2in, height=1.2in,
+   keepaspectratio]{./img/sphairahedralPrism/semiSphairaAll.jpg}
+   \subcaption{}
+   \label{fig:semi-sphairaAll}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=1.2in, height=1.2in,
+   keepaspectratio]{./img/sphairahedralPrism/semiSphairaHalf.jpg}
+   \subcaption{}
+   \label{fig:semi-sphairaHalf}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:semi-sphairahedron}
+ \end{minipage}
+ \begin{minipage}[t]{0.3\textwidth}
+  \centering
+ \includegraphics[width=1.2in, height=1.2in,
+ keepaspectratio]{./img/sphairahedralPrism/hole.jpg}
+ \caption{}
+  \label{fig:brokenHole}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/step1.jpg}
+  \subcaption{}
+  \label{fig:sphaira-step1}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/step2.jpg}
+  \subcaption{}
+  \label{fig:sphaira-step2}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/step5.jpg}
+  \subcaption{}
+  \label{fig:sphaira-step5}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/step10.jpg}
+  \subcaption{}
+  \label{fig:sphaira-step10}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/constructFractal/finiteProcess/final.jpg}
+  \subcaption{}
+  \label{fig:sphaira-final}
+ \end{minipage}
+ \hspace*{\fill}
+ \caption{}
+ \label{fig:sphairahedronTile}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/step1.jpg}
+  \subcaption{}
+  \label{fig:terrainStep1}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/step2.jpg}
+  \subcaption{}
+  \label{fig:terrainStep2}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/step5.jpg}
+  \subcaption{}
+  \label{fig:terrainStep5}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/step20.jpg}
+  \subcaption{}
+  \label{fig:terrainStep20}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[height=1.1in, keepaspectratio]{./img/constructFractal/terrainProcess/final.jpg}
+  \subcaption{}
+  \label{fig:sphairaPrismFinal}
+ \end{minipage}
+ \caption{}
+ \label{fig:sphairahedralPrismTile}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \centering
+ \includegraphics[width=3in,
+ keepaspectratio]{./img/constructFractal/semi-terrain.jpg}
+ \caption{}
+  \label{fig:semiSphairaSpheres}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=1.5in, height=1.5in,
+ keepaspectratio]{./img/HexahedraWithSphericalFaces/sectionAtVertex.jpg}
+ \caption{}
+ \label{fig:sectionAtVertex}
+   \hspace*{\fill}
+\end{figure}
+\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[width=1.5in, height=1.5in,
+  keepaspectratio]{./img/HexahedraWithSphericalFaces/twoCirclesSlice.jpg}
+ \caption{}
+ \label{fig:twoCirclesChain}
+\end{figure}
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/tetrahedron.jpg}
+   \caption{}
+   \label{fig:tetrahedron}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/faces.jpg}
+   \caption{}
+   \label{fig:tetrahedronFaces}
+  \end{minipage}
+ \hspace*{\fill}
+ \end{figure}
+
+%tetrahedron col.2
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/a.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronType1}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/b.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronType2}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/c.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronType3}
+  \end{minipage}
+ \hspace*{\fill}
+ \caption{}
+ \label{fig:tetrahedronCombinations}
+\end{figure}
+
+%tetrahedron col.3
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in,
+   keepaspectratio]{./img/sphairahedron/tetrahedron/sphairahedronInf.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronInf}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitsetInf.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronLimitInf}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/slice_a.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronSliceA}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitsetAbove_a.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronLimitsetAboveA}
+  \end{minipage}
+ \hspace*{\fill}
+ \caption{}
+ \label{fig:tetrahedronInf_a}
+\end{figure}
+
+%tetrahedron col.4
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in,
+   keepaspectratio]{./img/sphairahedron/tetrahedron/sphairahedralPrism_b.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronPrismInf_b}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitset_b.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronLimitsetInf_b}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/slice_b.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronSlice_b}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitsetAbove_b.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronAbove_b}
+  \end{minipage}
+ \hspace*{\fill}
+ \caption{}
+ \label{fig:tetrahedronInf_b}
+\end{figure}
+
+%tetrahedron col.5
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in,
+   keepaspectratio]{./img/sphairahedron/tetrahedron/sphairahedralPrism_c.jpg}
+   \subcaption{}
+   \label{fig:tetrahedralPrism_c}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitset_c.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronLimitset_c}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/HexahedraWithSphericalFaces/tetrahedron/slice_c.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronSlice_c}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitsetAbove_c.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronAbove_c}
+  \end{minipage}
+ \hspace*{\fill}
+ \caption{}
+ \label{fig:tetrahedronInf_c}
+\end{figure}
+
+%tetrahedron col.6
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.49\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/tetrahedron/sphairahedronFinite.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronFiniteSphairahedron}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.49\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/tetrahedron/limitsetFinite.jpg}
+   \subcaption{}
+   \label{fig:tetrahedronFiniteLimitset}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:tetrahedronFinite}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/pyramid.jpg}
+   \caption{}
+   \label{fig:quadrangularPyramid}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/faces.jpg}
+   \caption{}
+   \label{fig:quadrangularPyramidFaces}
+  \end{minipage}
+ \hspace*{\fill}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/a.jpg}
+   \subcaption{}
+   \label{fig:quadrangularPyramid1}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/b.jpg}
+   \subcaption{}
+   \label{fig:quadrangularPyramid2}
+ \end{minipage}
+ \hspace*{\fill}
+ \caption{}
+  \label{fig:quadrangularPyramidCombinations}
+\end{figure}
+
+\begin{figure}[h!tbp]
+   \centering
+   \includegraphics[width=1.5in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/proofQuadrangularPyramid.jpg}
+   \caption{}
+   \label{fig:quadrangularPyramidAtOrigin}
+ \hspace*{\fill}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering \includegraphics[width=1.3in,
+   keepaspectratio]{./img/sphairahedron/pentahedralPyramid/sphairahedronInf.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPyramidInf}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/limitsetInf.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPyramidLimitset}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/slice_a.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPyramidSlice}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/limitsetAbove_a.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPyramidAbove}
+  \end{minipage}
+ \hspace*{\fill}
+ \caption{}
+ \label{fig:quadrangularPyramid_Inf_1}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering \includegraphics[width=1.3in,
+   keepaspectratio]{./img/sphairahedron/pentahedralPyramid/sphairahedronInfType1.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPyramidInf_b}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/limitsetInfType1.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPyramidLimitset_b}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPyramid/slice_b.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPyramidSlice_b}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.3in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/limitsetAbove_b.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPyramidAbove_b}
+  \end{minipage}
+ \hspace*{\fill}
+ \caption{}
+ \label{fig:quadrangularPyramid_Inf_2}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/sphairahedronFinite.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPyramidSphairahedronFinite1}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/limitsetFinite.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPyramidLimitsetFinite1}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:pentahedralPyramidFinite}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}{0.5\textwidth}
+\begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/sphairahedronFiniteType1.jpg}
+   \subcaption{}
+ \label{fig:pentahedralPyramidSphairahedronFinite2}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPyramid/limitsetFiniteType1.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPyramidLimitsetFinite2}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:pentahedralPyramidFinite2}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/pentahedralPrism.jpg}
+   \caption{}
+   \label{fig:triangularPrism}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/faces.jpg}
+   \caption{}
+   \label{fig:triangularPrismPolyhedralStructure}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/a.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPrismType1}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/b.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPrismType2}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/c.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPrismType3}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/d.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPrismType4}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/e.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPrismType5}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/pentahedralPrism/f.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPrismType6}
+  \end{minipage}
+ \hspace*{\fill}
+  \caption{}
+  \label{fig:triangularPrismDihedralAngles}
+\end{figure}
+
+\begin{figure}[h!tbp]
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/prismAll.jpg}
+  \caption{}
+  \label{fig:triangularPrismThreeComponents}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}{0.48\textwidth}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/sphairahedronInf.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPrismInfPositiveSphairahedron}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/limitsetInf.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPrismInfPositiveLimit}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:pentahedralPrismInfPositive}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}{0.48\textwidth}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/sphairahedronInf2.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPrismInfSphairahedron4}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/limitsetInf2.jpg}
+   \subcaption{}
+   \label{fig:pentahedralPrismInfLimit4}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:pentahedralPrismInfNeg}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+\begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/pentahedralPrism/sphairaInfType2_1.jpg}
+   \subcaption{}
+   \label{fig:prismSphairaInfType2_1}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/pentahedralPrism/limitsetInfType2_1.jpg}
+   \subcaption{}
+   \label{fig:prismLimitInfType2_1}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+ \label{fig:prismInfType2_1}
+\end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/sphairaInfType2_2.jpg}
+   \subcaption{}
+   \label{fig:prismSphairaInfType2_2}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in, keepaspectratio]{./img/sphairahedron/pentahedralPrism/limitsetInfType2_2.jpg}
+   \subcaption{}
+   \label{fig:prismLimitInfType2_2}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:prismInfType2_2}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[width=2.5in,
+  keepaspectratio]{./img/sphairahedron/pentahedralPrism/holes.jpg}
+ \caption{}
+ \label{fig:prismHoles}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.66\textwidth}
+ \centering
+ \includegraphics[width=1.5in,
+ keepaspectratio]{./img/HexahedraWithSphericalFaces/cube.jpg}
+ \caption{}
+ \label{fig:cube}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.33\textwidth}
+   \centering
+   \includegraphics[width=1.4in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cubeFaces.jpg}
+   \caption{}
+   \label{fig:cubePolyhedralStructure}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.99\textwidth}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_a.jpg}
+   \subcaption{}
+   \label{fig:cube_a}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_b.jpg}
+   \subcaption{}
+   \label{fig:cube_b}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_c.jpg}
+   \subcaption{}
+   \label{fig:cube_c}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_d.jpg}
+   \subcaption{}
+   \label{fig:cube_d}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_e.jpg}
+   \subcaption{}
+   \label{fig:cube_e}
+  \end{minipage}
+ \hspace*{\fill}
+\begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in,
+ keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_f.jpg}
+   \subcaption{}
+   \label{fig:cube_f}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_g.jpg}
+   \subcaption{}
+   \label{fig:cube_g}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_h.jpg}
+   \subcaption{}
+   \label{fig:cube_h}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_i.jpg}
+   \subcaption{}
+   \label{fig:cube_i}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_j.jpg}
+   \subcaption{}
+   \label{fig:cube_j}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.15\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/cube/cube_k.jpg}
+   \subcaption{}
+   \label{fig:cube_k}
+  \end{minipage}
+ \hspace*{\fill}
+  \caption{}
+  \label{fig:cubeGraph}
+ \end{minipage}
+\end{figure}
+
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=2in, keepaspectratio]{./img/HexahedraWithSphericalFaces/threeCircles1.jpg}
+   \subcaption{}
+   \label{fig:condition1}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=2in, keepaspectratio]{./img/HexahedraWithSphericalFaces/threeCircles2.jpg}
+   \subcaption{}
+   \label{fig:condition2}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=2in, keepaspectratio]{./img/HexahedraWithSphericalFaces/threeCircles3.jpg}
+   \subcaption{}
+   \label{fig:condition3}
+  \end{minipage}
+  \caption{}
+  \label{fig:threeCircles}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.5\textwidth}
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeA.jpg}
+ \caption{}
+ \label{fig:graphCubeA}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.5\textwidth}
+  \centering
+  \includegraphics[width=2in,
+  keepaspectratio]{./img/graph/cubeALimit.jpg}
+  \caption{}
+  \label{fig:graphCubeALimit}
+ \end{minipage}
+ \hspace*{\fill}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/cube/sphairahedronFinite.jpg}
+   \subcaption{}
+   \label{fig:cubeFiniteSphairahedron}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/cube/limitsetFinite.jpg}
+   \subcaption{}
+   \label{fig:cubeFiniteLimitset}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:cubeFinite}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/cube/sphairahedronInf.jpg}
+   \subcaption{}
+   \label{fig:cubeInfiniteSphairahedron}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/cube/limitsetInf.jpg}
+   \subcaption{}
+   \label{fig:cubeInfiniteLimitset}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:cubeInf}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=1in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/cake1.jpg}
+   \caption{}
+   \label{fig:cake1}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/faces.jpg}
+   \caption{}
+   \label{fig:hexahedralCake1Graph}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.195\textwidth}
+   \centering
+   \includegraphics[width=0.8in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/a.jpg}
+   \subcaption{}
+   \label{fig:cake1a}
+  \end{minipage}
+  %\hspace*{\fill}
+  \begin{minipage}[t]{0.195\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/b.jpg}
+   \subcaption{}
+   \label{fig:cake1b}
+  \end{minipage}
+ %\hspace*{\fill}
+  \begin{minipage}[t]{0.195\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/c.jpg}
+   \subcaption{}
+   \label{fig:cake1c}
+  \end{minipage}
+ %\hspace*{\fill}
+  \begin{minipage}[t]{0.195\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/d.jpg}
+   \subcaption{}
+   \label{fig:cake1d}
+  \end{minipage}
+ %\hspace*{\fill}
+ %  \begin{minipage}[t]{0.23\textwidth}
+ %   \centering
+ %   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/e.jpg}
+ %   \subcaption{}
+ %   \label{fig:cake1e}
+ %  \end{minipage}
+ % \hspace*{\fill}
+  \begin{minipage}[t]{0.195\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/f.jpg}
+   \subcaption{}
+   \label{fig:cake1f}
+  \end{minipage}
+ \\%\hspace*{\fill}
+ %  \begin{minipage}[t]{0.23\textwidth}
+ %   \centering
+ %   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/g.jpg}
+ %   \subcaption{}
+ %   \label{fig:cake1g}
+ %  \end{minipage}
+ % \hspace*{\fill}
+  \begin{minipage}[t]{0.195\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/h.jpg}
+   \subcaption{}
+   \label{fig:cake1h}
+  \end{minipage}
+ \hspace*{\fill}
+ %  \begin{minipage}[t]{0.23\textwidth}
+ %   \centering
+ %   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/i.jpg}
+ %   \subcaption{}
+ %   \label{fig:cake1i}
+ %  \end{minipage}
+ % \hspace*{\fill}
+  \begin{minipage}[t]{0.195\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/j.jpg}
+   \subcaption{}
+   \label{fig:cake1j}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.195\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/k.jpg}
+   \subcaption{}
+   \label{fig:cake1k}
+  \end{minipage}
+ \hspace*{\fill}
+ %  \begin{minipage}[t]{0.23\textwidth}
+ %   \centering
+ %   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/l.jpg}
+ %   \subcaption{}
+ %   \label{fig:cake1l}
+ %  \end{minipage}
+ % \hspace*{\fill}
+  \begin{minipage}[t]{0.195\textwidth}
+   \centering
+   \includegraphics[width=0.8in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake1/m.jpg}
+   \subcaption{}
+   \label{fig:cake1m}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:hexahedralCake1List}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.49\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake2/cake2.jpg}
+   \caption{}
+   \label{fig:cakeType2}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.49\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake2/faces.jpg}
+   \caption{}
+   \label{fig:polyhedralStructureCake2}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake2/a.jpg}
+   \subcaption{}
+   \label{fig:cake2a}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake2/b.jpg}
+   \subcaption{}
+   \label{fig:cake2b}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake2/c.jpg}
+   \subcaption{}
+   \label{fig:cake2c}
+  \end{minipage}
+ \hspace*{\fill}
+  \caption{}
+  \label{fig:cake2List}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake2/sphairahedronFinite.jpg}
+   \subcaption{}
+   \label{fig:cake2FiniteSphairahedron}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake2/limitsetFinite.jpg}
+   \subcaption{}
+   \label{fig:cake2FiniteLimitset}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:cakeFinite}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake2/sphairahedronInf.jpg}
+   \subcaption{}
+   \label{fig:cake2InfSphairahedron}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake2/limitsetInf.jpg}
+   \subcaption{}
+   \label{fig:cake2InfLimitset}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:cakeInf}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake2/sphairahedronFinite_b.jpg}
+   \subcaption{}
+   \label{fig:cake2Type2FiniteSphairahedron}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake2/limitsetFinite_b.jpg}
+   \subcaption{}
+   \label{fig:cake2Type2FiniteLimitset}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:cake2Type2finite}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake2/sphairahedronInf_b.jpg}
+   \subcaption{}
+   \label{fig:cake2Type2InfSphairahedron}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake2/limitsetInf_b.jpg}
+   \subcaption{}
+   \label{fig:cake2Type2InfLimitset}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:cake2Type2infinite}
+ \end{minipage}
+\end{figure}
+\clearpage
+\begin{figure}[h!tbp]
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake2/sphairahedronFinite_c.jpg}
+   \subcaption{}
+   \label{fig:cake2type3finiteSphairahedron}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake2/limitsetFinite_c.jpg}
+   \subcaption{}
+   \label{fig:cake2type3finiteLimitset}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:cake2Type3finite}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake2/sphairahedronInf_c.jpg}
+   \subcaption{}
+   \label{fig:cake2type3infiniteSphairahedron}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake2/limitsetInf_c.jpg}
+   \subcaption{}
+   \label{fig:cake2type3infiniteLimitset}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:cake2Type3infinite}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=1in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake3/cake3.jpg}
+   \caption{}
+   \label{fig:cake3}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake3/faces.jpg}
+   \caption{}
+   \label{fig:cake3polyhedralStructure}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake3/a.jpg}
+   \subcaption{}
+   \label{fig:cake3a}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.5\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/HexahedraWithSphericalFaces/hexahedralCake3/b.jpg}
+   \subcaption{}
+   \label{fig:cake3b}
+  \end{minipage}
+ \hspace*{\fill}
+  \caption{}
+  \label{fig:cake3list}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake3/sphairahedronFinite_a.jpg}
+   \subcaption{}
+   \label{fig:cake3finiteSphairahedronType1}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake3/limitsetFinite_a.jpg}
+   \subcaption{}
+   \label{fig:cake3finiteLimitsetType1}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:cake3finiteType1}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake3/sphairahedralPrismInf_a.jpg}
+   \subcaption{}
+   \label{fig:cake3infiniteSphairahedronType1}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake3/limitsetInf_a.jpg}
+   \subcaption{}
+   \label{fig:cake3infiniteLimitsetType1}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:cake3infiniteType1}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake3/sphairahedronFinite_b.jpg}
+   \subcaption{}
+   \label{fig:cake3finiteSphairahedronType2}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake3/limitsetFinite_b.jpg}
+   \subcaption{}
+   \label{fig:cake3finiteLimitsetType2}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:cake3finiteType2}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}{0.5\textwidth}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake3/sphairahedralPrismInf_b.jpg}
+   \subcaption{}
+   \label{fig:cake3infiniteSphairahedronType2}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.24\textwidth}
+   \centering
+   \includegraphics[width=1.35in, height=1.35in,
+   keepaspectratio]{./img/sphairahedron/hexahedralCake3/limitsetInf_b.jpg}
+   \subcaption{}
+   \label{fig:cake3infiniteLimitsetType2}
+  \end{minipage}
+  \hspace*{\fill}
+  \caption{}
+  \label{fig:cake3infiniteType2}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=1in, height=1in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/otherPolyhedra/hexahedralCake4.jpg}
+   \caption{}
+   \label{fig:cake4}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=1in, height=1in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/otherPolyhedra/pentagonalPyramid.jpg}
+   \caption{}
+   \label{fig:pentagonalPyramid}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.3\textwidth}
+   \centering
+   \includegraphics[width=1in, height=1in,
+   keepaspectratio]{./img/HexahedraWithSphericalFaces/otherPolyhedra/triangularDipyramid.jpg}
+   \caption{}
+   \label{fig:triangularDipyramid}
+  \end{minipage}
+  \hspace*{\fill}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep1.jpg}
+  \subcaption{}
+  \label{fig:visualizeSpheresStep1}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep2.jpg}
+  \subcaption{}
+  \label{fig:visualizeSpheresStep2}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep5.jpg}
+  \subcaption{}
+  \label{fig:visualizeSpheresStep5}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereStep10.jpg}
+  \subcaption{}
+  \label{fig:visualizeSpheresStep10}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.18\textwidth}
+  \centering
+  \includegraphics[width=1in, height=1in, keepaspectratio]{./img/visualization/sphereFinal.jpg}
+  \subcaption{}
+  \label{fig:visualizeSpheresFinal}
+ \end{minipage}
+ \hspace*{\fill}
+ \caption{}
+ \label{fig:visualizeSpheres}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[width=2.5in,
+  keepaspectratio]{./img/sphairahedron/cube/extendedSchottky.jpg}
+ \caption{}
+ \label{fig:extendedSchottky}
+\end{figure}
+
+\begin{figure}[h!tbp]
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/plane/tetrahedronType0.jpg}
+   \subcaption{}
+   \label{fig:planeTetra}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in,
+   keepaspectratio]{./img/plane/pentahedralPrismType2.jpg}
+   \subcaption{}
+   \label{fig:planePentaPrism}
+  \end{minipage}
+ \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/plane/cubeType0.jpg}
+   \subcaption{}
+   \label{fig:planeCube}
+  \end{minipage}
+  \hspace*{\fill}
+  \begin{minipage}[t]{0.23\textwidth}
+   \centering
+   \includegraphics[width=1in, keepaspectratio]{./img/plane/hexahedralCake2Type0.jpg}
+   \subcaption{}
+   \label{fig:planeCake}
+  \end{minipage}
+ \hspace*{\fill}
+ \caption{}
+ \label{fig:planes}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.5\textwidth}
+  \centering
+  \includegraphics[width=2.5in,
+  keepaspectratio]{./img/Observation/triangle2.jpg}
+  \caption{}
+  \label{fig:obsTriangle}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.5\textwidth}
+ \centering
+ \includegraphics[width=2.5in,
+ keepaspectratio]{./img/Observation/triangle.jpg}
+ \caption{}
+ \label{fig:patternTetrahedron}
+ \hspace*{\fill}
+ \end{minipage}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.3\textwidth}
+  \centering
+  \includegraphics[width=1.3in, keepaspectratio]{./img/visualization/cubeArms.jpg}
+ \caption{}
+ \label{fig:cubeArms}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.75\textwidth}
+ \begin{minipage}[t]{0.25\textwidth}
+  \centering
+  \includegraphics[width=1.3in, keepaspectratio]{./img/visualization/cubePrism.jpg}
+  \subcaption{}
+  \label{fig:upperPrism}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.25\textwidth}
+  \centering
+  \includegraphics[width=1.3in, keepaspectratio]{./img/visualization/cubeSmallHole.jpg}
+  \subcaption{}
+  \label{fig:upperPrismSmallHole}
+  \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.25\textwidth}
+  \centering
+  \includegraphics[width=1.3in, keepaspectratio]{./img/visualization/cubeHole.jpg}
+  \subcaption{}
+  \label{fig:upperPrismBigHole}
+ \end{minipage}
+ \hspace*{\fill}
+ \caption{}
+ \label{fig:cubeHole}
+ \end{minipage}
+ \hspace*{\fill}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \begin{minipage}[t]{0.5\textwidth}
+  \centering
+  \includegraphics[width=1.3in,
+  keepaspectratio]{./img/visualization/lowerHalfSphairahedron.jpg}
+ \caption{}
+ \label{fig:lowerPrism}
+ \end{minipage}
+ \hspace*{\fill}
+ \begin{minipage}[t]{0.5\textwidth}
+  \centering
+  \includegraphics[width=1.3in,
+  keepaspectratio]{./img/visualization/lowerHalfLimit.jpg}
+ \caption{}
+ \label{fig:lowerLimit}
+ \end{minipage}
+ \hspace*{\fill}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeALimit.jpg}
+ \caption{}
+  \label{fig:cubeALimit2}
+\end{figure}
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeB.jpg}
+ \caption{}
+ \label{fig:graphCubeB}
+\end{figure}
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeC.jpg}
+ \caption{}
+ \label{fig:graphCubeC}
+\end{figure}
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeD.jpg}
+ \caption{}
+ \label{fig:graphCubeD}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeE.jpg}
+ \caption{}
+ \label{fig:graphCubeE}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeH.jpg}
+ \caption{}
+ \label{fig:graphCubeH}
+\end{figure}
+
+\begin{figure}[h!tbp]
+ \centering
+ \includegraphics[width=2in,
+ keepaspectratio]{./img/graph/cubeI.jpg}
+ \caption{}
+ \label{fig:graphCubeI}
+\end{figure}
+
 Figure captions
 \begin{itemize}
  \item Figure \ref{fig:cubeSphaira}: Cubic sphairahedron.
  \item Figure \ref{fig:quasi-sphere}: Images of a quasi-sphere rendered
-       in different viewpoints. 
+       in different viewpoints.
  \item Figure \ref{fig:quasi-sphere}\subref{fig:quasi-sphere1}:
  \item Figure \ref{fig:quasi-sphere}\subref{fig:quasi-sphere2}:
  \item Figure \ref{fig:quasi-sphere}\subref{fig:quasi-sphereZoom}:
@@ -3788,7 +3837,7 @@ Figure captions
        10
  \item Figure \ref{fig:sphairahedronTile}\subref{fig:sphaira-final}:
        Final image
- \item Figure \ref{fig:sphairahedralPrismTile}: Tiling of a cubic infinite sphairahedron.
+ \item Figure \ref{fig:sphairahedralPrismTile}: Tiling of a infinite cubic sphairahedron.
  \item Figure \ref{fig:sphairahedralPrismTile}\subref{fig:terrainStep1}:
        Step 1
  \item Figure \ref{fig:sphairahedralPrismTile}\subref{fig:terrainStep2}:
@@ -3796,11 +3845,12 @@ Figure captions
  \item Figure \ref{fig:sphairahedralPrismTile}\subref{fig:terrainStep5}:
        Step 5
  \item Figure \ref{fig:sphairahedralPrismTile}\subref{fig:terrainStep20}:
-       Step 10
+       Step 20
  \item Figure
        \ref{fig:sphairahedralPrismTile}\subref{fig:sphairaPrismFinal}:Final
        image
-\item Figure \ref{fig:semiSphairaSpheres}: Sphairahedron with hole.
+\item Figure \ref{fig:semiSphairaSpheres}: Plane and infinite number of
+      balls touching to the ground.
 \item Figure \ref{fig:sectionAtVertex}: Section at $a=z_A$.
 \item Figure \ref{fig:twoCirclesChain}: Two tangent circles.
 \item Figure \ref{fig:tetrahedron}: Tetrahedron.
@@ -3809,13 +3859,13 @@ Figure captions
 \item Figure \ref{fig:tetrahedronCombinations}: Types of combinations
       of dihedral angles.
 \item Figure \ref{fig:tetrahedronCombinations}\subref{fig:tetrahedronType1}:
-      Type1
+      Type 1
 \item Figure \ref{fig:tetrahedronCombinations}\subref{fig:tetrahedronType2}:
-      Type2
+      Type 2
 \item Figure \ref{fig:tetrahedronCombinations}\subref{fig:tetrahedronType3}:
-      Type3
+      Type 3
 
-\item Figure \ref{fig:tetrahedronInf_a}: A tetrahedron of type1.
+\item Figure \ref{fig:tetrahedronInf_a}: A tetrahedron of type 1.
 \item Figure \ref{fig:tetrahedronInf_a}\subref{fig:tetrahedronInf}:
 \item Figure \ref{fig:tetrahedronInf_a}\subref{fig:tetrahedronLimitInf}:
 \item Figure \ref{fig:tetrahedronInf_a}\subref{fig:tetrahedronSliceA}:
@@ -3853,13 +3903,13 @@ Figure captions
       combinations of dihedral angles.
 \item Figure
       \ref{fig:quadrangularPyramidCombinations}\subref{fig:quadrangularPyramid1}:
-      Type1
+      Type 1
 \item Figure
       \ref{fig:quadrangularPyramidCombinations}\subref{fig:quadrangularPyramid2}:
-      Type2
+      Type 2
 \item Figure \ref{fig:quadrangularPyramidAtOrigin}: Section at $z=0$.
 \item Figure \ref{fig:quadrangularPyramid_Inf_1}: A quadrangular pyramid
-      of type1.
+      of type 1.
 \item Figure
       \ref{fig:quadrangularPyramid_Inf_1}\subref{fig:pentahedralPyramidInf}:
 \item Figure
@@ -3871,15 +3921,15 @@ Figure captions
 \item Figure \ref{fig:quadrangularPyramid_Inf_2}: A quadrangular pyramid
       of type 2.
 \item Figure
-      \ref{fig:quadrangularPyramid_Inf_2}\subref{fig:pentahedralPyramidInf_b}: 
+      \ref{fig:quadrangularPyramid_Inf_2}\subref{fig:pentahedralPyramidInf_b}:
 \item Figure
-      \ref{fig:quadrangularPyramid_Inf_2}\subref{fig:pentahedralPyramidLimitset_b}: 
+      \ref{fig:quadrangularPyramid_Inf_2}\subref{fig:pentahedralPyramidLimitset_b}:
 \item Figure \ref{fig:quadrangularPyramid_Inf_2}\subref{fig:pentahedralPyramidSlice_b}:
 \item Figure
-      \ref{fig:quadrangularPyramid_Inf_2}\subref{fig:pentahedralPyramidAbove_b}: 
+      \ref{fig:quadrangularPyramid_Inf_2}\subref{fig:pentahedralPyramidAbove_b}:
 
 \item Figure \ref{fig:pentahedralPyramidFinite}: Finite quadrangular pyramid
-      type1.
+      type 1.
 \item Figure
       \ref{fig:pentahedralPyramidFinite}\subref{fig:pentahedralPyramidSphairahedronFinite1}:
       Sphairahedron
@@ -3932,7 +3982,7 @@ Figure captions
 %      \ref{fig:pentahedralPrismFinite}\subref{fig:pentahedralPrismLimitsetFinite}:
 %      Limit set
 
-\item Figure \ref{fig:pentahedralPrismInfPositive}: Semi-sphairahedron and its limit set (1). 
+\item Figure \ref{fig:pentahedralPrismInfPositive}: Semi-sphairahedron and its limit set (1).
 \item Figure
       \ref{fig:pentahedralPrismInfPositive}\subref{fig:pentahedralPrismInfPositiveSphairahedron}: Semi-sphairahedron
 \item Figure
@@ -3943,10 +3993,10 @@ Figure captions
 %      type(a)*3*.
 %\item Figure
 %      \ref{fig:pentahedralPrismFinite}\subref{fig:pentahedralPrismInfSphairahedron3}:
-%      Sphairahedron. 
+%      Sphairahedron.
 %\item Figure
 %      \ref{fig:pentahedralPrismFinite}\subref{fig:pentahedralPrismInfLimit3}:
-%      Limit set. 
+%      Limit set.
 
 \item Figure \ref{fig:pentahedralPrismInfNeg}: Semi-sphairahedron and its limit set (2).
 \item Figure
@@ -3995,7 +4045,7 @@ Figure captions
 
 
 \item Figure \ref{fig:cubeFinite}: Finite cubic sphairahedron and
-      limit set. 
+      limit set.
 \item Figure \ref{fig:cubeFinite}\subref{fig:cubeFiniteSphairahedron}:
       Sphairahedron
 \item Figure \ref{fig:cubeFinite}\subref{fig:cubeFiniteLimitset}: Limit set
@@ -4007,7 +4057,7 @@ Figure captions
 \item Figure \ref{fig:cubeInf}\subref{fig:cubeInfiniteLimitset}: Limit
       set
 
-\item Figure \ref{fig:cake1}: Cake \# 1.
+\item Figure \ref{fig:cake1}: Cake \#1.
 \item Figure \ref{fig:hexahedralCake1Graph}: Polyhedral structure.
 
 \item Figure \ref{fig:hexahedralCake1List}: Combinations of dihedral angles of cake \#1.
@@ -4035,7 +4085,7 @@ Figure captions
 
 \item Figure \ref{fig:cakeFinite}: Finite cake \#2 type 1.
 \item Figure \ref{fig:cakeFinite}\subref{fig:cake2FiniteSphairahedron}:
-      Sphairahedron 
+      Sphairahedron
 \item Figure \ref{fig:cakeFinite}\subref{fig:cake2FiniteLimitset}: Limit
       set
 
@@ -4084,7 +4134,7 @@ Figure captions
 \item Figure \ref{fig:cake3list}\subref{fig:cake3a}:
 \item Figure \ref{fig:cake3list}\subref{fig:cake3b}:
 
-\item Figure \ref{fig:cake3finiteType1}: Finite hexahedral cake3 type 1.
+\item Figure \ref{fig:cake3finiteType1}: Finite hexahedral cake \#3 type 1.
 \item Figure
       \ref{fig:cake3finiteType1}\subref{fig:cake3finiteSphairahedronType1}:
       Sphairahedron
@@ -4107,7 +4157,7 @@ Figure captions
       \ref{fig:cake3finiteType2}\subref{fig:cake3finiteSphairahedronType2}:
       Sphairahedron
 \item Figure
-      \ref{fig:cake3finiteType2}\subref{fig:cake3finiteLimitsetType2}: 
+      \ref{fig:cake3finiteType2}\subref{fig:cake3finiteLimitsetType2}:
       Limit set
 
 \item Figure \ref{fig:cake3infiniteType2}: Infinite hexahedral cake \#3
@@ -4116,7 +4166,7 @@ Figure captions
       \ref{fig:cake3infiniteType2}\subref{fig:cake3infiniteSphairahedronType2}:
       Sphairahedron
 \item Figure
-      \ref{fig:cake3infiniteType2}\subref{fig:cake3infiniteLimitsetType2}: 
+      \ref{fig:cake3infiniteType2}\subref{fig:cake3infiniteLimitsetType2}:
       Limit set
 
 \item Figure \ref{fig:cake4}: hexahedral cake \#4.
@@ -4139,7 +4189,7 @@ Figure captions
 \item Figure
       \ref{fig:visualizeSpheres}\subref{fig:visualizeSpheresFinal}:
       Final image
-\item Figure \ref{fig:extendedSchottky}:
+\item Figure \ref{fig:extendedSchottky}: All of the vertices of a cube lie on a plane.
 % Three-dimensional Printing
 %\item Figure \ref{fig:3dmono}: Monochrome printing by Makerbot
 %      Replicater Z18 with PLA resin.
@@ -4176,7 +4226,7 @@ Figure captions
 %Appendix
 
 \item Figure \ref{fig:cubeALimit2}: Parameter space of type 1.
-\item Figure \ref{fig:graphCubeB}: Parameter space of type 2. 
+\item Figure \ref{fig:graphCubeB}: Parameter space of type 2.
 \item Figure \ref{fig:graphCubeC}: Parameter space of type 3.
 \item Figure \ref{fig:graphCubeD}: Parameter space of type 4.
 \item Figure \ref{fig:graphCubeE}: Parameter space of type 5.
