@@ -70,20 +70,19 @@ Sciences, Meiji University, Tokyo, Japan;
 \maketitle
 
 \begin{abstract}
-We are interested in finding examples and rendering the limit sets of
-quasi-Fuchsian subgroups of the group of all orientation
-preserving/reversing Moebius transformations on the 3-sphere.
+ Quasi-Fuchsian fractals, which are announced by Ahara and Araki in 2003,
+ are not only showing us three-dimensional fractal phenomena but also
+ giving us opportunities for experimenting with high dimensional
+ Kleinian groups.
+ Nakamura and Ahara introduce an algorithm called Iterated Inversion
+ System (IIS) in 2016 and 2017 to render these fractals, well-optimized
+ in parallel processing.  Nakamura develops and opens a system that
+ enables us to simulate the limit sets of sphairahedra easily.
 
-In this article, first, we show an overview of such groups arising from
-sphairahedra, which is announced by Ahara and Araki in 2003.
-Next, we introduce a rendering system of sphairahedra and their limit
-sets and observe some mathematical problems.
-Usually, rendering an image of this kind of fractal takes much time.
-However, using an algorithm called Iterated Inversion System (IIS),
-introduced by Nakamura and Ahara in 2016 and 2017,
-we can render images of these fractals in real-time, and this system
-makes a visualization experiment easily. We also focus on finding and
-solving mathematical problems about the polyhedra from visualization.
+These unusual objects have many faces of studies, mathematics, computer
+graphics, and esthetics.  In this article, we focus on observations of
+the mathematics side, classify the variations of sphairahedra, observe
+propositions, and rearrange some open problems. 
 
 \end{abstract}
 
@@ -138,8 +137,6 @@ graphics and it shows the simplest parameter space of cubic sphairahedra
 and some rendered images of the limit set by POV-Ray.
 After that, Ahara presented a paper written in Japanese\cite{AharaJa},
 showing the varieties of sphairahedra and dimensions of parameter space.
-In 2016, Ryo Kageyama\cite{kageyama} introduced the parameter space of the cubic sphairahedron, and moreover, he introduced varieties of deformations of
-quasi-spheres.
 
 In the graphical aspect, in 2012, Knighty developed a script to render
 quasi-spheres in real-time under limited conditions
@@ -473,9 +470,13 @@ Ahara and Araki \cite{AharaAraki} determine all of combinations of dihedral angl
 Ahara \cite{AharaJa} determines all of polyhedral structures of sphairahedra with 5 or 6 faces.  He also shows the number of combinations of dihedral angles for each structure without a proof.
 Ahara and Araki \cite{AharaAraki2} determines all of the parameter spaces for the cube case with a proof.  This paper was quoted in other papers, however it is an unpublished preprint.
 %影山さんの仕事（の関連部分）の紹介
-Kageyama \cite{kageyama} introduces the result of \cite{AharaAraki2} without a proof.
+Kageyama \cite{kageyama} quotes the result of \cite{AharaAraki2} in his master thesis in order to prove
+the existence of other variations of sphairahedra.
 %この論文での守備範囲の紹介
-In this paper, we introduce all of the parameter spaces of sphairahedra with 5 or 6 faces, including current results. The proof is so similar to that of \cite{AharaAraki2}, and we introduce it in the appendix.
+In this chapter, we show the parameter spaces of sphairahedra with 5 or
+6 faces, including current results.
+The proof repeats similar discussions as those in \cite{AharaAraki2},
+and we enumerate the results in Appendix.
 
 
 %Usually, a polyhedron has planar faces. But easily, we can consider an
@@ -493,7 +494,7 @@ In this paper, we introduce all of the parameter spaces of sphairahedra with 5 o
 % If a polyhedron with the above conditions is of cubic (that is,
 % the one skeleton of the polyhedron is the same as that of a cube), then
 % there are seven combinations of face-angles. For each combination of
-% face-angles, a set of conformal equivalent classes of polyhedra is two
+% face-angles, a set of conformagl equivalent classes of polyhedra is two
 % dimensional.
 %\end{theorem}
 
@@ -3360,7 +3361,7 @@ The parameter space is $-2\sqrt{\sqrt{2} - 1} < z_A < 2\sqrt{\sqrt{2} -1}$.
   \label{fig:cakeInf}
  \end{minipage}
 \end{figure}
-
+\clearpage
 \begin{figure}[h!tbp]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
@@ -3403,7 +3404,7 @@ The parameter space is $-2\sqrt{\sqrt{2} - 1} < z_A < 2\sqrt{\sqrt{2} -1}$.
   \label{fig:cake2Type2infinite}
  \end{minipage}
 \end{figure}
-\clearpage
+
 \begin{figure}[h!tbp]
  \begin{minipage}{0.5\textwidth}
   \begin{minipage}[t]{0.24\textwidth}
